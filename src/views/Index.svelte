@@ -1,2 +1,6 @@
+<script>
+    import Navbar from './NavBar.svelte'
+</script>
 
-<h2>index</h2>
+<Navbar />
+
