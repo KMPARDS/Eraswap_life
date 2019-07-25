@@ -11,10 +11,13 @@
     }
     async function generate_wallet(event) {
         let wallet = await ethers.Wallet.fromMnemonic(mnemonic.join(" "))
-
+        let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(await wallet.encrypt(wallet_password)));
+        let dlAnchorElem = document.getElementById('downloadAnchorElem');
+        dlAnchorElem.setAttribute("href",     dataStr     );
+        dlAnchorElem.setAttribute("download", "UTC-"+wallet.address+".json");
+        dlAnchorElem.click();
     }
 
-    let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify({"1":"one"}));
 </script>
 
 <Navbar title="Create New Wallet"/>
@@ -28,5 +31,5 @@
 </div>
 <input type="password" bind:value={wallet_password}>
 <button on:click={generate_wallet}>Generate Wallet</button>
+<a id="downloadAnchorElem" href="/" style="display:none"></a>
 </div>
-<button id="downloadAnchorElem">Download</button>
