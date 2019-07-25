@@ -3,15 +3,18 @@
     let size = 256;
     let is_256 = true;
     let mnemonic = bip39.generateMnemonic(size).split(" ");
-    let wallet_password=""
+    let wallet_password="";
+    let wallet = "";
     function generate_random() {
         let size = is_256? 256: 128
         mnemonic = bip39.generateMnemonic(size).split(" ");
     }
-    
-    function generate_wallet(event) {
-        console.log(wallet_password)
+    async function generate_wallet(event) {
+        let wallet = await ethers.Wallet.fromMnemonic(mnemonic.join(" "))
+
     }
+
+    let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify({"1":"one"}));
 </script>
 
 <Navbar title="Create New Wallet"/>
@@ -26,3 +29,4 @@
 <input type="password" bind:value={wallet_password}>
 <button on:click={generate_wallet}>Generate Wallet</button>
 </div>
+<button id="downloadAnchorElem">Download</button>
