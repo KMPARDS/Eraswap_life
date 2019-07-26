@@ -60,9 +60,9 @@
 <div class="row">
 {#each mnemonic as word}
 {#if word!='-'}
-<div class="col-6 mnemonic_entry">{word}</div>
+<div class="col-4 mnemonic_entry">{word}</div>
 {:else}
-<input type="text" class="col-6 mnemonic_entry">
+<input type="text" class="col-4 mnemonic_entry">
 {/if}
 {/each}
 </div>
@@ -74,7 +74,22 @@
 <button on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button>
 <button on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>
 <a id="downloadAnchorElem" href="/" style="display:none">Download</a>
+<div class:hide={status!=5}>
+<h4>Please be patient</h4>
+It might take 15 - 45 seconds to generate UTC file
+
+<h4>Don't Lose It</h4>
+Be careful, it can not be recovered if you lose it.
+
+
+<h4>Don't Share It</h4>
+Your funds will be stolen if you use this file on a malicious phishing site.
+
+
+<h4>Make a Backup</h4>
+Secure it like the millions of dollars it may one day be worth.
 <a href="/dashboard" class:hide={status!=5}>Access your dashboard</a>
+</div>
 </div>
 <style>
 .hide{
