@@ -1,6 +1,5 @@
 <script>
     import Navbar from './NavBar.svelte'
-    let size = 128;
 </script>
 
 <Navbar title="Dashboard"/>
