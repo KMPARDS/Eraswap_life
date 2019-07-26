@@ -3,42 +3,54 @@
     let size = 256;
     let is_256 = true;
     let mnemonic = bip39.generateMnemonic(size).split(" ");
+    let saved_mnemonic = mnemonic;
     let wallet_password="";
     let wallet = "";
-    let noted=false;
+    let status = 1;  // 1=> noted mnemonic 2=> submit mnemonic 3=> generate wallet 4=> Loading
+    let noted = false;
     function generate_random() {
-        let size = is_256? 256: 128
+        noted = false;
+        let size = is_256? 256: 128;
         mnemonic = bip39.generateMnemonic(size).split(" ");
     }
+    let matching = false;
     async function generate_wallet(event) {
-        let wallet = await ethers.Wallet.fromMnemonic(mnemonic.join(" "))
-        let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(await wallet.encrypt(wallet_password)));
-        let dlAnchorElem = document.getElementById('downloadAnchorElem');
-        dlAnchorElem.setAttribute("href",     dataStr     );
-        dlAnchorElem.setAttribute("download", "UTC-"+wallet.address+".json");
-        dlAnchorElem.click();
+        if(noted){
+            status = 4;
+            let wallet = await ethers.Wallet.fromMnemonic(saved_mnemonic.join(" "))
+            let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(await wallet.encrypt(wallet_password)));
+            let dlAnchorElem = document.getElementById('downloadAnchorElem');
+            dlAnchorElem.setAttribute("href",     dataStr     );
+            dlAnchorElem.setAttribute("download", "UTC-"+wallet.address+".json");
+            dlAnchorElem.click();
+            status = 1
+        }else{
+            alert("Invalid Input ")
+        }
     }
     function noted_down() {
-        let saved_mnemonic = mnemonic;
-        for(let i=0;i<5;i++){
+        saved_mnemonic = mnemonic.slice();
+        noted=true;
+        let size = is_256? 6: 3;
+        for(let i=0;i<size;i++){
             let index = Math.floor(Math.random()*mnemonic.length);
             mnemonic[index] = "-"
         }
+        status = 2
     }
-    
     function check_noted() {
         let elements = document.querySelectorAll(".mnemonic_entry");
         let input_entry = "";
-        let word = ""
+        let word = "";
         for(let e in elements){
             word = elements[e].innerText? elements[e].innerText: elements[e].value;
             input_entry += word +" ";
         }
-        console.log(input_entry)
+        noted = input_entry.substring(0,saved_mnemonic.join(" ").length) == saved_mnemonic.join(" ");
+        console.log(input_entry.substring(0,saved_mnemonic.join(" ").length), saved_mnemonic.join(" "))
+        status = 3
     }
-
 </script>
-
 <Navbar title="Create New Wallet"/>
 <input type="checkbox" bind:checked={is_256} on:change={generate_random}>24 words
 <button on:click={generate_random}>Generate Random</button>
@@ -46,15 +58,23 @@
 <div class="row">
 {#each mnemonic as word}
 {#if word!='-'}
-<div class="col-6 mnemonic_entry" val={word}>{word}</div>
+<div class="col-6 mnemonic_entry">{word}</div>
 {:else}
 <input type="text" class="col-6 mnemonic_entry">
 {/if}
 {/each}
 </div>
-<input type="password" bind:value={wallet_password}>
-<button on:click={generate_wallet}>Generate Wallet</button>
-<button on:click={noted_down}>Noted Mnemonic</button>
-<button on:click={check_noted}>Submit Mnemonic</button>
+<input type="password" bind:value={wallet_password} class:hide={status!=3}>
+<button on:click={generate_wallet} class:hide={status!=3}>Generate Wallet</button>
+<div class="spinner-border" role="status" class:hide={status!=4}>
+  <span class="sr-only">Loading...</span>
+</div>
+<button on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button>
+<button on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>
 <a id="downloadAnchorElem" href="/" style="display:none">Download</a>
 </div>
+<style>
+.hide{
+    display: none;
+}
+</style>
