@@ -27,12 +27,14 @@
     }
     
     function check_noted() {
-        // let elements = $(".mnemonic_entry");
-        // let input_entry = "";
-        // for(let e in elements){
-            // input_entry += elements[e].html() + elements[e].val();
-        // }
-        // console.log(input_entry)
+        let elements = document.querySelectorAll(".mnemonic_entry");
+        let input_entry = "";
+        let word = ""
+        for(let e in elements){
+            word = elements[e].innerText? elements[e].innerText: elements[e].value;
+            input_entry += word +" ";
+        }
+        console.log(input_entry)
     }
 
 </script>
@@ -54,5 +56,5 @@
 <button on:click={generate_wallet}>Generate Wallet</button>
 <button on:click={noted_down}>Noted Mnemonic</button>
 <button on:click={check_noted}>Submit Mnemonic</button>
-<a id="downloadAnchorElem" href="/" style="display:none"></a>
+<a id="downloadAnchorElem" href="/" style="display:none">Download</a>
 </div>
