@@ -25,5 +25,10 @@ router('/access-my-wallet', () =>
     )
 );
 
+router('/dashboard', () =>
+    import(/* webpackChunkName: "something" */ './views/Dashboard.svelte').then(
+        module => page.set({ component: module.default })
+    )
+);
 
 export default router

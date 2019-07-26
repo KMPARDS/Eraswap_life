@@ -1,6 +1,8 @@
 <script>
     import Navbar from './NavBar.svelte'
-    let size = 128;
+    export let wallet;
+
 </script>
 
-<Navbar title="Dashboard"/>
+<Navbar title="Access My Wallet"/>
+

@@ -6,9 +6,10 @@
     let saved_mnemonic = mnemonic;
     let wallet_password="";
     let wallet = "";
-    let status = 1;  // 1=> noted mnemonic 2=> submit mnemonic 3=> generate wallet 4=> Loading
+    let status = 1;  // 1=> noted mnemonic 2=> submit mnemonic 3=> generate wallet 4=> Loading 5=> Login
     let noted = false;
     function generate_random() {
+        status = 1;
         noted = false;
         let size = is_256? 256: 128;
         mnemonic = bip39.generateMnemonic(size).split(" ");
@@ -23,7 +24,7 @@
             dlAnchorElem.setAttribute("href",     dataStr     );
             dlAnchorElem.setAttribute("download", "UTC-"+wallet.address+".json");
             dlAnchorElem.click();
-            status = 1
+            status = 5
         }else{
             alert("Invalid Input ")
         }
@@ -47,8 +48,9 @@
             input_entry += word +" ";
         }
         noted = input_entry.substring(0,saved_mnemonic.join(" ").length) == saved_mnemonic.join(" ");
-        console.log(input_entry.substring(0,saved_mnemonic.join(" ").length), saved_mnemonic.join(" "))
-        status = 3
+        if(noted){
+            status = 3
+        }
     }
 </script>
 <Navbar title="Create New Wallet"/>
@@ -72,6 +74,7 @@
 <button on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button>
 <button on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>
 <a id="downloadAnchorElem" href="/" style="display:none">Download</a>
+<a href="/dashboard" class:hide={status!=5}>Access your dashboard</a>
 </div>
 <style>
 .hide{
