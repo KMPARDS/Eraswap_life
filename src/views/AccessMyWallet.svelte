@@ -2,7 +2,9 @@
     import Navbar from './NavBar.svelte'
     let mnemonic="";
     function load_wallet() {
-        window.wallet = ethers.Wallet.fromMnemonic(mnemonic)
+        let provider = new ethers.providers.InfuraProvider("kovan");
+        let wallet = ethers.Wallet.fromMnemonic(mnemonic);
+        window.wallet = new ethers.Wallet(wallet.privateKey, provider)
     }
 </script>
 

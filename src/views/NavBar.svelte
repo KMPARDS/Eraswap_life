@@ -10,10 +10,10 @@
         <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/">Link</a>
+        <a class="nav-link" href="/create-new-wallet">Create New Wallet</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link" href="/access-my-wallet">Access My Wallet</a>
       </li>
     </ul>
   </div>
