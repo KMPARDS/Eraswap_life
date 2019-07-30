@@ -74,7 +74,7 @@
 <button on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button>
 <button on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>
 <a id="downloadAnchorElem" href="/" style="display:none">Download</a>
-<div class:hide={status!=5}>
+<div class:hide={status!=4}>
 <h4>Please be patient</h4>
 It might take 15 - 45 seconds to generate UTC file
 
