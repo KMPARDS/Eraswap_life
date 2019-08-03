@@ -10,12 +10,35 @@
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
 
-  <body></body>
   <script src="js/jquery.min.js"></script>
   <script src="js/bip39.min.js"></script>
   <script src="js/ethers.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+
+$(document).ready(function(){
+
+    $("#show").click(function(){
+    $(".next").show();
+    $(".key").hide();
+    });
+});
+
+    $(document).ready(function(){
+        $("#optional").click(function(){
+            $(".opt").toggle();
+        });
+        });
+
+    $(".modal").each(function(l){$(this).on("show.bs.modal",function(l){var o=$(this).attr("data-easein");"shake"==o?$(".modal-dialog").velocity("callout."+o):"pulse"==o?$(".modal-dialog").velocity("callout."+o):"tada"==o?$(".modal-dialog").velocity("callout."+o):"flash"==o?$(".modal-dialog").velocity("callout."+o):"bounce"==o?$(".modal-dialog").velocity("callout."+o):"swing"==o?$(".modal-dialog").velocity("callout."+o):$(".modal-dialog").velocity("transition."+o)})});
+
+
+
+</script>
+
+<body></body>
 </html>
