@@ -14,22 +14,22 @@
     }
 </script>
 
-<Navbar title="Dashboard"/>
-<div class="container">
-{#if error_message != ""}
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  {error_message}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{/if}
-<div class="row">
-<div class="col">
-<h4>Access through mnemonic</h4>
-<textarea bind:value={mnemonic}></textarea>
-<button on:click={load_wallet}>Access my wallet</button>
-<a href="/dashboard" id="dashboard" style="display: none">Access</a>
-</div>
-</div>
-</div>
+    <Navbar title="Dashboard"/>
+    <div class="container">
+    {#if error_message != ""}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {error_message}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {/if}
+    <div class="row">
+    <div class="col">
+    <h4>Access through mnemonic</h4>
+    <textarea bind:value={mnemonic}></textarea>
+    <button on:click={load_wallet}>Access my wallet</button>
+    <a href="/dashboard" id="dashboard" style="display: none">Access</a>
+    </div>
+    </div>
+    </div>

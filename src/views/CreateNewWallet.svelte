@@ -53,46 +53,187 @@
         }
     }
 </script>
-<Navbar title="Create New Wallet"/>
-<input type="checkbox" bind:checked={is_256} on:change={generate_random}>24 words
-<button on:click={generate_random}>Generate Random</button>
-<div class="container">
-<div class="row">
-{#each mnemonic as word}
-{#if word!='-'}
-<div class="col-4 mnemonic_entry">{word}</div>
-{:else}
-<input type="text" class="col-4 mnemonic_entry">
-{/if}
-{/each}
-</div>
-<input type="password" bind:value={wallet_password} class:hide={status!=3}>
-<button on:click={generate_wallet} class:hide={status!=3}>Generate Wallet</button>
-<div class="spinner-border" role="status" class:hide={status!=4}>
-  <span class="sr-only">Loading...</span>
-</div>
-<button on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button>
-<button on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>
-<a id="downloadAnchorElem" href="/" style="display:none">Download</a>
-<div class:hide={status!=4}>
-<h4>Please be patient</h4>
-It might take 15 - 45 seconds to generate UTC file
 
-<h4>Don't Lose It</h4>
-Be careful, it can not be recovered if you lose it.
-
-
-<h4>Don't Share It</h4>
-Your funds will be stolen if you use this file on a malicious phishing site.
-
-
-<h4>Make a Backup</h4>
-Secure it like the millions of dollars it may one day be worth.
-<a href="/dashboard" class:hide={status!=5}>Access your dashboard</a>
-</div>
-</div>
 <style>
 .hide{
     display: none;
 }
+
+.form-control{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.mnemonic_entry{
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin:5px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #811515;
+  -webkit-transition: .4s;
+  transition: .4s;
+   border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #888;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.slider:after
+{
+ content:'12';
+ color: white;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 18px;
+ font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after
+{  
+  content:'24';
+}
+
+/*--------- END --------*/
 </style>
+<Navbar title="Create New Wallet" />
+
+    <div class="container">
+        <div class="tm-breadcrumb text-center">
+            <h2>Create a new wallet</h2>Already have a wallet?<a href="accessmywallet.html"><u>Access My Wallet</u></a>
+        </div>
+    </div>
+    
+<div id="tm-area-pricing" class="tm-pricebox-area tm-section bg-grey ">
+    <div class="container center key">
+            <div class="nav-center">
+                <ul class="nav nav-pills">
+                    <li>
+                        <button class="btn btn-default active" style="background: #811515; color:#fff; padding:3px 19px; margin-right: 3px" data-toggle="tab" on:click={generate_random}>Generate Random</button>  
+                        <!-- <a  href="#prices" class="btn btn-default active" style="background: #811515; color:#fff; padding:20px; margin-right: 3px" data-toggle="tab">Generate Random</a> -->
+                    </li>
+                    <li>
+                    <button  class="btn btn-default"  style="background: #811515; color:#fff; padding:3px 19px"  data-toggle="tab" on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button>
+                    <!-- <a href="#features" class="btn btn-default"  style="background: #811515; color:#fff; padding:20px"  data-toggle="tab">By Mnemonic Phrase</a> -->
+                    </li>                        
+                </ul>
+            </div>
+    <!-- <input type="checkbox" bind:checked={is_256} on:change={generate_random}>24 words -->
+
+    <!-- <button on:click={generate_random}>Generate Random</button>   -->
+    <div class="container">
+          <label class="switch"><input type="checkbox" id="togBtn" bind:checked={is_256} on:change={generate_random} >
+            <div class="slider round"></div>
+          </label>
+            <!-- <span style="text-align:center; color: #811515;">
+               <span>12 words</span>  <label  class="switch">
+                <input id="optional" bind:checked={is_256} on:change={generate_random} type="checkbox"> 
+                <span class="slider round"></span>
+            </label><span>24 words</span>
+            </span> -->
+            
+        <div class="row offset-xl-2">            
+            {#each mnemonic as word} {#if word!='-'}
+            <div class="memonics col-3 mnemonic_entry ">{word}</div>
+            {:else}
+            <input type="text" class="col-3 mnemonic_entry form-control"> {/if} {/each}
+        </div>   
+
+    <!-- <button on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button> --><br>
+    <!-- <a href="#mnemonics" class="tm-button tm-button-sm " data-toggle="modal"></a><span style="font-size: 13px; font-weight: 100">Submit Mnemonic</span></a> -->
+    <button class="btn btn-default offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>  
+        </div>
+    </div>   
+</div>
+   <div id="mnemonics" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+                        </div>
+                        <div class="modal-body" style="text-align: center">
+                            <input type="password" bind:value={wallet_password} class:hide={status!=3}><br>
+
+                            <button class="btn btn-default offset-xl-5" on:click={generate_wallet} class:hide={status!=3}>Generate Wallet</button>
+                            
+                              <div class="spinner-border" role="status" class:hide={status!=4}>
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                             <a id="downloadAnchorElem" href="/" style="display:none">Download</a>
+                            <div class:hide={status!=4}>
+                                <h4>Please be patient</h4> It might take 15 - 45 seconds to generate UTC file
+
+                                <h4>Don't Lose It</h4> Be careful, it can not be recovered if you lose it.
+
+                                <h4>Don't Share It</h4> Your funds will be stolen if you use this file on a malicious phishing site.
+
+                                <h4>Make a Backup</h4> Secure it like the millions of dollars it may one day be worth.
+                                <a href="/dashboard" class:hide={status!=5}>Access your dashboard</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+<!-- Wrapper -->
+
+
+
