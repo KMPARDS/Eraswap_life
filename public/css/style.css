@@ -1507,8 +1507,8 @@ input[type=radio]:checked ~ label::before {
 
 /* Section Padding */
 .tm-padding-section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .tm-padding-section-top {
@@ -3418,7 +3418,6 @@ button.tm-videobutton.tm-videobutton-lg span i {
 .tm-sticky-header.is-sticky .tm-navigation > ul > li:hover > a {
   color: #ffffff;
 }
-
 /**
  * Heroslider
  */
@@ -3430,7 +3429,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
   background: -webkit-gradient(linear, left top, right top, from(#811515), to(#694f4d));
   background: -webkit-linear-gradient(left, #811515 0%, #694f4d 100%);
   background: -o-linear-gradient(left, #811515 0%, #694f4d 100%);
-  background: linear-gradient(90deg, #523f3d 0%, #540707 100%);
+  background: linear-gradient(90deg, #6b1111 0%, #170301 100%);
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3885,6 +3884,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 
 .tm-feature-content p {
   margin-bottom: 0;
+  text-align: justify;
 }
 
 .tm-feature:hover .tm-feature-icon svg {

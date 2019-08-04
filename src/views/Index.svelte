@@ -1,22 +1,654 @@
 <script>
     import Navbar from './NavBar.svelte'
+    import Footer from './Footer.svelte'
     let size = 128;
 </script>
+<style>
+.tm-funfact{padding:0px}
+.tm-funfact-icon{margin-bottom:0px}
+    .coin {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  transform-style: preserve-3d;
+  animation: rotate3d 8s linear infinite;
+  transition: all 0.3s;
+}
+.coin__front, .coin__back {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e8d0bb;
+}
+.coin__front:after, .coin__back:after {
+  content: "";
+  position: absolute;
+  left: -150px;
+  bottom: 100%;
+  display: block;
+  height: 200px;
+  width: 600px;
+  background: #fff;
+  opacity: 0.3;
+  animation: shine linear 4s infinite;
+}
+.coin__front {
+  background-image: url("/images/Era-Swap-Coin.png");
+  background-size: cover;
+  transform: translateZ(10px);
+}
+.coin__back {
+  background-image: url("/images/Era-Swap-Coin.png");
+  background-size: cover;
+  transform: translateZ(-10px) rotateY(180deg);
+}
+.coin__edge div:nth-child(1) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #3c2714;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(94.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(2) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #482f18;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(99deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(3) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #55371d;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(103.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(4) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #613f21;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(108deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(5) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #6d4625;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(112.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(6) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #784e29;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(117deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(7) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #84552c;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(121.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(8) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #8e5c30;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(126deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(9) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #996334;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(130.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(10) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #a36937;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(135deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(11) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #ad703a;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(139.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(12) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #b6763e;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(144deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(13) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #bf7c41;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(148.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(14) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #c2824a;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(153deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(15) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #c58853;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(157.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(16) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #c88e5b;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(162deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(17) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #ca9363;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(166.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(18) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #cd986a;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(171deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(19) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #cf9d71;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(175.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(20) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #d1a278;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(180deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(21) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #d4a67f;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(184.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(22) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #d6ab85;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(189deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(23) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #d8af8b;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(193.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(24) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #dab290;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(198deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(25) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #dbb695;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(202.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(26) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #ddb99a;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(207deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(27) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #debd9f;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(211.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(28) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e0bfa3;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(216deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(29) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e1c2a7;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(220.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(30) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e2c4aa;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(225deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(31) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e3c7ad;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(229.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(32) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e4c9b0;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(234deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(33) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e5cab3;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(238.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(34) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e6ccb5;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(243deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(35) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e7cdb7;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(247.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(36) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e7ceb8;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(252deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(37) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e7cfb9;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(256.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(38) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e8d0ba;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(261deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(39) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e8d0bb;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(265.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(40) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e8d0bb;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(270deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(41) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e8d0bb;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(274.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(42) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e8d0ba;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(279deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(43) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e7cfb9;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(283.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(44) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e7ceb8;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(288deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(45) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e7cdb7;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(292.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(46) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e6ccb5;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(297deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(47) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e5cab3;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(301.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(48) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e4c9b0;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(306deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(49) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e3c7ad;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(310.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(50) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e2c4aa;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(315deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(51) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e1c2a7;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(319.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(52) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #e0bfa3;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(324deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(53) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #debd9f;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(328.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(54) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #ddb99a;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(333deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(55) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #dbb695;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(337.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(56) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #dab290;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(342deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(57) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #d8af8b;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(346.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(58) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #d6ab85;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(351deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(59) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #d4a67f;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(355.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(60) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #d1a278;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(360deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(61) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #cf9d71;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(364.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(62) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #cd986a;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(369deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(63) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #ca9363;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(373.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(64) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #c88e5b;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(378deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(65) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #c58853;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(382.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(66) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #c2824a;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(387deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(67) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #bf7c41;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(391.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(68) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #b6763e;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(396deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(69) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #ad703a;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(400.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(70) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #a36937;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(405deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(71) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #996334;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(409.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(72) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #8e5c30;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(414deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(73) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #84552c;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(418.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(74) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #784e29;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(423deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(75) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #6d4625;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(427.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(76) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #613f21;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(432deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(77) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #55371d;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(436.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(78) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #482f18;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(441deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(79) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #3c2714;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(445.5deg) translateX(150px) rotateY(90deg);
+}
+.coin__edge div:nth-child(80) {
+  position: absolute;
+  height: 11.775px;
+  width: 20px;
+  background: #2e1e10;
+  transform: translateY(144.1125px) translateX(140px) rotateZ(450deg) translateX(150px) rotateY(90deg);
+}
+.coin__shadow {
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 100px 100px #000;
+  opacity: 0.125;
+  transform: rotateX(90deg) translateZ(-330px) scale(0.5);
+}
+@keyframes rotate3d {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+@keyframes shine {
+  0%, 15% {
+    transform: translateY(600px) rotate(-40deg);
+  }
+  50% {
+    transform: translateY(-300px) rotate(-40deg);
+  }
+}
 
-
-<div class="container-fluid">
-<div class="row">
-<a class="col-sm" href="/create-new-wallet">Create new wallet</a>
-<a class="col-sm" href="/access-my-wallet">Access my wallet</a>
-</div>
-</div>
-
-    <!-- Preloader -->
-    <!--// Preloader -->
-
+</style>
     <!-- Wrapper -->
-    <div id="wrapper" class="wrapper">
-        <Navbar title="EraSwap"/>
+    <div id="wrapper" class="wrapper">        
+          <div class="tm-header tm-header-fixed tm-sticky-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-9 col-9">
+                            <div class="lrg-logo"></div>
+                    </div>
+                    <div class="col-lg-9 col-md-3 col-3">
+                       <Navbar title="EraSwap"/>
+                    </div>
+                </div>
+                <div class="tm-mobilenav"></div>
+            </div>
+        </div>
+
         <!-- Heroslider Area -->
         <div id="tm-area-heroslider" class="tm-heroslider">
             <div class="tm-heroslider-inner">
@@ -25,15 +657,13 @@
                     <div class="row align-items-center">
                         <div class="col-xl-8 col-lg-7 order-2 order-lg-1">
                             <div class="tm-heroslider-content">
-                                <h1>Awesome Design<br> to Showcase your app</h1>
-                                <p>An App is a term to describe a web-based program. These web-based or mobile
-                                    applications
-                                    perform a specific task for the user.</p>
+                                <h1>Era Swap Life</h1>
+                                <p>Era Swap Life is the gateway to the one world of Era Swap Ecosystem. <br>Let’s Swap to Next Era, together!!</p>
                                 <div class="tm-buttongroup">
-                                    <a href="/" class="tm-button tm-button-lg tm-button-white tm-button-transparent"><i
-                                            class="zmdi zmdi-android"></i><span>Google Play</span></a>
-                                    <a href="/" class="tm-button tm-button-lg tm-button-white tm-button-transparent"><i
-                                            class="zmdi zmdi-apple"></i><span>IOS App Store</span></a>
+                                    <a href="/create-new-wallet"class="tm-button tm-button-lg tm-button-white tm-button-transparent"><i
+                                            class="zmdi zmdi-android"></i><span>Create New Wallet</span></a>
+                                    <a href="/access-my-wallet" class="tm-button tm-button-lg tm-button-white tm-button-transparent"><i
+                                            class="zmdi zmdi-apple"></i><span>Access My Wallet</span></a>
                                 </div>
                                 <a href="#tm-area-features" class="tm-heroslider-scrolldown">
                                     <i class="zmdi zmdi-square-down"></i>
@@ -42,7 +672,22 @@
                         </div>
                         <div class="col-xl-4 col-lg-5 order-1 order-lg-2">
                             <div class="tm-heroslider-mobileshow">
-                                <img src="https://www.myetherwallet.com/img/spaceman.95f84509.png" alt="appmyil mobile">
+                                <!-- <img src="https://www.myetherwallet.com/img/spaceman.95f84509.png" alt="appmyil mobile"> -->
+                                <div class="coin">
+                                    <div class="coin__front"></div>
+                                    <div class="coin__edge">
+                                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                    </div>
+                                    <div class="coin__back"></div>
+                                    <div class="coin__shadow"></div>
+                                </div>
                                 <div class="tm-heroslider-mobileshowanim">
                                     <span></span>
                                     <span></span>
@@ -58,12 +703,17 @@
 
         <!-- Page Content -->
         <main class="page-content">
-
             <!-- Features Area -->
             <div id="tm-area-features" class="tm-features-area tm-section tm-padding-section bg-white">
                 <div class="container">
+                        <div class="tm-sectiontitle text-center">
+                        <!-- <h2>About Era Swap Life</h2> -->                           
+                            <h4>Why One App Era Swap Life</h4>
+                              <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
+                              <br>
+                        </div>
                     <div class="row justify-content-center mt-30-reverse">
-
+                            
                         <!-- Single Features -->
                         <div class="col-lg-4 col-md-6 col-12 mt-30">
                             <div class="tm-feature">
@@ -75,9 +725,8 @@
                                     </svg>
                                 </span>
                                 <div class="tm-feature-content">
-                                    <h4>Quick Access</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmod tempor inc
-                                        ididunt ut labore</p>
+                                    <h5>Era Swap Token (ES)</h5>
+                                    <p>is a decentralized utility token currently based on Ethereum blockchain (ERC20) used on multiple platforms for exchange of services (P2P), avail discounts, rewards and more utility.</p>
                                 </div>
                             </div>
                         </div>
@@ -94,9 +743,8 @@
                                     </svg>
                                 </span>
                                 <div class="tm-feature-content">
-                                    <h4>Secured Data</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmod tempor inc
-                                        ididunt ut labore</p>
+                                    <h5>Era Swap Ecosystem (ESE)</h5>
+                                    <p>includes all inter-linked platforms where ES can be utilized for multiple utilities. The ecosystem consists of platforms offering P2P services and usage to community members.</p>
                                 </div>
                             </div>
                         </div>
@@ -113,9 +761,8 @@
                                     </svg>
                                 </span>
                                 <div class="tm-feature-content">
-                                    <h4>Layout Flexible</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmod tempor inc
-                                        ididunt ut labore</p>
+                                    <h5>Total Utility Reward (TUR)</h5>
+                                    <p>is the total ES rewards that will be generated in Workpool. This reward will be distributed to the community members in 50% liquid and 50% TA locked through TimeAlly DApp (TA).</p>
                                 </div>
                             </div>
                         </div>
@@ -127,17 +774,132 @@
             <!--// Features Area -->
 
             <!-- About Us Area -->
-            <div id="tm-area-about" class="tm-about-area tm-section tm-padding-section bg-grey">
+            <div id="tm-area-about" class="tm-about-area tm-section tm-padding-section" style="background: #eef2f4">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-lg-8">
+                        <div class="col-lg-12">
                             <div class="tm-sectiontitle text-center">
-                                <h2>About Appmyil</h2>
-                                <span class="tm-sectiontitle-divider"><i class="zmdi zmdi-fullscreen"></i></span>
+                                <!-- <h2>About Era Swap Life</h2> -->                               
+                                  <h4>Why One App Era Swap Life</h4>
+                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
+                                   <br><br>
+                                <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
+                                <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
                             </div>
+                            
                         </div>
                     </div>
-                    <div class="row align-items-center">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">Affiliate Programme</p>                                        
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">Decentralized Token Vesting Platform</p>                                        
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">Decentralized Wallet</p>                                        
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">P2P Marketplace Platform</p>                                        
+                                </div>
+                            </div> 
+                        </div>
+                       
+                        <br><br>
+                         <div class="row">
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">Social Community Platform</p>                                        
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">Merchants & Shoppers e-Retail Points</p>                                        
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">eLearning Platform</p>                                        
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">Decentralized Prediction Platform</p>                                        
+                                </div>
+                            </div> 
+                        </div>
+
+                         <br><br>
+                         <div class="row">
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">Multi Exchange Solution</p>                                        
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">P2P Lend & Borrow</p>                                        
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p style="font-size:13px">P2P Exchange</p>                                        
+                                </div>
+                            </div> 
+                            <!-- <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                    </span>
+                                    <p>Affiliate Programme</p>                                        
+                                </div>
+                            </div>  -->
+                        </div>
+                    </div>
+                </div>
+                    <!-- <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="tm-about-image">
                                 <img class="tm-about-mobilethumb" src="images/about-mobile.png" alt="about mobile">
@@ -145,14 +907,11 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="tm-about-content">
-                                <h4>Why People Choose Our App</h4>
-                                <h6>A mobile app or mobile application is a computer program designed to run on a
-                                    mobile device.</h6>
-                                <p>Mobile apps were originally offered for general productivity and information
-                                    retrieval. However public demand and the availability of developer tools drove
-                                    rapid expansion into other categories. </p>
+                                <h4>Why One App Era Swap Life:</h4>
+                                <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
+                                <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
                                 <ul class="stylish-list">
-                                    <li><i class="zmdi zmdi-check"></i> Apps are generally downloaded from application.</li>
+                                    <li><i class="zmdi zmdi-check"></i> Affiliate Program</li>
                                     <li><i class="zmdi zmdi-check"></i> Most mobile devices are sold with several apps
                                         bundled.</li>
                                     <li><i class="zmdi zmdi-check"></i> Mobile apps were originally offered for general
@@ -162,7 +921,7 @@
                                 <a href="/" class="tm-button"><span>Read More</span></a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!--// About Us Area -->
@@ -173,8 +932,9 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
-                                <h2>Advance Features</h2>
-                                <span class="tm-sectiontitle-divider"><i class="zmdi zmdi-fullscreen"></i></span>
+                                <h2>Advantages to Era Swap Community Members</h2>
+                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
+                                <br><br>
                             </div>
                         </div>
                     </div>
@@ -193,10 +953,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4>User Friendly</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris
-                                                arcu, lobortis id interdum vitae, interdum eget elit. Cura
-                                                bitur quis urna nulla. Suspendisse potenti.</p>
+                                            <h4>One App</h4>
+                                            <p>OneApp for all platforms of ecosystem giving ease of access and convenience</p>
                                         </div>
                                     </div>
                                 </div>
@@ -213,10 +971,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4>Easy to customize</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris
-                                                arcu, lobortis id interdum vitae, interdum eget elit. Cura
-                                                bitur quis urna nulla. Suspendisse potenti.</p>
+                                            <h4>Integrated with Wallet</h4>
+                                            <p>Integrated with your Wallet to receive all benefits from inter-linked apps at one stop</p>
                                         </div>
                                     </div>
                                 </div>
@@ -233,10 +989,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4>App store support</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris
-                                                arcu, lobortis id interdum vitae, interdum eget elit. Cura
-                                                bitur quis urna nulla. Suspendisse potenti.</p>
+                                            <h4>Self Control</h4>
+                                            <p>Control and privacy in your hands as the private keys stays with you only</p>
                                         </div>
                                     </div>
                                 </div>
@@ -253,10 +1007,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4>Perfect Showcase</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris
-                                                arcu, lobortis id interdum vitae, interdum eget elit. Cura
-                                                bitur quis urna nulla. Suspendisse potenti.</p>
+                                            <h4>Mapping</h4>
+                                            <p>Mapped with your usage, utility, rewards and referrals</p>
                                         </div>
                                     </div>
                                 </div>
@@ -267,7 +1019,7 @@
                         <div class="col-lg-6">
                             <div class="tm-service-image">
                                 <div class="tm-service-image-1 is-visible">
-                                    <img src="https://www.myetherwallet.com/img/spaceman.95f84509.png" alt="appmyil mobile">
+                                    <img src="/images/Rocket.png" alt="appmyil mobile">
                                 </div>
                                 <div class="tm-service-image-2">
                                     <img src="images/service-image-2.png" alt="appmyil mobile">
@@ -442,3 +1194,5 @@
 
 
     </div>
+
+     <Footer />
