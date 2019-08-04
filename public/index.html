@@ -34,9 +34,37 @@
         $('ul').toggleClass('active');
     });
   });
-  </script>
-  <script>
     $(".modal").each(function(l){$(this).on("show.bs.modal",function(l){var o=$(this).attr("data-easein");"shake"==o?$(".modal-dialog").velocity("callout."+o):"pulse"==o?$(".modal-dialog").velocity("callout."+o):"tada"==o?$(".modal-dialog").velocity("callout."+o):"flash"==o?$(".modal-dialog").velocity("callout."+o):"bounce"==o?$(".modal-dialog").velocity("callout."+o):"swing"==o?$(".modal-dialog").velocity("callout."+o):$(".modal-dialog").velocity("transition."+o)})});
+    refer="";
+    base_url = "http://13.234.115.87:8000/"
+    function submit_refer(){
+        if(refer){
+            post("graph/refer",{address:refer})
+        }
+    }
+
+    async function post(url, d) {
+    formData = new FormData();
+    formData.set("signature",await wallet.signMessage(await $.get(base_url+"userprofile/nonce",{})));
+    $.each(d, function(key, value){
+      console.log(key);
+      formData.set(key, value);
+    })
+
+
+    data = await $.ajax({
+                       url: base_url+url,
+                       type: "POST",
+                       data: formData,
+                       cache: false,
+                       processData: false,
+                       contentType: false,
+                       success: function(data) {
+                           console.log(data)
+                       }
+                   });
+    return data
+}
 </script>
   <body></body>
 </html>

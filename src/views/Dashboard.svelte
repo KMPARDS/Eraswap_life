@@ -23,6 +23,7 @@
         }
     });
 
+
     async function load_website(event) {
         let url = event.srcElement.attributes.data.value;
     	website = await window.open( url, this);

@@ -33,7 +33,7 @@
                                 <div class="tm-pricebox-price">
                                    <textarea bind:value={mnemonic}></textarea>
                                     
-                                    <!-- <a href="/dashboard" id="dashboard" style="display: none">Access</a> -->
+                                   <a href="/dashboard" id="dashboard" style="display: none">Access</a>
                                 </div>
                                 
                             </div>
@@ -54,4 +54,3 @@
                 </div>
             </div>              
         <!--// Breadcrumb Area -->
-<br><br>

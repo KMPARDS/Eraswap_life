@@ -20,10 +20,10 @@
                     <div class="single-widget widget-quicklinks">
                         <h5 class="widget-title">Services</h5>
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a rel="noopener noreferrer">About</a></li>
+                            <li><a rel="noopener noreferrer">Blog</a></li>
+                            <li><a rel="noopener noreferrer">FAQs</a></li>
+                            <li><a rel="noopener noreferrer">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -31,10 +31,10 @@
                     <div class="single-widget widget-quicklinks">
                         <h5 class="widget-title">Support</h5>
                         <ul>
-                            <li><a href="#">Help center</a></li>
-                            <li><a href="#">How it work</a></li>
-                            <li><a href="#">Terms of use</a></li>
-                            <li><a href="#">Forum</a></li>
+                            <li><a rel="noopener noreferrer">Help center</a></li>
+                            <li><a rel="noopener noreferrer">How it work</a></li>
+                            <li><a rel="noopener noreferrer">Terms of use</a></li>
+                            <li><a rel="noopener noreferrer">Forum</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,36 +64,36 @@
         <div class="tm-footer-bottomarea">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <p class="tm-footer-copyright">Copyright 2019 <a href="#">appmyil</a>. Designed by <a href="#">thememarch</a></p>
+                    <p class="tm-footer-copyright">Copyright 2019 <a rel="noopener noreferrer">appmyil</a>. Designed by <a rel="noopener noreferrer">thememarch</a></p>
                 </div>
                 <div class="col-md-5">
                     <ul class="tm-footer-social">
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-facebook"></i>
                                 <i class="zmdi zmdi-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-dribbble"></i>
                                 <i class="zmdi zmdi-dribbble"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-behance"></i>
                                 <i class="zmdi zmdi-behance"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-twitter"></i>
                                 <i class="zmdi zmdi-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-pinterest"></i>
                                 <i class="zmdi zmdi-pinterest"></i>
                             </a>

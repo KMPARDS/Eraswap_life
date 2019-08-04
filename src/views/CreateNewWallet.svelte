@@ -159,7 +159,7 @@ input:checked + .slider:after
 
     <div class="container">
         <div class="tm-breadcrumb text-center">
-            <h2>Create a new wallet</h2>Already have a wallet?<a href="accessmywallet.html"><u>Access My Wallet</u></a>
+            <h2>Create a new wallet</h2>Already have a wallet?<a href="access-my-wallet"><u>Access My Wallet</u></a>
         </div>
     </div>
     

@@ -2,6 +2,11 @@
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
     let size = 128;
+    function get_query(name){
+       if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+          return decodeURIComponent(name[1]);
+    }
+    refer = get_query("refer")
 </script>
 <style>
 .tm-funfact{padding:0px}
