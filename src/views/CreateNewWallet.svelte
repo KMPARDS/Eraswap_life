@@ -1,5 +1,6 @@
 <script>
     import Navbar from './NavBar.svelte'
+    import Footer from './Footer.svelte'
     let size = 256;
     let is_256 = true;
     let mnemonic = bip39.generateMnemonic(size).split(" ");
@@ -155,7 +156,9 @@ input:checked + .slider:after
 
 /*--------- END --------*/
 </style>
+<div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
 <Navbar title="Create New Wallet" />
+</div><br><br><br><br>
 
     <div class="container">
         <div class="tm-breadcrumb text-center">
@@ -235,6 +238,6 @@ input:checked + .slider:after
                 </div>
         </div>
 <!-- Wrapper -->
-
+<Footer />
 
 

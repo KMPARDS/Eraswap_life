@@ -1,5 +1,6 @@
 <script>
     import Navbar from './NavBar.svelte'
+    import Footer from './Footer.svelte'
     let mnemonic="";
     let error_message="";
     function load_wallet() {
@@ -13,9 +14,9 @@
         }
     }
 </script>
-
+<div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
     <Navbar title="Dashboard"/>
-
+</div><br><br><br><br>
  <div class="container">
                 <div class="tm-breadcrumb text-center">
                     <h2 style="font-size: 32px; font-weight:100">Access My Wallet</h2>Do not have a wallet? 
@@ -33,12 +34,12 @@
                                 <div class="tm-pricebox-price">
                                    <textarea bind:value={mnemonic}></textarea>
                                     
-                                    <!-- <a href="/dashboard" id="dashboard" style="display: none">Access</a> -->
+                                    <a href="/dashboard" id="dashboard" style="display: none">Access</a>
                                 </div>
                                 
                             </div>
                             <div class="tm-pricebox-footer">
-                                <button class="tm-button tm-button-sm tm-button-dark" on:click={load_wallet}>Access my wallet</button>
+                                <button class="tm-button tm-button-sm" on:click={load_wallet}><span style="color:#fff">Access my wallet</span></button>
                             </div>
                               {#if error_message != ""}
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -55,3 +56,5 @@
             </div>              
         <!--// Breadcrumb Area -->
 <br><br>
+
+<Footer />

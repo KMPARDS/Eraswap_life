@@ -1184,7 +1184,7 @@ input[type=radio]:checked ~ label::before {
   background: -webkit-gradient(linear, left top, right top, from(#811515), to(#694f4d));
   background: -webkit-linear-gradient(left, #811515 0%, #694f4d 100%);
   background: -o-linear-gradient(left, #811515 0%, #694f4d 100%);
-  background: linear-gradient(90deg, #811515 0%, #694f4d 100%);
+  background: linear-gradient(90deg, #6b1111 0%, #170301 100%);
 }
 
 /* Background Image */
@@ -1944,7 +1944,7 @@ button.tm-button span {
   z-index: 3;
   vertical-align: baseline;
   font-weight: 100;
-  font-size: 14px
+  font-size: 17px
 }
 
 .tm-button i,
@@ -2031,7 +2031,7 @@ button.tm-button.tm-button-white.tm-button-transparent::after {
 a.tm-button.tm-button-white.tm-button-transparent:hover,
 button.tm-button.tm-button-white.tm-button-transparent:hover {
   background: #ffffff;
-  color: #a00d08;
+  color: #a00d08 !important;
 }
 
 .tm-button.tm-button-dark,
@@ -4534,7 +4534,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 
 .tm-funfact {
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 16px 0 15px rgba(0, 0, 0, 0.1);
   background: #F5F9FB;
   padding: 10px;
   padding: 45px 0;
@@ -6319,6 +6319,16 @@ button.tm-videobutton.tm-videobutton-lg span i {
   .tm-footer-copyright {
     text-align: center;
   }
+  .navbar-brand{  
+      width:150px;  
+  }
+  .navbar-light .navbar-toggler{
+    background: #fff
+  }
+  .navbar-nav{
+    /* background: white; */
+    color: #000
+  }
 }
 
 .tm-footer-widgets .widget-title {
@@ -6384,3 +6394,4 @@ button.tm-videobutton.tm-videobutton-lg span i {
 }
 
 /*# sourceMappingURL=style.css.map */
+

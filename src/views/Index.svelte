@@ -636,15 +636,8 @@
     <!-- Wrapper -->
     <div id="wrapper" class="wrapper">        
           <div class="tm-header tm-header-fixed tm-sticky-header">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-9 col-9">
-                            <div class="lrg-logo"></div>
-                    </div>
-                    <div class="col-lg-9 col-md-3 col-3">
-                       <Navbar title="EraSwap"/>
-                    </div>
-                </div>
+            <div class="container">              
+                     <Navbar title="EraSwap"/>
                 <div class="tm-mobilenav"></div>
             </div>
         </div>
@@ -660,10 +653,8 @@
                                 <h1>Era Swap Life</h1>
                                 <p>Era Swap Life is the gateway to the one world of Era Swap Ecosystem. <br>Let’s Swap to Next Era, together!!</p>
                                 <div class="tm-buttongroup">
-                                    <a href="/create-new-wallet"class="tm-button tm-button-lg tm-button-white tm-button-transparent"><i
-                                            class="zmdi zmdi-android"></i><span>Create New Wallet</span></a>
-                                    <a href="/access-my-wallet" class="tm-button tm-button-lg tm-button-white tm-button-transparent"><i
-                                            class="zmdi zmdi-apple"></i><span>Access My Wallet</span></a>
+                                    <a href="/create-new-wallet"class="tm-button tm-button-lg tm-button-white tm-button-transparent"><span>Create New Wallet</span></a>
+                                    <a href="/access-my-wallet" class="tm-button tm-button-lg tm-button-white tm-button-transparent"><span>Access My Wallet</span></a>
                                 </div>
                                 <a href="#tm-area-features" class="tm-heroslider-scrolldown">
                                     <i class="zmdi zmdi-square-down"></i>
@@ -704,11 +695,11 @@
         <!-- Page Content -->
         <main class="page-content">
             <!-- Features Area -->
-            <div id="tm-area-features" class="tm-features-area tm-section tm-padding-section bg-white">
+            <div id="tm-area-features" class="tm-features-area tm-section tm-padding-section bg-white" >
                 <div class="container">
                         <div class="tm-sectiontitle text-center">
                         <!-- <h2>About Era Swap Life</h2> -->                           
-                            <h4>Why One App Era Swap Life</h4>
+                            <h4>Era Swap Life is Gateway to</h4>
                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
                               <br>
                         </div>
@@ -1038,7 +1029,7 @@
 
             <!--// Video & Funfact Area -->
             <!-- Frequently Ask Question -->
-            <div id="tm-area-faq" class="tm-faq-area tm-section tm-padding-section bg-white">
+            <!-- <div id="tm-area-faq" class="tm-faq-area tm-section tm-padding-section bg-white">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -1055,7 +1046,7 @@
                             </div>
                         </div>
                         <div class="col-lg-7">
-                            <!-- Accordion Wrapper -->
+                            
                             <div id="tm-accordion1" class="tm-accordion">
 
                                 <div class="card">
@@ -1183,11 +1174,11 @@
                                 </div>
 
                             </div>
-                            <!--// Accordion Wrapper -->
+                            
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--// Frequently Ask Question -->
         </main>
         <!--// Page Content -->
