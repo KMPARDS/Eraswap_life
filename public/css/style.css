@@ -2306,7 +2306,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 
 .tm-sectiontitle-divider::before, .tm-sectiontitle-divider::after {
   content: "";
-  background-image: url(../images/title-shape.min.png);
+  background-image: url(../images/title-shape-min.png);
   display: inline-block;
   width: 70px;
   height: 7px;
@@ -2496,7 +2496,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
   content: "";
   position: absolute;
   border: 0;
-  background-image: url(../images/icons/down-caret.min.png);
+  background-image: url(../images/icons/down-caret-min.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;

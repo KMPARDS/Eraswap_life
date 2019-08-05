@@ -1660,7 +1660,7 @@ button.tm-readmore:hover i {
 
 .tm-sectiontitle-divider::before, .tm-sectiontitle-divider::after {
   content: "";
-  background-image: url(../images/title-shape.min.png);
+  background-image: url(../images/title-shape-min.png);
   display: inline-block;
   width: 70px;
   height: 7px;

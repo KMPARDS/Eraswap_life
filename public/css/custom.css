@@ -196,7 +196,7 @@ footer h4{
   width: 300px;
   height: 50px;
   text-align: center;
-  background-image: url('https://www.timeally.io/images/logo.min.png');
+  background-image: url('https://www.timeally.io/images/logo-min.png');
   background-repeat: no-repeat;
 }
 
@@ -204,7 +204,7 @@ footer h4{
   width: 200px;
   height: 20px;
   text-align: center;
-  background-image: url('https://www.timeally.io/images/logo.min.png');
+  background-image: url('https://www.timeally.io/images/logo-min.png');
 }
 
 .ptb-50{
@@ -380,7 +380,7 @@ footer h4{
   width:100%;
   height:100%;
   /* background:#981d09; */
-  background-image: url(Era-Swap-Coin_PNG.min.png);
+  background-image: url(Era-Swap-Coin_PNG-min.png);
   
   transform:scale(0.95);
   overflow:hidden;
