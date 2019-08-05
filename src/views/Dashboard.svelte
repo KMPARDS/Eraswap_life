@@ -174,7 +174,7 @@
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->                               
                                   <h2><b>Era Swap Life is Gateway to</b></h2>
-                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
+                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.min.png"></span>
                                    <br><br>                               
                             </div>
                             
@@ -186,28 +186,28 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/1App_web_logos-01.png" alt="">
+                                        <img src="/images/1App_web_logos-01.min.png" alt="">
                                     </span>                                                                         
                                 </div>
                             </div> 
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/A.png" alt=""  data="http://timeswappers.com/wallet-login" on:click={load_website}>
+                                        <img src="/images/A.min.png" alt=""  data="http://timeswappers.com/wallet-login" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/b.png" alt="">
+                                        <img src="/images/b.min.png" alt="">
                                     </span>
                                 </div>
                             </div> 
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/c.png" alt="">
+                                        <img src="/images/c.min.png" alt="">
                                     </span>
                                 </div>
                             </div> 
@@ -219,28 +219,28 @@
                            <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/d.png" alt="" data="http://localhost:8081/" on:click={load_website}>
+                                        <img src="/images/d.min.png" alt="" data="http://localhost:8081/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div> 
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/e.png" alt="">
+                                        <img src="/images/e.min.png" alt="">
                                     </span>
                                 </div>
                             </div> 
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/f.png" alt="">
+                                        <img src="/images/f.min.png" alt="">
                                     </span>
                                 </div>
                             </div> 
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/g.png" alt="">
+                                        <img src="/images/g.min.png" alt="">
                                     </span>
                                 </div>
                             </div> 

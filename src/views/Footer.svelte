@@ -1,7 +1,7 @@
 <!-- Footer Area -->
 <div class="tm-footer bg-gradient">
     <!-- <div class="tm-footer-bgshape">
-        <img src="/images/es_newlogo-white.png" alt="footer background shape">
+        <img src="/images/es_newlogo-white.min.png" alt="footer background shape">
     </div> -->
     <div class="container">
         <div class="tm-footer-toparea tm-padding-section" style="padding-top: 30px !important; padding-bottom: 3px !important;">
@@ -9,7 +9,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12">
                     <div class="single-widget widget-info">
                         <a href="index.html" class="widget-info-logo">
-                            <img src="/images/es_newlogo-white.png" alt="appmyil logo">
+                            <img src="/images/es_newlogo-white.min.png" alt="appmyil logo">
                         </a>
                         <!-- <p>Dolor enim sit et perferendis quia in. Sed perferendis aliquid quo vel
                             necessitatibus commodi similique et. Veniam ducimus sed rerum cumque ipsum eos

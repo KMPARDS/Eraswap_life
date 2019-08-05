@@ -30,7 +30,7 @@
                                 <h4>Access through mnemonic</h4>
                             </div>
                             <div class="tm-pricebox-body"><br>
-                                <img src="assets/images/computer.png" alt="">
+                                <img src="assets/images/computer.min.png" alt="">
                                 <div class="tm-pricebox-price">
                                    <textarea bind:value={mnemonic}></textarea>
                                     

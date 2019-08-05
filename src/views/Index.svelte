@@ -41,12 +41,12 @@
   animation: shine linear 4s infinite;
 }
 .coin__front {
-  background-image: url("/images/Era-Swap-Coin.png");
+  background-image: url("/images/Era-Swap-Coin.min.png");
   background-size: cover;
   transform: translateZ(10px);
 }
 .coin__back {
-  background-image: url("/images/Era-Swap-Coin.png");
+  background-image: url("/images/Era-Swap-Coin.min.png");
   background-size: cover;
   transform: translateZ(-10px) rotateY(180deg);
 }
@@ -650,7 +650,7 @@
         <!-- Heroslider Area -->
         <div id="tm-area-heroslider" class="tm-heroslider">
             <div class="tm-heroslider-inner">
-                <img src="images/heroslider-overlay-shape.png" alt="heroslider ovelay" class="tm-heroslider-ovelayshape">
+                <img src="images/heroslider-overlay-shape.min.png" alt="heroslider ovelay" class="tm-heroslider-ovelayshape">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-8 col-lg-7 order-2 order-lg-1">
@@ -668,7 +668,7 @@
                         </div>
                         <div class="col-xl-4 col-lg-5 order-1 order-lg-2">
                             <div class="tm-heroslider-mobileshow">
-                                <!-- <img src="https://www.myetherwallet.com/img/spaceman.95f84509.png" alt="appmyil mobile"> -->
+                                <!-- <img src="https://www.myetherwallet.com/img/spaceman.95f84509.min.png" alt="appmyil mobile"> -->
                                 <div class="coin">
                                     <div class="coin__front"></div>
                                     <div class="coin__edge">
@@ -705,7 +705,7 @@
                         <div class="tm-sectiontitle text-center">
                         <!-- <h2>About Era Swap Life</h2> -->                           
                             <h4>Era Swap Life is Gateway to</h4>
-                              <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
+                              <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.min.png"></span>
                               <br>
                         </div>
                     <div class="row justify-content-center mt-30-reverse">
@@ -777,7 +777,7 @@
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->                               
                                   <h4>Why One App Era Swap Life</h4>
-                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
+                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.min.png"></span>
                                    <br><br>
                                 <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
                                 <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
@@ -791,7 +791,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Affiliate Programme</p>                                        
                                 </div>
@@ -799,7 +799,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Decentralized Token Vesting Platform</p>                                        
                                 </div>
@@ -807,7 +807,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Decentralized Wallet</p>                                        
                                 </div>
@@ -815,7 +815,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Marketplace Platform</p>                                        
                                 </div>
@@ -827,7 +827,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Social Community Platform</p>                                        
                                 </div>
@@ -835,7 +835,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Merchants & Shoppers e-Retail Points</p>                                        
                                 </div>
@@ -843,7 +843,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">eLearning Platform</p>                                        
                                 </div>
@@ -851,7 +851,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Decentralized Prediction Platform</p>                                        
                                 </div>
@@ -863,7 +863,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Multi Exchange Solution</p>                                        
                                 </div>
@@ -871,7 +871,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Lend & Borrow</p>                                        
                                 </div>
@@ -879,7 +879,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Exchange</p>                                        
                                 </div>
@@ -887,7 +887,7 @@
                             <!-- <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9.min.png" alt="">
                                     </span>
                                     <p>Affiliate Programme</p>                                        
                                 </div>
@@ -898,7 +898,7 @@
                     <!-- <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="tm-about-image">
-                                <img class="tm-about-mobilethumb" src="images/about-mobile.png" alt="about mobile">
+                                <img class="tm-about-mobilethumb" src="images/about-mobile.min.png" alt="about mobile">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -929,7 +929,7 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h2>Advantages to Era Swap Community Members</h2>
-                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
+                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.min.png"></span>
                                 <br><br>
                             </div>
                         </div>
@@ -1015,10 +1015,10 @@
                         <div class="col-lg-6">
                             <div class="tm-service-image">
                                 <div class="tm-service-image-1 is-visible">
-                                    <img src="/images/Rocket.png" alt="appmyil mobile">
+                                    <img src="/images/Rocket.min.png" alt="appmyil mobile">
                                 </div>
                                 <div class="tm-service-image-2">
-                                    <img src="images/service-image-2.png" alt="appmyil mobile">
+                                    <img src="images/service-image-2.min.png" alt="appmyil mobile">
                                 </div>
                                 <div class="tm-service-mobileshowanim">
                                     <span></span>
@@ -1047,7 +1047,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-5">
                             <div class="tm-faq-image">
-                                <img src="images/faq-image.png" alt="faq image">
+                                <img src="images/faq-image.min.png" alt="faq image">
                             </div>
                         </div>
                         <div class="col-lg-7">
