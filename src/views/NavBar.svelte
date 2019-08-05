@@ -14,10 +14,10 @@
       <!-- <li class="nav-item active" style="margin-right: 8px;">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/dashboard">Dashboard</a>
       </li> -->
-      <li class="nav-item" style="margin-right: 8px;">
+      <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/create-new-wallet">Create New Wallet</a>
       </li>
-      <li class="nav-item" style="margin-right: 8px;">
+      <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/access-my-wallet">Access My Wallet</a>
       </li>
     </ul>

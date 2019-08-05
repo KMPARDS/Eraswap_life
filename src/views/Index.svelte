@@ -9,7 +9,7 @@
     refer = get_query("refer")
 </script>
 <style>
-.tm-funfact{padding:0px}
+.tm-funfact{padding:0px; margin-bottom:10px}
 .tm-funfact-icon{margin-bottom:0px}
     .coin {
   position: relative;
@@ -791,7 +791,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/9.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Affiliate Programme</p>                                        
                                 </div>
@@ -799,15 +799,15 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/10.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Decentralized Token Vesting Platform</p>                                        
+                                    <p style="font-size:13px">Decentralized Token Vesting</p>                                        
                                 </div>
                             </div> 
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/8.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Decentralized Wallet</p>                                        
                                 </div>
@@ -815,7 +815,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/2.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Marketplace Platform</p>                                        
                                 </div>
@@ -827,7 +827,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/12.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Social Community Platform</p>                                        
                                 </div>
@@ -835,15 +835,15 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/11.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Merchants & Shoppers e-Retail Points</p>                                        
+                                    <p style="font-size:13px">Merchants & Shoppers e-Retail</p>                                        
                                 </div>
                             </div> 
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/3.png" alt="">
                                     </span>
                                     <p style="font-size:13px">eLearning Platform</p>                                        
                                 </div>
@@ -851,7 +851,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/5.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Decentralized Prediction Platform</p>                                        
                                 </div>
@@ -863,7 +863,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/6.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Multi Exchange Solution</p>                                        
                                 </div>
@@ -871,7 +871,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/7.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Lend & Borrow</p>                                        
                                 </div>
@@ -879,7 +879,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="/images/1.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Exchange</p>                                        
                                 </div>

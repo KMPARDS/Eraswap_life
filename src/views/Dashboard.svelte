@@ -45,7 +45,7 @@
 </script>
 
 <style>
-.tm-funfact{padding:0px}
+.tm-funfact{padding:0px; margin-bottom:10px;}
 .tm-funfact-icon{margin-bottom:0px}
     .coin {
   position: relative;
@@ -62,7 +62,7 @@
     </div>
     <br><br><br><br>
         <div class="tm-breadcrumb text-center">
-            <h2 style="font-size: 32px; font-weight:100">Dashboard</h2>
+            <!-- <h2 style="font-size: 32px; font-weight:100"></h2> -->
             <!-- <a href="createmywallet.html" class="tm-button"><span>Create A New Wallet</span></a> -->
         </div>
     <div class="container">
@@ -81,7 +81,7 @@
         <div class="col-lg-8 col-md-6 col-12 mt-30">
             <div class="tm-pricebox text-center">
                 <div class="tm-pricebox-header">
-                    <h4>Basic</h4>
+                    <h4>Dashboard</h4>
                 </div>
                 <div class="tm-pricebox-body">                                  
                     <ul>
@@ -243,8 +243,16 @@
                                         <img src="/images/g-min.png" alt="">
                                     </span>
                                 </div>
+                            </div>
+                        </div><br><br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="/images/betdeex-logo.png" alt="">
+                                    </span>
+                                </div>
                             </div> 
-                             
                         </div>
                          <br><br>                        
                     </div>

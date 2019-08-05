@@ -3,7 +3,8 @@
     import Footer from './Footer.svelte'
     let size = 256;
     let is_256 = true;
-    let mnemonic = bip39.generateMnemonic(size).split(" ");
+    let clipboard = bip39.generateMnemonic(size)
+    let mnemonic = clipboard.split(" ");
     let saved_mnemonic = mnemonic;
     let wallet_password="";
     let wallet = "";
@@ -13,7 +14,9 @@
         status = 1;
         noted = false;
         let size = is_256? 256: 128;
-        mnemonic = bip39.generateMnemonic(size).split(" ");
+        clipboard = bip39.generateMnemonic(size)
+        mnemonic = clipboard.split(" ");
+
     }
     let matching = false;
     async function generate_wallet(event) {
@@ -32,6 +35,7 @@
     }
     function noted_down() {
         saved_mnemonic = mnemonic.slice();
+        
         noted=true;
         let size = is_256? 6: 3;
         for(let i=0;i<size;i++){
@@ -53,6 +57,15 @@
             status = 3
         }
     }
+
+
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+
 
 </script>
 
@@ -184,16 +197,22 @@ input:checked + .slider:after
 
     <!-- <button on:click={generate_random}>Generate Random</button>   -->
     <div class="container">
-          <label class="switch"><input type="checkbox" id="togBtn" bind:checked={is_256} on:change={generate_random} >
-            <div class="slider round"></div>
-          </label>
+         
             <!-- <span style="text-align:center; color: #811515;">
                <span>12 words</span>  <label  class="switch">
                 <input id="optional" bind:checked={is_256} on:change={generate_random} type="checkbox"> 
                 <span class="slider round"></span>
             </label><span>24 words</span>
             </span> -->
-            
+            <p style="text-align:left;">
+                <label class="switch"><input type="checkbox" id="togBtn" bind:checked={is_256} on:change={generate_random} >
+                    <div class="slider round"></div>
+                </label>
+                <span style="float:right;">
+                    <button on:click={myFunction} style="border:none"><img src="images/clipboard.png"> </button>
+                </span>
+                <input type="text" bind:value={clipboard} id="myInput" style="display: none">
+            </p>
         <div class="row offset-xl-2">            
             {#each mnemonic as word} {#if word!='-'}
             <div class="memonics col-3 mnemonic_entry ">{word}</div>
@@ -207,7 +226,7 @@ input:checked + .slider:after
         </div>
     </div>   
 </div>
-   <div id="mnemonics" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+    <div id="mnemonics" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
