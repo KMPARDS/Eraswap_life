@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>EraSwap Shop</title><link rel="apple-touch-icon" href="images/favicon-min.png"><link rel="shortcut icon" href="images/favicon.ico"><link rel="stylesheet" href="css/custom.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/custom.css"><link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css"><link href="https://eraswaptechnologies.com/assets/css/plugins.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Google Font (font-family: 'Roboto', sans-serif;) --><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet"><!-- Google Font ('Poppins', sans-serif;) --><link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"><link href="/css/index.11f2d967f699837c3a62.css" rel="prefetch"><link href="/css/something.11f2d967f699837c3a62.css" rel="prefetch"><link href="/js/index.11f2d967f699837c3a62.js" rel="prefetch"><link href="/js/something.11f2d967f699837c3a62.js" rel="prefetch"></head><script src="js/jquery.min.js"></script><script src="js/bip39.min.js"></script><script src="js/ethers.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js"></script><script src="js/bootstrap.min.js"></script><script type="text/javascript">$(document).ready(function(){
+    $('.toggle').click(function(){
+        $('.toggle').toggleClass('active');
+        $('ul').toggleClass('active');
+    });
+  });
+    $(".modal").each(function(l){$(this).on("show.bs.modal",function(l){var o=$(this).attr("data-easein");"shake"==o?$(".modal-dialog").velocity("callout."+o):"pulse"==o?$(".modal-dialog").velocity("callout."+o):"tada"==o?$(".modal-dialog").velocity("callout."+o):"flash"==o?$(".modal-dialog").velocity("callout."+o):"bounce"==o?$(".modal-dialog").velocity("callout."+o):"swing"==o?$(".modal-dialog").velocity("callout."+o):$(".modal-dialog").velocity("transition."+o)})});
+    refer="";
+    base_url = "http://13.234.115.87:8000/"
+
+    function submit_refer(){
+        if(refer){
+            post("graph/refer",{address:refer})
+        }
+    }
+
+
+    async function get(data){
+        data["signature"]=await wallet.signMessage(await $.get(base_url+"userprofile/nonce",{}))
+        return $.get(base_url+"graph/first_time",data)
+    }
+
+
+    async function post(url, d) {
+    formData = new FormData();
+    formData.set("signature",await wallet.signMessage(await $.get(base_url+"userprofile/nonce",{})));
+    $.each(d, function(key, value){
+      console.log(key);
+      formData.set(key, value);
+    })
+
+
+    data = await $.ajax({
+                       url: base_url+url,
+                       type: "POST",
+                       data: formData,
+                       cache: false,
+                       processData: false,
+                       contentType: false,
+                       success: function(data) {
+                           console.log(data)
+                       }
+                   });
+    return data
+}</script><body><script type="text/javascript" src="/js/main.11f2d967f699837c3a62.js"></script></body></html>
