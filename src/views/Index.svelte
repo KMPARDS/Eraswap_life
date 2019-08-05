@@ -355,259 +355,259 @@
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e7ceb8;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(288deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(45) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e7cdb7;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(292.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(46) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e6ccb5;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(297deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(47) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e5cab3;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(301.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(48) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e4c9b0;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(306deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(49) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e3c7ad;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(310.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(50) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e2c4aa;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(315deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(51) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e1c2a7;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(319.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(52) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #e0bfa3;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(324deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(53) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #debd9f;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(328.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(54) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #ddb99a;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(333deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(55) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #dbb695;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(337.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(56) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #dab290;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(342deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(57) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #d8af8b;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(346.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(58) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #d6ab85;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(351deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(59) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #d4a67f;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(355.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(60) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #d1a278;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(360deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(61) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #cf9d71;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(364.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(62) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #cd986a;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(369deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(63) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #ca9363;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(373.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(64) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #c88e5b;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(378deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(65) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #c58853;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(382.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(66) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #c2824a;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(387deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(67) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #bf7c41;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(391.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(68) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #b6763e;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(396deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(69) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #ad703a;
+  background:gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(400.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(70) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #a36937;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(405deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(71) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #996334;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(409.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(72) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #8e5c30;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(414deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(73) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #84552c;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(418.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(74) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #784e29;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(423deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(75) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #6d4625;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(427.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(76) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #613f21;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(432deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(77) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #55371d;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(436.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(78) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #482f18;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(441deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(79) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #3c2714;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(445.5deg) translateX(150px) rotateY(90deg);
 }
 .coin__edge div:nth-child(80) {
   position: absolute;
   height: 11.775px;
   width: 20px;
-  background: #2e1e10;
+  background: gold;
   transform: translateY(144.1125px) translateX(140px) rotateZ(450deg) translateX(150px) rotateY(90deg);
 }
 .coin__shadow {
