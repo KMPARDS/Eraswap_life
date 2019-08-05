@@ -64,36 +64,36 @@
         <div class="tm-footer-bottomarea">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <p class="tm-footer-copyright">Copyright 2019 <a href="#">Era Swap Life</a> | Era Swap White Paper | AML Policy | Disclaimer</p>
+                    <p class="tm-footer-copyright">Copyright 2019 <a rel="noopener noreferrer">appmyil</a>. Designed by <a rel="noopener noreferrer">thememarch</a></p>
                 </div>
                 <div class="col-md-5">
                     <ul class="tm-footer-social">
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-facebook"></i>
                                 <i class="zmdi zmdi-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-dribbble"></i>
                                 <i class="zmdi zmdi-dribbble"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-behance"></i>
                                 <i class="zmdi zmdi-behance"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-twitter"></i>
                                 <i class="zmdi zmdi-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a rel="noopener noreferrer">
                                 <i class="zmdi zmdi-pinterest"></i>
                                 <i class="zmdi zmdi-pinterest"></i>
                             </a>
