@@ -21,7 +21,8 @@
     })();
 
     window.addEventListener('message', function(event) {
-        if(event.origin === "http://localhost:8000"){
+        console.log(window.origin)
+        if(event.origin != "http://localhost:8000/"){
             if(website){
                 website.postMessage(wallet.privateKey,"*");
             }else{
@@ -36,14 +37,13 @@
         let url = event.srcElement.attributes.data.value;
     	website = await window.open( url, this);
     }
-    
-    function load_dayswappers() {
-        console.log("sadf")
-        document.getElementById("computeex").click();
-    }
+
+    // function load_dayswappers() {
+    //     console.log("sadf")
+    //     document.getElementById("computeex").click();
+    // }
 </script>
 
-</script>
 <style>
 .tm-funfact{padding:0px}
 .tm-funfact-icon{margin-bottom:0px}
@@ -77,39 +77,31 @@
 {/if}
   <div class="row justify-content-center">
 
-                        <!-- Single Pricebox -->
-                        <div class="col-lg-4 col-md-6 col-12 mt-30">
-                            <div class="tm-pricebox text-center">
-                                <div class="tm-pricebox-header">
-                                    <h4>Basic</h4>
-                                </div>
-                                <div class="tm-pricebox-body">                                  
-                                    <ul>
-                                        <li>ETH Balance - {balance}</li>
-                                        <li> Address - {address}</li>
-                                        <!-- <li>Webmail Access</li> -->
-                                        <!-- <li class="disabled">Unlimited attachment</li> -->
-                                        <!-- <li class="disabled">SSL Security</li> -->
-                                    </ul>
-                                </div>
-                                <div class="tm-pricebox-footer">
-                                    <button class="col-6" data="http://localhost:8000/login" on:click={load_website}>Computeex</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!--// Single Pricebox -->
-
+        <!-- Single Pricebox -->
+        <div class="col-lg-8 col-md-6 col-12 mt-30">
+            <div class="tm-pricebox text-center">
+                <div class="tm-pricebox-header">
+                    <h4>Basic</h4>
+                </div>
+                <div class="tm-pricebox-body">                                  
+                    <ul>
+                        <li>ETH Balance - {balance}</li>
+                        <li> Address - {address}</li>
+                        <!-- <li>Webmail Access</li> -->
+                        <!-- <li class="disabled">Unlimited attachment</li> -->
+                        <!-- <li class="disabled">SSL Security</li> -->
+                    </ul>
+                </div>
+                <div class="tm-pricebox-footer">
+                    <button class="col-6" data="http://localhost:8000/login" on:click={load_website}>Computeex</button>
+                </div>
+            </div>
+        </div>
+        <!--// Single Pricebox -->
   </div>
-<div class="row">
-    <div class="col-6">
-        ETH Balance - {balance}
-        <br>
-        Address - {address}
-    </div>
-</div>
-<div class="row">
-<button class="col-4" data="http://localhost:8000/login" on:click={load_website} id="computeex">Computeex</button>
+  <br><br>
 
+<div class="row">
 <button class="btn btn-default offset-xl-5"  id="refer_model" data-toggle="modal" data-target="#model"  style="display: none">Submit</button>
 <button class="btn btn-default offset-xl-5"  id="first_time" data-toggle="modal" data-target="#model2"  style="display: none">asdf</button>
 
@@ -167,27 +159,21 @@
                                     <div class="tm-mailchimp-error"></div>
                                 </div>
                                 <!--// Mailchimp Alerts -->
+                                </div>
                             </div>
                         </div>
-
-
-                        </div>
-
                     </div>
                 </div>
           </div>
-
-
-
     </div>
 </div>
-<div id="tm-area-about" class="tm-about-area tm-section tm-padding-section" style="background: #eef2f4">
+        <div id="tm-area-about" class="tm-about-area tm-section tm-padding-section" style="background: #eef2f4">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->                               
-                                  <h2><b>Why One App Era Swap Life</b></h2>
+                                  <h2><b>Era Swap Life is Gateway to</b></h2>
                                    <span class="tm-sectiontitle-divider"><img src="/images/divider-logo.png"></span>
                                    <br><br>                               
                             </div>
@@ -233,7 +219,7 @@
                            <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/d.png" alt="">
+                                        <img src="/images/d.png" alt="" data="http://localhost:8081/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div> 

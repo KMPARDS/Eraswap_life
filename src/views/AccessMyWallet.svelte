@@ -24,7 +24,7 @@
                 </div>
                 <div class="row">
                     <!-- Single Pricebox -->
-                    <div class="offset-xl-4 col-lg-4 col-md-6 col-12 mt-30">
+                    <div class="offset-xl-2 col-lg-8 col-md-8 col-12 mt-30">
                         <div class="tm-pricebox text-center">
                             <div class="tm-pricebox-header">
                                 <h4>Access through mnemonic</h4>

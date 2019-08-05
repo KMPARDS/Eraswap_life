@@ -8,11 +8,12 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active" style="margin-right: 8px;">
+    <ul class="navbar-nav mr-auto navbar-right">
+      <!-- <li class="nav-item active" style="margin-right: 8px;">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/dashboard">Dashboard</a>
-      </li>
+      </li> -->
       <li class="nav-item" style="margin-right: 8px;">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/create-new-wallet">Create New Wallet</a>
       </li>
