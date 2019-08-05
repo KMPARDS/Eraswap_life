@@ -37,11 +37,19 @@
     $(".modal").each(function(l){$(this).on("show.bs.modal",function(l){var o=$(this).attr("data-easein");"shake"==o?$(".modal-dialog").velocity("callout."+o):"pulse"==o?$(".modal-dialog").velocity("callout."+o):"tada"==o?$(".modal-dialog").velocity("callout."+o):"flash"==o?$(".modal-dialog").velocity("callout."+o):"bounce"==o?$(".modal-dialog").velocity("callout."+o):"swing"==o?$(".modal-dialog").velocity("callout."+o):$(".modal-dialog").velocity("transition."+o)})});
     refer="";
     base_url = "http://13.234.115.87:8000/"
+
     function submit_refer(){
         if(refer){
             post("graph/refer",{address:refer})
         }
     }
+
+
+    async function get(data){
+        data["signature"]=await wallet.signMessage(await $.get(base_url+"userprofile/nonce",{}))
+        return $.get(base_url+"graph/first_time",data)
+    }
+
 
     async function post(url, d) {
     formData = new FormData();
