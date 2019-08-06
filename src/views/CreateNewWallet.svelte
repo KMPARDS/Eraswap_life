@@ -65,8 +65,6 @@ function myFunction() {
   document.execCommand("copy");
   alert("Copied the text: " + copyText.value);
 }
-
-
 </script>
 
 <style>
@@ -219,16 +217,17 @@ input:checked + .slider:after
         </div>
     </div>   
 </div>
-    <div id="mnemonics" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+        <div id="mnemonics" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
                         </div>
                         <div class="modal-body" style="text-align: center">
-                            <input type="password" bind:value={wallet_password} class:hide={status!=3}><br>
+                            <img src="/images/logo-22.png" alt="">
+                            <input type="password" bind:value={wallet_password} class:hide={status!=3} placeholder="Enter your password"><br><br>
 
-                            <button class="btn btn-default offset-xl-5" on:click={generate_wallet} class:hide={status!=3}>Generate Wallet</button>
+                            <button class="tm-button tm-button-sm " on:click={generate_wallet} class:hide={status!=3}><span style="color:#fff">Generate Wallet</span></button>
                             
                               <div class="spinner-border" role="status" class:hide={status!=4}>
                                     <span class="sr-only">Loading...</span>
@@ -249,6 +248,8 @@ input:checked + .slider:after
                     </div>
                 </div>
         </div>
+
+        
 <!-- Wrapper -->
 <Footer />
 

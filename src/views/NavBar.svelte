@@ -15,10 +15,11 @@
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/dashboard">Dashboard</a>
       </li> -->
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
-        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/create-new-wallet">Create New Wallet</a>
+       <!-- <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/create-new-wallet" >Access My Wallet</a> -->
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" data-toggle="modal" data-target="#terms"  >Create New Wallet</a>
       </li>
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
-        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/access-my-wallet">Access My Wallet</a>
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/access-my-wallet" >Access My Wallet</a>
       </li>
     </ul>
   </div>

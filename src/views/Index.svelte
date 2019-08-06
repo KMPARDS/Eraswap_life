@@ -658,7 +658,7 @@
                                 <h1>Era Swap Life</h1>
                                 <p>Era Swap Life is the gateway to the one world of Era Swap Ecosystem. <br>Let’s Swap to Next Era, together!!</p>
                                 <div class="tm-buttongroup">
-                                    <a href="/create-new-wallet"class="tm-button tm-button-lg tm-button-white tm-button-transparent"><span>Create New Wallet</span></a>
+                                    <a href="/create-new-wallet"class="tm-button tm-button-lg tm-button-white tm-button-transparent" data-toggle="modal" data-target="#terms" ><span>Create New Wallet</span></a>
                                     <a href="/access-my-wallet" class="tm-button tm-button-lg tm-button-white tm-button-transparent"><span>Access My Wallet</span></a>
                                 </div>
                                 <a href="#tm-area-features" class="tm-heroslider-scrolldown">
