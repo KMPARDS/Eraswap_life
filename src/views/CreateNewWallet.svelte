@@ -115,7 +115,7 @@ function myFunction() {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #811515;
+  background-color: #888;
   -webkit-transition: .4s;
   transition: .4s;
    border-radius: 34px;
@@ -135,7 +135,7 @@ function myFunction() {
 }
 
 input:checked + .slider {
-  background-color: #888;
+  background-color: #811515;
 }
 
 input:focus + .slider {
@@ -175,7 +175,7 @@ input:checked + .slider:after
 
     <div class="container">
         <div class="tm-breadcrumb text-center">
-            <h2>Create a new wallet</h2>Already have a wallet?<a href="access-my-wallet"><u>Access My Wallet</u></a>
+            <h2>Create a new wallet</h2>Already have a wallet?<a href="access-my-wallet"><b> Access My Wallet</b></a>
         </div>
     </div>
     
@@ -188,7 +188,7 @@ input:checked + .slider:after
                         <!-- <a  href="#prices" class="btn btn-default active" style="background: #811515; color:#fff; padding:20px; margin-right: 3px" data-toggle="tab">Generate Random</a> -->
                     </li>
                     <li>
-                    <button  class="btn btn-default"  style="background: #811515; color:#fff; padding:3px 19px"  data-toggle="tab" on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button>
+                    <button  class="btn btn-default"  style="background: #811515; color:#fff; padding:3px 19px"  data-toggle="tab" on:click={noted_down} class:hide={status!=1}>I Wrote down My Mnemonic Phrase</button>
                     <!-- <a href="#features" class="btn btn-default"  style="background: #811515; color:#fff; padding:20px"  data-toggle="tab">By Mnemonic Phrase</a> -->
                     </li>                        
                 </ul>
@@ -197,22 +197,15 @@ input:checked + .slider:after
 
     <!-- <button on:click={generate_random}>Generate Random</button>   -->
     <div class="container">
-         
-            <!-- <span style="text-align:center; color: #811515;">
-               <span>12 words</span>  <label  class="switch">
-                <input id="optional" bind:checked={is_256} on:change={generate_random} type="checkbox"> 
-                <span class="slider round"></span>
-            </label><span>24 words</span>
-            </span> -->
-            <p style="text-align:left;">
-                <label class="switch"><input type="checkbox" id="togBtn" bind:checked={is_256} on:change={generate_random} >
-                    <div class="slider round"></div>
-                </label>
-                <span style="float:right;">
-                    <button on:click={myFunction} style="border:none"><img src="images/clipboard.png"> </button>
-                </span>
-                <input type="text" bind:value={clipboard} id="myInput" style="display: none">
-            </p>
+        <p style="text-align:left;">
+            <label class="switch"><input type="checkbox" id="togBtn" bind:checked={is_256} on:change={generate_random} >
+                <div class="slider round"></div>
+            </label>
+            <span style="float:right;">
+                <button on:click={myFunction} style="border:none"><img src="images/clipboard.png"> </button>
+            </span>
+            <input type="text" bind:value={clipboard} id="myInput" style="display: none">
+        </p>
         <div class="row offset-xl-2">            
             {#each mnemonic as word} {#if word!='-'}
             <div class="memonics col-3 mnemonic_entry ">{word}</div>
