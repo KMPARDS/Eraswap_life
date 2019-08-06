@@ -1018,7 +1018,6 @@
                                     <img src="/images/Rocket-min.png" alt="appmyil mobile">
                                 </div>
                                 <div class="tm-service-image-2">
-                                    <img src="images/service-image-2-min.png" alt="appmyil mobile">
                                 </div>
                                 <div class="tm-service-mobileshowanim">
                                     <span></span>
