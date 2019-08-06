@@ -1,6 +1,13 @@
 <script>
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
+
+	import { onMount } from 'svelte';
+
+    onMount(async () => {
+        document.getElementById("pop_up").click();
+	});
+
     let size = 256;
     let is_256 = true;
     let clipboard = bip39.generateMnemonic(size)
@@ -35,7 +42,7 @@
     }
     function noted_down() {
         saved_mnemonic = mnemonic.slice();
-        
+
         noted=true;
         let size = is_256? 6: 3;
         for(let i=0;i<size;i++){
@@ -65,6 +72,9 @@ function myFunction() {
   document.execCommand("copy");
   alert("Copied the text: " + copyText.value);
 }
+
+
+
 </script>
 
 <style>
@@ -161,7 +171,7 @@ input:checked + .slider:before {
 }
 
 input:checked + .slider:after
-{  
+{
   content:'24';
 }
 
@@ -170,6 +180,35 @@ input:checked + .slider:after
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
 <Navbar title="Create New Wallet" />
 </div><br><br><br><br>
+
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" id="pop_up" data-toggle="modal" data-target="#terms"  style="display: none">Create New Wallet</a>
+
+
+
+    <div id="terms" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+              </div>
+              <div class="modal-body" style="text-align: center">
+                <img src="/images/logo-22.png" alt=""><br><br>
+                <h3>What is Era Swap Life Wallet? </h3>
+                ES Life Wallet is a free, open-source, client-side interface.  ES Life Wallet allows you to interact directly with the blockchain, while you remain in full control of your keys and funds.<br><br>
+
+Please think about this carefully. YOU are the one who is in control.  ES Life Wallet is not a bank or exchange. We don't hold your keys, your funds, or your information. This means we can't access accounts, recover keys, reset passwords, or reverse transactions.<br><br>
+
+<b class="text-danger">WARNING: You And Only You Are Responsible For Your Security.</b><br><br>
+
+
+<a class="nav-link text-white tm-button tm-button-lg" data-dismiss="modal" aria-hidden="true"><span style="color:#fff">Proceed</span></a>
+              </div>
+
+          </div>
+      </div>
+</div>
+
+
 
     <div class="container">
         <div class="tm-breadcrumb text-center">
