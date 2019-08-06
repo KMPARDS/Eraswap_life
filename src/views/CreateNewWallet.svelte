@@ -1,7 +1,6 @@
 <script>
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
-
 	import { onMount } from 'svelte';
 
     onMount(async () => {
@@ -35,6 +34,7 @@
             dlAnchorElem.setAttribute("download", "UTC-"+wallet.address+".json");
             dlAnchorElem.click();
             status = 5
+            document.getElementById("password_modal").click()
         }else{
             alert("Invalid Input ")
         }
@@ -46,7 +46,7 @@
         let size = is_256? 6: 3;
         for(let i=0;i<size;i++){
             let index = Math.floor(Math.random()*mnemonic.length);
-            mnemonic[index] = "-"
+           mnemonic[index] = "-"
         }
         status = 2
     }
@@ -61,6 +61,9 @@
         noted = input_entry.substring(0,saved_mnemonic.join(" ").length) == saved_mnemonic.join(" ");
         if(noted){
             status = 3
+        }else{
+            status = 2;
+            console.log("not matched", input_entry.substring(0,saved_mnemonic.join(" ").length), saved_mnemonic.join(" "))
         }
     }
 
@@ -102,9 +105,9 @@ function myFunction() {
 
 .mnemonic_entry{
   border-bottom: 1px solid #ccc;
-  padding: 10px;
+  /*padding: 10px;*/
   text-align: center;
-  margin:5px;
+  /*margin:5px;*/
 }
 .switch {
   position: relative;
@@ -174,7 +177,12 @@ input:checked + .slider:after
   content:'24';
 }
 
-/*--------- END --------*/
+
+.red_button {
+    background: #a00d08 !important;
+    display: block;
+}
+
 </style>
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
 <Navbar title="Create New Wallet" />
@@ -242,12 +250,16 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
         </p>
         <div class="row offset-xl-2">            
             {#each mnemonic as word, i} {#if word!='-'}
-            <div class="memonics col-3 mnemonic_entry ">{i+1}. {word}</div>
+            <div class="memonics col-3">{i+1}. <div class="mnemonic_entry">{word}</div></div>
             {:else}
-            {i+1}. <input type="text" class="col-3 mnemonic_entry form-control"> {/if} {/each}
+            <div class="col-3">
+            {i+1}. <input type="text" class="mnemonic_entry form-control" on:change={check_noted}>
+            </div>
+            {/if} {/each}
         </div>   
 
-    <button class="btn btn-default offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>
+    <button class="btn btn-default offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}>Submit Mnemonic</button>
+    <a href="/access-my-wallet" class="btn btn-default offset-xl-5" class:hide={status!=5}>Access your dashboard</a>
         </div>
     </div>   
 </div>
@@ -255,7 +267,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="password_modal"> × </button>
                         </div>
                         <div class="modal-body" style="text-align: center">
                             <img src="/images/logo-22.png" alt="">
@@ -275,16 +287,12 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                                 <h4>Don't Share It</h4> Your funds will be stolen if you use this file on a malicious phishing site.
 
                                 <h4>Make a Backup</h4> Secure it like the millions of dollars it may one day be worth.
-                                <a href="/dashboard" class:hide={status!=5}>Access your dashboard</a>
                             </div>
                         </div>
                         
                     </div>
                 </div>
         </div>
-
-        
-<!-- Wrapper -->
 <Footer />
 
 
