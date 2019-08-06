@@ -240,7 +240,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/g-min.png" alt="">
+                                        <img src="/images/g-min.png" alt="" data="https://www.timeally.io/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
@@ -249,7 +249,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/betdeex-logo.png" alt="">
+                                        <img src="/images/betdeex-logo-min.png" alt="">
                                     </span>
                                 </div>
                             </div> 
