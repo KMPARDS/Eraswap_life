@@ -1,6 +1,7 @@
 <script>
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
+    import Logo from './Logo.svelte'
     let mnemonic="";
     let error_message="";
     let keystore="";
@@ -84,7 +85,7 @@ async function load_by_private() {
                                                     <div class="tm-pricebox-body"><br>
                                                      <div class="row">
                                                             <div class="offset-xl-3 col-md-6">
-                                                        <img src="/images/logo-22.png" alt="">
+                                                            <Logo />
 
 
                                                         <div class="tm-pricebox-price">
@@ -124,7 +125,7 @@ async function load_by_private() {
                                                         <div class="tm-pricebox-body"><br>
                                                          <div class="row">
                                                             <div class="offset-xl-2 col-md-8">
-                                                            <img src="/images/logo-22.png" alt="">
+                                                            <Logo />
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
                                                             <textarea bind:value={mnemonic}></textarea>    
@@ -159,7 +160,7 @@ async function load_by_private() {
                                                             <div class="tm-pricebox-body"><br>
                                                             <div class="row">
                                                                 <div class="offset-xl-3 col-md-6">
-                                                                <img src="/images/logo-22.png" alt="">
+                                                                <Logo />
                                                                 <input type="text" bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
                                                                                                                          

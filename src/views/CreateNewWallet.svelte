@@ -1,6 +1,8 @@
 <script>
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
+    import Logo from './Logo.svelte'
+
 	import { onMount } from 'svelte';
 
     onMount(async () => {
@@ -9,7 +11,7 @@
 
     let size = 256;
     let is_256 = true;
-    let clipboard = bip39.generateMnemonic(size)
+    let clipboard = bip39.generateMnemonic(size);
     let mnemonic = clipboard.split(" ");
     let saved_mnemonic = mnemonic;
     let wallet_password="";
@@ -199,7 +201,7 @@ input:checked + .slider:after
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
               </div>
               <div class="modal-body" style="text-align: center">
-                <img src="/images/logo-22.png" alt=""><br><br>
+                <Logo /><br><br>
                 <h3>What is Era Swap Life Wallet? </h3>
                 ES Life Wallet is a free, open-source, client-side interface.  ES Life Wallet allows you to interact directly with the blockchain, while you remain in full control of your keys and funds.<br><br>
 
@@ -243,9 +245,9 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             <label class="switch"><input type="checkbox" id="togBtn" bind:checked={is_256} on:change={generate_random} >
                 <div class="slider round"></div>
             </label>
-            <span style="float:right;">
+            <!-- <span style="float:right;">
                 <button on:click={myFunction} style="border:none"><img src="images/clipboard.png"> </button>
-            </span>
+            </span> -->
             <input type="text" bind:value={clipboard} id="myInput" style="display: none">
         </p>
         <div class="row offset-xl-2">            
@@ -270,7 +272,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="password_modal"> × </button>
                         </div>
                         <div class="modal-body" style="text-align: center">
-                            <img src="/images/logo-22.png" alt="">
+                            <Logo />
                             <input type="password" bind:value={wallet_password} class:hide={status!=3} placeholder="Enter your password"><br><br>
 
                             <button class="tm-button tm-button-sm " on:click={generate_wallet} class:hide={status!=3}><span style="color:#fff">Generate Wallet</span></button>
