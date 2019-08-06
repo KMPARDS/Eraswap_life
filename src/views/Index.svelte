@@ -791,7 +791,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/9.png" alt="">
+                                        <img src="/images/9-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Affiliate Programme</p>                                        
                                 </div>
@@ -799,7 +799,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/10.png" alt="">
+                                        <img src="/images/10-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Decentralized Token Vesting</p>                                        
                                 </div>
@@ -807,7 +807,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/8.png" alt="">
+                                        <img src="/images/8-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Decentralized Wallet</p>                                        
                                 </div>
@@ -815,7 +815,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/2.png" alt="">
+                                        <img src="/images/2-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Marketplace Platform</p>                                        
                                 </div>
@@ -827,7 +827,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/12.png" alt="">
+                                        <img src="/images/12-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Social Community Platform</p>                                        
                                 </div>
@@ -835,7 +835,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/11.png" alt="">
+                                        <img src="/images/11-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Merchants & Shoppers e-Retail</p>                                        
                                 </div>
@@ -843,7 +843,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/3.png" alt="">
+                                        <img src="/images/3-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">eLearning Platform</p>                                        
                                 </div>
@@ -851,7 +851,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/5.png" alt="">
+                                        <img src="/images/5-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Decentralized Prediction Platform</p>                                        
                                 </div>
@@ -863,7 +863,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/6.png" alt="">
+                                        <img src="/images/6-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Multi Exchange Solution</p>                                        
                                 </div>
@@ -871,7 +871,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/7.png" alt="">
+                                        <img src="/images/7-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Lend & Borrow</p>                                        
                                 </div>
@@ -879,7 +879,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/1.png" alt="">
+                                        <img src="/images/1-min.png" alt="">
                                     </span>
                                     <p style="font-size:13px">P2P Exchange</p>                                        
                                 </div>
@@ -887,7 +887,7 @@
                             <!-- <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min.png" alt="">
+                                        <img src="https://eraswapwallet.com/img/icons/9-min-min.png" alt="">
                                     </span>
                                     <p>Affiliate Programme</p>                                        
                                 </div>
@@ -1018,7 +1018,6 @@
                                     <img src="/images/Rocket-min.png" alt="appmyil mobile">
                                 </div>
                                 <div class="tm-service-image-2">
-                                    <img src="images/service-image-2-min.png" alt="appmyil mobile">
                                 </div>
                                 <div class="tm-service-mobileshowanim">
                                     <span></span>
