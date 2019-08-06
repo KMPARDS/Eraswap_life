@@ -3,9 +3,14 @@
     import Footer from './Footer.svelte'
     let mnemonic="";
     let error_message="";
+    let keystore="";
+    let wallet_password="";
+    let load_wallet_message = "Load wallet";
+    let private_key ="";
+    let provider = new ethers.providers.InfuraProvider("kovan");
+
     function load_wallet() {
         try{
-            let provider = new ethers.providers.InfuraProvider("kovan");
             let wallet = ethers.Wallet.fromMnemonic(mnemonic);
             window.wallet = new ethers.Wallet(wallet.privateKey, provider)
             document.getElementById("dashboard").click()
@@ -13,6 +18,45 @@
             error_message = "Invalid Mnemonic";
         }
     }
+    
+    function load_keystore(event){
+    let uploadedFile = event.target.files[0];
+
+    let filename = uploadedFile.name;
+
+    let readFile = new FileReader();
+    readFile.onload = function(e) {
+        let contents = e.target.result;
+        let json = JSON.parse(contents);
+        keystore = json;
+    };
+    readFile.readAsText(uploadedFile);
+}
+
+async function load_by_keystore() {
+    load_wallet_message = "Loading.."
+    try{
+    window.wallet  = await ethers.Wallet.fromEncryptedJson(JSON.stringify(keystore), wallet_password)
+
+            window.wallet = new ethers.Wallet(wallet.privateKey, provider)
+
+            document.getElementById("dashboard").click()
+}catch (e) {
+  error_message = "Password and keystore do not match"
+}
+    load_wallet_message = "Load Wallet";
+}
+
+async function load_by_private() {
+    try{
+        window.wallet = await new ethers.Wallet(private_key);
+            window.wallet = new ethers.Wallet(wallet.privateKey, provider)
+        document.getElementById("dashboard").click()
+    }catch (e) {
+        error_message = "Invalid private key";
+    }
+}
+
 </script>
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
     <Navbar title="Dashboard"/>
@@ -41,16 +85,21 @@
                                                      <div class="row">
                                                             <div class="offset-xl-3 col-md-6">
                                                         <img src="/images/logo-22.png" alt="">
+
+
                                                         <div class="tm-pricebox-price">
-                                                          <input type="password" placeholder="Enter the Password">
-                                                                                                                  
+                                                          <input type="file"  on:change={load_keystore}>
                                                         </div>
+
+                                                        <div class="tm-pricebox-price">
+                                                          <input type="password" bind:value={wallet_password} placeholder="Enter the Password">
+                                                        </div>
+
                                                         </div>
                                                         </div>
                                                     </div>
                                                     <div class="tm-pricebox-footer">
-                                                   
-                                                        <button class="tm-button tm-button-sm"><span style="color:#fff">Upload Keystore file</span></button>
+                                                        <button class="tm-button tm-button-sm" on:click={load_by_keystore}><span style="color:#fff">{load_wallet_message}</span></button>
                                                     </div>
                                                     {#if error_message != ""}
                                                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -111,7 +160,7 @@
                                                             <div class="row">
                                                                 <div class="offset-xl-3 col-md-6">
                                                                 <img src="/images/logo-22.png" alt="">
-                                                                <input type="text" placeholder="Enter Private Key">
+                                                                <input type="text" bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
                                                                                                                          
                                                                 </div>
@@ -119,7 +168,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="tm-pricebox-footer">
-                                                                <button class="tm-button tm-button-sm"><span style="color:#fff">Access Wallet</span></button>
+                                                                <button class="tm-button tm-button-sm" on:click={load_by_private}><span style="color:#fff">Access Wallet</span></button>
                                                             </div>
                                                             {#if error_message != ""}
                                                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
