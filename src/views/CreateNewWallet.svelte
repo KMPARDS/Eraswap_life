@@ -23,7 +23,6 @@
         let size = is_256? 256: 128;
         clipboard = bip39.generateMnemonic(size)
         mnemonic = clipboard.split(" ");
-
     }
     let matching = false;
     async function generate_wallet(event) {
@@ -67,7 +66,7 @@
 
 
 function myFunction() {
-  var copyText = document.getElementById("myInput");
+  let copyText = document.getElementById("myInput");
   copyText.select();
   document.execCommand("copy");
   alert("Copied the text: " + copyText.value);
@@ -230,9 +229,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                     </li>                        
                 </ul>
             </div>
-    <!-- <input type="checkbox" bind:checked={is_256} on:change={generate_random}>24 words -->
 
-    <!-- <button on:click={generate_random}>Generate Random</button>   -->
     <div class="container">
         <p style="text-align:left;">
             <label class="switch"><input type="checkbox" id="togBtn" bind:checked={is_256} on:change={generate_random} >
@@ -244,15 +241,13 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             <input type="text" bind:value={clipboard} id="myInput" style="display: none">
         </p>
         <div class="row offset-xl-2">            
-            {#each mnemonic as word} {#if word!='-'}
-            <div class="memonics col-3 mnemonic_entry ">{word}</div>
+            {#each mnemonic as word, i} {#if word!='-'}
+            <div class="memonics col-3 mnemonic_entry ">{i+1}. {word}</div>
             {:else}
-            <input type="text" class="col-3 mnemonic_entry form-control"> {/if} {/each}
+            {i+1}. <input type="text" class="col-3 mnemonic_entry form-control"> {/if} {/each}
         </div>   
 
-    <!-- <button on:click={noted_down} class:hide={status!=1}>Noted Mnemonic</button> --><br>
-    <!-- <a href="#mnemonics" class="tm-button tm-button-sm " data-toggle="modal"></a><span style="font-size: 13px; font-weight: 100">Submit Mnemonic</span></a> -->
-    <button class="btn btn-default offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>  
+    <button class="btn btn-default offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2}>Submit Mnemonic</button>
         </div>
     </div>   
 </div>
