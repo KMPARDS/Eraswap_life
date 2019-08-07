@@ -14,8 +14,9 @@
             if(first_time==="True")
                 document.getElementById("first_time").click()
             if(refer)document.getElementById("refer_model").click()
-
+            error_message=""
         }catch (e) {
+            console.log(e)
             error_message = 'Wallet not loaded. Please Load your wallet '
         }
     })();
@@ -145,7 +146,7 @@
                                 <h3>Join Day Swappers Affiliate Programme</h3>
                                 <p>You are requested to complete your KYC to be eligible to avail Day Swappers rewards</p>
                                 <form id="tm-mailchimp-form" class="tm-subscribe-form text-center">
-                                    <button id="mc-submit" type="button" class="tm-button" data="http://dayswappers.org" on:click={load_website}><span>Now</span></button>
+                                    <button id="mc-submit" type="button" class="tm-button" ><span  data="http://dayswappers.org" on:click={load_website}>Now</span></button>
                                     <button id="mc-submit" type="button" class="tm-button" data-dismiss="modal"><span>Later</span></button>
                                 </form>
                                 <!-- Mailchimp Alerts -->
@@ -203,7 +204,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/c-min.png" alt="">
+                                        <img src="/images/c-min.png" alt="" data="http://13.233.92.48/wallet-login" on:click={load_website}>
                                     </span>
                                 </div>
                             </div> 
