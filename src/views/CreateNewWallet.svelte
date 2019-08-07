@@ -260,8 +260,8 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             {/if} {/each}
         </div>   
 
-    <button class="btn btn-default offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}>Submit Mnemonic</button>
-    <a href="/access-my-wallet" class="btn btn-default offset-xl-5" class:hide={status!=5}>Access your dashboard</a>
+    <button class="btn btn-default text-white tm-button tm-button-lg offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
+    <a href="/access-my-wallet" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5" class:hide={status!=5}><span style="color:#fff">Access your dashboard</span></a>
         </div>
     </div>   
 </div>
