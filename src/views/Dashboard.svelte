@@ -92,9 +92,6 @@
                         <!-- <li class="disabled">SSL Security</li> -->
                     </ul>
                 </div>
-                <div class="tm-pricebox-footer">
-                    <button class="col-6" data="http://localhost:8000/login" on:click={load_website}>Computeex</button>
-                </div>
             </div>
         </div>
         <!--// Single Pricebox -->
