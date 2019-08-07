@@ -83,7 +83,7 @@
                 <div class="tm-pricebox-header">
                     <h4>Dashboard</h4>
                 </div>
-                <div class="tm-pricebox-body">                                  
+                <div class="tm-pricebox-body">
                     <ul>
                         <li>ETH Balance - {balance}</li>
                         <li> Address - {address}</li>
@@ -128,7 +128,7 @@
 
 
                         </div>
-                        
+
                     </div>
                 </div>
           </div>
@@ -169,12 +169,12 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
                             <div class="tm-sectiontitle text-center">
-                                <!-- <h2>About Era Swap Life</h2> -->                               
+                                <!-- <h2>About Era Swap Life</h2> -->
                                   <h2><b>Era Swap Life is Gateway to</b></h2>
                                    <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
-                                   <br><br>                               
+                                   <br><br>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -184,9 +184,9 @@
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         <img src="/images/1App_web_logos-01-min.png" alt="">
-                                    </span>                                                                         
+                                    </span>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
@@ -200,40 +200,40 @@
                                         <img src="/images/b-min.png" alt="">
                                     </span>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         <img src="/images/c-min.png" alt="" data="http://13.233.92.48/wallet-login" on:click={load_website}>
                                     </span>
                                 </div>
-                            </div> 
-                          
+                            </div>
+
                         </div>
-                       
+
                         <br><br>
                          <div class="row">
                            <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/d-min.png" alt="" data="http://localhost:8080/" on:click={load_website}>
+                                        <img src="/images/d-min.png" alt="" data="http://13.234.115.87" on:click={load_website}>
                                     </span>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         <img src="/images/e-min.png" alt="">
                                     </span>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         <img src="/images/f-min.png" alt="">
                                     </span>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
@@ -249,9 +249,9 @@
                                         <img src="/images/betdeex-logo-min.png" alt="">
                                     </span>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
-                         <br><br>                        
+                         <br><br>
                     </div>
                 </div>
                 </div>
