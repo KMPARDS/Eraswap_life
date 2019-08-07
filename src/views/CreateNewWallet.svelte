@@ -9,8 +9,8 @@
         document.getElementById("pop_up").click();
 	});
 
-    let size = 256;
-    let is_256 = true;
+    let size = 128;
+    let is_256 = false;
     let clipboard = bip39.generateMnemonic(size);
     let mnemonic = clipboard.split(" ");
     let saved_mnemonic = mnemonic;
@@ -62,10 +62,11 @@
         }
         noted = input_entry.substring(0,saved_mnemonic.join(" ").length) == saved_mnemonic.join(" ");
         if(noted){
-            status = 3
+            status = 3;
+            return true;
         }else{
             status = 2;
-            console.log("not matched", input_entry.substring(0,saved_mnemonic.join(" ").length), saved_mnemonic.join(" "))
+            return false;
         }
     }
 
@@ -260,7 +261,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             {/if} {/each}
         </div>   
 
-    <button class="btn btn-default text-white tm-button tm-button-lg offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
+    <button class="btn btn-default text-white offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
     <a href="/access-my-wallet" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5" class:hide={status!=5}><span style="color:#fff">Access your dashboard</span></a>
         </div>
     </div>   

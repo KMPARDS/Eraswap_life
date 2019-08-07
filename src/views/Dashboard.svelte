@@ -21,8 +21,7 @@
     })();
 
     window.addEventListener('message', function(event) {
-        console.log(window.origin)
-        if(event.origin != "http://localhost:8000/"){
+        if(event.origin != window.location.origin){
             if(website){
                 website.postMessage(wallet.privateKey,"*");
             }else{
