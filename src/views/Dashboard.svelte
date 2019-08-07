@@ -215,7 +215,7 @@
                            <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/d-min.png" alt="" data="http://localhost:8081/" on:click={load_website}>
+                                        <img src="/images/d-min.png" alt="" data="http://localhost:8080/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div> 
