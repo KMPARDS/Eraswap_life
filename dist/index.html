@@ -42,4 +42,21 @@
                        }
                    });
     return data
-}</script><body><script type="text/javascript" src="/js/main.4d14f98933d1f519df8f.js"></script></body></html>
+}</script><body><script type="text/javascript" src="/js/main.4d14f98933d1f519df8f.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 300) {
+	    $(".black").css("background" , "blue");
+	  }
+
+	  else{
+		  $(".black").css("background" , "#fff");  	
+	  }
+  })
+})
+</script>
+</body></html>

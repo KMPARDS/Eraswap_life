@@ -768,7 +768,38 @@
                 </div>
             </div>
             <!--// Features Area -->
-
+<style>
+  .flip-card {
+    /* background-color: white; */
+    width: 260px;
+    height: 125px;
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;    
+  }
+  .flip-card-front{background: #fff;}
+  .flip-card-back {
+    background-color: #2980b9;
+    /* color: white; */
+    transform: rotateY(180deg);
+  }
+</style> 
             <!-- About Us Area -->
             <div id="tm-area-about" class="tm-about-area tm-section tm-padding-section" style="background: #eef2f4">
                 <div class="container">
@@ -785,103 +816,205 @@
                             
                         </div>
                     </div>
-                    <div class="row justify-content-center">
+  
+                      <div class="row justify-content-center">
                         <div class="col-lg-12">
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
-                                        <img src="/images/9-min.png" alt="">
-                                    </span>
-                                    <p style="font-size:13px">Affiliate Programme</p>                                        
+                                <div class="flip-card">
+                                  <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                      <span class="tm-funfact-icon">
+                                          <img src="/images/9-min.png" alt="">
+                                      </span>
+                                      <p style="font-size:13px">Affiliate Programme</p>                                         
+                                    </div>
+                               <div class="flip-card-back">
+                                  <div class="tm-funfact text-center">
+                                     <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/d-min.png" alt="" height="105px">                                     
+                                  </div>
                                 </div>
+                                </div>
+                              </div>
                             </div> 
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
-                                        <img src="/images/10-min.png" alt="">
-                                    </span>
-                                    <p style="font-size:13px">Decentralized Token Vesting</p>                                        
-                                </div>
+                              <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                        <span class="tm-funfact-icon">
+                                          <img src="/images/10-min.png" alt="">
+                                      </span>
+                                      <p style="font-size:13px">Decentralized Token Vesting</p>                                         
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/g-min.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div>                               
                             </div> 
-                            <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                            <div class="col-md-3">      
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                       <span class="tm-funfact-icon">
                                         <img src="/images/8-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Decentralized Wallet</p>                                        
-                                </div>
+                                    <p style="font-size:13px">Decentralized Wallet</p>                                          
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/f-min.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div>  
                             </div> 
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                       <span class="tm-funfact-icon">
                                         <img src="/images/2-min.png" alt="">
-                                    </span>
-                                    <p style="font-size:13px">P2P Marketplace Platform</p>                                        
-                                </div>
+                                       </span>
+                                    <p style="font-size:13px">P2P Marketplace Platform</p>                                            
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/A-min.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div>                                
                             </div> 
                         </div>
                        
                         <br><br>
                          <div class="row">
-                            <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                            <div class="col-md-3">        
+                             <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                      <span class="tm-funfact-icon">
                                         <img src="/images/12-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Social Community Platform</p>                                        
-                                </div>
-                            </div> 
+                                    <p style="font-size:13px">Social Community Platform</p>                                           
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/b-min.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div>                                
+                            </div>                     
+                              
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                      <span class="tm-funfact-icon">
                                         <img src="/images/11-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Merchants & Shoppers e-Retail</p>                                        
-                                </div>
-                            </div> 
+                                    <p style="font-size:13px">Merchants & Shoppers e-Retail</p>                                           
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/c-min.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div>  
+                              </div> 
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                      <span class="tm-funfact-icon">
                                         <img src="/images/3-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">eLearning Platform</p>                                        
-                                </div>
+                                    <p style="font-size:13px">eLearning Platform</p>                                         
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/academy.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div> 
+                              
                             </div> 
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                       <span class="tm-funfact-icon">
                                         <img src="/images/5-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Decentralized Prediction Platform</p>                                        
-                                </div>
+                                    <p style="font-size:13px">Decentralized Prediction Platform</p>                                          
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/betdeex-logo.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div>                               
                             </div> 
                         </div>
 
                          <br><br>
                          <div class="row">
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                               <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                        <span class="tm-funfact-icon">
                                         <img src="/images/6-min.png" alt="">
-                                    </span>
-                                    <p style="font-size:13px">Multi Exchange Solution</p>                                        
-                                </div>
+                                       </span>
+                                    <p style="font-size:13px">Multi Exchange Solution</p>                                          
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/1App_web_logos-01-min.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div> 
                             </div> 
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                                 <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                       <span class="tm-funfact-icon">
                                         <img src="/images/7-min.png" alt="">
-                                    </span>
-                                    <p style="font-size:13px">P2P Lend & Borrow</p>                                        
-                                </div>
-                            </div> 
+                                        </span>
+                                    <p style="font-size:13px">P2P Lend & Borrow</p>                                           
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/1App_web_logos-01-min.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div> 
+                             </div> 
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                      <span class="tm-funfact-icon">
                                         <img src="/images/1-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">P2P Exchange</p>                                        
+                                    <p style="font-size:13px">P2P Exchange</p>                                         
+                                      </div>
+                                    <div class="flip-card-back">
+                                      <div class="tm-funfact text-center">
+                                        <a href="https://www.blocklogy.org/" target="_blank" ><img src="images/1App_web_logos-01-min.png" alt="" height="105px">                                     
+                                    </div>
+                                  </div>
+                                  </div>
                                 </div>
                             </div> 
                             <!-- <div class="col-md-3">
