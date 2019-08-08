@@ -19,7 +19,7 @@
             error_message = "Invalid Mnemonic";
         }
     }
-    
+
     function load_keystore(event){
     let uploadedFile = event.target.files[0];
 
@@ -37,12 +37,14 @@
 async function load_by_keystore() {
     load_wallet_message = "Loading..."
     try{
-    window.wallet  = await ethers.Wallet.fromEncryptedJson(JSON.stringify(keystore), wallet_password)
-
-            window.wallet = new ethers.Wallet(wallet.privateKey, provider)
-
-            document.getElementById("dashboard").click()
+    if (keystore,typeof(keystore) != "string"){
+        keystore = JSON.stringify(keystore)
+    }
+    window.wallet  = await ethers.Wallet.fromEncryptedJson(keystore, wallet_password)
+    window.wallet = new ethers.Wallet(wallet.privateKey, provider)
+    document.getElementById("dashboard").click()
 }catch (e) {
+  console.log(e);
   error_message = "Password and keystore do not match"
 }
     load_wallet_message = "Load Wallet";
@@ -64,14 +66,14 @@ async function load_by_private() {
 </div><br><br><br><br>
  <div class="container">
                 <div class="tm-breadcrumb text-center">
-                    <h2 style="font-size: 32px; font-weight:100">Access My Wallet</h2>Do not have a wallet? 
+                    <h2 style="font-size: 32px; font-weight:100">Access My Wallet</h2>Do not have a wallet?
                     <a href="create-new-wallet"><b>Create A New Wallet</b></a><br><br>
-                </div>                
+                </div>
                 <div class="container text-center ">
                     <ul id="myTabs" class="nav nav-pills nav-justified offset-xl-2" role="tablist" data-tabs="tabs">
                         <li class="active"><a href="#Commentary" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin-left: 10px;"><span style=" color:#fff">Keystore File</span></button></a></li>
-                        <li><a href="#Videos" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin-left: 10px;"> <span style=" color:#fff">Access through mnemonic</span></button></a></li>       
-                            <li><a href="#key" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin-left: 10px;"> <span style=" color:#fff">Private Key</span></button></a></li>                       
+                        <li><a href="#Videos" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin-left: 10px;"> <span style=" color:#fff">Access through mnemonic</span></button></a></li>
+                            <li><a href="#key" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin-left: 10px;"> <span style=" color:#fff">Private Key</span></button></a></li>
                     </ul>
                              <div class="tab-content">
                                  <div role="tabpanel" class="tab-pane fade in active show" id="Commentary">
@@ -120,7 +122,7 @@ async function load_by_private() {
                                                     <div class="tm-pricebox text-center">
                                                         <div class="tm-pricebox-header">
                                                             <h4>Access through mnemonic</h4>
-                                                           
+
                                                         </div>
                                                         <div class="tm-pricebox-body"><br>
                                                          <div class="row">
@@ -128,7 +130,7 @@ async function load_by_private() {
                                                             <Logo />
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
-                                                            <textarea bind:value={mnemonic}></textarea>    
+                                                            <textarea bind:value={mnemonic}></textarea>
                                                             <a href="/dashboard" id="dashboard" style="display: none">Access</a>
                                                             </div>
                                                             </div>
@@ -163,7 +165,7 @@ async function load_by_private() {
                                                                 <Logo />
                                                                 <input type="text" bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
-                                                                                                                         
+
                                                                 </div>
                                                                 </div>
                                                                 </div>
@@ -182,12 +184,12 @@ async function load_by_private() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>          
-                                        </div>  
-                                             
+                                                </div>
+                                        </div>
+
                     <!--// Single Pricebox -->
                 </div>
-            </div>              
+            </div>
         <!--// Breadcrumb Area -->
 <br><br>
 
