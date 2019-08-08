@@ -225,7 +225,7 @@
                            <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/d-min.png" alt="" data="http://13.234.115.87" on:click={load_website}>
+                                        <img src="/images/d-min.png" alt="" data="https://dayswappers.com/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
