@@ -6,7 +6,7 @@
        if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
           return decodeURIComponent(name[1]);
     }
-    refer = get_query("refer")
+    refer = get_query("refer").toLowerCase();
 </script>
 <style>
     .tm-funfact{padding:0px; margin-bottom:10px}
@@ -201,7 +201,7 @@
       position: absolute;
       height: 11.775px;
       width: 20px;
-      background: gold;  
+      background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(189deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(23) {
@@ -639,9 +639,9 @@
 
 </style>
     <!-- Wrapper -->
-    <div id="wrapper" class="wrapper">        
+    <div id="wrapper" class="wrapper">
           <div class="tm-header tm-header-fixed tm-sticky-header">
-            <div class="container">              
+            <div class="container">
                      <Navbar title="EraSwap"/>
                 <div class="tm-mobilenav"></div>
             </div>
@@ -703,13 +703,13 @@
             <div id="tm-area-features" class="tm-features-area tm-section tm-padding-section bg-white" >
                 <div class="container">
                         <div class="tm-sectiontitle text-center">
-                        <!-- <h2>About Era Swap Life</h2> -->                           
+                        <!-- <h2>About Era Swap Life</h2> -->
                             <h4>Era Swap Life is Gateway to</h4>
                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
                               <br>
                         </div>
                     <div class="row justify-content-center mt-30-reverse">
-                            
+
                         <!-- Single Features -->
                         <div class="col-lg-4 col-md-6 col-12 mt-30">
                             <div class="tm-feature">
@@ -791,7 +791,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;    
+    backface-visibility: hidden;
   }
   .flip-card-front{background: #fff;}
   .flip-card-back {
@@ -799,14 +799,14 @@
     /* color: white; */
     transform: rotateY(180deg);
   }
-</style> 
+</style>
             <!-- About Us Area -->
             <div id="tm-area-about" class="tm-about-area tm-section tm-padding-section" style="background: #eef2f4">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
                             <div class="tm-sectiontitle text-center">
-                                <!-- <h2>About Era Swap Life</h2> -->                               
+                                <!-- <h2>About Era Swap Life</h2> -->
                                   <h4>Why Era Swap Life</h4>
                                    <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
                                    <br><br>
@@ -814,10 +814,10 @@
                                 <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
                                 Access Era Swap Platforms, please <a href="/create-new-wallet"><b>Create wallet</b></a> or <a href="/access-my-wallet"><b>Access Wallet </b></a>
                             </div>
-                            
+
                         </div>
                     </div>
-  
+
                       <div class="row justify-content-center">
                         <div class="col-lg-12">
                         <div class="row">
@@ -828,16 +828,16 @@
                                       <span class="tm-funfact-icon">
                                           <img src="/images/9-min.png" alt="">
                                       </span>
-                                      <p style="font-size:13px">Affiliate Programme</p>                                         
+                                      <p style="font-size:13px">Affiliate Programme</p>
                                     </div>
                                <div class="flip-card-back">
                                   <div class="tm-funfact text-center">
-                                     <img src="images/d-min.png" alt="" height="105px">                                     
+                                     <img src="images/d-min.png" alt="" height="105px">
                                   </div>
                                 </div>
                                 </div>
                               </div>
-                            </div> 
+                            </div>
                             <div class="col-md-3">
                               <div class="flip-card">
                                     <div class="flip-card-inner">
@@ -845,33 +845,33 @@
                                         <span class="tm-funfact-icon">
                                            <img src="/images/10-min.png" alt="">
                                       </span>
-                                      <p style="font-size:13px">Decentralized Token Vesting</p>                                         
+                                      <p style="font-size:13px">Decentralized Token Vesting</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/g-min.png" alt="" height="105px">                                     
+                                        <img src="images/g-min.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
-                                </div>                               
-                            </div> 
-                            <div class="col-md-3">      
+                                </div>
+                            </div>
+                            <div class="col-md-3">
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                        <span class="tm-funfact-icon">
                                         <img src="/images/8-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Decentralized Wallet</p>                                          
+                                    <p style="font-size:13px">Decentralized Wallet</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/f-min.png" alt="" height="105px">                                     
+                                        <img src="images/f-min.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
-                                </div>  
-                            </div> 
+                                </div>
+                            </div>
                             <div class="col-md-3">
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
@@ -879,38 +879,38 @@
                                        <span class="tm-funfact-icon">
                                         <img src="/images/2-min.png" alt="">
                                        </span>
-                                    <p style="font-size:13px">P2P Marketplace Platform</p>                                            
+                                    <p style="font-size:13px">P2P Marketplace Platform</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                      <img src="images/A-min.png" alt="" height="105px">                                     
+                                      <img src="images/A-min.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
-                                </div>                                
-                            </div> 
+                                </div>
+                            </div>
                         </div>
-                       
+
                         <br><br>
                          <div class="row">
-                            <div class="col-md-3">        
+                            <div class="col-md-3">
                              <div class="flip-card">
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
                                         <img src="/images/12-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Social Community Platform</p>                                           
+                                    <p style="font-size:13px">Social Community Platform</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/b-min.png" alt="" height="105px"> 
+                                        <img src="images/b-min.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
-                                </div>                                
-                            </div>                     
-                              
+                                </div>
+                            </div>
+
                             <div class="col-md-3">
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
@@ -918,16 +918,16 @@
                                       <span class="tm-funfact-icon">
                                         <img src="/images/11-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Merchants & Shoppers e-Retail</p>                                           
+                                    <p style="font-size:13px">Merchants & Shoppers e-Retail</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/c-min.png" alt="" height="105px">                                     
+                                        <img src="images/c-min.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
-                                </div>  
-                              </div> 
+                                </div>
+                              </div>
                             <div class="col-md-3">
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
@@ -935,17 +935,17 @@
                                       <span class="tm-funfact-icon">
                                         <img src="/images/3-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">eLearning Platform</p>                                         
+                                    <p style="font-size:13px">eLearning Platform</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                       <img src="images/academy.png" alt="" height="105px">                                   
+                                       <img src="images/academy.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
-                                </div> 
-                              
-                            </div> 
+                                </div>
+
+                            </div>
                             <div class="col-md-3">
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
@@ -953,7 +953,7 @@
                                        <span class="tm-funfact-icon">
                                         <img src="/images/5-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Decentralized Prediction Platform</p>                                          
+                                    <p style="font-size:13px">Decentralized Prediction Platform</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
@@ -961,8 +961,8 @@
                                     </div>
                                   </div>
                                   </div>
-                                </div>                               
-                            </div> 
+                                </div>
+                            </div>
                         </div>
 
                          <br><br>
@@ -974,16 +974,16 @@
                                         <span class="tm-funfact-icon">
                                         <img src="/images/6-min.png" alt="">
                                        </span>
-                                    <p style="font-size:13px">Multi Exchange Solution</p>                                          
+                                    <p style="font-size:13px">Multi Exchange Solution</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/CM1.jpg" alt="" height="">                                     
+                                        <img src="images/CM1.jpg" alt="" height="">
                                     </div>
                                   </div>
                                   </div>
-                                </div> 
-                            </div> 
+                                </div>
+                            </div>
                             <div class="col-md-3">
                                  <div class="flip-card">
                                     <div class="flip-card-inner">
@@ -991,16 +991,16 @@
                                        <span class="tm-funfact-icon">
                                         <img src="/images/7-min.png" alt="">
                                         </span>
-                                    <p style="font-size:13px">P2P Lend & Borrow</p>                                           
+                                    <p style="font-size:13px">P2P Lend & Borrow</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                       <img src="images/1App_web_logos-01-min.png" alt="" height="105px">                                     
+                                       <img src="images/1App_web_logos-01-min.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
-                                </div> 
-                             </div> 
+                                </div>
+                             </div>
                             <div class="col-md-3">
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
@@ -1008,16 +1008,16 @@
                                       <span class="tm-funfact-icon">
                                         <img src="/images/1-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">P2P Exchange</p>                                         
+                                    <p style="font-size:13px">P2P Exchange</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                       <img src="images/1App_web_logos-01-min.png" alt="" height="105px">                                     
+                                       <img src="images/1App_web_logos-01-min.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
                                 </div>
-                            </div> 
+                            </div>
                              <div class="col-md-3">
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
@@ -1025,11 +1025,11 @@
                                       <span class="tm-funfact-icon">
                                         <img src="/images/1-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">Next Gen Dating and Match-Making</p>                                         
+                                    <p style="font-size:13px">Next Gen Dating and Match-Making</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/1App_web_logos-01-min.png" alt="" height="105px">                                     
+                                        <img src="images/1App_web_logos-01-min.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
@@ -1040,7 +1040,7 @@
                                     <span class="tm-funfact-icon">
                                         <img src="https://eraswapwallet.com/img/icons/9-min-min.png" alt="">
                                     </span>
-                                    <p>Affiliate Programme</p>                                        
+                                    <p>Affiliate Programme</p>
                                 </div>
                             </div>  -->
                         </div>
@@ -1053,25 +1053,25 @@
                                         <span class="tm-funfact-icon">
                                           <img src="/images/6-min.png" alt="">
                                        </span>
-                                    <p style="font-size:13px">Farming Community</p>                                          
+                                    <p style="font-size:13px">Farming Community</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/CM1.jpg" alt="" height="">                                     
+                                        <img src="images/CM1.jpg" alt="" height="">
                                     </div>
                                   </div>
                                   </div>
-                                </div> 
-                            </div> 
-                          
-                           
-                            
+                                </div>
+                            </div>
+
+
+
                             <!-- <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         <img src="https://eraswapwallet.com/img/icons/9-min-min.png" alt="">
                                     </span>
-                                    <p>Affiliate Programme</p>                                        
+                                    <p>Affiliate Programme</p>
                                 </div>
                             </div>  -->
                         </div>
@@ -1232,7 +1232,7 @@
                             </div>
                         </div>
                         <div class="col-lg-7">
-                            
+
                             <div id="tm-accordion1" class="tm-accordion">
 
                                 <div class="card">
@@ -1360,7 +1360,7 @@
                                 </div>
 
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
