@@ -20,8 +20,8 @@
                     <div class="single-widget widget-quicklinks">
                         <h5 class="widget-title">Services</h5>
                         <ul>
-                            <li><a href="/CreateNewWallet">Create Wallet</a></li>
-                            <li><a href="/AccessMyWallet">Access my Wallet</a></li>                            
+                            <li><a href="/create-new-wallet">Create Wallet</a></li>
+                            <li><a href="/access-my-wallet">Access my Wallet</a></li>
                             <!-- <li><a href="#">Advantages to Community</a></li> -->
                             <li><a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
                         </ul>
@@ -66,40 +66,6 @@
                 <div class="col-md-7">
                     <p class="tm-footer-copyright">Copyright 2019 <a rel="noopener noreferrer">Era Swap Life</a>. </p>
                 </div>
-                <!-- <div class="col-md-5">
-                    <ul class="tm-footer-social">
-                        <li>
-                            <a rel="noopener noreferrer">
-                                <i class="zmdi zmdi-facebook"></i>
-                                <i class="zmdi zmdi-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a rel="noopener noreferrer">
-                                <i class="zmdi zmdi-dribbble"></i>
-                                <i class="zmdi zmdi-dribbble"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a rel="noopener noreferrer">
-                                <i class="zmdi zmdi-behance"></i>
-                                <i class="zmdi zmdi-behance"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a rel="noopener noreferrer">
-                                <i class="zmdi zmdi-twitter"></i>
-                                <i class="zmdi zmdi-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a rel="noopener noreferrer">
-                                <i class="zmdi zmdi-pinterest"></i>
-                                <i class="zmdi zmdi-pinterest"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div> -->
             </div>
         </div>
     </div>

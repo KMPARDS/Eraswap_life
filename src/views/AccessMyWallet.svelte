@@ -35,7 +35,7 @@
 }
 
 async function load_by_keystore() {
-    load_wallet_message = "Loading.."
+    load_wallet_message = "Loading..."
     try{
     window.wallet  = await ethers.Wallet.fromEncryptedJson(JSON.stringify(keystore), wallet_password)
 
