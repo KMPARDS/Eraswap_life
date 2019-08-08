@@ -6,7 +6,9 @@
        if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
           return decodeURIComponent(name[1]);
     }
-    refer = get_query("refer").toLowerCase();
+    try{
+    refer = get_query("refer").toLowerCase();}catch(e){
+    }
 </script>
 <style>
     .tm-funfact{padding:0px; margin-bottom:10px}
