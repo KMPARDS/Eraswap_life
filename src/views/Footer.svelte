@@ -17,13 +17,13 @@
                     </div>
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-12">
-                    <div class="single-widget widget-quicklinks">
-                        <h5 class="widget-title">Services</h5>
+                    <div class="single-widget">
+                        <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
-                            <li><a href="/create-new-wallet">Create Wallet</a></li>
-                            <li><a href="/access-my-wallet">Access my Wallet</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="/create-new-wallet">Create Wallet</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li>
                             <!-- <li><a href="#">Advantages to Community</a></li> -->
-                            <li><a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
                         </ul>
                     </div>
                 </div>

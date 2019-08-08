@@ -648,7 +648,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Roboto", sans-serif;
-  color: #686b77;
+  color: #686b77 !important;
   font-weight: 400;
 }
 
@@ -1970,8 +1970,8 @@ button.tm-button:hover::after {
 .tm-button.tm-button-lg,
 a.tm-button.tm-button-lg,
 button.tm-button.tm-button-lg {
-  height: 55px;
-  line-height: 55px;
+  height: 50px;
+  line-height: 50px;
 }
 
 .tm-button.tm-button-lg i,
@@ -2019,6 +2019,8 @@ button.tm-button.tm-button-white.tm-button-transparent {
   border: 1px solid #ffffff;
   background: transparent;
   color: #ffffff;
+  font-size: 14px;
+  font-weight: 100
 }
 
 .tm-button.tm-button-white.tm-button-transparent::after,
@@ -5135,7 +5137,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 }
 
 .tm-pricebox-header {
-  padding: 20px 30px;
+  padding: 10px 30px;
   background: #3c424f;
   position: relative;
   z-index: 1;
@@ -5169,6 +5171,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   color: #ffffff;
+  font-weight: 100;
 }
 
 .tm-pricebox-body {

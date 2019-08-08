@@ -61,7 +61,7 @@ async function load_by_private() {
 </script>
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
     <Navbar title="Dashboard"/>
-</div><br><br><br><br>
+</div><br><br>
  <div class="container">
                 <div class="tm-breadcrumb text-center">
                     <h2 style="font-size: 32px; font-weight:100">Access My Wallet</h2>Do not have a wallet? 
@@ -77,17 +77,15 @@ async function load_by_private() {
                                  <div role="tabpanel" class="tab-pane fade in active show" id="Commentary">
                                      <div class="row">
                                     <!-- Single Pricebox -->
-                                            <div class="col-lg-12 col-md-12 col-12 mt-30">
+                                            <div class="col-lg-6 col-md-6 col-6 mt-30 offset-xl-3">
                                                 <div class="tm-pricebox text-center">
                                                     <div class="tm-pricebox-header">
                                                         <h4>Keystore File</h4>
                                                     </div>
                                                     <div class="tm-pricebox-body"><br>
                                                      <div class="row">
-                                                            <div class="offset-xl-3 col-md-6">
-                                                            <Logo />
-
-
+                                                            <div class="col-md-10 offset-xl-1">
+                                                            <Logo /><br>
                                                         <div class="tm-pricebox-price">
                                                           <input type="file"  on:change={load_keystore}>
                                                         </div>
@@ -116,16 +114,15 @@ async function load_by_private() {
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="Videos">
                                             <div class="row">
-                                                <div class="col-lg-12 col-md-12 col-12 mt-30">
+                                                <div class="col-lg-6 col-md-6 col-6 mt-30 offset-xl-3">
                                                     <div class="tm-pricebox text-center">
                                                         <div class="tm-pricebox-header">
-                                                            <h4>Access through mnemonic</h4>
-                                                           
+                                                            <h4>Access through mnemonic</h4>                                                           
                                                         </div>
                                                         <div class="tm-pricebox-body"><br>
                                                          <div class="row">
-                                                            <div class="offset-xl-2 col-md-8">
-                                                            <Logo />
+                                                            <div class="col-md-10 offset-xl-1">
+                                                            <Logo /><br>
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
                                                             <textarea bind:value={mnemonic}></textarea>    
@@ -152,15 +149,15 @@ async function load_by_private() {
                                          <div role="tabpanel" class="tab-pane fade in active" id="key">
                                             <div class="row">
                                             <!-- Single Pricebox -->
-                                                    <div class="col-lg-12 col-md-12 col-12 mt-30">
+                                                    <div class="col-lg-6 col-md-6 col-6 mt-30 offset-xl-3">
                                                         <div class="tm-pricebox text-center">
                                                             <div class="tm-pricebox-header">
                                                                 <h4>Private Key</h4>
                                                             </div>
                                                             <div class="tm-pricebox-body"><br>
                                                             <div class="row">
-                                                                <div class="offset-xl-3 col-md-6">
-                                                                <Logo />
+                                                                <div class="col-md-10 offset-xl-1">
+                                                                <Logo /><br>
                                                                 <input type="text" bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
                                                                                                                          

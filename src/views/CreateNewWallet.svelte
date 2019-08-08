@@ -189,11 +189,9 @@ input:checked + .slider:after
 </style>
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
 <Navbar title="Create New Wallet" />
-</div><br><br><br><br>
+</div><br><br>
 
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" id="pop_up" data-toggle="modal" data-target="#terms"  style="display: none">Create New Wallet</a>
-
-
 
     <div id="terms" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -203,13 +201,12 @@ input:checked + .slider:after
               </div>
               <div class="modal-body" style="text-align: center">
                 <Logo /><br><br>
-                <h3>What is Era Swap Life Wallet? </h3>
+                <h3>What is ES Life Wallet? </h3>
                 ES Life Wallet is a free, open-source, client-side interface.  ES Life Wallet allows you to interact directly with the blockchain, while you remain in full control of your keys and funds.<br><br>
 
 Please think about this carefully. YOU are the one who is in control.  ES Life Wallet is not a bank or exchange. We don't hold your keys, your funds, or your information. This means we can't access accounts, recover keys, reset passwords, or reverse transactions.<br><br>
 
 <b class="text-danger">WARNING: You And Only You Are Responsible For Your Security.</b><br><br>
-
 
 <a class="nav-link text-white tm-button tm-button-lg" data-dismiss="modal" aria-hidden="true"><span style="color:#fff">Proceed</span></a>
               </div>
@@ -260,12 +257,12 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             </div>
             {/if} {/each}
         </div>   
-
+<br><br>
     <button class="btn btn-default text-white offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
     <a href="/access-my-wallet" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5" class:hide={status!=5}><span style="color:#fff">Access your dashboard</span></a>
         </div>
     </div>   
-</div>
+</div><br><br><br><br>
         <div id="mnemonics" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">

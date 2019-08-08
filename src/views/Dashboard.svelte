@@ -84,6 +84,14 @@
                     <h4>Dashboard</h4>
                 </div>
                 <div class="tm-pricebox-body">
+                 <ul>
+                        <li>ES Balance - {balance}</li>
+                        <li> Address - {address}</li>
+                        <!-- <li>Webmail Access</li> -->
+                        <!-- <li class="disabled">Unlimited attachment</li> -->
+                        <!-- <li class="disabled">SSL Security</li> -->
+                    </ul>
+                    <hr>
                     <ul>
                         <li>ETH Balance - {balance}</li>
                         <li> Address - {address}</li>
@@ -111,7 +119,8 @@
                         <div class="modal-body" style="text-align: center">
                             <div class="col-lg-12">
                             <div class="tm-subscribe-content text-center">
-                                <h3>Are you refered by {refer}</h3>
+                                <h3>Are you refered by </h3>
+                                <p style="font-size:14px">{refer}</p>
                                 <form id="tm-mailchimp-form" class="tm-subscribe-form text-center">
                                     <button id="mc-submit" type="button" class="tm-button" data-dismiss="modal" on:click={submit_refer}><span>Accept</span></button>
                                     <button id="mc-submit" type="button" class="tm-button" data-dismiss="modal"><span>Reject</span></button>
