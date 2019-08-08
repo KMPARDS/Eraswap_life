@@ -812,6 +812,7 @@
                                    <br><br>
                                 <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
                                 <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
+                                Access Era Swap Platforms, please <a href="/create-new-wallet"><b>Create wallet</b></a> or <a href="/access-my-wallet"><b>Access Wallet </b></a>
                             </div>
                             
                         </div>
@@ -1130,8 +1131,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4>One App</h4>
-                                            <p>OneApp for all platforms of ecosystem giving ease of access and convenience</p>
+                                            <h4><img src="/images/divider-logo-min.png"/> Single point platform</h4>
+                                            <p style="margin-left: 33px;">Single point for all platforms of ecosystem giving ease of access and convenience</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1148,8 +1149,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4>Integrated with Wallet</h4>
-                                            <p>Integrated with your Wallet to receive all benefits from inter-linked apps at one stop</p>
+                                            <h4><img src="/images/divider-logo-min.png"/> Integrated with Wallet</h4>
+                                            <p style="margin-left: 33px;">Integrated with your Wallet to receive all benefits from inter-linked apps at one stop</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1166,8 +1167,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4>Self Control</h4>
-                                            <p>Control and privacy in your hands as the private keys stays with you only</p>
+                                            <h4><img src="/images/divider-logo-min.png"/> Self Control</h4>
+                                            <p style="margin-left: 33px;">Control and privacy in your hands as the private keys stays with you only</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1184,8 +1185,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4>Mapping</h4>
-                                            <p>Mapped with your usage, utility, rewards and referrals</p>
+                                            <h4><img src="/images/divider-logo-min.png"/> Mapping</h4>
+                                            <p style="margin-left: 33px;">Mapped with your usage, utility, rewards and referrals</p>
                                         </div>
                                     </div>
                                 </div>
