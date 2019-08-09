@@ -2,10 +2,34 @@
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
     let balance = "-";
+    let es_balance = "-";
     let address = "-";
     let error_message = "";
     let website = "";
     let first_time = "";
+
+
+    let abi= [{
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_owner",
+                    "type": "address"
+                }
+            ],
+            "name": "balanceOf",
+            "outputs": [
+                {
+                    "name": "balance",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }];
+
+
     (async () => {
         try{
             balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
@@ -15,6 +39,10 @@
                 document.getElementById("first_time").click()
             if(refer)document.getElementById("refer_model").click()
             error_message=""
+
+            let contract = new ethers.Contract("0x53E750ee41c562C171D65Bcb51405b16a56cF676", abi, wallet)
+            es_balance = ethers.utils.formatEther(await contract.functions.balanceOf(wallet.address));
+
         }catch (e) {
             console.log(e)
             error_message = 'Wallet not loaded. Please Load your wallet '
@@ -85,7 +113,7 @@
                 </div>
                 <div class="tm-pricebox-body">
                  <ul>
-                        <li>ES Balance - {balance}</li>
+                        <li>ES Balance - {es_balance}</li>
                         <li>ETH Balance - {balance}</li>
                         <li> Address - {address}</li>
                     </ul>
