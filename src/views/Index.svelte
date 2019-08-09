@@ -1134,7 +1134,7 @@
                                         </span>
                                         <div class="tm-service-content">
                                             <h4><img src="/images/divider-logo-min.png"/> Single point platform</h4>
-                                            <p style="margin-left: 33px;">Single point for all platforms of ecosystem giving ease of access and convenience</p>
+                                            <p style="margin-left: 33px;">Single platforms for users of ecosystem giving ease of access and convenience</p>
                                         </div>
                                     </div>
                                 </div>

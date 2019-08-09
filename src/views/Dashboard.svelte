@@ -86,18 +86,8 @@
                 <div class="tm-pricebox-body">
                  <ul>
                         <li>ES Balance - {balance}</li>
-                        <li> Address - {address}</li>
-                        <!-- <li>Webmail Access</li> -->
-                        <!-- <li class="disabled">Unlimited attachment</li> -->
-                        <!-- <li class="disabled">SSL Security</li> -->
-                    </ul>
-                    <hr>
-                    <ul>
                         <li>ETH Balance - {balance}</li>
                         <li> Address - {address}</li>
-                        <!-- <li>Webmail Access</li> -->
-                        <!-- <li class="disabled">Unlimited attachment</li> -->
-                        <!-- <li class="disabled">SSL Security</li> -->
                     </ul>
                 </div>
             </div>
