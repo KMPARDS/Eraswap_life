@@ -1152,7 +1152,7 @@
                                         </span>
                                         <div class="tm-service-content">
                                             <h4><img src="/images/divider-logo-min.png"/> Integrated with Wallet</h4>
-                                            <p style="margin-left: 33px;">Integrated with your Wallet to receive all benefits from inter-linked apps at one stop</p>
+                                            <p style="margin-left: 33px;">Integrated with your Wallet to receive all benefits from inter-linked platforms</p>
                                         </div>
                                     </div>
                                 </div>
