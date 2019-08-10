@@ -1133,8 +1133,8 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4><img src="/images/divider-logo-min.png"/> Single point platform</h4>
-                                            <p style="margin-left: 33px;">Single platforms for users of ecosystem giving ease of access and convenience</p>
+                                            <h4><img src="/images/divider-logo-min.png"/> Single sign on to ecosystem</h4>
+                                            <p style="margin-left: 33px;">Ease of access and convenience to users for getting access to all platforms of Era Swap Ecosystem</p>
                                         </div>
                                     </div>
                                 </div>
