@@ -801,6 +801,7 @@
     /* color: white; */
     transform: rotateY(180deg);
   }
+  
 </style>
             <!-- About Us Area -->
             <div id="tm-area-about" class="tm-about-area tm-section tm-padding-section" style="background: #eef2f4">
@@ -980,7 +981,7 @@
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/CM1.jpg" alt="" height="">
+                                        <img src="images/comp.png" alt="" height="105px" >
                                     </div>
                                   </div>
                                   </div>
@@ -997,7 +998,7 @@
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                       <img src="images/1App_web_logos-01-min.png" alt="" height="105px">
+                                       <img src="images/comp-lb.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
@@ -1031,7 +1032,7 @@
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/1App_web_logos-01-min.png" alt="" height="105px">
+                                        <img src="images/date.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
@@ -1059,7 +1060,7 @@
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/CM1.jpg" alt="" height="">
+                                        <img src="images/vof.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
