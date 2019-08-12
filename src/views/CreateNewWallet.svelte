@@ -238,7 +238,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                 </ul>
             </div>
 
-    <div class="container">
+       <div class="container">
         <p style="text-align:left;">
             <label class="switch"><input type="checkbox" id="togBtn" bind:checked={is_256} on:change={generate_random} >
                 <div class="slider round"></div>
@@ -250,7 +250,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
         </p>
         <div class="row offset-xl-2">
             {#each mnemonic as word, i} {#if word!='-'}
-            <div class="memonics col-3">{i+1}. <div class="mnemonic_entry">{word}</div></div>
+            <div class="memonics col-4">{i+1}. <div class="mnemonic_entry">{word}</div></div>
             {:else}
             <div class="col-3">
             {i+1}. <input type="text" class="mnemonic_entry form-control" on:change={check_noted}>

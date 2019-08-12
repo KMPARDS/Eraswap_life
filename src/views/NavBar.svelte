@@ -5,7 +5,13 @@
         document.getElementById("home").click()
     }
 </script>
-
+<style>
+@media(max-width:768px){
+  .navbar-collapse{
+    background:#461313; padding:15px; border-radius:10px;
+  }
+}
+</style>
 <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="/" id="home"><img src="/images/es_newlogo-white-min.png"></a>
 
@@ -13,7 +19,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
     <ul class="navbar-nav ml-auto navbar-right">
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/create-new-wallet" >Create New Wallet</a>
