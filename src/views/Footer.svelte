@@ -9,13 +9,6 @@
 <!-- Footer Area -->
 <div class="tm-footer bg-gradient">
     <div class="container">
-
-                  <iframe
-                        allow="microphone;"
-                        width="350"
-                        height="430"
-                        src="https://console.dialogflow.com/api-client/demo/embedded/11b7c637-920a-4280-8c9e-f948a97e3ac6">
-                    </iframe>
         <div class="tm-footer-toparea tm-padding-section" style="padding-top: 30px !important; padding-bottom: 3px !important;">
             <div class="row widgets tm-footer-widgets">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12">
@@ -74,18 +67,6 @@
                         </ul> -->
                     </div>
                 </div>
-
-{#if user.loggedIn}
-	<button on:click={toggle}>
-		Log out
-	</button>
-{/if}
-
-{#if !user.loggedIn}
-	<button on:click={toggle}>
-		Log in
-	</button>
-{/if}
                 </div>
             </div>
         </div>
