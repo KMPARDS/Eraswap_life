@@ -1,9 +1,21 @@
+ <script>
+	let user = { loggedIn: false };
+
+	function toggle() {
+		user.loggedIn = !user.loggedIn;
+	}
+</script>
+
 <!-- Footer Area -->
 <div class="tm-footer bg-gradient">
-    <!-- <div class="tm-footer-bgshape">
-        <img src="/images/es_newlogo-white-min.png" alt="footer background shape">
-    </div> -->
     <div class="container">
+
+                  <iframe
+                        allow="microphone;"
+                        width="350"
+                        height="430"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/11b7c637-920a-4280-8c9e-f948a97e3ac6">
+                    </iframe>
         <div class="tm-footer-toparea tm-padding-section" style="padding-top: 30px !important; padding-bottom: 3px !important;">
             <div class="row widgets tm-footer-widgets">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12">
@@ -16,7 +28,8 @@
                             omnis eos blanditiis.</p> -->
                     </div>
                 </div>
-                <div class="col-xl-8 col-lg-8 col-md-8 col-12">
+
+                <div class="col-xl-4 col-lg-4 col-md-4 col-12">
                     <div class="single-widget">
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
@@ -27,6 +40,8 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-4 col-12" on:click={toggle}>
                 <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-quicklinks">
                         <h5 class="widget-title">Support</h5>
@@ -58,6 +73,19 @@
                             </li>
                         </ul> -->
                     </div>
+                </div>
+
+{#if user.loggedIn}
+	<button on:click={toggle}>
+		Log out
+	</button>
+{/if}
+
+{#if !user.loggedIn}
+	<button on:click={toggle}>
+		Log in
+	</button>
+{/if}
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@
         if(noted){
             status = 4;
             let wallet = await ethers.Wallet.fromMnemonic(saved_mnemonic.join(" "))
-            let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(await wallet.encrypt(wallet_password)));
+            let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent((await wallet.encrypt(wallet_password)));
             let dlAnchorElem = document.getElementById('downloadAnchorElem');
             dlAnchorElem.setAttribute("href",     dataStr     );
             dlAnchorElem.setAttribute("download", "UTC-"+wallet.address+".json");
@@ -222,19 +222,19 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             <h2>Create a new wallet</h2>Already have a wallet?<a href="access-my-wallet"><b> Access My Wallet</b></a>
         </div>
     </div>
-    
+
 <div id="tm-area-pricing" class="tm-pricebox-area tm-section bg-grey ">
     <div class="container center key">
             <div class="nav-center">
                 <ul class="nav nav-pills">
                     <li>
-                        <button class="btn btn-default active" style="background: #811515; color:#fff; padding:3px 19px; margin-right: 3px" data-toggle="tab" on:click={generate_random}>Generate Random</button>  
+                        <button class="btn btn-default active" style="background: #811515; color:#fff; padding:3px 19px; margin-right: 3px" data-toggle="tab" on:click={generate_random}>Generate Random</button>
                         <!-- <a  href="#prices" class="btn btn-default active" style="background: #811515; color:#fff; padding:20px; margin-right: 3px" data-toggle="tab">Generate Random</a> -->
                     </li>
                     <li>
                     <button  class="btn btn-default"  style="background: #811515; color:#fff; padding:3px 19px"  data-toggle="tab" on:click={noted_down} class:hide={status!=1}>I Wrote down My Mnemonic Phrase</button>
                     <!-- <a href="#features" class="btn btn-default"  style="background: #811515; color:#fff; padding:20px"  data-toggle="tab">By Mnemonic Phrase</a> -->
-                    </li>                        
+                    </li>
                 </ul>
             </div>
 
@@ -248,7 +248,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             </span> -->
             <input type="text" bind:value={clipboard} id="myInput" style="display: none">
         </p>
-        <div class="row offset-xl-2">            
+        <div class="row offset-xl-2">
             {#each mnemonic as word, i} {#if word!='-'}
             <div class="memonics col-3">{i+1}. <div class="mnemonic_entry">{word}</div></div>
             {:else}
@@ -256,12 +256,12 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             {i+1}. <input type="text" class="mnemonic_entry form-control" on:change={check_noted}>
             </div>
             {/if} {/each}
-        </div>   
+        </div>
 <br><br>
     <button class="btn btn-default text-white offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
     <a href="/access-my-wallet" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5" class:hide={status!=5}><span style="color:#fff">Access your dashboard</span></a>
         </div>
-    </div>   
+    </div>
 </div><br><br><br><br>
         <div id="mnemonics" class="modal" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -274,7 +274,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                             <input type="password" bind:value={wallet_password} class:hide={status!=3} placeholder="Enter your password"><br><br>
 
                             <button class="tm-button tm-button-sm " on:click={generate_wallet} class:hide={status!=3}><span style="color:#fff">Generate Wallet</span></button>
-                            
+
                               <div class="spinner-border" role="status" class:hide={status!=4}>
                                     <span class="sr-only">Loading...</span>
                                 </div>
@@ -289,7 +289,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                                 <h4>Make a Backup</h4> Secure it like the millions of dollars it may one day be worth.
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
         </div>
