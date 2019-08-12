@@ -104,6 +104,18 @@
     </div>
 {/if}
   <div class="row justify-content-center">
+  <style>
+@media(max-width:768px){
+    .pcaddress{
+        display:none;
+    }
+}
+@media(min-width:769px){
+    .maddress{
+        display:none;
+    }
+}
+  </style>
 
         <!-- Single Pricebox -->
         <div class="col-lg-8 col-md-6 col-12 mt-30">
@@ -115,7 +127,8 @@
                  <ul>
                         <li>ES Balance - {es_balance}</li>
                         <li>ETH Balance - {balance}</li>
-                        <li> Address - {address}</li>
+                        <li class="pcaddress"> Address - {address}</li>
+                        <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)}</li>
                     </ul>
                 </div>
             </div>
