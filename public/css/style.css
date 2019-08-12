@@ -5172,6 +5172,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
   transition: all 0.4s ease-in-out;
   color: #ffffff;
   font-weight: 100;
+  font-size: 17px;
 }
 
 .tm-pricebox-body {
