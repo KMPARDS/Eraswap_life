@@ -217,7 +217,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/A-min.png" alt=""  data="https//timeswappers.com/wallet-login" on:click={load_website}>
+                                        <img src="/images/A-min.png" alt=""  data="https://timeswappers.com/wallet-login" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
