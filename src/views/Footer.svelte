@@ -9,8 +9,8 @@
 <!-- Footer Area -->
 <div class="tm-footer bg-gradient">
     <div class="container">
-        <div class="tm-footer-toparea tm-padding-section" style="padding-top: 30px !important; padding-bottom: 3px !important;">
-            <div class="row widgets tm-footer-widgets">
+        <div class="tm-footer-toparea tm-padding-section" >
+            <div class="row widgets tm-footer-widgets" style="padding-top: 0px !important; padding-bottom: 3px !important;">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12">
                     <div class="single-widget widget-info">
                         <a href="index.html" class="widget-info-logo">
@@ -48,28 +48,28 @@
                 </div> -->
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-recentpost">
-                        <!-- <h5 class="widget-title">Recent Posts</h5> -->
-                        <!-- <ul>
-                            <li>
-                                <div class="widget-recentpost-content">
-                                    <h6><a href="blog-details.html">Fundamental analysis
-                                            services</a></h6>
-                                    <span>August 01, 2019</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="widget-recentpost-content">
-                                    <h6><a href="blog-details.html">Steps to a successful
-                                            Business</a></h6>
-                                    <span>August 01, 2019</span>
-                                </div>
-                            </li>
-                        </ul> -->
+                       
                     </div>
                 </div>
+            </div>
+            
+        </div>
+    </div>
+    
+            <div class="row offset-md-1" style="padding-bottom: 40px;">
+                <div class="col-md-3">
+                     <a href="https://etherscan.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>Era Swap Token (ES)</span></a>
+                </div>
+                 <div class="col-md-3">
+                     <a href="https://etherscan.io/address/0x20ee679d73559e4c4b5e3b3042b61be723828d6c#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>Newly Released Token (NRT)</span></a>
+                </div>
+                 <div class="col-md-3">
+                     <a href="https://etherscan.io/address/0x42225682113E6Ed3616B36B4A72BbaE376041D7c#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>BetDeEx DApp</span></a>
+                </div>
+                 <div class="col-md-3">
+                     <a href="https://etherscan.io/address/0x5630ee5f247bd6b61991fbb2f117bbeb45990876#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>TimeAlly DApp</span></a>
                 </div>
             </div>
-        </div>
         <div class="tm-footer-bottomarea">
             <div class="row align-items-center">
                 <div class="col-md-7">
