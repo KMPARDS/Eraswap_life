@@ -1074,7 +1074,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
-                                <h2>Advantages to Era Swap Community Members</h2>
+                                <h4>Advantages to Era Swap Community Members</h4>
                                <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
                                 <br><br>
                             </div>
@@ -1155,7 +1155,6 @@
                                     </div>
                                 </div>
                                 <!--// Single Features -->
-
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -1181,7 +1180,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
-                                <h2>FAQ's</h2>
+                                <h4>FAQ's</h4>
                                 <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
                             </div>
                         </div>
@@ -1203,7 +1202,7 @@
                                     <div id="tm-accordion1-collapse1" class="collapse show" aria-labelledby="tm-accordion1-heading1"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body">
-                                           <iframe width="460" height="215" src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <iframe width="460" height="215" src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
