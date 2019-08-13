@@ -2965,7 +2965,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
   display: block;
   width: 100%;
   text-align: left;
-  padding: 10px 10px 10px 50px;
+  /* padding: 10px 10px 10px 50px; */
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   color: #3c424f;
@@ -2976,12 +2976,13 @@ button.tm-videobutton.tm-videobutton-lg span i {
   position: relative;
   white-space: inherit;
   background: #F5F9FB;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .tm-accordion .card-header button::before {
-  content: "\f2f9";
-  font-family: 'Material-Design-Iconic-Font';
+  /* content: "\f2f9"; */
+  display: none;
+  /* font-family: 'Material-Design-Iconic-Font'; */
   position: absolute;
   left: 10px;
   top: 50%;

@@ -1038,14 +1038,7 @@
                                   </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min-min.png" alt="">
-                                    </span>
-                                    <p>Affiliate Programme</p>
-                                </div>
-                            </div>  -->
+                           
                         </div>
                          <br><br>
                          <div class="row">
@@ -1066,40 +1059,11 @@
                                   </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
-                                        <img src="https://eraswapwallet.com/img/icons/9-min-min.png" alt="">
-                                    </span>
-                                    <p>Affiliate Programme</p>
-                                </div>
-                            </div>  -->
+                          
                         </div>
                     </div>
                 </div>
-                    <!-- <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="tm-about-image">
-                                <img class="tm-about-mobilethumb" src="images/about-mobile-min.png" alt="about mobile">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="tm-about-content">
-                                <h4>Why One App Era Swap Life:</h4>
-                                <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
-                                <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
-                                <ul class="stylish-list">
-                                    <li><i class="zmdi zmdi-check"></i> Affiliate Program</li>
-                                    <li><i class="zmdi zmdi-check"></i> Most mobile devices are sold with several apps
-                                        bundled.</li>
-                                    <li><i class="zmdi zmdi-check"></i> Mobile apps were originally offered for general
-                                        productivity.</li>
-                                    <li><i class="zmdi zmdi-check"></i> App presents the service's technology news.</li>
-                                </ul>
-                                <a href="/" class="tm-button"><span>Read More</span></a>
-                            </div>
-                        </div>
-                    </div> -->
+                    
                 </div>
             </div>
             <!--// About Us Area -->
@@ -1131,7 +1095,7 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4><img src="/images/divider-logo-min.png"/> Single sign on to ecosystem</h4>
+                                            <h4><img src="/images/divider-logo-min.png"/> Single Sign On to Ecosystem (SSO)</h4>
                                             <p style="margin-left: 33px;">Ease of access and convenience to users for getting access to all platforms of Era Swap Ecosystem</p>
                                         </div>
                                     </div>
@@ -1212,27 +1176,19 @@
                 </div>
             </div>
             <!--// Services Area -->
-
-            <!--// Video & Funfact Area -->
-            <!-- Frequently Ask Question -->
-            <!-- <div id="tm-area-faq" class="tm-faq-area tm-section tm-padding-section bg-white">
+             <div id="tm-area-faq" class="tm-faq-area tm-section tm-padding-section"  style="background: #eef2f4">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
-                                <h2>Frequently Asked Questions</h2>
-                                <span class="tm-sectiontitle-divider"><i class="zmdi zmdi-fullscreen"></i></span>
+                                <h2>FAQ's</h2>
+                                <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="row align-items-center">
-                        <div class="col-lg-5">
-                            <div class="tm-faq-image">
-                                <img src="images/faq-image-min.png" alt="faq image">
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-
+                    <div class="row align-items-center">                       
+                        <div class="col-lg-8 offset-md-2">
+                            <!-- Accordion Wrapper -->
                             <div id="tm-accordion1" class="tm-accordion">
 
                                 <div class="card">
@@ -1240,17 +1196,14 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link" data-toggle="collapse" data-target="#tm-accordion1-collapse1"
                                                 aria-expanded="true" aria-controls="tm-accordion1-collapse1">
-                                                How can I download the app ?
+                                                <img src="/images/q.png"> How to use Era Swap Life Single Sign On to access Era Swap Ecosystem?
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="tm-accordion1-collapse1" class="collapse show" aria-labelledby="tm-accordion1-heading1"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body">
-                                            <p>An App is a term to describe a web-based program. These web-based or
-                                                mobile applications perform a specific task for the user. website where
-                                                one can download these small programs for use on mobile devices such as
-                                                a Smart phone.</p>
+                                           <iframe width="460" height="215" src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -1260,111 +1213,24 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse2"
                                                 aria-expanded="false" aria-controls="tm-accordion1-collapse2">
-                                                How can I install the app ?
+                                               <img src="/images/q.png">  How to Stake TimeAlly from Era Swap Life?
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="tm-accordion1-collapse2" class="collapse" aria-labelledby="tm-accordion1-heading2"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body">
-                                            <p>An App is a term to describe a web-based program. These web-based or
-                                                mobile applications perform a specific task for the user. website where
-                                                one can download these small programs for use on mobile devices such as
-                                                a Smart phone.</p>
-                                            <ul>
-                                                <li>Libero exercitationem omnis blanditiis ea quo et rem.</li>
-                                                <li>Beatae veritatis aliquid vel quisquam saepe incidunt.</li>
-                                            </ul>
+                                           <iframe width="460" height="215" src="https://www.youtube.com/embed/qn1q9_SPeT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="card">
-                                    <div class="card-header" id="tm-accordion1-heading3">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse3"
-                                                aria-expanded="false" aria-controls="tm-accordion1-collapse3">
-                                                How can I active all the features ?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="tm-accordion1-collapse3" class="collapse" aria-labelledby="tm-accordion1-heading3"
-                                        data-parent="#tm-accordion1">
-                                        <div class="card-body">
-                                            <p>An App is a term to describe a web-based program. These web-based or
-                                                mobile applications perform a specific task for the user. website where
-                                                one can download these small programs for use on mobile devices such as
-                                                a Smart phone.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header" id="tm-accordion1-heading4">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse4"
-                                                aria-expanded="false" aria-controls="tm-accordion1-collapse4">
-                                                What platform should we target?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="tm-accordion1-collapse4" class="collapse" aria-labelledby="tm-accordion1-heading4"
-                                        data-parent="#tm-accordion1">
-                                        <div class="card-body">
-                                            <p>An App is a term to describe a web-based program. These web-based or
-                                                mobile applications perform a specific task for the user. website where
-                                                one can download these small programs for use on mobile devices such as
-                                                a Smart phone.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header" id="tm-accordion1-heading5">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse5"
-                                                aria-expanded="false" aria-controls="tm-accordion1-collapse5">
-                                                Do I have to buy the Mobile App?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="tm-accordion1-collapse5" class="collapse" aria-labelledby="tm-accordion1-heading5"
-                                        data-parent="#tm-accordion1">
-                                        <div class="card-body">
-                                            <p>An App is a term to describe a web-based program. These web-based or
-                                                mobile applications perform a specific task for the user. website where
-                                                one can download these small programs for use on mobile devices such as
-                                                a Smart phone.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header" id="tm-accordion1-heading6">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse6"
-                                                aria-expanded="false" aria-controls="tm-accordion1-collapse6">
-                                                Will I need to test my app fully?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="tm-accordion1-collapse6" class="collapse" aria-labelledby="tm-accordion1-heading6"
-                                        data-parent="#tm-accordion1">
-                                        <div class="card-body">
-                                            <p>An App is a term to describe a web-based program. These web-based or
-                                                mobile applications perform a specific task for the user. website where
-                                                one can download these small programs for use on mobile devices such as
-                                                a Smart phone.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
-
+                            <!--// Accordion Wrapper -->
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
+
             <!--// Frequently Ask Question -->
         </main>
         <!--// Page Content -->
