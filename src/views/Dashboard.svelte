@@ -40,7 +40,7 @@
             if(refer)document.getElementById("refer_model").click()
             error_message=""
 
-            let contract = new ethers.Contract("0x53E750ee41c562C171D65Bcb51405b16a56cF676", abi, wallet)
+            let contract = new ethers.Contract("0xef1344bdf80bef3ff4428d8becec3eea4a2cf574", abi, wallet)
             es_balance = ethers.utils.formatEther(await contract.functions.balanceOf(wallet.address));
 
         }catch (e) {

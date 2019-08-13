@@ -8,7 +8,7 @@
     let wallet_password="";
     let load_wallet_message = "Load wallet";
     let private_key ="";
-    let provider = new ethers.providers.InfuraProvider("kovan");
+    let provider = new ethers.providers.InfuraProvider("homestead");
 
     function load_wallet() {
         try{
