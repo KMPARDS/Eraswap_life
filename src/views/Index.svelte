@@ -1066,9 +1066,6 @@
                                   </div>
                                 </div>
                             </div>
-
-
-
                             <!-- <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
