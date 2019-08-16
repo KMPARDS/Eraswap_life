@@ -1009,13 +1009,13 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
-                                        <img src="/images/1-min.png" alt="">
+                                         <img src="/images/6-min.png" alt="">
                                     </span>
-                                    <p style="font-size:13px">P2P Exchange</p>
+                                     <p style="font-size:13px">Farming Community</p>
                                       </div>
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                       <img src="images/1App_web_logos-01-min.png" alt="" height="105px">
+                                        <img src="images/vof.png" alt="" height="105px">
                                     </div>
                                   </div>
                                   </div>
@@ -1037,35 +1037,12 @@
                                   </div>
                                   </div>
                                 </div>
-                            </div>
-                           
-                        </div>
-                         <br><br>
-                         <div class="row">
-                          <div class="col-md-3">
-                               <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                      <div class="flip-card-front">
-                                        <span class="tm-funfact-icon">
-                                          <img src="/images/6-min.png" alt="">
-                                       </span>
-                                    <p style="font-size:13px">Farming Community</p>
-                                      </div>
-                                    <div class="flip-card-back">
-                                      <div class="tm-funfact text-center">
-                                        <img src="images/vof.png" alt="" height="105px">
-                                    </div>
-                                  </div>
-                                  </div>
-                                </div>
-                            </div>
-                          
-                        </div>
+                            </div>                           
+                        </div>                       
                     </div>
-                </div>
-                    
-                </div>
-            </div>
+                </div>                    
+              </div>
+          </div>
             <!--// About Us Area -->
 
             <!-- Services Area -->

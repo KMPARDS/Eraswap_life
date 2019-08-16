@@ -30,6 +30,7 @@
                             <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li>
                             <!-- <li><a href="#">Advantages to Community</a></li> -->
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">White Paper</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,8 +56,14 @@
             
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12 offset-md-5">
+            <h4 class="text-white">Smart Contracts Address</h4><br>
+        </div>        
+    </div>
     
             <div class="row offset-md-1" style="padding-bottom: 40px;">
+            
                 <div class="col-md-3">
                      <a href="https://etherscan.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>Era Swap Token (ES)</span></a>
                 </div>
@@ -75,6 +82,41 @@
                 <div class="col-md-7">
                     <p class="tm-footer-copyright">Copyright 2019 <a rel="noopener noreferrer">Era Swap Life</a>. </p>
                 </div>
+                <!-- <div class="col-md-5">
+                            <ul class="tm-footer-social">
+                                <li>
+                                    <a href="#">
+                                        <i class="zmdi fa fa-facebook"></i>
+                                        <i class="zmdi zmdi-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="zmdi zmdi-dribbble"></i>
+                                        <i class="zmdi zmdi-dribbble"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="zmdi zmdi-behance"></i>
+                                        <i class="zmdi zmdi-behance"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="zmdi zmdi-twitter"></i>
+                                        <i class="zmdi zmdi-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="zmdi zmdi-pinterest"></i>
+                                        <i class="zmdi zmdi-pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+
             </div>
         </div>
     </div>
