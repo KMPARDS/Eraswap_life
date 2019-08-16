@@ -286,7 +286,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/betdeex-logo-min.png" alt="">
+                                        <img src="/images/betdeex-logo-min.png" data="" alt="">
                                     </span>
                                 </div>
                             </div>
