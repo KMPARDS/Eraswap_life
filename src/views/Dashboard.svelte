@@ -63,7 +63,7 @@
     async function load_website(event) {
         console.log(event);
         let url = event.srcElement.attributes.data.value;
-    	website = await window.open( url, this);
+    	website = await window.open( url);
     }
 
     // function load_dayswappers() {
