@@ -747,7 +747,6 @@
                             </div>
                         </div>
                         <!--// Single Features -->
-
                         <!-- Single Features -->
                         <div class="col-lg-4 col-md-6 col-12 mt-30">
                             <div class="tm-feature">
@@ -1200,6 +1199,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                             <!--// Accordion Wrapper -->
                         </div>

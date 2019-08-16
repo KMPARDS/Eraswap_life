@@ -5,7 +5,6 @@
 		user.loggedIn = !user.loggedIn;
 	}
 </script>
-
 <!-- Footer Area -->
 <div class="tm-footer bg-gradient">
     <div class="container">
