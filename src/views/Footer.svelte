@@ -31,6 +31,7 @@
                             <!-- <li><a href="#">Advantages to Community</a></li> -->
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">White Paper</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_lightpaper.pdf" target="_blank">Light Paper</a></li>
                         </ul>
                     </div>
                 </div>
