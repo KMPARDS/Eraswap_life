@@ -13,8 +13,8 @@
             <div class="row widgets tm-footer-widgets" style="padding-top: 0px !important; padding-bottom: 3px !important;">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12">
                     <div class="single-widget widget-info">
-                        <a href="index.html" class="widget-info-logo">
-                            <img src="/images/es_newlogo-white-min.png" alt="appmyil logo">
+                        <a href="/" class="widget-info-logo">
+                            <img src="/images/es_newlogo-white-min.png" alt="">
                         </a>
                         <!-- <p>Dolor enim sit et perferendis quia in. Sed perferendis aliquid quo vel
                             necessitatibus commodi similique et. Veniam ducimus sed rerum cumque ipsum eos
