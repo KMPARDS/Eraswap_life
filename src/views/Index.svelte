@@ -1009,7 +1009,7 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
-                                         <img src="/images/6-min.png" alt="">
+                                         <img src="/images/Farmer.png" alt="">
                                     </span>
                                      <p style="font-size:13px">Farming Community</p>
                                       </div>
@@ -1026,7 +1026,7 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
-                                        <img src="/images/1-min.png" alt="">
+                                        <img src="/images/Dating.png" alt="">
                                     </span>
                                     <p style="font-size:13px">Next Gen Dating and Match-Making</p>
                                       </div>
