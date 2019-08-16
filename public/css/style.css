@@ -688,6 +688,7 @@ caption,
 hr {
   margin: 0;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 h1,
@@ -4048,6 +4049,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 
 .tm-service-content p {
   margin-bottom: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .tm-service-image {

@@ -815,7 +815,7 @@
                                    <br><br>
                                 <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
                                 <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
-                                Access Era Swap Platforms, please <a href="/create-new-wallet"><b>Create wallet</b></a> or <a href="/access-my-wallet"><b>Access Wallet </b></a>
+                                <p> Access Era Swap Platforms, please <a href="/create-new-wallet"><b>Create wallet</b></a> or <a href="/access-my-wallet"><b>Access Wallet </b></a></p>
                             </div>
 
                         </div>
@@ -1178,7 +1178,7 @@
                                     </div>
                                     <div id="tm-accordion1-collapse1" class="collapse show" aria-labelledby="tm-accordion1-heading1"
                                         data-parent="#tm-accordion1">
-                                        <div class="card-body">
+                                        <div class="card-body offset-md-1">
                                           <iframe width="460" height="215" src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
@@ -1195,7 +1195,7 @@
                                     </div>
                                     <div id="tm-accordion1-collapse2" class="collapse" aria-labelledby="tm-accordion1-heading2"
                                         data-parent="#tm-accordion1">
-                                        <div class="card-body">
+                                        <div class="card-body offset-md-1">
                                            <iframe width="460" height="215" src="https://www.youtube.com/embed/qn1q9_SPeT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
