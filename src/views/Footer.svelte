@@ -44,12 +44,10 @@
                     </iframe>
                 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-                    <div class="single-widget widget-recentpost">
-                       
+                    <div class="single-widget widget-recentpost">                       
                     </div>
                 </div>
-            </div>
-            
+            </div>            
         </div>
     </div>
             <div class="row">

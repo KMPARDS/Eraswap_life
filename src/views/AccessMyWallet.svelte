@@ -66,7 +66,7 @@ async function load_by_private() {
 </div><br><br>
  <div class="container">
                 <div class="tm-breadcrumb text-center">
-               <span class="blinking" style="font-size:18px">Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br><br>
+               <span class="blinking" style="font-size:22px">Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br><br>
                     <h2 style="font-size: 32px; font-weight:100">Access My Wallet</h2>Do not have a wallet?
                     <a href="create-new-wallet"><b>Create A New Wallet</b></a><br><br>
                 </div>
