@@ -186,7 +186,7 @@
                                 <h3>Join Day Swappers Affiliate Programme</h3>
                                 <p>You are requested to complete your KYC to be eligible to avail Day Swappers rewards</p>
                                 <form id="tm-mailchimp-form" class="tm-subscribe-form text-center">
-                                    <button id="mc-submit" type="button" class="tm-button" ><span  data="http://dayswappers.org" on:click={load_website}>Now</span></button>
+                                    <button id="mc-submit" type="button" class="tm-button" ><span  data="http://dayswappers.com" on:click={load_website}>Now</span></button>
                                     <button id="mc-submit" type="button" class="tm-button" data-dismiss="modal"><span>Later</span></button>
                                 </form>
                                 <!-- Mailchimp Alerts -->
@@ -286,7 +286,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/betdeex-logo-min.png" data="" alt="">
+                                        <img src="/images/betdeex-logo-min.png" data="https://www.betdeex.com" on:click={load_website} alt="">
                                     </span>
                                 </div>
                             </div>
