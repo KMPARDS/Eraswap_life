@@ -36,17 +36,13 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12" on:click={toggle}>
-                <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                    <div class="single-widget widget-quicklinks">
-                        <h5 class="widget-title">Support</h5>
-                        <ul> -->
-                            <!-- <li><a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li> -->
-                            <!-- <li><a href="#">Era Swap (ES) Ver. 2</a></li> -->
-                            <!-- <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li> -->
-                        <!-- </ul>
-                    </div>
-                </div> -->
+                    <iframe
+                        allow="microphone;"
+                        width="350"
+                        height="430"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/11b7c637-920a-4280-8c9e-f948a97e3ac6">
+                    </iframe>
+                
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-recentpost">
                        
@@ -56,12 +52,12 @@
             
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 offset-md-5">
-            <h4 class="text-white">Smart Contracts Address</h4><br>
-        </div>        
-    </div>
-    
+            <div class="row">
+                <div class="col-md-12 offset-md-5">
+                    <h4 class="text-white">Smart Contracts Address</h4><br>
+                </div>        
+            </div>
+            
             <div class="row offset-md-1" style="padding-bottom: 40px;">
             
                 <div class="col-md-3">

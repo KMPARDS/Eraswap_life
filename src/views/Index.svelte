@@ -1199,6 +1199,22 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="card">
+                                    <div class="card-header" id="tm-accordion1-heading2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse2"
+                                                aria-expanded="false" aria-controls="tm-accordion1-collapse2">
+                                               <img src="/images/q.png">  Migration in Future?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="tm-accordion1-collapse2" class="collapse" aria-labelledby="tm-accordion1-heading2"
+                                        data-parent="#tm-accordion1">
+                                        <div class="card-body offset-md-1">
+                                         <p>As you only control the keys of your account and they are not stored anywhere, so in case you loose your Private Keys or Mnemonic phrase or Keystore file then only you are accountable and responsible for the loss.</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 
                             </div>
                             <!--// Accordion Wrapper -->
