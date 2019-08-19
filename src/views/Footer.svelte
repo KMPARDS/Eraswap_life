@@ -8,6 +8,19 @@
 <!-- Footer Area -->
 <div class="tm-footer bg-gradient">
     <div class="container">
+    <img src="/images/chatbot.png" class="open-button" onclick="openForm()" style="width:120px">
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+     <iframe
+             allow="microphone;"
+             width="350"
+             height="430"
+             src="https://console.dialogflow.com/api-client/demo/embedded/11b7c637-920a-4280-8c9e-f948a97e3ac6">
+    </iframe>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
         <div class="tm-footer-toparea tm-padding-section" >
             <div class="row widgets tm-footer-widgets" style="padding-top: 0px !important; padding-bottom: 3px !important;">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12">
@@ -36,12 +49,12 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12" on:click={toggle}>
-                    <iframe
+                    <!-- <iframe
                         allow="microphone;"
                         width="350"
                         height="430"
                         src="https://console.dialogflow.com/api-client/demo/embedded/11b7c637-920a-4280-8c9e-f948a97e3ac6">
-                    </iframe>
+                    </iframe> -->
                 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-recentpost">                       
