@@ -42,12 +42,20 @@
                             <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li>
                             <!-- <li><a href="#">Advantages to Community</a></li> -->
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
-                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">White Paper</a></li>
-                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_lightpaper.pdf" target="_blank">Light Paper</a></li>
+                          
                         </ul>
                     </div>
                 </div>
-
+             <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                    <div class="single-widget">
+                        <!-- <h5 class="widget-title">Services</h5> -->
+                        <ul>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">White Paper</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_lightpaper.pdf" target="_blank">Light Paper</a></li>
+                             <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/EraSwapLife.pdf" target="_blank">User Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12" on:click={toggle}>
                     <!-- <iframe
                         allow="microphone;"
