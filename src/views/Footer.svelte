@@ -69,8 +69,7 @@
                 </div>        
             </div>
             
-            <div class="row offset-md-1" style="padding-bottom: 40px;">
-            
+            <div class="row offset-md-1" style="padding-bottom: 40px;">            
                 <div class="col-md-3">
                      <a href="https://etherscan.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>Era Swap Token (ES)</span></a>
                 </div>
