@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
   }
-    svg { 
+    svg {
         height: 100%;
         width: 100%;
       }
@@ -27,7 +27,83 @@
       100% {
         stroke-dashoffset: 1050;
       }
-    }</style><link href="/css/index.c535fda884a8bff70327.css" rel="prefetch"><link href="/css/something.c535fda884a8bff70327.css" rel="prefetch"><link href="/js/index.c535fda884a8bff70327.js" rel="prefetch"><link href="/js/something.c535fda884a8bff70327.js" rel="prefetch"></head><script src="js/bundle.js"></script><script type="text/javascript">wallet = undefined
+    }</style><style>/* Button used to open the chat form - fixed at the bottom of the page */
+    .open-button {
+      /* background-color: #555; */
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
+
+    /* The popup chat - hidden by default */
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 380px;
+      padding: 15px;
+      background-color: white;
+    }
+
+    /* Full-width textarea */
+    .form-container textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      resize: none;
+      min-height: 200px;
+    }
+
+    /* When the textarea gets focus, do something */
+    .form-container textarea:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-image:linear-gradient(90deg, #6b1111 0%, #0a0100 100%);
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+
+    /* robot */</style><link href="/css/index.c8d752b54ea73f912909.css" rel="prefetch"><link href="/css/something.c8d752b54ea73f912909.css" rel="prefetch"><link href="/js/index.c8d752b54ea73f912909.js" rel="prefetch"><link href="/js/something.c8d752b54ea73f912909.js" rel="prefetch"></head><script>function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }</script><script src="js/bundle.js"></script><script type="text/javascript">wallet = undefined
 
     $(document).ready(function(){
     $('.toggle').click(function(){
@@ -36,7 +112,7 @@
     });
   });
     refer="";
-    base_url = "https://dayswappers.com:8000/";
+    base_url = "https://apis.dayswappers.com/";
 
     function submit_refer(){
         if(refer){
@@ -72,4 +148,4 @@
                        }
                    });
     return data
-}</script><body><script type="text/javascript" src="/js/main.c535fda884a8bff70327.js"></script></body></html>
+}</script><body><script type="text/javascript" src="/js/main.c8d752b54ea73f912909.js"></script></body></html>
