@@ -77,9 +77,6 @@ function myFunction() {
   document.execCommand("copy");
   alert("Copied the text: " + copyText.value);
 }
-
-
-
 </script>
 
 <style>
@@ -220,7 +217,10 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
     <div class="container">
         <div class="tm-breadcrumb text-center">
          <span class="blinking" style="font-size:22px">Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br><br>
-            <h2>Create a new wallet</h2>Already have a wallet?<a href="access-my-wallet"><b> Access My Wallet</b></a>
+            <h2 style="font-weight:800">Sign Up / Create<br>
+            New Wallet 
+            
+            </h2>Already have a wallet?<a href="access-my-wallet"><b> Access My Wallet</b></a>
         </div>
     </div>
 
