@@ -68,7 +68,7 @@ async function load_by_private() {
                 <div class="tm-breadcrumb text-center">
                <span class="blinking" style="font-size:22px">Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br><br>
                     <h2 style="font-size: 32px; font-weight:800">Sign In / Access <br>
-                    With existing Wallet <span style="font-size:14px">(Only ERC20 Wallet)</span>
+                    With existing Wallet <span style="font-size:14px">(Only Ether Wallet)</span>
                     </h2>Do not have a wallet?
                     <a href="create-new-wallet"><b>Create A New Wallet</b></a><br><br>
                 </div>
