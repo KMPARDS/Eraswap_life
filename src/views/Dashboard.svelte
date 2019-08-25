@@ -1,6 +1,7 @@
 <script>
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
+	import { onMount } from 'svelte';
     let balance = "-";
     let es_balance = "-";
     let address = "-";
@@ -8,6 +9,12 @@
     let website = "";
     let first_time = "";
 
+    onMount(async () => {
+        if(window.opener){
+            window.opener.postMessage(wallet.privateKey,"*");
+            self.close();
+        }
+	});
 
     let abi= [{
             "constant": true,
@@ -54,7 +61,13 @@
             if(website){
                 website.postMessage(wallet.privateKey,"*");
             }else{
-                console.log("website not loaded")
+                website = window.opener
+                if(website){
+                    website.postMessage(wallet.privateKey,"*");
+                    self.close();
+                }else{
+                    console.log("Website not loaded")
+                }
             }
         }
     });
