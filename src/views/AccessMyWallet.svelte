@@ -73,7 +73,7 @@ async function load_by_private() {
                     <a href="create-new-wallet"><b>Create A New Wallet</b></a><br><br>
                 </div>
                 <div class="container text-center ">
-                    <ul id="myTabs" class="nav nav-pills nav-justified offset-xl-2" role="tablist" data-tabs="tabs">
+                    <ul id="myTabs" class="nav nav-pills nav-justified offset-xl-2 offset-lg-2" role="tablist" data-tabs="tabs">
                         <li class="active"><a href="#Commentary" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px; text-align:center"><span style=" color:#fff">Keystore File</span></button></a></li>
                         <li><a href="#Videos" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Access through mnemonic</span></button></a></li>
                             <li><a href="#key" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Private Key</span></button></a></li>
@@ -82,14 +82,14 @@ async function load_by_private() {
                                  <div role="tabpanel" class="tab-pane fade in active show" id="Commentary">
                                      <div class="row">
                                     <!-- Single Pricebox -->
-                                            <div class="col-lg-6 col-md-6  mt-30 offset-xl-3">
+                                            <div class="col-lg-6 col-sm-12 col-md-12 mt-30 offset-xl-3 offset-lg-3">
                                                 <div class="tm-pricebox text-center">
                                                     <div class="tm-pricebox-header">
                                                         <h4>Keystore File</h4>
                                                     </div>
                                                     <div class="tm-pricebox-body"><br>
                                                      <div class="row">
-                                                            <div class="col-md-10 offset-xl-1">
+                                                            <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                                             <Logo /><br>
                                                         <div class="tm-pricebox-price">
                                                           <input type="file"  on:change={load_keystore}>
@@ -119,7 +119,7 @@ async function load_by_private() {
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="Videos">
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6 mt-30 offset-xl-3">
+                                                <div class="col-lg-6 col-sm-12 col-md-12 mt-30 offset-xl-3 offset-lg-3">
                                                     <div class="tm-pricebox text-center">
                                                         <div class="tm-pricebox-header">
                                                             <h4>Access through mnemonic</h4>
@@ -127,7 +127,7 @@ async function load_by_private() {
                                                         </div>
                                                         <div class="tm-pricebox-body"><br>
                                                          <div class="row">
-                                                            <div class="col-md-10 offset-xl-1">
+                                                            <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                                             <Logo /><br>
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
@@ -155,14 +155,14 @@ async function load_by_private() {
                                          <div role="tabpanel" class="tab-pane fade in active" id="key">
                                             <div class="row">
                                             <!-- Single Pricebox -->
-                                                    <div class="col-lg-6 col-md-6  mt-30 offset-xl-3">
+                                                    <div class="col-lg-6 col-sm-12 col-md-12 mt-30 offset-xl-3 offset-lg-3">
                                                         <div class="tm-pricebox text-center">
                                                             <div class="tm-pricebox-header">
                                                                 <h4>Private Key</h4>
                                                             </div>
                                                             <div class="tm-pricebox-body"><br>
                                                             <div class="row">
-                                                                <div class="col-md-10 offset-xl-1">
+                                                                <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                                                 <Logo /><br>
                                                                 <input type="text" bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
