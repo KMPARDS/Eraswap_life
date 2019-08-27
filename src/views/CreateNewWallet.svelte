@@ -186,7 +186,7 @@ input:checked + .slider:after
 </style>
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
 <Navbar title="Create New Wallet" />
-</div><br><br>
+</div><br>
 
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" id="pop_up" data-toggle="modal" data-target="#terms"  style="display: none">Create New Wallet</a>
 
@@ -216,11 +216,11 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
 
     <div class="container">
         <div class="tm-breadcrumb text-center">
-         <span class="blinking" style="font-size:22px">Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br><br>
-            <h2 style="font-weight:800">Sign Up / Create<br>
+         <span class="blinking">Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br>
+            <h2 style="font-size: 20px; font-weight:800">Sign Up / Create<br>
             New Wallet 
             
-            </h2>Already have a wallet?<a href="access-my-wallet"><b> Access My Wallet</b></a>
+            </h2 >Already have a wallet?<a href="access-my-wallet"><b> Access My Wallet</b></a>
         </div>
     </div>
 
@@ -229,7 +229,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             <div class="nav-center">
                 <ul class="nav nav-pills">
                     <li>
-                        <button class="btn btn-default active" style="background: #811515; color:#fff; padding:3px 19px; margin-right: 3px" data-toggle="tab" on:click={generate_random}>Generate Random</button>
+                        <button class="btn btn-default active" style="background:linear-gradient(270deg, #811515 0%, #694f4d 100%); color:#fff; padding:3px 19px; margin-right: 3px" data-toggle="tab" on:click={generate_random}>Generate Random</button>
                         <!-- <a  href="#prices" class="btn btn-default active" style="background: #811515; color:#fff; padding:20px; margin-right: 3px" data-toggle="tab">Generate Random</a> -->
                     </li>
                     <li>

@@ -1,1 +1,1 @@
-<img src="/images/logo-22-min.png" alt="Logo">
+<img src="/images/S_LIFE.png" alt="Logo" height="30px">
