@@ -63,22 +63,22 @@ async function load_by_private() {
 </script>
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
     <Navbar title="Dashboard"/>
-</div><br><br>
+</div><br>
  <div class="container">
                 <div class="tm-breadcrumb text-center">
-               <span class="blinking" style="font-size:22px">Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br><br>
-                    <h2 style="font-size: 32px; font-weight:800">Sign In / Access <br>
+               <span class="blinking" >Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br><br>
+                    <h2 style="font-size: 20px; font-weight:800">Sign In / Access <br>
                     With existing Wallet <span style="font-size:14px">(Only Ether Wallet)</span>
                     </h2>Do not have a wallet?
-                    <a href="create-new-wallet"><b>Create A New Wallet</b></a><br><br>
+                    <a style="font-size: 15px;" href="create-new-wallet"><b>Create A New Wallet</b></a><br><br>
                 </div>
-                <div class="container text-center ">
+                <div class="container text-center" style="margin-top: -30px;">
                     <ul id="myTabs" class="nav nav-pills nav-justified offset-xl-2 offset-lg-2" role="tablist" data-tabs="tabs">
                         <li class="active"><a href="#Commentary" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px; text-align:center"><span style=" color:#fff">Keystore File</span></button></a></li>
                         <li><a href="#Videos" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Access through mnemonic</span></button></a></li>
                             <li><a href="#key" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Private Key</span></button></a></li>
                     </ul>
-                             <div class="tab-content">
+                             <div class="tab-content" style="margin-top:-30px">
                                  <div role="tabpanel" class="tab-pane fade in active show" id="Commentary">
                                      <div class="row">
                                     <!-- Single Pricebox -->
@@ -92,11 +92,11 @@ async function load_by_private() {
                                                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                                             <Logo /><br>
                                                         <div class="tm-pricebox-price">
-                                                          <input type="file"  on:change={load_keystore}>
+                                                          <input style="height: 39px" type="file"  on:change={load_keystore}>
                                                         </div>
 
                                                         <div class="tm-pricebox-price">
-                                                          <input type="password" bind:value={wallet_password} placeholder="Enter the Password">
+                                                          <input style="height: 39px" type="password" bind:value={wallet_password} placeholder="Enter the Password">
                                                         </div>
 
                                                         </div>
@@ -163,8 +163,8 @@ async function load_by_private() {
                                                             <div class="tm-pricebox-body"><br>
                                                             <div class="row">
                                                                 <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                                                <Logo /><br>
-                                                                <input type="text" bind:value={private_key} placeholder="Enter Private Key">
+                                                                <Logo /><br><br>
+                                                                <input  type="text" bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
 
                                                                 </div>
