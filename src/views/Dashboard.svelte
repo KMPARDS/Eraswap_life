@@ -218,7 +218,7 @@
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->
                                   <h2><b>Era Swap Life is Gateway to</b></h2>
-                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
+                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png" ></span>
                                    <br><br>
                             </div>
 
@@ -230,7 +230,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/1App_web_logos-01-min.png" alt="">
+                                        <img src="/images/1App_web_logos-01-min.png" alt="" data="https://timeswappers.com/wallet-login" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
