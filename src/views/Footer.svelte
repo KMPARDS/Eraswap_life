@@ -5,6 +5,12 @@
 		user.loggedIn = !user.loggedIn;
 	}
 </script>
+<style>
+.tm-padding-section {
+  padding-top: 80px;
+  padding-bottom: 0px !important;
+}
+</style>
 <!-- Footer Area -->
 <div class="tm-footer bg-gradient">
     <div class="container">
@@ -23,7 +29,7 @@
 </div>
         <div class="tm-footer-toparea tm-padding-section" >
             <div class="row widgets tm-footer-widgets" style="padding-top: 0px !important; padding-bottom: 3px !important;">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                <div class="col-xl-4 col-lg- col-md-4 col-12">
                     <div class="single-widget widget-info">
                         <a href="/" class="widget-info-logo">
                             <img src="/images/es_newlogo-white-min.png" alt="">
@@ -34,7 +40,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                <div class="col-xl-2 col-lg-4 col-md-4 col-12">
                     <div class="single-widget">
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
@@ -46,7 +52,7 @@
                         </ul>
                     </div>
                 </div>
-             <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+             <div class="col-xl-2 col-lg-4 col-md-4 col-12">
                     <div class="single-widget">
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
@@ -57,12 +63,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12" on:click={toggle}>
-                    <!-- <iframe
-                        allow="microphone;"
-                        width="350"
-                        height="430"
-                        src="https://console.dialogflow.com/api-client/demo/embedded/11b7c637-920a-4280-8c9e-f948a97e3ac6">
-                    </iframe> -->
+                    <iframe src="https://www.youtube.com/embed/X4zp5zRP3_Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-recentpost">                       

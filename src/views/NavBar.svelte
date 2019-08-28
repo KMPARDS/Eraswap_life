@@ -15,7 +15,7 @@
   border-bottom: 1px solid #ccc6 !important;
 }
 .dropdown-menu{
-  min-width: 18rem;
+  min-width: 19rem;
   
 }
 .dropdown-item:active{
@@ -30,28 +30,31 @@ a:hover{
 }
 @media(max-width:768px){
   .align-drop{
-      right: auto;
-      left: 0;
+      left: auto;
+      right: 0;
     }  
 }
+
+
 </style>
 <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="/" id="home"><img src="/images/es_newlogo-white-min.png"></a>
   <div class="dropdown">
      <i class="fa fa-th " style="color: #fff; font-size:20px" data-toggle="dropdown" aria-hidden="true"></i>     
     <div class="dropdown-menu align-drop">
-      <a class="dropdown-item" href="http://dayswappers.com/" target="_blank"><img src="/images/9-min.png" alt="" height="25px"> <span class="sec-menu" style="font-size:13px">Affiliate Programme</span></a>
+     <a class="dropdown-item" href="https://timeswappers.com/swapperswall"  target="_blank"><img src="/images/12-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Social Community Platform</span></a> 
+ 
       <a class="dropdown-item" href="https://www.timeally.io/"  target="_blank"><img src="/images/10-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Token Vesting</span></a>
-      <a class="dropdown-item" href="#"  target="_blank" ><img src="/images/8-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Wallet</span></a>
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/2-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">P2P Marketplace Platform</span></a>      
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/12-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Social Community Platform</span></a> 
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/11-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Merchants & Shoppers e-Retail</span></a> 
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/3-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">eLearning Platform</span></a> 
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/5-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Prediction Platform</span></a> 
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/6-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Multi Exchange Solution</span></a> 
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/7-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">P2P Lend & Borrow</span></a> 
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/Farmer.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Farming Community</span></a> 
-      <a class="dropdown-item" href="#"  target="_blank"><img src="/images/Dating.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Next Gen Dating and Match-Making</span></a> 
+      <a class="dropdown-item" href="https://eraswapwallet.com/"  target="_blank" ><img src="/images/8-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Wallet</span></a>
+      <a class="dropdown-item" href="https://timeswappers.com/"  target="_blank"><img src="/images/2-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">P2P Marketplace Platform</span></a> 
+      <a class="dropdown-item" href="http://dayswappers.com/" target="_blank"><img src="/images/9-min.png" alt="" height="25px"> <span class="sec-menu" style="font-size:13px">Affiliate Programme</span></a>          
+      <a class="dropdown-item" href="https://buzcafe.com/"  target="_blank"><img src="/images/11-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Merchants & Shoppers e-Retail</span></a> 
+      <a class="dropdown-item" href="https://eraswap.academy/"  target="_blank"><img src="/images/3-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">eLearning Platform</span></a> 
+      <a class="dropdown-item" href="https://www.betdeex.com/"  target="_blank"><img src="/images/5-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Prediction Platform</span></a>       
+      <a class="dropdown-item" href="https://computeex.net/"  target="_blank"><img src="/images/7-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">P2P Lend & Borrow</span></a>
+      <a class="dropdown-item" href="https://computeex.net/"  target="_blank"><img src="/images/6-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Multi Exchange Solution</span></a>  
+      <a class="dropdown-item" href="http://valueoffarmers.org/"  target="_blank"><img src="/images/Farmer.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Farming Community</span></a> 
+      <a class="dropdown-item" href="http://dateswappers.com/"  target="_blank"><img src="/images/Dating.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Next Gen Dating and Match-Making</span></a> 
     </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
