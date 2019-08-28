@@ -72,7 +72,7 @@ a:hover{
       </if>
       {/if}
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
-        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="https://eraswaptoken.io/dash/" >ESE Dashboard</a>
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/dist/ecosystem" >ESE Dashboard</a>
       </li>
     </ul>
   </div>
