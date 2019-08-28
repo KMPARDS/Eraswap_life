@@ -230,8 +230,8 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/1App_web_logos-01-min.png" alt="" data="https://timeswappers.com/wallet-login" on:click={load_website}>
-                                    </span>
+                                        <img src="/images/g-min.png" alt="" data="https://www.timeally.io/" on:click={load_website}>
+                                    </span>                                   
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -244,7 +244,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/b-min.png" alt="">
+                                        <img src="/images/b-min.png" alt="" data="https://timeswappers.com/wallet-login" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
@@ -270,21 +270,21 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
+                                        <img src="/images/f-min.png" alt="" data="https://eraswapwallet.com/" on:click={load_website}>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                             <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
                                         <img src="/images/e-min.png" alt="" data="https://computeex.net/login/" on:click={load_website}>
                                     </span>
-                                </div>
+                                </div>                               
                             </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/f-min.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
-                                        <img src="/images/g-min.png" alt="" data="https://www.timeally.io/" on:click={load_website}>
+                                        <img src="/images/1App_web_logos-01-min.png" alt="" data="https://eraswap.academy/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
