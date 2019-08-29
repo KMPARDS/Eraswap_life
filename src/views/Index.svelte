@@ -767,6 +767,14 @@
                 </div>
             </div>
             <!--// Features Area -->
+            <style>
+            @media(min-width: 768px){
+              .pcvid{
+                width: 560px;
+                height:315px;
+              }
+            }
+            </style>
 
                  <div id="tm-area-services" class="tm-services-area tm-section bg-white" >
                 <div class="container">
@@ -782,10 +790,12 @@
                         </div>
                     </div>
                     <div class="row ">                        
-                        <div class="col-lg-12 " style="margin-bottom: -108px;">
+                        <div class="col-lg-12 col-md-12 col-xl-12 col-xs-12" style="margin-bottom: -108px;">
                             <div class="tm-service-image offset-md-3">
                                 <div class="tm-service-image-1 is-visible" style="margin-top: -92px; margin-bottom: -130px;">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/BABmKitmkic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                 <iframe  class="pcvid" src="https://www.youtube.com/embed/BABmKitmkic?rel=0&amp;showinfo=0" frameborder="0"  allowFullScreen />
+
+                                 <!-- <iframe class="pcvid" src="https://www.youtube.com/embed/BABmKitmkic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                 </div>
                                 <div class="tm-service-image-2">
                                 </div>
@@ -1232,7 +1242,7 @@
                                     <div id="tm-accordion1-collapse1" class="collapse show" aria-labelledby="tm-accordion1-heading1"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
-                                          <iframe width="460" height="215" src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <iframe src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -1249,7 +1259,7 @@
                                     <div id="tm-accordion1-collapse2" class="collapse" aria-labelledby="tm-accordion1-heading2"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
-                                           <iframe width="460" height="215" src="https://www.youtube.com/embed/qn1q9_SPeT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                           <iframe  src="https://www.youtube.com/embed/qn1q9_SPeT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
