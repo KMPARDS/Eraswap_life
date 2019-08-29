@@ -1115,7 +1115,7 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>Advantages to Era Swap Community Members</h4>
-                               <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                               <span class=""><img src="/images/life.png" height="30px"></span>
                                 <br><br>
                             </div>
                         </div>
