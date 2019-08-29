@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Facebook -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+
+
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://eraswap.life/images/favicon-min.png">
+
+    <title>Era Swap Life is the gateway to the one world of Era Swap Ecosystem</title>
+
+    <!-- vendor css -->
+    <link href="lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/cryptofont/css/cryptofont.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+    <style>
+      .tx-normal{
+        font-size: 18px;
+      }
+      .chart-thirteen {
+          height: 126px;
+      }
+
+      div.ex {
+        /* background-color: lightblue; */
+        height: 195px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden
+      }
+      div.ex1 {
+        /* background-color: lightblue; */
+        height: 228px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden
+      }
+      div.ex2 {
+        /* background-color: lightblue; */
+        height: 118px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden
+      }
+      div.ex3 {
+        /* background-color: lightblue; */
+        height: 118px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden
+      }
+      div.ex4 {
+        /* background-color: lightblue; */
+        height: 148px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden
+      }
+      div.ex5 {
+        /* background-color: lightblue; */
+        height: 148px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden
+      }
+      div.ex6 {
+        /* background-color: lightblue; */
+        height: 117px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden
+      }
+    </style>
+    <style>
+       
+      </style>
+  </head>
+  <body class="page-profile">
+
+    <header class="navbar navbar-header navbar-header-fixed">
+
+      <div class="navbar-brand">
+        <a href="https://eraswap.life/" class="df-logo"><img src="images/es_newlogo-min.png"></a>
+      </div><!-- navbar-brand -->
+      <!-- <div id="navbarMenu" class="navbar-menu-wrapper">
+        <div class="navbar-menu-header">
+          <a href="index.html" class="df-logo"></a>
+          <a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+        </div>
+        <ul class="nav navbar-menu navbar-right">
+            <li class="nav-item"><a href="https://themeforest.net/item/dashforge-responsive-admin-dashboard-template/23725961" class="btn btn-buy"> <span>Sign Up </span> <span style="font-size: 10px">New Users</span></a></li>
+            <li class="nav-item"><a href="https://themeforest.net/item/dashforge-responsive-admin-dashboard-template/23725961" class="btn btn-buy"><span>Sign In  <span style="font-size: 10px">Existing Users</span></span></a></li>
+          </ul>
+      </div>
+      -->
+    </header>
+
+    <div class="content content-fixed">
+      <div class="container-fluid pd-x-0 pd-lg-x-10 pd-xl-x-0">
+        <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ecosystem Monitoring</li>
+              </ol>
+            </nav>
+            <h4 class="mg-b-0 tx-spacing--1">Welcome to Ecosystem Dashboard</h4>
+          </div>
+          <div class="d-none d-md-block">
+            <button class="btn btn-sm pd-x-15 btn-white btn-uppercase"><i data-feather="mail" class="wd-10 mg-r-5"></i> Email</button>
+            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" onClick="window.print()"><i data-feather="printer" class="wd-10 mg-r-5"></i> Print</button>
+          </div>
+        </div>
+
+        <div class="row row-xs">
+          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES Total Supply</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="es-total-supply">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChart6" class="flot-chart ht-30"></div>
+                </div><!-- chart-three -->
+            </div>
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Total ES Users</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="es-holders">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChart7" class="flot-chart ht-30"></div>
+                </div><!-- chart-three -->
+            </div>
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Total Staked ES</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="total-staked-es">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChartAvailableEST" class="flot-chart ht-30"></div>
+                </div><!-- chart-three -->
+            </div>
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES released from NRT this month</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="nrt-released">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChart8" class="flot-chart ht-30"></div>
+                </div><!-- chart-three -->
+            </div>
+          </div><!-- col -->
+          <!-- <div class="col-sm-6 col-lg-2 mg-t-10 mg-sm-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of TimeAlly Stakings</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="number-of-ta-stakings">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChart4" class="flot-chart ht-30"></div>
+                </div>
+            </div>
+          </div> -->
+          <!-- col -->
+          <!-- <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of TimeAlly stakers</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="number-of-stakers">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChart5" class="flot-chart ht-30"></div>
+                </div>
+            </div>
+          </div> -->
+          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of DaySwappers</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="total_no_of_user">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChart120" class="flot-chart ht-30"></div>
+                </div><!-- chart-three -->
+            </div>
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of KYC DaySwappers</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="kyc-users">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChart4" class="flot-chart ht-30"></div>
+                </div><!-- chart-three -->
+            </div>
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+              <div class="card card-body">
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of Ecosystem transactions</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                  <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="platform-transactions-number">Loading...</h3>
+                </div>
+                <div class="chart-three">
+                    <div id="flotChart9" class="flot-chart ht-30"></div>
+                  </div><!-- chart-three -->
+              </div>
+            </div><!-- col -->
+            <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+              <div class="card card-body">
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Volume of Ecosystem transactions</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                  <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="volume-of-platform">Loading...</h3>
+                </div>
+                <div class="chart-three">
+                    <div id="flotChart110" class="flot-chart ht-30"></div>
+                  </div><!-- chart-three -->
+              </div>
+            </div><!-- col -->
+
+            <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+              <div class="card card-body">
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Luck Pool in Newly Released Tokens</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                  <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="luck-pool-bal">Loading...</h3>
+                </div>
+                <div class="chart-three">
+                    <div id="flotChart5" class="flot-chart ht-30"></div>
+                  </div><!-- chart-three -->
+              </div>
+            </div><!-- col -->
+            <div class="col-sm-6 col-lg-2 mg-t-10">
+              <div class="card card-body">
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Total ES Burned</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                  <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">11,000,000 ES</h3>
+                </div>
+                <div class="chart-three">
+                    <div id="flotChart8" class="flot-chart ht-30"></div>
+                  </div><!-- chart-three -->
+              </div>
+            </div><!-- col -->
+
+          <div class="col-12 mg-t-10">
+            <div class="card">
+              <!-- <div class="card-header">
+                <h5 class="mg-b-0">1 ES <img src="images/es-life.png" height="24px"></h5>
+              </div> -->
+              <!-- card-header -->
+              <div class="card-body pd-0">
+                <div class="row no-gutters">
+                  <div class="col col-sm-6 col-lg">
+                    <div class="crypto">
+                      <div class="media mg-b-10">
+                           <div class="crypto-icon bg-secondary">
+                              <img src="images/es-icon.png">
+                            </div>
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Era Swap <span class="tx-color-03 tx-normal">(ES)</span></h6>
+                          <div class="d-flex align-items-baseline tx-rubik">
+                            <h5 class="tx-20 mg-b-0">Not Available</h5>
+                            <!-- <p class="mg-b-0 tx-11 tx-danger mg-l-3"><i class="icon ion-md-arrow-down"></i> 0.80%</p> -->
+                          </div>
+                        </div><!-- media-body -->                       
+                      </div><!-- media -->
+                      <!-- <div class="chart-twelve">
+                        <div id="flotChart2" class="flot-chart"></div>
+                      </div> -->
+                      <!-- chart-twelve -->
+
+                      <!-- <div class="pos-absolute b-5 l-20 tx-medium">
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
+                          <a href="" class="link-01 tx-semibold">12</a> USD Markets
+                        </label>
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
+                          <a href="" class="link-01 tx-semibold">81</a> ETH Markets
+                        </label>
+                      </div> -->
+                    </div><!-- crypto -->
+                  </div>
+                  <div class="col col-sm-6 col-lg bd-t bd-lg-t-0 bd-sm-l">
+                    <div class="crypto">
+                        <div class="media mg-b-10">
+                             <div class="crypto-icon bg-secondary">
+                                <i class="fa fa-btc"></i>
+                              </div>
+                            <div class="media-body pd-l-8">
+                              <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Bitcoin <span class="tx-color-03 tx-normal">(BTC)</span></h6>
+                              <div class="d-flex align-items-baseline tx-rubik">
+                                <h5 class="tx-20 mg-b-0" id="bitcoin-price-usd">Loading...</h5>
+                                <!-- <p class="mg-b-0 tx-11 tx-success mg-l-3"><i class="icon ion-md-arrow-up"></i> 4.34%</p> -->
+                              </div>
+                            </div><!-- media-body -->
+                          </div><!-- media -->
+
+                      <!-- <div class="chart-twelve">
+                        <div id="flotChart5" class="flot-chart"></div>
+                      </div> -->
+                      <!-- chart-twelve -->
+
+                      <!-- <div class="pos-absolute b-5 l-20 tx-medium">
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
+                          <a href="" class="link-01 tx-semibold">6</a> USD Markets
+                        </label>
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
+                          <a href="" class="link-01 tx-semibold">31</a> DASH Markets
+                        </label>
+                      </div> -->
+                    </div><!-- crypto -->
+                  </div>
+                  <div class="col col-sm-6 col-lg bd-t bd-sm-t-0 bd-sm-l">
+                    <div class="crypto">
+                        <div class="media mg-b-10">
+                            <div class="crypto-icon bg-secondary">
+                              <i class="cf cf-eth"></i>
+                            </div>
+                            <!-- crypto-icon -->
+                            <div class="media-body pd-l-8">
+                              <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Ethereum <span class="tx-color-03 tx-normal">(ETH)</span></h6>
+                              <div class="d-flex align-items-baseline tx-rubik">
+                                <h5 class="tx-20 mg-b-0" id="ether-price-usd">Loading...</h5>
+                                <!-- <p class="mg-b-0 tx-11 tx-danger mg-l-3"><i class="icon ion-md-arrow-down"></i> 0.77%</p> -->
+                              </div>
+                            </div><!-- media-body -->
+                          </div><!-- media -->
+                     
+
+                      <!-- <div class="chart-twelve">
+                        <div id="flotChartBTCCash" class="flot-chart"></div>
+                      </div> -->
+                      <!-- chart-twelve -->
+
+                      <!-- <div class="pos-absolute b-5 l-20 tx-medium">
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
+                          <a href="" class="link-01 tx-semibold">11</a> USD Markets
+                        </label>
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
+                          <a href="" class="link-01 tx-semibold">74</a> BCH Markets
+                        </label>
+                      </div> -->
+                    </div><!-- crypto -->
+                  </div>
+
+
+                </div><!-- row -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+
+          <div class="col-lg-4 col-xl-4 mg-t-10">
+            <div class="card">
+              <div class="card-header bd-b-0 pd-t-10 pd-lg-t-25 pd-l-20 pd-lg-l-25 d-flex flex-column flex-sm-row align-items-sm-start justify-content-sm-between">
+                <div>
+                  <h6 class="mg-b-5">Last month Work Pool NRT Utilisation</h6>                  
+                </div>
+              </div>              
+              <div class="card-body ex" >
+                <div class="row align-items-sm-end">
+                  <div class="col-12 mg-t-30 mg-lg-t-0">
+                    <div class="row">
+                      <div class="col-sm-6 col-lg-12">
+                        <div class="d-flex align-items-center justify-content-between mg-b-5">
+                          <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">TimeTraders</h6>
+                          <span class="tx-10 tx-color-04">0% (NRT not released)</span>
+                        </div>
+                        <div class="d-flex justify-content-between mg-b-5">
+                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small>0 ES</small></h5>
+                        </div>
+                        <div class="progress ht-4 mg-b-0 op-5">
+                          <div class="progress-bar bg-orange wd-0p" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-12 mg-t-30">
+                        <div class="d-flex align-items-center justify-content-between mg-b-5">
+                          <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">DaySwappers</h6>
+                          <span class="tx-10 tx-color-04">0% (NRT not released)</span>
+                        </div>
+                        <div class="d-flex justify-content-between mg-b-5">
+                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small>0 ES</small></h5>
+                        </div>
+                        <div class="progress ht-4 mg-b-0 op-5">
+                          <div class="progress-bar bg-pink wd-0p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-12 mg-t-30">
+                        <div class="d-flex align-items-center justify-content-between mg-b-5">
+                          <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">BuzCafe</h6>
+                          <span class="tx-10 tx-color-04">0% (NRT not released)</span>
+                        </div>
+                        <div class="d-flex justify-content-between mg-b-5">
+                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small>0 ES</small></h5>
+                        </div>
+                        <div class="progress ht-4 mg-b-0 op-5">
+                          <div class="progress-bar bg-primary wd-0p" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-12 mg-t-30 mg-sm-t-0 mg-lg-t-30">
+                        <div class="d-flex align-items-center justify-content-between mg-b-5">
+                          <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">Curator</h6>
+                          <span class="tx-10 tx-color-04">0% (NRT not released)</span>
+                        </div>
+                        <div class="d-flex align-items-end justify-content-between mg-b-5">
+                          <h5 class="tx-normal tx-rubik lh-2 mg-b-0">0 ES</h5>
+                          <h6 class="tx-normal tx-rubik tx-color-03 lh-2 mg-b-0">0 ES</h6>
+                        </div>
+                        <div class="progress ht-4 mg-b-0 op-5">
+                          <div class="progress-bar bg-teal wd-0p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-xl-4 mg-t-10">
+            <div class="card">
+              <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
+                <h6 class="mg-b-0">All Platform TFC Generated of this month</h6>
+              </div><!-- card-header -->
+              <div class="card-body pos-relative pd-0">
+
+                <div data-label="Example" class="df-example">
+                  <div class="ht-100 ht-lg-200"><canvas id="chartBar2"></canvas></div>
+                </div><!-- df-example -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div>
+          <div class="col-md-6 col-xl-4 mg-t-10">
+                <div class="card">
+                  <div class="card-header">
+                    <h6 class="mg-b-0">Charity Pool</h6>
+                  </div><!-- card-header -->
+                  <!-- <div class="card-body pd-lg-25">
+                    <div class="chart-seven"><canvas id="chartDonut3"></canvas></div>
+                  </div> -->
+                  <!-- card-body -->
+                  <div class="card-footer pd-50">
+                    <div class="row">
+                      <div class="col-12">
+                        <p class="tx-13 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-5">Charity Collected</p>
+                        <div class="d-flex align-items-center">
+                          <div class="wd-10 ht-10 rounded-circle bg-pink mg-r-5"></div>
+                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
+                        </div>
+                      </div><!-- col -->
+                      <div class="col-12 mg-t-20">
+                        <p class="tx-13 tx-uppercase tx-medium tx-color-03 tx-spacing-1 mg-b-5">Charity Given</p>
+                        <div class="d-flex align-items-center">
+                          <div class="wd-10 ht-10 rounded-circle bg-teal mg-r-5"></div>
+                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="d-flex mg-t-25">
+                    <button class="btn btn-sm btn-uppercase btn-white flex-fill tx-spacing-1">Become A Curator</button>
+                    <button class="btn btn-sm btn-uppercase btn-primary flex-fill tx-spacing-1 mg-l-10">Become A Time Trader</button>
+                </div> -->
+        </div>
+
+
+          <div class="col-md-3 col-xl-4 mg-t-10">
+              <div class="card">
+                  <div class="crypto card-header" style="padding-bottom: 0px;">
+                      <div class="media mg-b-8">
+                        <div class="">
+                          <img src="images/TimeAlly-Favicon.png" height="25px">
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">TimeAlly Stakers</span></h6>
+
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+                  </div>
+                  <div class="card-body pd-y-25">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="chart-thirteen"><canvas id="chartDonut2"></canvas></div>
+                      </div>
+                      <div class="col-12 tx-12 ">
+                          <!-- <div class="d-flex align-items-center">
+                              <div class="wd-10 ht-10 bg-primary rounded-circle pos-relative t--1"></div>
+                              <span class="tx-medium mg-l-10">Number of 1 year stakers</span>
+                              <span class="tx-rubik mg-l-auto" id="one-year-stakers">Loading...</span>
+
+                            </div> -->
+                            <div class="d-flex align-items-center mg-t-10">
+                              <div class="wd-10 ht-10 bg-teal rounded-circle pos-relative t--1"></div>
+                              <span class="tx-medium mg-l-10">Volume of 1 year stakings</span>
+                              <span class="tx-rubik mg-l-auto" id="one-year-stakings">Loading...</span>
+                              <!-- <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0.75% <i class="icon fa fa-long-arrow-up"></i></span> -->
+                            </div>
+                            <!-- <div class="d-flex align-items-center mg-t-10">
+                              <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
+                              <span class="tx-medium mg-l-10">Number of 2 year stakers</span>
+                              <span class="tx-rubik mg-l-auto" id="two-year-stakers">Loading...</span>
+
+                            </div> -->
+                            <div class="d-flex align-items-center mg-t-10">
+                                <div class="wd-10 ht-10 rounded-circle pos-relative t--1" style="background-color: #4D4D4D"></div>
+                                <span class="tx-medium mg-l-10">Volume of 2 year stakings</span>
+                                <span class="tx-rubik mg-l-auto" id="two-year-stakings">Loading...</span>
+                                <!-- <span class="wd-60 tx-right tx-rubik mg-l-5 tx-danger">-0.58% <i class="icon fa fa-long-arrow-down"></i></span> -->
+                              </div>
+                          </div>
+                    </div>
+                  </div><!-- card-body -->
+                </div><!-- card -->
+          </div>
+          <!-- <div class="col-md-3 col-xl-4 mg-t-10">
+              <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                    <h6 class="lh-5 mg-b-0">Total ES utilised in WorkPool NRT</h6>
+                  </div>
+                  <div class="card-body pd-y-25">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="chart-thirteen"><canvas id="chartDonuts"></canvas></div>
+                      </div>
+                      <div class="col-12 tx-12 mg-t-40">
+                        <div class="d-flex align-items-center">
+                          <div class="wd-10 ht-10 bg-primary rounded-circle pos-relative t--1"></div>
+                          <span class="tx-medium mg-l-10">Utilised by Curator</span>
+                          <span class="tx-rubik mg-l-auto">0 ES</span>
+                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
+                        </div>
+                        <div class="d-flex align-items-center mg-t-10">
+                          <div class="wd-10 ht-10 bg-teal rounded-circle pos-relative t--1"></div>
+                          <span class="tx-medium mg-l-10">Utilised by TimeTraders</span>
+                          <span class="tx-rubik mg-l-auto">0 ES</span>
+                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
+                        </div>
+                        <div class="d-flex align-items-center mg-t-10">
+                          <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
+                          <span class="tx-medium mg-l-10">Utilised by Day Swappers</span>
+                          <span class="tx-rubik mg-l-auto">0 ES</span>
+                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
+                        </div>
+                        <div class="d-flex align-items-center mg-t-10">
+                          <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
+                          <span class="tx-medium mg-l-10">Utilised by BuzCafe</span>
+                          <span class="tx-rubik mg-l-auto">0 ES</span>
+                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
+                        </div>
+                        <div class="d-flex align-items-center mg-t-10">
+                          <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
+                          <span class="tx-medium mg-l-10">Utilised by Day Swappers</span>
+                          <span class="tx-rubik mg-l-auto">0 ES</span>
+                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div> -->
+       
+
+          <div class="col-md-4 col-lg-4 mg-t-10 col-sm-6">
+              <div class="card">               
+                <div class="crypto card-header" style="padding-bottom: 0px;">
+                    <div class="media mg-b-8">
+                      <div class="">
+                        <img src="images/Time-Swappers-Favicon.png" height="25px">
+                      </div><!-- crypto-icon -->
+                      <div class="media-body pd-l-8">
+                        <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Time Swappers <span class="tx-color-03 tx-normal"></span></h6>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                </div>
+                <div class="card-body ex1 pd-0">
+                  <div class="list-group list-group-flush tx-13">
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Number of Users</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-no-of-users">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Number of Freelancers/Sellers</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-no-of-freelancers">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">TFC generated</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-TfcGenerated">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Number of Views on Freelancer Portfolio pages</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-profile-views">0 Views</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total KYC Done</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-kyc-done">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Verified</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfVerifiedUser">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Certified</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfCertifiedUser">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Deposit done</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfDeposit">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Withdraw done</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfWithdraw">0 ES</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Jobs Posted</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalJobsPosted">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Jobs done</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalJobsDone">Loading...</div>
+                    </div>
+                  </div><!-- list-group -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+            <div class="card">
+                <div class="crypto card-header" style="padding-bottom: 0px;">
+                    <div class="media mg-b-8">
+                      <div class="">
+                        <img src="images/Swappers-Wall-Favicon.png" height="25px">
+                      </div><!-- crypto-icon -->
+                      <div class="media-body pd-l-8">
+                        <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Top 10 Power Token Receivers on Swappers Wall</h6>  
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                </div>
+              <div class="card-body pd-0" style="padding-top:17px">
+                <div class="list-group list-group-flush tx-13" id="swapperswall-top-ten-receivers">
+
+                </div><!-- list-group -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+            <div class="card">
+                <div class="crypto card-header" style="padding-bottom: 0px;">
+                    <div class="media mg-b-8">
+                      <div class="">
+                        <img src="images/Time-Swappers-Favicon.png" height="25px">
+                      </div><!-- crypto-icon -->
+                      <div class="media-body pd-l-8">
+                        <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Top 5 Services on Time Swappers</h6>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                </div>
+              <div class="card-body ex3 pd-0">
+                <div class="list-group list-group-flush tx-13" id="timeswappers-topServices">
+                  
+                </div><!-- list-group -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+              <div class="card ">
+                  <div class="crypto card-header" style="padding-bottom: 0px;">
+                      <div class="media mg-b-8">
+                        <div class="">
+                          <img src="images/Day-Swappers--Favicon.png" height="25px">
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Day Swappers <span class="tx-color-03 tx-normal"></span></h6>
+
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+                  </div>
+                <div class="card-body pd-0">
+                  <div class="list-group list-group-flush tx-13">
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Direct Transactions Volume</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02">4,230 ES</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Direct Transactions TFC</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02">1,416 ES</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Indirect Transactions Volume</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02">4,230 ES</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Indirect Transactions TFC</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02">1,416 ES</div>
+                    </div>
+                  </div><!-- list-group -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+            <div class="card">
+              <!-- <div class="card-header">
+                <h6 class="lh-5 mg-b-5">Swappers Wall</h6>
+              </div> -->
+              <div class="crypto card-header" style="padding-bottom: 0px;">
+                  <div class="media mg-b-8">
+                    <div class="">
+                      <img src="images/Swappers-Wall-Favicon.png" height="25px">
+                    </div><!-- crypto-icon -->
+                    <div class="media-body pd-l-8">
+                      <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Swappers Wall <span class="tx-color-03 tx-normal"></span></h6>
+
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+              </div>
+              <div class="card-body pd-0 ex2">
+                <div class="list-group list-group-flush tx-13">
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Communities</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-communities">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Group</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-groups">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Pages</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-pages">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Friends</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-friends">0 Views</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Active Users</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-active-users">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Media Uploads</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-media">Loading...</div>
+                  </div>
+
+                </div><!-- list-group -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+
+
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+            <div class="card">
+              <!-- <div class="card-header">
+                <h6 class="lh-5 mg-b-5">Eraswap Academy</h6>
+              </div> -->
+              <div class="crypto card-header" style="padding-bottom: 0px;">
+                  <div class="media mg-b-8">
+                    <div class="">
+                      <img src="images/Acadmey-Favicon.png" height="25px">
+                    </div><!-- crypto-icon -->
+                    <div class="media-body pd-l-8">
+                      <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Eraswap Academy <span class="tx-color-03 tx-normal"></span></h6>
+
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+              </div>
+              <div class="card-body ex5 pd-0">
+                <div class="list-group list-group-flush tx-13">
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Trainers Count</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-trainers-count">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Institute Count</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-institute-count">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Users Count</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-users-count">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Users with certificates</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-users-with-certificate">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total BOA distributed to users</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-total-boa">Loading...</div>
+                  </div>
+
+                </div><!-- list-group -->
+                <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for every course sale on Eraswap Academy. Please go to the platform site for more information on this.</p>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+             <div class="card">
+                <div class="crypto card-header" style="padding-bottom: 0px;">
+                    <div class="media mg-b-8">
+                      <div class="">
+                        <img src="images/BuzCafe-Favicons.png" height="25px">
+                      </div><!-- crypto-icon -->
+                      <div class="media-body pd-l-8">
+                        <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">BuzCafe <span class="tx-color-03 tx-normal"></span></h6>
+
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                </div>
+              <div class="card-body pd-0">
+                <div class="list-group list-group-flush tx-13">
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Users</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-users-count">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Shops</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-shops-count">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Deposits</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-deposits-count">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Withdrawls</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-withdrawals-count">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Internal Transactions</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-transactions-count">Loading...</div>
+                  </div>
+
+                </div><!-- list-group -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+              <div class="card">
+                  <div class="crypto card-header" style="padding-bottom: 0px;">
+                      <div class="media mg-b-8">
+                        <div class="">
+                          <img src="images/TimeAlly-Favicon.png" height="25px">
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">TimeAlly <span class="tx-color-03 tx-normal"></span></h6>
+
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+                  </div>
+
+              <div class="card-body ex4 pd-0">
+                <div class="list-group list-group-flush tx-13">
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Number of Stakings</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-number-stakings">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Number of Stakers</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-number-stakers">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Volume of Stakings</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-stakings-volume">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Number of 1 year stakings</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-one-year-stakings-number">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Number of 2 year stakings</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-two-year-stakings-number">Loading...</div>
+                  </div>
+
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Volume of 1 year stakings</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-one-year-stakings-olume">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total Volume of 2 year stakings</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-two-year-stakings-volume">Loading...</div>
+                  </div>
+
+                </div><!-- list-group -->
+                <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for new stakings fulfilling TimeAlly Club criteria. Please go to the platform site for more information on this.</p>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+              <div class="card">
+                  <div class="crypto card-header" style="padding-bottom: 0px;">
+                      <div class="media mg-b-8">
+                        <div class="">
+                          <img src="images/BetDeEx-Favicons.png" height="25px">
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">BetDeEx <span class="tx-color-03 tx-normal"></span></h6>
+
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+                  </div>
+              <div class="card-body ex6 pd-0">
+                <div class="list-group list-group-flush tx-13">
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total number of Events</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-total-number-bets">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total number of Predictors</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-total-number-bettors">0 users</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total ES volume predicted on BetDeEx</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-total-prediction-volume">Loading...</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Highest Prediction on BetDeEx</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-highest-prediction-volume">0 ES</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Average Prediction on BetDeEx</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-average-prediction-volume">0 ES</div>
+                  </div>
+                </div><!-- list-group -->
+                <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for every prediction on BetDeEx. Please go to the platform site for more information on this.</p>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+
+
+          <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
+              <div class="card">
+                  <div class="crypto card-header" style="padding-bottom: 0px;">
+                      <div class="media mg-b-8">
+                        <div class="">
+                          <img src="images/computeEx-Favicon.png" height="20px">
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">ComputeEx <span class="tx-color-03 tx-normal"></span></h6>
+
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+                  </div>
+              <div class="card-body pd-0">
+                <div class="list-group list-group-flush tx-13">
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total number of Transactions</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="computeex-total-number-transactions">0 transactions</div>
+                  </div>
+                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                    <strong class="tx-12 tx-rubik">Total volume</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="computeex-volume">0 ES</div>
+                  </div>
+                </div><!-- list-group -->
+                <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for every transaction on ComputeEx. Please go to the platform site for more information on this.</p>
+              </div><!-- card-body -->
+
+            </div><!-- card -->
+          </div><!-- col -->
+      </div><!-- container -->
+      </div>
+    </div>
+    </div><!-- content -->
+    <footer class="footer">
+      <div>
+        <span>&copy; 2019 </span>
+        <span>Created by Era Swap Life</a></span>
+      </div>
+    </footer>
+        <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/feather-icons/feather.min.js"></script>
+    <script src="lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="lib/jquery.flot/jquery.flot.js"></script>
+    <script src="lib/jquery.flot/jquery.flot.stack.js"></script>
+    <script src="lib/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="lib/chart.js/Chart.bundle.min.js"></script>
+    <script src="https://use.fontawesome.com/1a79ae8d00.js"></script>
+
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="lib/js-cookie/js.cookie.js"></script>
+    <script src="assets/js/dashforge.settings.js"></script>
+
+    <script>
+      $(function(){
+        'use strict'
+
+        var plot = $.plot('#flotChart', [{
+          data: df3,
+          color: '#661111'
+        },{
+          data: df1,
+          color: '#9e4b4b'
+        },{
+          data: df2,
+          color: '#8c5656',
+          lines: {
+            fill: false,
+            lineWidth: 1.5
+          }
+        }], {
+    			series: {
+            stack: 0,
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 0,
+              fill: 1
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            aboveData: true
+          },
+    			yaxis: {
+            show: false,
+    				min: 0,
+    				max: 350
+    			},
+    			xaxis: {
+            show: true,
+            ticks: [[0,''],[8,'Jan'],[20,'Feb'],[32,'Mar'],[44,'Apr'],[56,'May'],[68,'Jun'],[80,'Jul'],[92,'Aug'],[104,'Sep'],[116,'Oct'],[128,'Nov'],[140,'Dec']],
+            color: 'rgba(255,255,255,.2)'
+          }
+        });
+
+
+        $.plot('#flotChart2', [{
+          data: [[0,55],[1,38],[2,20],[3,70],[4,50],[5,15],[6,30],[7,50],[8,40],[9,55],[10,60],[11,40],[12,32],[13,17],[14,28],[15,36],[16,53],[17,66],[18,58],[19,46]],
+          color: '#661111'
+        },{
+          data: [[0,80],[1,80],[2,80],[3,80],[4,80],[5,80],[6,80],[7,80],[8,80],[9,80],[10,80],[11,80],[12,80],[13,80],[14,80],[15,80],[16,80],[17,80],[18,80],[19,80]],
+          color: '#f0f1f5'
+        }], {
+          series: {
+            stack: 0,
+            bars: {
+              show: true,
+              lineWidth: 0,
+              barWidth: .5,
+              fill: 1
+            }
+          },
+          grid: {
+            borderWidth: 0,
+            borderColor: '#edeff6'
+          },
+          yaxis: {
+            show: false,
+            max: 80
+          },
+          xaxis: {
+            ticks:[[0,'Jan'],[4,'Feb'],[8,'Mar'],[12,'Apr'],[16,'May'],[19,'Jun']],
+            color: '#fff',
+          }
+        });
+
+        $.plot('#flotChartAvailableEST', [{
+            data: df4,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 60
+          },
+    			xaxis: { show: false }
+    		});
+
+        $.plot('#flotChart4', [{
+            data: df5,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 80
+          },
+    			xaxis: { show: false }
+    		});
+
+        $.plot('#flotChart5', [{
+            data: df6,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 80
+          },
+    			xaxis: { show: false }
+    		});
+
+        $.plot('#flotChart6', [{
+            data: df4,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 60
+          },
+    			xaxis: { show: false }
+    		});
+
+        $.plot('#flotChart7', [{
+            data: df4,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 60
+          },
+    			xaxis: { show: false }
+    		});
+
+        $.plot('#flotChart8', [{
+            data: df4,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 60
+          },
+    			xaxis: { show: false }
+        });
+
+        $.plot('#flotChart9', [{
+            data: df4,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 60
+          },
+    			xaxis: { show: false }
+    		});
+
+        $.plot('#flotChart110', [{
+            data: df4,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 60
+          },
+    			xaxis: { show: false }
+    		});
+
+        $.plot('#flotChart120', [{
+            data: df4,
+            color: '#9db2c6'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: .5 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 60
+          },
+    			xaxis: { show: false }
+    		});
+        $('#vmap').vectorMap({
+          map: 'usa_en',
+          showTooltip: true,
+          backgroundColor: '#fff',
+          color: '#d1e6fa',
+          colors: {
+            fl: '#69b2f8',
+            ca: '#69b2f8',
+            tx: '#69b2f8',
+            wy: '#69b2f8',
+            ny: '#69b2f8'
+          },
+          selectedColor: '#00cccc',
+          enableZoom: false,
+          borderWidth: 1,
+          borderColor: '#fff',
+          hoverOpacity: .85
+        });
+
+
+        var ctxLabel = ['6am', '10am', '1pm', '4pm', '7pm', '10pm'];
+        var ctxData1 = [20, 60, 50, 45, 50, 60];
+        var ctxData2 = [10, 40, 30, 40, 55, 25];
+
+        // Bar chart
+        var ctx1 = document.getElementById('chartBar1').getContext('2d');
+        new Chart(ctx1, {
+          type: 'horizontalBar',
+          data: {
+            labels: ctxLabel,
+            datasets: [{
+              data: ctxData1,
+              backgroundColor: '#69b2f8'
+            }, {
+              data: ctxData2,
+              backgroundColor: '#d1e6fa'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  display: false,
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#182b49'
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  display: true,
+                  color: '#eceef4'
+                },
+                barPercentage: 0.6,
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#8392a5',
+                  max: 80
+                }
+              }]
+            }
+          }
+        });
+
+      })
+    </script>
+     <script>
+      $(function(){
+        'use strict'
+
+        $.plot('#flotChart1', [{
+            data: df3,
+            color: '#e1e5ed',
+            lines: {
+              lineWidth: 1
+            }
+          },{
+            data: df3,
+            color: '#69b2f8',
+            lines: {
+              lineWidth: 1
+            }
+          },{
+            data: df3,
+            color: '#0168fa'
+          }], {
+    			series: {
+            stack: 0,
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 1.7,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 5,
+            hoverable: true
+          },
+    			yaxis: {
+            show: true,
+            color: 'rgba(72, 94, 144, .1)',
+            min: 0,
+            max: 160,
+            font: {
+              size: 10,
+              color: '#8392a5'
+            }
+          },
+    			xaxis: {
+            show: true,
+            color: 'rgba(72, 94, 144, .1)',
+            ticks: [[0, '08:00'], [20, '09:00'], [40, '10:00'], [60, '11:00'], [80, '12:00'], [100, '13:00'], [120, '14:00'], [140, '15:00']],
+            font: {
+              size: 10,
+              family: 'Arial, sans-serif',
+              color: '#8392a5'
+            },
+            reserveSpace: false
+          }
+    		});
+
+        function flotOption(min, max) {
+          return {
+            series: {
+              stack: 0,
+              shadowSize: 0,
+              lines: {
+                show: true,
+                lineWidth: 1.5,
+                fill: true,
+                fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+              }
+            },
+            grid: { borderWidth: 0 },
+            yaxis: { show: false },
+            xaxis: {
+              show: false,
+              min: min,
+              max: max
+            }
+          }
+        }
+
+        // Ethereum
+        $.plot('#flotChart2', [{
+          data: df3,
+          color: '#c0ccda',
+          lines: { lineWidth: 1 }
+        },{
+          data: df3,
+          color: '#a0aabc'
+        }], flotOption(0,50));
+
+        // Bitcoin Cash
+        $.plot('#flotChartBTCCash', [{
+          data: df3,
+          color: '#b8eace',
+          lines: { lineWidth: 1 }
+        },{
+          data: df3,
+          color: '#58cd8b'
+        }], flotOption(20,70));
+
+        // Litecoin
+        $.plot('#flotChart4', [{
+          data: df3,
+          color: '#c0ccdf',
+          lines: { lineWidth: 1 }
+        },{
+          data: df3,
+          color: '#6e8ab6'
+        }], flotOption(90,140));
+
+        // Dash
+        $.plot('#flotChart5', [{
+          data: df3,
+          color: '#b1d0fd',
+          lines: { lineWidth: 1 }
+        },{
+          data: df3,
+          color: '#4c94fb'
+        }], flotOption(80,130));
+      })
+       // Horizontal bar chart
+     var ctx2 = document.getElementById('chartBar2').getContext('2d');
+     // below code is run in bottom script
+      // new Chart(ctx2, {
+      //   type: 'horizontalBar',
+      //   data: {
+      //     labels: ['Time Swappers', 'Buzcafe', 'Day Swappers', 'BetDeEx', 'ComputeEx', 'TimeAlly'],
+      //     datasets: [{
+      //       data: [90, 60, 50, 95, 50, 60],
+      //       backgroundColor: ['#661111', '#661111','#661111','#661111','#661111','#661111']
+      //     }]
+      //   },
+      //   options: {
+      //     maintainAspectRatio: false,
+      //     responsive: true,
+      //     legend: {
+      //       display: false,
+      //       labels: {
+      //         display: false
+      //       }
+      //     },
+      //     layout: {
+      //       padding: {
+      //         left: 5
+      //       }
+      //     },
+      //     scales: {
+      //       yAxes: [{
+      //         gridLines: {
+      //           display: false
+      //         },
+      //         barPercentage: 0.5,
+      //         ticks: {
+      //           beginAtZero:true,
+      //           fontSize: 13,
+      //           fontColor: '#182b49',
+      //           fontFamily: 'IBM Plex Sans'
+      //         }
+      //       }],
+      //       xAxes: [{
+      //         gridLines: {
+      //           color: '#e5e9f2'
+      //         },
+      //         ticks: {
+      //           beginAtZero: true,
+      //           fontSize: 10,
+      //           fontColor: '#182b49',
+      //           max: 100
+      //         }
+      //       }]
+      //     }
+      //   }
+      // });
+
+    </script>
+    <script>
+        $(function(){
+          'use strict'
+
+          $.plot('#flotChart1', [{
+              data: df3,
+              color: '#e1e5ed',
+              lines: {
+                lineWidth: 1
+              }
+            },{
+              data: df3,
+              color: '#69b2f8',
+              lines: {
+                lineWidth: 1
+              }
+            },{
+              data: df3,
+              color: '#0168fa'
+            }], {
+            series: {
+              stack: 0,
+              shadowSize: 0,
+              lines: {
+                show: true,
+                lineWidth: 1.7,
+                fill: true,
+                fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+              }
+            },
+            grid: {
+              borderWidth: 0,
+              labelMargin: 5,
+              hoverable: true
+            },
+            yaxis: {
+              show: true,
+              color: 'rgba(72, 94, 144, .1)',
+              min: 0,
+              max: 160,
+              font: {
+                size: 10,
+                color: '#8392a5'
+              }
+            },
+            xaxis: {
+              show: true,
+              color: 'rgba(72, 94, 144, .1)',
+              ticks: [[0, '08:00'], [20, '09:00'], [40, '10:00'], [60, '11:00'], [80, '12:00'], [100, '13:00'], [120, '14:00'], [140, '15:00']],
+              font: {
+                size: 10,
+                family: 'Arial, sans-serif',
+                color: '#8392a5'
+              },
+              reserveSpace: false
+            }
+          });
+
+          function flotOption(min, max) {
+            return {
+              series: {
+                stack: 0,
+                shadowSize: 0,
+                lines: {
+                  show: true,
+                  lineWidth: 1.5,
+                  fill: true,
+                  fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+                }
+              },
+              grid: { borderWidth: 0 },
+              yaxis: { show: false },
+              xaxis: {
+                show: false,
+                min: min,
+                max: max
+              }
+            }
+          }
+
+          // Ethereum
+          $.plot('#flotChart2', [{
+            data: df3,
+            color: '#c0ccda',
+            lines: { lineWidth: 1 }
+          },{
+            data: df3,
+            color: '#a0aabc'
+          }], flotOption(0,50));
+
+          // Bitcoin Cash
+          $.plot('#flotChart3', [{
+            data: df3,
+            color: '#b8eace',
+            lines: { lineWidth: 1 }
+          },{
+            data: df3,
+            color: '#58cd8b'
+          }], flotOption(20,70));
+
+          // Litecoin
+          $.plot('#flotChart4', [{
+            data: df3,
+            color: '#c0ccdf',
+            lines: { lineWidth: 1 }
+          },{
+            data: df3,
+            color: '#6e8ab6'
+          }], flotOption(90,140));
+
+          // Dash
+          $.plot('#flotChart5', [{
+            data: df3,
+            color: '#b1d0fd',
+            lines: { lineWidth: 1 }
+          },{
+            data: df3,
+            color: '#4c94fb'
+          }], flotOption(80,130));
+
+
+
+          // Markets
+          $.plot('#flotChart6', [{
+              data: df1,
+              color: '#00cccc',
+              lines: {
+                lineWidth: 1.7,
+                fill: true,
+                fillColor: { colors: [ { opacity: 0 }, { opacity: 0.4 } ] }
+              }
+            },{
+              data: df2,
+              color: '#e1e5ed',
+              lines: {
+                lineWidth: 1,
+                fill: true,
+                fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+              }
+            }], {
+            series: {
+              shadowSize: 0,
+              lines: {
+                show: true,
+              }
+            },
+            grid: {
+              borderWidth: 0,
+              labelMargin: 10,
+              aboveData: true
+            },
+            yaxis: {
+              show: false,
+              max: 150
+            },
+            xaxis: {
+              show: true,
+              tickColor: 'rgba(72,94,144, 0.07)',
+              ticks: [[25,'mar 10'],[50,'mar 11'],[75,'mar 12'],[100,'mar 13'],[125,'mar 14']],
+              //min: 35,
+              //max: 125
+            }
+          });
+        })
+      </script>
+      <script>
+       /** PIE CHART **/
+       var datapie = {
+            labels: ['USD', 'EUR', 'CNY', 'GBP', 'JPY', 'KRW', 'SGD'],
+            datasets: [{
+              data: [25,15,10,12,9,13,16],
+              backgroundColor: ['#661111', '#661111','#fec85e','#ff7c8f','#661111','#661111','#b2bece']
+            }]
+          };
+
+          var optionpie = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          };
+
+          // For a pie chart
+          var ctx8 = document.getElementById('chartDonuts');
+          var myDonutChart = new Chart(ctx8, {
+            type: 'doughnut',
+            data: datapie,
+            options: optionpie
+          });
+
+
+           /** PIE CHART **/
+          var datapie2 = {
+            labels: ['1 year staking volume', '2 year staking volume'],
+            datasets: [{
+              data: [0,0],
+              backgroundColor: ['#4D4D4D', '#661111','#661111','#666111']
+            }]
+          };
+          var optionpie = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          };
+          // For a pie chart
+          var ctx10 = document.getElementById('chartDonut2');
+          var myDonutChart2 = new Chart(ctx10, {
+            type: 'doughnut',
+            data: datapie2,
+            options: optionpie
+          });
+
+
+           /** PIE CHART **/
+           var datapie3 = {
+            labels: ['Charity Collected', 'Charity Given'],
+            datasets: [{
+              data: [25,15],
+              backgroundColor: ['#888888', '#661111']
+            }]
+          };
+          var optionpie = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          };
+          // For a pie chart
+          var ctx11 = document.getElementById('chartDonut3');
+          var myDonutChart3 = new Chart(ctx11, {
+            type: 'doughnut',
+            data: datapie3,
+            options: optionpie
+          });
+  </script>
+  <script>
+  // Markets
+  $.plot('#flotChart18', [{
+            data: df1,
+            color: '#661111',
+            lines: {
+              lineWidth: 1.7,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.4 } ] }
+            }
+          },{
+            data: df2,
+            color: '#661111',
+            lines: {
+              lineWidth: 1,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+            }
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 10,
+            aboveData: true
+          },
+    			yaxis: {
+            show: false,
+            max: 150
+          },
+    			xaxis: {
+            show: true,
+            tickColor: 'rgba(72,94,144, 0.07)',
+            ticks: [[25,'mar 10'],[50,'mar 11'],[75,'mar 12'],[100,'mar 13'],[125,'mar 14']],
+            //min: 35,
+            //max: 125
+          }
+    		});
+
+        $.plot('#flotChart25', [{
+          data: [[0,55],[1,38],[2,20],[3,70],[4,50],[5,15],[6,30],[7,50],[8,40],[9,55],[10,60],[11,40],[12,32],[13,17],[14,28],[15,36],[16,53],[17,66],[18,58],[19,46]],
+          color: '#661111'
+        },{
+          data: [[0,80],[1,80],[2,80],[3,80],[4,80],[5,80],[6,80],[7,80],[8,80],[9,80],[10,80],[11,80],[12,80],[13,80],[14,80],[15,80],[16,80],[17,80],[18,80],[19,80]],
+          color: '#f0f1f5'
+        }], {
+          series: {
+            stack: 0,
+            bars: {
+              show: true,
+              lineWidth: 0,
+              barWidth: .5,
+              fill: 1
+            }
+          },
+          grid: {
+            borderWidth: 0,
+            borderColor: '#edeff6'
+          },
+          yaxis: {
+            show: false,
+            max: 80
+          },
+          xaxis: {
+            ticks:[[0,'Jan'],[4,'Feb'],[8,'Mar'],[12,'Apr'],[16,'May'],[19,'Jun']],
+            color: '#fff',
+          }
+        });
+
+        var ctx18 = document.getElementById('chartBar1').getContext('2d');
+        new Chart(ctx18, {
+          type: 'bar',
+          data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            datasets: [{
+              data: [150,110,90,115,125,160,160,140,100,110,120,120],
+              backgroundColor: '#66a4fb'
+            },{
+              data: [100,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#661111'
+            },{
+              data: [180,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#10b759'
+            },{
+              data: [180,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#888'
+            },{
+              data: [180,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#ccc'
+            },{
+              data: [180,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#65e0e0'
+            },{
+              data: [180,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#65e0e0'
+            },{
+              data: [180,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#65e0e0'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+                labels: {
+                  display: false
+                }
+            },
+            scales: {
+              xAxes: [{
+                display: false,
+                barPercentage: 0.5
+              }],
+              yAxes: [{
+                gridLines: {
+                  color: '#ebeef3'
+                },
+                ticks: {
+                  fontColor: '#8392a5',
+                  fontSize: 10,
+                  min: 80,
+                  max: 200
+                }
+              }]
+            }
+          }
+        });
+
+  </script>
+
+  <script>
+    /// @dev code that aims to bring life to the Era Swap Life dashboard
+
+    $.ajax({
+      url: "https://api.etherscan.io/api?module=stats&action=ethprice&apikey=YourApiKeyToken",
+      success: function(result){
+        console.log('eth usd', result);
+      $("#ether-price-usd").html('$'+result.result.ethusd);
+    }});
+
+
+    $.ajax({
+      url: "https://blockchain.info/ticker",
+      success: function(result){
+        console.log('btc usd', result);
+      $("#bitcoin-price-usd").html('$'+result.USD['15m']);
+    }});
+
+
+    $.ajax({
+      url: "https://api.cryptonator.com/api/ticker/ltc-usd",
+      success: function(result){
+        console.log('ltc usd', result);
+      $("#ltc-price-usd").html('$'+result.ticker.price);
+    }});
+
+    const baseUrl = 'http://ec2-52-66-102-245.ap-south-1.compute.amazonaws.com:3000';
+
+    $.ajax({
+      url: baseUrl+'/eraswap/esTotalSupply',
+      success: function(result){
+        console.log('es total supply', result);
+      $("#es-total-supply").html(result.data.totalSupply+' ES');
+    }});
+
+    $.ajax({
+      url: baseUrl+'/eraswap/holdersOfEraSwap',
+      success: function(result){
+        console.log('es holders', result);
+      $("#es-holders").html(result.data.numberOfAddresses+' addresses');
+    }});
+
+    $.ajax({
+      url: baseUrl+'/nrt/nrtReleasedThisMonth',
+      success: function(result){
+        console.log('nrtReleasedThisMonth', result);
+      $("#nrt-released").html(result.data.nrtReleasedThisMonth+' ES');
+    }});
+
+    $.ajax({
+      url: baseUrl+'/nrt/luckPoolBal',
+      success: function(result){
+        console.log('luckPoolBal', result);
+      $("#luck-pool-bal").html(result.data.luckPoolBal+' ES');
+    }});
+
+
+
+    $.ajax({
+      url: baseUrl+'/timeally/getNumberOfStakings',
+      success: function(result){
+        console.log('no of stakings', result);
+        $("#number-of-ta-stakings").html(result.data.numberOfStakings+' stakings');
+        $("#timeally-total-number-stakings").html(result.data.numberOfStakings+' stakings');
+    }});
+
+    $.ajax({
+      url: baseUrl+'/timeally/getStakingPlanStatistics',
+      success: function(result){
+        console.log('plan statistics', result);
+        $("#one-year-stakers").html(result.data.plan0Count+' stakings');
+        $("#one-year-stakings").html(result.data.plan0Amount+' ES');
+
+        $("#two-year-stakers").html(result.data.plan1Count+' stakings');
+        $("#two-year-stakings").html(result.data.plan1Amount+' ES');
+
+        $("#timeally-total-one-year-stakings-number").html(result.data.plan0Count+' stakings');
+        $("#timeally-total-one-year-stakings-olume").html(result.data.plan0Amount+' ES');
+
+        $("#timeally-total-two-year-stakings-number").html(result.data.plan1Count+' stakings');
+        $("#timeally-total-two-year-stakings-volume").html(result.data.plan1Amount+' ES');
+if(!datapie2) 
+        datapie2 = {
+                  labels: ['1 year staking volume', '2 year staking volume'],
+                  datasets: [{
+                    data: [0,0],
+                    backgroundColor: ['#4D4D4D', '#661111','#661111','#666111']
+                  }]
+                };
+        datapie2.datasets[0].data[0] = Number(result.data.plan0Amount);
+        datapie2.datasets[0].data[1] = Number(result.data.plan1Amount);
+
+        var ctx10 = document.getElementById('chartDonut2');
+         myDonutChart2 = new Chart(ctx10, {
+          type: 'doughnut',
+          data: datapie2,
+          options: optionpie
+        });
+
+    }});
+
+    $.ajax({
+      url: baseUrl+'/timeally/getPlatformDetailsAllTime',
+      success: function(result){
+        console.log('platform details', result);
+        $("#total-staked-es").html(result.data.totalStaking+' ES');
+        $("#number-of-stakers").html(result.data.totalPlatformUsers+' stakers');
+        $("#1-year-staking-volume").html(result.data.totalPlatformUsers+' ES');
+
+        $("#timeally-total-stakings-volume").html(result.data.totalStaking+' ES');
+        $("#timeally-total-number-stakers").html(result.data.totalPlatformUsers+' stakers');
+      }
+    });
+
+    $.ajax({
+      url: baseUrl+'/betdeex/getNumberOfBets',
+      success: function(result){
+        console.log('betdeex getNumberOfBets', result);
+        $("#betdeex-total-number-bets").html(result.data.numberOfBets+' events');
+      }
+    });
+
+    $.ajax({
+      url: baseUrl+'/betdeex/getTotalBetTokens',
+      success: function(result){
+        console.log('betdeex getTotalBetTokens', result);
+        $("#betdeex-total-prediction-volume").html(result.data.totalBetAmount+' ES');
+      }
+    });
+
+
+    $.ajax({
+      url: 'https://apis.dayswappers.com/userprofile/transactions',
+      success: function(result){
+        console.log('dayswappers transactions', result);
+        let totalAmount = 0;
+        const platformTFC = {};
+        for(const entry of result) {
+          totalAmount += entry.amount;
+          if(platformTFC[entry.platform] !== undefined) {
+            platformTFC[entry.platform] += entry.tfc;
+          } else {
+            platformTFC[entry.platform] = 0;
+          }
+        }
+        console.log('platformTFC', platformTFC);
+        $("#platform-transactions-number").html(result.length+' txs');
+        $("#volume-of-platform").html(totalAmount+' ES');
+
+        new Chart(ctx2, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Time Swappers', 'Buzcafe', 'Day Swappers', 'BetDeEx', 'ComputeEx', 'TimeAlly'],
+            datasets: [{
+              data: [
+                platformTFC['Time Swappers'],
+                platformTFC['Buzcafe'],
+                platformTFC['Day Swappers'],
+                platformTFC['BetDeEx'],
+                platformTFC['ComputeEx'],
+                platformTFC['TimeAlly'],
+              ],
+              backgroundColor: ['#661111', '#661111','#661111','#661111','#661111','#661111']
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            layout: {
+              padding: {
+                left: 5
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  display: false
+                },
+                barPercentage: 0.5,
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 13,
+                  fontColor: '#182b49',
+                  fontFamily: 'IBM Plex Sans'
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#182b49',
+                  max: Math.max(platformTFC['Time Swappers'] || 0,
+                  platformTFC['Buzcafe'] || 0,
+                  platformTFC['Day Swappers'] || 0,
+                  platformTFC['BetDeEx'] || 0,
+                  platformTFC['ComputeEx'] || 0,
+                  platformTFC['TimeAlly'] || 0)
+                }
+              }]
+            }
+          }
+        });
+    }});
+
+    $.ajax({
+      url: 'https://apis.dayswappers.com/userprofile/overview',
+      success: function(result){
+        console.log('dayswappers overview', result);
+
+        $("#total_no_of_user").html(result.total_no_of_user+' users');
+        $("#kyc-users").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
+    }});
+
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfUser',
+      success: function(result){
+        console.log('timeswappers-no-of-users', result);
+        $("#timeswappers-no-of-users").html(result.data+' user'+(result.data>1?'s':''));
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfFreelancerOrSeller',
+      success: function(result){
+        console.log('timeswappers-no-of-freelancers', result);
+        $("#timeswappers-no-of-freelancers").html(result.data+' user'+(result.data>1?'s':''));
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalViewsOnProfile',
+      success: function(result){
+        console.log('timeswappers-profile-views', result);
+        $("#timeswappers-profile-views").html(result.data+' view'+(result.data>1?'s':''));
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalKYCDone',
+      success: function(result){
+        console.log('timeswappers-kyc-done', result);
+        $("#timeswappers-kyc-done").html(result.data+' user'+(result.data>1?'s':''));
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfVerifiedUser',
+      success: function(result){
+        console.log('timeswappers-totalNoOfVerifiedUser', result);
+        $("#timeswappers-totalNoOfVerifiedUser").html(result.data+' user'+(result.data>1?'s':''));
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfCertifiedUser',
+      success: function(result){
+        console.log('timeswappers-totalNoOfCertifiedUser', result);
+        $("#timeswappers-totalNoOfCertifiedUser").html(result.data+' user'+(result.data>1?'s':''));
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfDeposit',
+      success: function(result){
+        console.log('timeswappers-totalNoOfDeposit', result);
+        $("#timeswappers-totalNoOfDeposit").html(result.data+' ES');
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfWithdraw',
+      success: function(result){
+        console.log('timeswappers-totalNoOfWithdraw', result);
+        $("#timeswappers-totalNoOfWithdraw").html(result.data+' ES');
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalJobsPosted',
+      success: function(result){
+        console.log('timeswappers-totalJobsPosted', result);
+        $("#timeswappers-totalJobsPosted").html(result.data+' job'+(result.data>1?'s':''));
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/totalJobsDone',
+      success: function(result){
+        console.log('timeswappers-totalJobsDone', result);
+        $("#timeswappers-totalJobsDone").html(result.data+' job'+(result.data>1?'s':''));
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/userDashboard/TfcGenerated',
+      success: function(result){
+        console.log('timeswappers-TfcGenerated', result);
+        $("#timeswappers-TfcGenerated").html(result.data+' ES');
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/feedData/all-total',
+      success: function(result){
+        console.log('swapperswall-feedData', result);
+        $("#swapperswall-communities").html(result.data.communities+' communities');
+        $("#swapperswall-groups").html(result.data.groups+' groups');
+        $("#swapperswall-pages").html(result.data.pages+' pages');
+        $("#swapperswall-friends").html(result.data.friends+' friends');
+        $("#swapperswall-active-users").html(result.data.activeUsers+' active users');
+        $("#swapperswall-media").html(result.data.mediaUploads+' media uploads');
+    }});
+
+    $.ajax({
+      url: 'https://apis.timeswappers.com/api/tokensData/top-ten-receivers',
+      success: function(result){
+        console.log('swapperswall-top-ten-receivers', result);
+        result.data.forEach(object => {
+          $("#swapperswall-top-ten-receivers").append(
+            `
+            <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+              <strong class="tx-12 tx-rubik">${object.toWalletAddress.slice(0,14)}...${object.toWalletAddress.slice(38)}</strong>
+              <div class="mg-l-auto tx-rubik tx-color-02">${object.tokens} Power Tokens</div>
+            </div>
+            `
+          );
+        })
+
+    }});
+  </script>
+
+
+  </body>
+</html>
