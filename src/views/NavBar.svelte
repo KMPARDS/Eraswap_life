@@ -59,7 +59,7 @@ a:hover{
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
     <ul class="navbar-nav ml-auto navbar-right">
@@ -75,7 +75,7 @@ a:hover{
       </if>
       {/if}
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
-        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/ecosystem" target="_blank">ESE Dashboard</a>
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/ecosystem/index.html" target="_blank">ESE Dashboard</a>
       </li>
     </ul>
   </div>

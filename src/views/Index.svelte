@@ -643,7 +643,7 @@
     <!-- Wrapper -->
     <div id="wrapper" class="wrapper">
           <div class="tm-header tm-header-fixed tm-sticky-header">
-            <div class="container">
+            <div class="container-fluid">
                      <Navbar title="EraSwap"/>
                 <div class="tm-mobilenav"></div>
             </div>
@@ -707,7 +707,7 @@
                         <div class="tm-sectiontitle text-center">
                         <!-- <h2>About Era Swap Life</h2> -->
                             <h4>Era Swap Life is Gateway to</h4>
-                              <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
+                              <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
                               <br>
                         </div>
                     <div class="row justify-content-center mt-30-reverse">
@@ -782,7 +782,7 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>Era Swap Life - One World</h4>
-                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png" ></span>
+                              <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
                                 <br><br>
                                 <h6>Watch this exclusive teaser to see multiple platforms under Era Swap Ecosystem where Era Swap (ES) will be utilized as a decentralized utility token</h6>
                                 
@@ -852,7 +852,7 @@
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->
                                   <h4>Why Era Swap Life</h4>
-                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
+                                   <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
                                    <br><br>
                                 <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
                                 <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
@@ -1115,7 +1115,7 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>Advantages to Era Swap Community Members</h4>
-                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
+                               <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
                                 <br><br>
                             </div>
                         </div>
@@ -1221,7 +1221,7 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>FAQ's</h4>
-                                <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
+                                <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
                             </div>
                         </div>
                     </div>
