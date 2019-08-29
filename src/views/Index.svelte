@@ -782,7 +782,7 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>Era Swap Life - One World</h4>
-                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png"></span>
+                               <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png" ></span>
                                 <br><br>
                                 <h6>Watch this exclusive teaser to see multiple platforms under Era Swap Ecosystem where Era Swap (ES) will be utilized as a decentralized utility token</h6>
                                 
