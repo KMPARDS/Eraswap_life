@@ -90,7 +90,7 @@ async function load_by_private() {
                                                     <div class="tm-pricebox-body"><br>
                                                      <div class="row">
                                                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                                            <Logo /><br>
+                                                             <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br>
                                                         <div class="tm-pricebox-price">
                                                           <input style="height: 39px" type="file"  on:change={load_keystore}>
                                                         </div>
@@ -128,7 +128,7 @@ async function load_by_private() {
                                                         <div class="tm-pricebox-body"><br>
                                                          <div class="row">
                                                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                                            <Logo /><br>
+                                                              <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br>
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
                                                             <textarea bind:value={mnemonic}></textarea>
@@ -163,7 +163,7 @@ async function load_by_private() {
                                                             <div class="tm-pricebox-body"><br>
                                                             <div class="row">
                                                                 <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                                                <Logo /><br><br>
+                                                                 <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br><br>
                                                                 <input  type="text" bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
 

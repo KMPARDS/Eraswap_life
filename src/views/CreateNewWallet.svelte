@@ -197,7 +197,7 @@ input:checked + .slider:after
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
               </div>
               <div class="modal-body" style="text-align: center">
-                <Logo /><br><br>
+                  <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br><br>
                 <h3>What is ES Life Wallet? </h3>
                 ES Life Wallet is a free, open-source, client-side interface.  ES Life Wallet allows you to interact directly with the blockchain, while you remain in full control of your keys and funds.<br><br>
 
@@ -271,7 +271,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="password_modal"> × </button>
                         </div>
                         <div class="modal-body" style="text-align: center">
-                            <Logo />
+                             <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
                             <input type="password" bind:value={wallet_password} class:hide={status!=3} placeholder="Enter your password"><br><br>
 
                             <button class="tm-button tm-button-sm " on:click={generate_wallet} class:hide={status!=3}><span style="color:#fff">Generate Wallet</span></button>
