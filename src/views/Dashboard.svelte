@@ -1,6 +1,7 @@
 <script>
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
+    import axios from 'axios'
 	import { onMount } from 'svelte';
     let balance = "-";
     let es_balance = "-";
@@ -124,23 +125,56 @@
 }
   </style>
 
-        <!-- Single Pricebox -->
-        <div class="col-lg-8 col-md-6 col-12 mt-30">
-            <div class="tm-pricebox text-center">
-                <div class="tm-pricebox-header">
-                    <h4>Dashboard</h4>
-                </div>
-                <div class="tm-pricebox-body">
-                 <ul>
-                        <li>ES Balance - {es_balance}</li>
-                        <li>ETH Balance - {balance}</li>
-                        <li class="pcaddress"> Address - {address}</li>
-                        <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--// Single Pricebox -->
+  <!-- Single Pricebox -->
+ <div class="col-lg-8 col-md-6 col-12 mt-30">
+     <div class="tm-pricebox text-center" style="padding-bottom: .1rem; background-color: #eee">
+         <div class="tm-pricebox-header">
+             <h4>Dashboard</h4>
+         </div>
+         <div class="tm-pricebox-body">
+          <ul>
+                 <li>ES Balance - {es_balance}</li>
+                 <li>ETH Balance - {balance}</li>
+                 <li class="pcaddress"> Address - {address}</li>
+                 <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)}</li>
+         </ul>
+       </div>
+       <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
+         <h6>Direct Rewards</h6>
+         <strong>From Workpool NRT</strong>
+         <ul>
+           <li>As a Curator: 0.0 ES</li>
+           <li>As a Time Trader: 0.0 ES</li>
+           <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
+         </ul>
+         <strong>From Promotions:</strong>
+         <ul>
+           <li>ComputeEx Exchange direct sales incentive: 0.0 ES</li>
+           <li>ComputeEx Lending & Borrowing ÐApp direct sales incentive: 0.0 ES</li>
+           <li>EraSwap Academy direct sales incentive: 0.0 ES</li>
+           <li>BetDeEx ÐApp direct sales incentive: 0.0 ES</li>
+           <li>TimeAlly Club direct sales incentive: 0.0 ES</li>
+         </ul>
+       </div>
+       <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
+         <h6>Indirect Rewards from DaySwappers</h6>
+         <strong>From Workpool NRT</strong>
+         <ul>
+           <li>Time Trading from your tree: 0.0 ES</li>
+           <li>BuzCafe Merchant trading from your tree: 0.0 ES</li>
+         </ul>
+         <strong>From Promotions:</strong>
+         <ul>
+           <li>ComputeEx Exchange tree sales incentive: 0.0 ES</li>
+           <li>ComputeEx Lending & Borrowing ÐApp tree sales incentive: 0.0 ES</li>
+           <li>EraSwap Academy tree sales incentive: 0.0 ES</li>
+           <li>BetDeEx ÐApp tree sales incentive: 0.0 ES</li>
+           <li>TimeAlly Club tree sales incentive: 0.0 ES</li>
+         </ul>
+       </div>
+     </div>
+ </div>
+ <!--// Single Pricebox -->
   </div>
   <br><br>
 
@@ -231,7 +265,7 @@
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         <img src="/images/g-min.png" alt="" data="https://www.timeally.io/" on:click={load_website}>
-                                    </span>                                   
+                                    </span>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -279,7 +313,7 @@
                                     <span class="tm-funfact-icon">
                                         <img src="/images/e-min.png" alt="" data="https://computeex.net/login/" on:click={load_website}>
                                     </span>
-                                </div>                               
+                                </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
