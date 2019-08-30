@@ -1944,6 +1944,14 @@
   <script>
     /// @dev code that aims to bring life to the Era Swap Life dashboard
 
+    window.lessDecimals = (string, decimals = 2) => {
+      let lessDecimals = string.split('.');
+      if(lessDecimals[1].length >= decimals) {
+        lessDecimals[1] = lessDecimals[1].slice(0, decimals);
+      }
+      return lessDecimals.join('.');
+    }
+
     $.ajax({
       url: "https://api.etherscan.io/api?module=stats&action=ethprice&apikey=YourApiKeyToken",
       success: function(result){
@@ -1973,7 +1981,7 @@
       url: baseUrl+'/eraswap/esTotalSupply',
       success: function(result){
         console.log('es total supply', result);
-      $("#es-total-supply").html(result.data.totalSupply+' ES');
+      $("#es-total-supply").html(window.lessDecimals(result.data.totalSupply)+' ES');
     }});
 
     $.ajax({
@@ -1987,14 +1995,14 @@
       url: baseUrl+'/nrt/nrtReleasedThisMonth',
       success: function(result){
         console.log('nrtReleasedThisMonth', result);
-      $("#nrt-released").html(result.data.nrtReleasedThisMonth+' ES');
+      $("#nrt-released").html(window.lessDecimals(result.data.nrtReleasedThisMonth)+' ES');
     }});
 
     $.ajax({
       url: baseUrl+'/nrt/luckPoolBal',
       success: function(result){
         console.log('luckPoolBal', result);
-      $("#luck-pool-bal").html(result.data.luckPoolBal+' ES');
+      $("#luck-pool-bal").html(window.lessDecimals(result.data.luckPoolBal)+' ES');
     }});
 
 
@@ -2012,16 +2020,16 @@
       success: function(result){
         console.log('plan statistics', result);
         $("#one-year-stakers").html(result.data.plan0Count+' stakings');
-        $("#one-year-stakings").html(result.data.plan0Amount+' ES');
+        $("#one-year-stakings").html(window.lessDecimals(result.data.plan0Amount)+' ES');
 
         $("#two-year-stakers").html(result.data.plan1Count+' stakings');
-        $("#two-year-stakings").html(result.data.plan1Amount+' ES');
+        $("#two-year-stakings").html(window.lessDecimals(result.data.plan1Amount)+' ES');
 
         $("#timeally-total-one-year-stakings-number").html(result.data.plan0Count+' stakings');
-        $("#timeally-total-one-year-stakings-olume").html(result.data.plan0Amount+' ES');
+        $("#timeally-total-one-year-stakings-olume").html(window.lessDecimals(result.data.plan0Amount)+' ES');
 
         $("#timeally-total-two-year-stakings-number").html(result.data.plan1Count+' stakings');
-        $("#timeally-total-two-year-stakings-volume").html(result.data.plan1Amount+' ES');
+        $("#timeally-total-two-year-stakings-volume").html(window.lessDecimals(result.data.plan1Amount)+' ES');
 if(!datapie2)
         datapie2 = {
                   labels: ['1 year staking volume', '2 year staking volume'],
@@ -2046,11 +2054,11 @@ if(!datapie2)
       url: baseUrl+'/timeally/getPlatformDetailsAllTime',
       success: function(result){
         console.log('platform details', result);
-        $("#total-staked-es").html(result.data.totalStaking+' ES');
+        $("#total-staked-es").html(window.lessDecimals(result.data.totalStaking)+' ES');
         $("#number-of-stakers").html(result.data.totalPlatformUsers+' stakers');
-        $("#1-year-staking-volume").html(result.data.totalPlatformUsers+' ES');
+        $("#1-year-staking-volume").html(window.lessDecimals(result.data.totalPlatformUsers)+' ES');
 
-        $("#timeally-total-stakings-volume").html(result.data.totalStaking+' ES');
+        $("#timeally-total-stakings-volume").html(window.lessDecimals(result.data.totalStaking)+' ES');
         $("#timeally-total-number-stakers").html(result.data.totalPlatformUsers+' stakers');
       }
     });
@@ -2067,7 +2075,7 @@ if(!datapie2)
       url: baseUrl+'/betdeex/getTotalBetTokens',
       success: function(result){
         console.log('betdeex getTotalBetTokens', result);
-        $("#betdeex-total-prediction-volume").html(result.data.totalBetAmount+' ES');
+        $("#betdeex-total-prediction-volume").html(window.lessDecimals(result.data.totalBetAmount)+' ES');
       }
     });
 
@@ -2210,14 +2218,14 @@ if(!datapie2)
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfDeposit',
       success: function(result){
         console.log('timeswappers-totalNoOfDeposit', result);
-        $("#timeswappers-totalNoOfDeposit").html(result.data+' ES');
+        $("#timeswappers-totalNoOfDeposit").html(window.lessDecimals(result.data)+' ES');
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfWithdraw',
       success: function(result){
         console.log('timeswappers-totalNoOfWithdraw', result);
-        $("#timeswappers-totalNoOfWithdraw").html(result.data+' ES');
+        $("#timeswappers-totalNoOfWithdraw").html(window.lessDecimals(result.data)+' ES');
     }});
 
     $.ajax({
@@ -2238,7 +2246,7 @@ if(!datapie2)
       url: 'https://apis.timeswappers.com/api/userDashboard/TfcGenerated',
       success: function(result){
         console.log('timeswappers-TfcGenerated', result);
-        $("#timeswappers-TfcGenerated").html(result.data+' ES');
+        $("#timeswappers-TfcGenerated").html(window.lessDecimals(result.data)+' ES');
     }});
 
     $.ajax({
