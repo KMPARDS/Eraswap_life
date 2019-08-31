@@ -253,7 +253,7 @@
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->
                                   <h2><b>Era Swap Life is Gateway to</b></h2>
-                                   <span class="tm-sectiontitle-divider"><img src="/images/divider-logo-min.png" ></span>
+                                   <span class="tm-sectiontitle-divider"><img src="/images/S_LIFE.png" ></span>
                                    <br><br>
                             </div>
 
@@ -264,6 +264,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
+                                <span class="label label-default">New</span>
                                     <span class="tm-funfact-icon">
                                         <img src="/images/g-min.png" alt="" data="https://www.timeally.io/" on:click={load_website}>
                                     </span>
