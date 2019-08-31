@@ -263,8 +263,7 @@
                         <div class="col-lg-12">
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
-                                <span class="label label-default">New</span>
+                                <div class="tm-funfact text-center">                                
                                     <span class="tm-funfact-icon">
                                         <img src="/images/g-min.png" alt="" data="https://www.timeally.io/" on:click={load_website}>
                                     </span>
@@ -273,14 +272,14 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/A-min.png" alt=""  data="https://timeswappers.com/wallet-login" on:click={load_website}>
+                                        <img src="/images/A-min.png" alt=""  data="https://timeswappers.com/wallet-login?home=timeswappers" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/b-min.png" alt="" data="https://timeswappers.com/wallet-login" on:click={load_website}>
+                                        <img src="/images/b-min.png" alt="" data="https://timeswappers.com/wallet-login?home=swapperswall" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
@@ -330,6 +329,27 @@
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         <img src="/images/betdeex-logo-min.png" data="https://www.betdeex.com" on:click={load_website} alt="">
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="/images/D6.png" data="http://dateswappers.com/" on:click={load_website} alt="">
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="/images/V8.png" data="http://valueoffarmers.org/" on:click={load_website} alt="">
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="col-md-3">
+                                <div class="tm-funfact text-center">
+                                    <span class="tm-funfact-icon">
+                                        <img src="/images/T5.png" data="https://timeallyclub.com/" on:click={load_website} alt="">
                                     </span>
                                 </div>
                             </div>
