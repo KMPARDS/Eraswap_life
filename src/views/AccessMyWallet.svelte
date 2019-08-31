@@ -103,7 +103,8 @@ async function load_by_private() {
                                                         </div>
                                                     </div>
                                                     <div class="tm-pricebox-footer">
-                                                        <button class="tm-button tm-button-sm" on:click={load_by_keystore}><span style="color:#fff">{load_wallet_message}</span></button>
+                                                     <button class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">{load_wallet_message}</span></button>
+                                                        <!-- <button class="tm-button tm-button-sm" on:click={load_by_keystore}><span style="color:#fff">{load_wallet_message}</span></button> -->
                                                     </div>
                                                     {#if error_message != ""}
                                                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -132,13 +133,15 @@ async function load_by_private() {
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
                                                             <textarea bind:value={mnemonic}></textarea>
+                                                            
                                                             <a href="/dashboard" id="dashboard" style="display: none">Access</a>
                                                             </div>
                                                             </div>
                                                             </div>
                                                         </div>
                                                         <div class="tm-pricebox-footer">
-                                                            <button class="tm-button tm-button-sm" on:click={load_wallet}><span style="color:#fff">Access my wallet</span></button>
+                                                         <button class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">Access my wallet</span></button>
+                                                            <!-- <button class="tm-button tm-button-sm" on:click={load_wallet}><span style="color:#fff">Access my wallet</span></button> -->
                                                         </div>
                                                         {#if error_message != ""}
                                                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -172,7 +175,8 @@ async function load_by_private() {
                                                                 </div>
                                                             </div>
                                                             <div class="tm-pricebox-footer">
-                                                                <button class="tm-button tm-button-sm" on:click={load_by_private}><span style="color:#fff">Access Wallet</span></button>
+                                                            <button class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">Access Wallet</span></button>
+                                                                <!-- <button class="tm-button tm-button-sm" on:click={load_by_private}><span style="color:#fff">Access Wallet</span></button> -->
                                                             </div>
                                                             {#if error_message != ""}
                                                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -192,6 +196,43 @@ async function load_by_private() {
                 </div>
             </div>
         <!--// Breadcrumb Area -->
+             <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    <div class="container">
+                         <div class="row">
+                            <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
+                                <img src="/images/S_LIFE.png" style=" display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
+                                <p style="text-align:center">Please enter your Referral ID</p>
+                                    <div class="tm-pricebox-price">
+                                        <input type="text" > 
+
+                                          <h3 style="text-align:center">Or</h3>
+                                        <p style="text-align:center"><a href="#">I do not have Referral ID</a></p>   
+                                        <p style="font-size:12px">Note : Referral ID is entered only once at the time of joining Era Swap Ecosystem. If you donot enter the referral ID now, you won't be able to add it later on.   </p>                       
+                                    </div>
+                                   
+                          </div>
+                         </div>
+                         </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div> -->
+
+                    </div>
+             </div>
+        </div>
 <br><br>
 
 <Footer />
