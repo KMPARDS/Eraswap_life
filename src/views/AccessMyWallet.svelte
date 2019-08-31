@@ -34,7 +34,7 @@
 
     window.referResponse = response => {
       if(response === 'Intoducer not found') {
-        setTimeout(() => window.refer = '', 500);
+        setTimeout(() => window.refer = '', 100);
       }
       gotResponse = response;
     }
@@ -231,11 +231,11 @@ async function load_by_private() {
                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                 <img src="/images/S_LIFE.png" style=" display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
                                 <p style="text-align:center">Please enter your Referral ID</p>
-                                    <div class="tm-pricebox-price">
+                                    <div class="tm-pricebox-price" style="text-align:center">
                                         <input type="text" id="refer-address">
                                         <button on:click={send_refer}>Connect to my Introducer</button>
                                         <p style="display:{gotResponse?'block':'none'}">{gotResponse}</p>
-                                        <button style="display:{gotResponse&&gotResponse==='Intoducer not found'?'block':'none'}" on:click={() => {
+                                        <button style="display:{gotResponse&&(gotResponse==='Intoducer not found'||gotResponse==='success')?'block':'none'}" on:click={() => {
                                           document.getElementById("refer-modal-close-button").click();
                                           document.getElementById("dashboard").click();
                                         }}>Okay, take me to the dashboard</button>
