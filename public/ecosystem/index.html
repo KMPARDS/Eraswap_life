@@ -162,7 +162,18 @@
           </div><!-- col -->
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
             <div class="card card-body">
-              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES released from NRT this month</h6>
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Circulating ES</h6>
+              <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="es-outside-timeally">Loading...</h3>
+              </div>
+              <div class="chart-three">
+                  <div id="flotChartAvailableEST" class="flot-chart ht-30"></div>
+                </div><!-- chart-three -->
+            </div>
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="card card-body">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES from NRT this month</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="nrt-released">Loading...</h3>
               </div>
@@ -205,7 +216,7 @@
                 </div><!-- chart-three -->
             </div>
           </div><!-- col -->
-          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+          <div class="col-sm-6 col-lg-2 mg-t-10 ">
             <div class="card card-body">
               <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of KYC DaySwappers</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
@@ -216,9 +227,9 @@
                 </div><!-- chart-three -->
             </div>
           </div><!-- col -->
-          <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+          <div class="col-sm-6 col-lg-2 mg-t-10 ">
               <div class="card card-body">
-                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of Ecosystem transactions</h6>
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Ecosystem transactions</h6>
                 <div class="d-flex d-lg-block d-xl-flex align-items-end">
                   <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="platform-transactions-number">Loading...</h3>
                 </div>
@@ -227,9 +238,9 @@
                   </div><!-- chart-three -->
               </div>
             </div><!-- col -->
-            <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="col-sm-6 col-lg-2 mg-t-10 ">
               <div class="card card-body">
-                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Volume of Ecosystem transactions</h6>
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Ecosystem Volume</h6>
                 <div class="d-flex d-lg-block d-xl-flex align-items-end">
                   <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="volume-of-platform">Loading...</h3>
                 </div>
@@ -239,9 +250,9 @@
               </div>
             </div><!-- col -->
 
-            <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+            <div class="col-sm-6 col-lg-2 mg-t-10">
               <div class="card card-body">
-                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Luck Pool in Newly Released Tokens</h6>
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Luck Pool in NRT</h6>
                 <div class="d-flex d-lg-block d-xl-flex align-items-end">
                   <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="luck-pool-bal">Loading...</h3>
                 </div>
@@ -252,9 +263,20 @@
             </div><!-- col -->
             <div class="col-sm-6 col-lg-2 mg-t-10">
               <div class="card card-body">
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES To be Burned in next NRT</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                  <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="burn-token-bal">Loading...</h3>
+                </div>
+                <div class="chart-three">
+                    <div id="flotChart8" class="flot-chart ht-30"></div>
+                  </div><!-- chart-three -->
+              </div>
+            </div><!-- col -->
+            <div class="col-sm-6 col-lg-2 mg-t-10">
+              <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Total ES Burned</h6>
                 <div class="d-flex d-lg-block d-xl-flex align-items-end">
-                  <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">11,000,000 ES</h3>
+                  <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="total-es-burned">Loading...</h3>
                 </div>
                 <div class="chart-three">
                     <div id="flotChart8" class="flot-chart ht-30"></div>
@@ -382,11 +404,11 @@
                       <div class="col-sm-6 col-lg-12">
                         <div class="d-flex align-items-center justify-content-between mg-b-5">
                           <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">TimeTraders</h6>
-                          <span class="tx-10 tx-color-04">0% (NRT not released)</span>
+                          <span class="tx-10 tx-color-04">0% (NRT utilized)</span>
                         </div>
                         <div class="d-flex justify-content-between mg-b-5">
                           <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small>0 ES</small></h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-curators">Loading...</small></h5>
                         </div>
                         <div class="progress ht-4 mg-b-0 op-5">
                           <div class="progress-bar bg-orange wd-0p" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
@@ -395,11 +417,11 @@
                       <div class="col-sm-6 col-lg-12 mg-t-30">
                         <div class="d-flex align-items-center justify-content-between mg-b-5">
                           <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">DaySwappers</h6>
-                          <span class="tx-10 tx-color-04">0% (NRT not released)</span>
+                          <span class="tx-10 tx-color-04">0% (NRT utilized)</span>
                         </div>
                         <div class="d-flex justify-content-between mg-b-5">
                           <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small>0 ES</small></h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-timetraders">Loading...</small></h5>
                         </div>
                         <div class="progress ht-4 mg-b-0 op-5">
                           <div class="progress-bar bg-pink wd-0p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
@@ -408,11 +430,11 @@
                       <div class="col-sm-6 col-lg-12 mg-t-30">
                         <div class="d-flex align-items-center justify-content-between mg-b-5">
                           <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">BuzCafe</h6>
-                          <span class="tx-10 tx-color-04">0% (NRT not released)</span>
+                          <span class="tx-10 tx-color-04">0% (NRT utilized)</span>
                         </div>
                         <div class="d-flex justify-content-between mg-b-5">
                           <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small>0 ES</small></h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-dayswappers">Loading...</small></h5>
                         </div>
                         <div class="progress ht-4 mg-b-0 op-5">
                           <div class="progress-bar bg-primary wd-0p" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -421,11 +443,11 @@
                       <div class="col-sm-6 col-lg-12 mg-t-30 mg-sm-t-0 mg-lg-t-30">
                         <div class="d-flex align-items-center justify-content-between mg-b-5">
                           <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">Curator</h6>
-                          <span class="tx-10 tx-color-04">0% (NRT not released)</span>
+                          <span class="tx-10 tx-color-04">0% (NRT utilized)</span>
                         </div>
                         <div class="d-flex align-items-end justify-content-between mg-b-5">
                           <h5 class="tx-normal tx-rubik lh-2 mg-b-0">0 ES</h5>
-                          <h6 class="tx-normal tx-rubik tx-color-03 lh-2 mg-b-0">0 ES</h6>
+                          <h6 class="tx-normal tx-rubik tx-color-03 lh-2 mg-b-0"><small id="nrtFractions-buzcafe">Loading...</small></h6>
                         </div>
                         <div class="progress ht-4 mg-b-0 op-5">
                           <div class="progress-bar bg-teal wd-0p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
@@ -803,7 +825,7 @@
                     <strong class="tx-12 tx-rubik">Users studying count</strong>
                     <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-users-with-certificate">0 users</div>
                   </div>
-                  
+
 
                 </div><!-- list-group -->
                 <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for every course sale on Eraswap Academy. Please go to the platform site for more information on this.</p>
@@ -868,26 +890,26 @@
 
               <div class="card-body ex4 pd-0">
                 <div class="list-group list-group-flush tx-13">
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                  <!-- <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Total Number of Stakings</strong>
                     <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-number-stakings">Loading...</div>
                   </div>
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Total Number of Stakers</strong>
                     <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-number-stakers">Loading...</div>
-                  </div>
+                  </div> -->
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Total Volume of Stakings</strong>
                     <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-stakings-volume">Loading...</div>
                   </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                  <!-- <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Total Number of 1 year stakings</strong>
                     <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-one-year-stakings-number">Loading...</div>
                   </div>
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Total Number of 2 year stakings</strong>
                     <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-two-year-stakings-number">Loading...</div>
-                  </div>
+                  </div> -->
 
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Total Volume of 1 year stakings</strong>
@@ -1979,6 +2001,7 @@
       success: function(result){
         console.log('es total supply', result);
       $("#es-total-supply").html(window.lessDecimals(result.data.totalSupply)+' ES');
+      $("#es-outside-timeally").html(window.lessDecimals(result.data.outsideTimeAllySupply)+' ES');
     }});
 
     $.ajax({
@@ -2001,6 +2024,31 @@
         console.log('luckPoolBal', result);
       $("#luck-pool-bal").html(window.lessDecimals(result.data.luckPoolBal)+' ES');
     }});
+
+    $.ajax({
+      url: baseUrl+'/nrt/burnTokenBal',
+      success: function(result){
+        console.log('burnTokenBal', result);
+      $("#burn-token-bal").html(window.lessDecimals(result.data.burnTokenBal)+' ES');
+    }});
+
+    $.ajax({
+      url: baseUrl+'/nrt/totalTokensBurned',
+      success: function(result){
+        console.log('totalTokensBurned', result);
+      $("#total-es-burned").html(window.lessDecimals(result.data.totalTokensBurned)+' ES');
+    }});
+
+    $.ajax({
+      url: baseUrl+'/nrt/nrtFractions',
+      success: function(result){
+        console.log('nrtFractions', result);
+        $("#nrtFractions-curators").html(window.lessDecimals(result.data.workPoolCalculation.curators)+' ES');
+        $("#nrtFractions-timetraders").html(window.lessDecimals(result.data.workPoolCalculation.timetraders)+' ES');
+        $("#nrtFractions-dayswappers").html(window.lessDecimals(result.data.workPoolCalculation.dayswappers)+' ES');
+        $("#nrtFractions-buzcafe").html(window.lessDecimals(result.data.workPoolCalculation.buzcafe)+' ES');
+    }});
+
 
 
 
@@ -2053,7 +2101,6 @@ if(!datapie2)
         console.log('platform details', result);
         $("#total-staked-es").html(window.lessDecimals(result.data.totalStaking)+' ES');
         $("#number-of-stakers").html(result.data.totalPlatformUsers+' stakers');
-        $("#1-year-staking-volume").html(window.lessDecimals(result.data.totalPlatformUsers)+' ES');
 
         $("#timeally-total-stakings-volume").html(window.lessDecimals(result.data.totalStaking)+' ES');
         $("#timeally-total-number-stakers").html(result.data.totalPlatformUsers+' stakers');
