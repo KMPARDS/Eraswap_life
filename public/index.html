@@ -181,6 +181,9 @@
                        contentType: false,
                        success: function(data) {
                            console.log(data)
+                           if(url === 'graph/refer') {
+                             window.referResponse(data);
+                           }
                        }
                    });
     return data

@@ -8,16 +8,34 @@
     let wallet_password="";
     let load_wallet_message = "Load wallet";
     let private_key ="";
+    let gotResponse = '';
     let provider = new ethers.providers.InfuraProvider("homestead");
 
     function load_wallet() {
         try{
             let wallet = ethers.Wallet.fromMnemonic(mnemonic);
             window.wallet = new ethers.Wallet(wallet.privateKey, provider)
-            document.getElementById("dashboard").click()
+            // document.getElementById("dashboard").click()
         }catch (e) {
             error_message = "Invalid Mnemonic";
         }
+    }
+
+    function send_refer() {
+      window.refer = document.getElementById('refer-address').value;
+      if(window.refer.length === 42 && window.refer.slice(0,2) === '0x') {
+        submit_refer();
+      } else {
+        alert('please check the address you are entering: '+window.refer);
+      }
+
+    }
+
+    window.referResponse = response => {
+      if(response === 'Intoducer not found') {
+        setTimeout(() => window.refer = '', 500);
+      }
+      gotResponse = response;
     }
 
     function load_keystore(event){
@@ -42,7 +60,7 @@ async function load_by_keystore() {
     }
     window.wallet  = await ethers.Wallet.fromEncryptedJson(keystore, wallet_password)
     window.wallet = new ethers.Wallet(wallet.privateKey, provider)
-    document.getElementById("dashboard").click()
+    // document.getElementById("dashboard").click()
 }catch (e) {
   console.log(e);
   error_message = "Password and keystore do not match"
@@ -54,7 +72,7 @@ async function load_by_private() {
     try{
         window.wallet = await new ethers.Wallet(private_key);
             window.wallet = new ethers.Wallet(wallet.privateKey, provider)
-        document.getElementById("dashboard").click()
+        // document.getElementById("dashboard").click()
     }catch (e) {
         error_message = "Invalid private key";
     }
@@ -103,7 +121,7 @@ async function load_by_private() {
                                                         </div>
                                                     </div>
                                                     <div class="tm-pricebox-footer">
-                                                     <button class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">{load_wallet_message}</span></button>
+                                                     <button on:click={load_by_keystore} class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">{load_wallet_message}</span></button>
                                                         <!-- <button class="tm-button tm-button-sm" on:click={load_by_keystore}><span style="color:#fff">{load_wallet_message}</span></button> -->
                                                     </div>
                                                     {#if error_message != ""}
@@ -133,14 +151,14 @@ async function load_by_private() {
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
                                                             <textarea bind:value={mnemonic}></textarea>
-                                                            
+
                                                             <a href="/dashboard" id="dashboard" style="display: none">Access</a>
                                                             </div>
                                                             </div>
                                                             </div>
                                                         </div>
                                                         <div class="tm-pricebox-footer">
-                                                         <button class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">Access my wallet</span></button>
+                                                         <button class="btn btn-primary tm-button tm-button-sm" on:click={load_wallet} data-toggle="modal" data-target="#myModal"> <span class="text-white">Access my wallet</span></button>
                                                             <!-- <button class="tm-button tm-button-sm" on:click={load_wallet}><span style="color:#fff">Access my wallet</span></button> -->
                                                         </div>
                                                         {#if error_message != ""}
@@ -175,7 +193,7 @@ async function load_by_private() {
                                                                 </div>
                                                             </div>
                                                             <div class="tm-pricebox-footer">
-                                                            <button class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">Access Wallet</span></button>
+                                                            <button on:click={load_by_private} class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">Access Wallet</span></button>
                                                                 <!-- <button class="tm-button tm-button-sm" on:click={load_by_private}><span style="color:#fff">Access Wallet</span></button> -->
                                                             </div>
                                                             {#if error_message != ""}
@@ -202,7 +220,7 @@ async function load_by_private() {
 
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button id="refer-modal-close-button" type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
@@ -213,13 +231,21 @@ async function load_by_private() {
                                 <img src="/images/S_LIFE.png" style=" display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
                                 <p style="text-align:center">Please enter your Referral ID</p>
                                     <div class="tm-pricebox-price">
-                                        <input type="text" > 
-
-                                          <h3 style="text-align:center">Or</h3>
-                                        <p style="text-align:center"><a href="#">I do not have Referral ID</a></p>   
-                                        <p style="font-size:12px">Note : Referral ID is entered only once at the time of joining Era Swap Ecosystem. If you donot enter the referral ID now, you won't be able to add it later on.   </p>                       
+                                        <input type="text" id="refer-address">
+                                        <button on:click={send_refer}>Connect to my Introducer</button>
+                                        <p style="display:{gotResponse?'block':'none'}">{gotResponse}</p>
+                                        <button style="display:{gotResponse&&gotResponse==='Intoducer not found'?'block':'none'}" on:click={() => {
+                                          document.getElementById("refer-modal-close-button").click();
+                                          document.getElementById("dashboard").click();
+                                        }}>Okay, take me to the dashboard</button>
+                                        <h3 style="text-align:center">Or</h3>
+                                        <p style="text-align:center"><a on:click={() => {
+                                            document.getElementById("refer-modal-close-button").click();
+                                            document.getElementById("dashboard").click();
+                                          }}>I do not have Referral ID</a></p>
+                                        <p style="font-size:12px">Note : Referral ID is entered only once at the time of joining Era Swap Ecosystem. If you donot enter the referral ID now, you won't be able to add it later on.   </p>
                                     </div>
-                                   
+
                           </div>
                          </div>
                          </div>
