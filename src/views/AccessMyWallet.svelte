@@ -141,7 +141,7 @@ async function load_by_private() {
                                                         </div>
                                                         <div class="tm-pricebox-footer">
                                                          <button class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">Access my wallet</span></button>
-                                                            <!-- <button class="tm-button tm-button-sm" on:click={load_wallet}><span style="color:#fff">Access my wallet</span></button> -->
+                                                            <button class="tm-button tm-button-sm" on:click={load_wallet}><span style="color:#fff">Access my wallet</span></button>
                                                         </div>
                                                         {#if error_message != ""}
                                                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
