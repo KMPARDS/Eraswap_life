@@ -24,6 +24,7 @@
     function send_refer() {
       window.refer = document.getElementById('refer-address').value;
       if(window.refer.length === 42 && window.refer.slice(0,2) === '0x') {
+        window.refer = window.refer.toLowerCase();
         submit_refer();
       } else {
         alert('please check the address you are entering: '+window.refer);
