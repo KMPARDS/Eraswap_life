@@ -64,10 +64,10 @@ a:hover{
   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
     <ul class="navbar-nav ml-auto navbar-right">
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
-        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/create-new-wallet" >Sign Up <span style="font-size:10px; ">New Users</span></a>
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/create-new-wallet" >Create Wallet <span style="font-size:10px; ">New Users</span></a>
       </li>
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
-        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/access-my-wallet" >Sign In <span style="font-size:10px; ">Existing Users</span></a>
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/access-my-wallet" >Load Wallet <span style="font-size:10px; ">Existing Users</span></a>
       </li>
       {#if wallet}
       <if class="nav-item" style="margin-right: 8px; margin-bottom:10px">
