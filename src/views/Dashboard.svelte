@@ -143,23 +143,29 @@
        </div>
        <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
          <h6>Your Direct Rewards</h6>
+         <strong>From Your TimeAlly Stakings</strong>
+         <ul>
+           <li>Your Stakings in TimeAlly: 0.0 ES</li>
+           <li>Unclaimed All TimeAlly Monthly Benefits Till date: 0.0 ES</li>
+           <li>Power Tokens received from TimeAlly: 0.0 ES</li>
+           <li>Power Tokens received from other users: 0.0 ES</li>
+           <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
+         </ul>
          <strong>From Workpool NRT</strong>
          <ul>
            <li>As a Curator: 0.0 ES</li>
            <li>As a Time Trader: 0.0 ES</li>
            <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
          </ul>
-         <strong>From Promotions by you:</strong>
+         <strong>From Promotions as an introducer:</strong>
          <ul>
-           <li>ComputeEx Exchange direct sales incentive: 0.0 ES</li>
-           <li>ComputeEx Lending & Borrowing ÐApp direct sales incentive: 0.0 ES</li>
            <li>EraSwap Academy direct sales incentive: 0.0 ES</li>
            <li>BetDeEx ÐApp direct sales incentive: 0.0 ES</li>
            <li>TimeAlly Club direct sales incentive: 0.0 ES</li>
          </ul>
        </div>
        <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
-         <h6>Your Indirect Rewards from DaySwappers</h6>
+         <h6>Indirect Incentives from your DaySwappers Tree</h6>
          <strong>From Workpool NRT</strong>
          <ul>
            <li>Time Trading from your tree: 0.0 ES</li>
