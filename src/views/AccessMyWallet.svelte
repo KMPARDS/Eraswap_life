@@ -230,20 +230,22 @@ async function load_by_private() {
                          <div class="row">
                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                 <img src="/images/S_LIFE.png" style=" display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
-                                <p style="text-align:center">Please enter your Referral ID</p>
+                                <p style="text-align:center">Please enter your Referral Address</p>
                                     <div class="tm-pricebox-price" style="text-align:center">
-                                        <input type="text" id="refer-address">
-                                        <button on:click={send_refer}>Connect to my Introducer</button>
+                                        <input type="text" id="refer-address" placeholder="Enter ETH address of introducer">
+                                        <button class="tm-button tm-button-sm" on:click={send_refer}>
+                                        <span style=" color:#fff; text-align:center">Connect to Introducer</span>
+                                        </button>
                                         <p style="display:{gotResponse?'block':'none'}">{gotResponse}</p>
-                                        <button style="display:{gotResponse&&(gotResponse==='Intoducer not found'||gotResponse==='success')?'block':'none'}" on:click={() => {
+                                        <button class="tm-button tm-button-sm" style="display:{gotResponse&&(gotResponse==='Intoducer not found'||gotResponse==='success')?'block':'none'};cursor:pointer;" on:click={() => {
                                           document.getElementById("refer-modal-close-button").click();
                                           document.getElementById("dashboard").click();
-                                        }}>Okay, take me to the dashboard</button>
+                                        }}><span style=" color:#fff; text-align:center">Okay</span></button>
                                         <h3 style="text-align:center">Or</h3>
-                                        <p style="text-align:center"><a on:click={() => {
+                                        <button class="tm-button tm-button-sm" on:click={() => {
                                             document.getElementById("refer-modal-close-button").click();
                                             document.getElementById("dashboard").click();
-                                          }}>I do not have Referral ID</a></p>
+                                          }}><span style=" color:#fff; text-align:center">I do not have Referral Address</span></button>
                                         <p style="font-size:12px">Note : Referral ID is entered only once at the time of joining Era Swap Ecosystem. If you donot enter the referral ID now, you won't be able to add it later on.   </p>
                                     </div>
 
