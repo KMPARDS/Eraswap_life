@@ -993,7 +993,7 @@
                                     </span>
                                     <p style="font-size:13px">eLearning Platform</p>
                                       </div>
-                                      <a href="https://eraswap.academy/" target="_blank"> 
+                                      <a href="https://eraswap.academy/wallet-login" target="_blank"> 
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
                                        <img src="images/academy.png" alt="" height="105px">
