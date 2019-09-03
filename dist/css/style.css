@@ -1,63 +1,4 @@
-/*
- * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- *
- * Template Name: Appmyil - App Landing Template   
- * Template URI: https://thememarch.com/demo/html/appmyil/
- * Description: Appmyil is an app landing HTML template which comes with unique and clean design. It helps you to create a beautiful app landing HTML website. It is designed with Bootstrap v4.2.1 the latest bootstrap version. Appmyil is well organized and very easy to customize.
- * Author: Thememarch
- * Author URI: https://thememarch.com
- * Version: 2.0
- *
- * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- */
-/*
-===========================================================
-    INDEX
-===========================================================
 
-    01) Reset
-    02) Animations
-    03) Typography
-    04) Utilities
-
-    05) Button
-    06) Title
-    07) Slider Elements
-    08) Tab
-    09) Selectbox
-    10) Breadcrumb
-    11) Pagination
-    12) Comment
-    13) Form Styles
-    14) Videobox
-    15) Accordion
-
-    16) Header
-    17) Navigation
-    18) Heroslider
-    19) Feature
-    20) About
-    21) Service
-    22) Screenshots
-    23) Funfact
-    24) Team Area
-    25) Testimonial
-    26) Pricebox
-    27) Faq Area
-    28) Download Area
-    29) Subscribe Area
-    30) Blog
-    31) Contact
-    32) Widgets
-    33) Footer
-
-===========================================================
-    END INDEX
-===========================================================
-*/
-/**
- * Reset
- */
 html {
   color: #222;
   font-size: 1em;
@@ -648,7 +589,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Roboto", sans-serif;
-  color: #686b77;
+  color: #686b77 !important;
   font-weight: 400;
 }
 
@@ -667,7 +608,6 @@ body {
 :-ms-input-placeholder {
   color: #686b77;
 }
-
 h1,
 h2,
 h3,
@@ -688,6 +628,7 @@ caption,
 hr {
   margin: 0;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 h1,
@@ -1970,8 +1911,8 @@ button.tm-button:hover::after {
 .tm-button.tm-button-lg,
 a.tm-button.tm-button-lg,
 button.tm-button.tm-button-lg {
-  height: 55px;
-  line-height: 55px;
+  height: 50px;
+  line-height: 50px;
 }
 
 .tm-button.tm-button-lg i,
@@ -2019,6 +1960,8 @@ button.tm-button.tm-button-white.tm-button-transparent {
   border: 1px solid #ffffff;
   background: transparent;
   color: #ffffff;
+  font-size: 14px;
+  font-weight: 100
 }
 
 .tm-button.tm-button-white.tm-button-transparent::after,
@@ -2306,7 +2249,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 
 .tm-sectiontitle-divider::before, .tm-sectiontitle-divider::after {
   content: "";
-  background-image: url(../images/title-shape.png);
+  background-image: url(../images/title-shape-min.png);
   display: inline-block;
   width: 70px;
   height: 7px;
@@ -2496,7 +2439,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
   content: "";
   position: absolute;
   border: 0;
-  background-image: url(../images/icons/down-caret.png);
+  background-image: url(../images/icons/down-caret-min.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -2963,7 +2906,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
   display: block;
   width: 100%;
   text-align: left;
-  padding: 10px 10px 10px 50px;
+  /* padding: 10px 10px 10px 50px; */
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   color: #3c424f;
@@ -2974,12 +2917,13 @@ button.tm-videobutton.tm-videobutton-lg span i {
   position: relative;
   white-space: inherit;
   background: #F5F9FB;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .tm-accordion .card-header button::before {
-  content: "\f2f9";
-  font-family: 'Material-Design-Iconic-Font';
+  /* content: "\f2f9"; */
+  display: none;
+  /* font-family: 'Material-Design-Iconic-Font'; */
   position: absolute;
   left: 10px;
   top: 50%;
@@ -4045,6 +3989,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 
 .tm-service-content p {
   margin-bottom: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .tm-service-image {
@@ -5135,7 +5080,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 }
 
 .tm-pricebox-header {
-  padding: 20px 30px;
+  padding: 10px 30px;
   background: #3c424f;
   position: relative;
   z-index: 1;
@@ -5169,6 +5114,8 @@ button.tm-videobutton.tm-videobutton-lg span i {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   color: #ffffff;
+  font-weight: 100;
+  font-size: 17px;
 }
 
 .tm-pricebox-body {
@@ -5193,7 +5140,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 }
 
 .tm-pricebox-price {
-  padding: 25px 30px 20px 30px;
+  padding: 5px 30px 20px 30px;
   border-bottom: 1px solid #f4f3f3;
   border-left: 1px solid #f4f3f3;
   border-right: 1px solid #f4f3f3;
@@ -6391,6 +6338,21 @@ button.tm-videobutton.tm-videobutton-lg span i {
   .tm-footer-widgets .widget-info {
     padding-right: 0;
   }
+}
+
+.blinking{
+  animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: #811515;    }
+  49%{    color: transparent; }
+  50%{    color: #811515; }
+  60%{    color: #811515; }
+  70%{    color: #811515; }
+  80%{    color: #811515; }
+  90%{    color: #811515; }
+  99%{    color:#811515;  }
+  100%{   color: #811515;    }
 }
 
 /*# sourceMappingURL=style.css.map */

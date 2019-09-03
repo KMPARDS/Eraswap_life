@@ -131,7 +131,7 @@
  <div class="col-lg-8 col-md-6 col-12 mt-30">
      <div class="tm-pricebox text-center" style="padding-bottom: .1rem; background-color: #eee">
          <div class="tm-pricebox-header">
-             <h4>Dashboard</h4>
+             <h4>Your Dashboard</h4>
          </div>
          <div class="tm-pricebox-body">
           <ul>
@@ -142,36 +142,42 @@
          </ul>
        </div>
        <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
-         <h6>Direct Rewards</h6>
+         <h6>Your Direct Rewards</h6>
+         <strong>From Your TimeAlly Stakings</strong>
+         <ul>
+           <li>Your Stakings in TimeAlly: 0.0 ES</li>
+           <li>Unclaimed All TimeAlly Monthly Benefits Till date: 0.0 ES</li>
+           <li>Power Tokens received from TimeAlly: 0.0 ES</li>
+           <li>Power Tokens received from other users: 0.0 ES</li>
+           <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
+         </ul>
          <strong>From Workpool NRT</strong>
          <ul>
            <li>As a Curator: 0.0 ES</li>
            <li>As a Time Trader: 0.0 ES</li>
            <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
          </ul>
-         <strong>From Promotions:</strong>
+         <strong>From Promotions as an introducer:</strong>
          <ul>
-           <li>ComputeEx Exchange direct sales incentive: 0.0 ES</li>
-           <li>ComputeEx Lending & Borrowing ÐApp direct sales incentive: 0.0 ES</li>
            <li>EraSwap Academy direct sales incentive: 0.0 ES</li>
            <li>BetDeEx ÐApp direct sales incentive: 0.0 ES</li>
            <li>TimeAlly Club direct sales incentive: 0.0 ES</li>
          </ul>
        </div>
        <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
-         <h6>Indirect Rewards from DaySwappers</h6>
+         <h6>Indirect Incentives from your DaySwappers Tree</h6>
          <strong>From Workpool NRT</strong>
          <ul>
            <li>Time Trading from your tree: 0.0 ES</li>
            <li>BuzCafe Merchant trading from your tree: 0.0 ES</li>
          </ul>
-         <strong>From Promotions:</strong>
+         <strong>From Promotions by your DaySwappers tree:</strong>
          <ul>
-           <li>ComputeEx Exchange tree sales incentive: 0.0 ES</li>
-           <li>ComputeEx Lending & Borrowing ÐApp tree sales incentive: 0.0 ES</li>
-           <li>EraSwap Academy tree sales incentive: 0.0 ES</li>
-           <li>BetDeEx ÐApp tree sales incentive: 0.0 ES</li>
-           <li>TimeAlly Club tree sales incentive: 0.0 ES</li>
+           <li>ComputeEx Exchange DaySwappers tree sales incentive: 0.0 ES</li>
+           <li>ComputeEx Lending & Borrowing ÐApp DaySwappers tree sales incentive: 0.0 ES</li>
+           <li>EraSwap Academy DaySwappers tree sales incentive: 0.0 ES</li>
+           <li>BetDeEx ÐApp DaySwappers tree sales incentive: 0.0 ES</li>
+           <li>TimeAlly Club DaySwappers tree sales incentive: 0.0 ES</li>
          </ul>
        </div>
      </div>
@@ -263,7 +269,7 @@
                         <div class="col-lg-12">
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">                                
+                                <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         <img src="/images/g-min.png" alt="" data="https://www.timeally.io/" on:click={load_website}>
                                     </span>
