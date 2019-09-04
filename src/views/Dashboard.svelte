@@ -162,9 +162,9 @@
          </ul>
          <strong>From Promotions as an introducer:</strong>
          <ul>
-           <li>EraSwap Academy direct sales incentive: 0.0 ES</li>
-           <li>BetDeEx ÐApp direct sales incentive: 0.0 ES</li>
-           <li>TimeAlly Club direct sales incentive: 0.0 ES</li>
+           <li>EraSwap Academy direct bounty incentive: 0.0 ES</li>
+           <li>BetDeEx ÐApp direct bounty incentive: 0.0 ES</li>
+           <li>TimeAlly Club direct bounty incentive: 0.0 ES</li>
          </ul>
        </div>
        <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
@@ -176,11 +176,11 @@
          </ul>
          <strong>From Promotions by your DaySwappers tree:</strong>
          <ul>
-           <li>ComputeEx Exchange DaySwappers tree sales incentive: 0.0 ES</li>
-           <li>ComputeEx Lending & Borrowing ÐApp DaySwappers tree sales incentive: 0.0 ES</li>
-           <li>EraSwap Academy DaySwappers tree sales incentive: 0.0 ES</li>
-           <li>BetDeEx ÐApp DaySwappers tree sales incentive: 0.0 ES</li>
-           <li>TimeAlly Club DaySwappers tree sales incentive: 0.0 ES</li>
+           <li>ComputeEx Exchange DaySwappers tree bounty incentive: 0.0 ES</li>
+           <li>ComputeEx Lending & Borrowing ÐApp DaySwappers tree bounty incentive: 0.0 ES</li>
+           <li>EraSwap Academy DaySwappers tree bounty incentive: 0.0 ES</li>
+           <li>BetDeEx ÐApp DaySwappers tree bounty incentive: 0.0 ES</li>
+           <li>TimeAlly Club DaySwappers tree bounty incentive: 0.0 ES</li>
          </ul>
        </div>
      </div>
