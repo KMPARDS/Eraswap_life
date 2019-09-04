@@ -167,7 +167,7 @@
            <li>TimeAlly Club direct bounty incentive: 0.0 ES</li>
          </ul>
        </div>
-       <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
+       <!-- <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
          <h6>Indirect Incentives from your DaySwappers Tree</h6>
          <strong>From Workpool NRT</strong>
          <ul>
@@ -182,7 +182,7 @@
            <li>BetDeEx ÐApp DaySwappers tree bounty incentive: 0.0 ES</li>
            <li>TimeAlly Club DaySwappers tree bounty incentive: 0.0 ES</li>
          </ul>
-       </div>
+       </div> -->
      </div>
  </div>
  <!--// Single Pricebox -->
