@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12" on:click={toggle}>
-                    <iframe src="https://www.youtube.com/embed/X4zp5zRP3_Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/X4zp5zRP3_Y?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-recentpost">                       
