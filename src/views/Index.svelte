@@ -5,7 +5,7 @@
     function get_query(name){
        if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
           return decodeURIComponent(name[1]);
-    }
+      }
     try{
     refer = get_query("refer").toLowerCase();}catch(e){
     }
@@ -984,26 +984,25 @@
                                   </div>
                                 </div>
                               </div>
-                            <div class="col-md-3">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                      <div class="flip-card-front">
-                                      <span class="tm-funfact-icon">
-                                        <img src="/images/3-min.png" alt="">
-                                    </span>
-                                    <p style="font-size:13px">eLearning Platform</p>
+                              <div class="col-md-3">
+                                  <div class="flip-card">
+                                      <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                        <span class="tm-funfact-icon">
+                                          <img src="/images/3-min.png" alt="">
+                                      </span>
+                                      <p style="font-size:13px">eLearning Platform</p>
+                                        </div>
+                                        <a href="https://eraswap.academy/wallet-login" target="_blank"> 
+                                      <div class="flip-card-back">
+                                        <div class="tm-funfact text-center">
+                                        <img src="images/academy.png" alt="" height="105px">
                                       </div>
-                                      <a href="https://eraswap.academy/wallet-login" target="_blank"> 
-                                    <div class="flip-card-back">
-                                      <div class="tm-funfact text-center">
-                                       <img src="images/academy.png" alt="" height="105px">
+                                    </div>
+                                    </a>
                                     </div>
                                   </div>
-                                  </a>
-                                  </div>
-                                </div>
-
-                            </div>
+                              </div>
                             <div class="col-md-3">
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
