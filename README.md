@@ -1,13 +1,5 @@
-# svelte app
+# Eraswap Life
 
-This is a project template for [Svelte](https://svelte.technology) apps with routing and lazy-loading.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit OrdinaryJellyfish/svelte-routing-template svelte-app
-cd svelte-app
-```
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
@@ -17,7 +9,7 @@ cd svelte-app
 Install the dependencies...
 
 ```bash
-cd svelte-app
+cd Eraswap_life
 npm install
 ```
 

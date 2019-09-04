@@ -328,7 +328,7 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/1App_web_logos-01-min.png" alt="" data="https://eraswap.academy/" on:click={load_website}>
+                                        <img src="/images/1App_web_logos-01-min.png" alt="" data="https://eraswap.academy/wallet-login/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
