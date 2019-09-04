@@ -43,11 +43,14 @@
             balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
             address = await wallet.getAddress();
             first_time = await get({address: wallet.address})
-            if(refer)
-                document.getElementById("refer_model").click()
-            else{
-                if(first_time==="True")document.getElementById("first_time").click()
+            if(first_time==="True" && refer) {
+              document.getElementById("refer_model").click()
             }
+            // if(refer)
+            //     document.getElementById("refer_model").click()
+            // else{
+            //     if(first_time==="True")document.getElementById("first_time").click()
+            // }
             error_message=""
 
             let contract = new ethers.Contract("0xef1344bdf80bef3ff4428d8becec3eea4a2cf574", abi, wallet)

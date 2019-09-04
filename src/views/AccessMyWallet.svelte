@@ -10,14 +10,17 @@
     let private_key ="";
     let gotResponse = '';
     let provider = new ethers.providers.InfuraProvider("homestead");
+    let accessWalletButtonText = 'Unlock Wallet Now';
 
     function load_wallet() {
         try{
             let wallet = ethers.Wallet.fromMnemonic(mnemonic);
             window.wallet = new ethers.Wallet(wallet.privateKey, provider)
             // document.getElementById("dashboard").click()
+            return true;
         }catch (e) {
             error_message = "Invalid Mnemonic";
+            return false;
         }
     }
 
@@ -27,7 +30,7 @@
         window.refer = window.refer.toLowerCase();
         submit_refer();
       } else {
-        alert('please check the address you are entering: '+window.refer);
+        alert('please check the address you are entering: ('+window.refer+')');
       }
 
     }
@@ -54,29 +57,50 @@
 }
 
 async function load_by_keystore() {
-    load_wallet_message = "Loading..."
-    try{
+  const returnValue = false;
+  load_wallet_message = "Loading..."
+  try{
     if (keystore,typeof(keystore) != "string"){
         keystore = JSON.stringify(keystore)
     }
     window.wallet  = await ethers.Wallet.fromEncryptedJson(keystore, wallet_password)
     window.wallet = new ethers.Wallet(wallet.privateKey, provider)
+    returnValue = true;
     // document.getElementById("dashboard").click()
-}catch (e) {
-  console.log(e);
-  error_message = "Password and keystore do not match"
-}
-    load_wallet_message = "Load Wallet";
+  } catch (e) {
+    console.log(e);
+    error_message = "Password and keystore do not match"
+  }
+  load_wallet_message = "Load Wallet";
+  return returnValue;
 }
 
 async function load_by_private() {
-    try{
-        window.wallet = await new ethers.Wallet(private_key);
-            window.wallet = new ethers.Wallet(wallet.privateKey, provider)
-        // document.getElementById("dashboard").click()
-    }catch (e) {
-        error_message = "Invalid private key";
+  try{
+    window.wallet = await new ethers.Wallet(private_key);
+    window.wallet = new ethers.Wallet(wallet.privateKey, provider)
+    // document.getElementById("dashboard").click()
+    return true;
+  } catch (e) {
+    error_message = "Invalid private key";
+    return false;
+  }
+}
+
+async function unlockWalletButton(loadWalletFunction) {
+  accessWalletButtonText = 'Please wait...';
+
+  // if wallet load failed then return
+  if(await loadWalletFunction()) {
+    const firstTime = (await get({ address: window.wallet.address }))==='True';
+    document.getElementById('modal-button').click();
+    console.log('firstTime', firstTime);
+    // do not show refer modal if url refer is not there
+    if(!firstTime || window.refer) {
+      document.getElementById("refer-modal-close-button").click();
+      document.getElementById("dashboard").click();
     }
+  }
 }
 
 </script>
@@ -122,8 +146,8 @@ async function load_by_private() {
                                                         </div>
                                                     </div>
                                                     <div class="tm-pricebox-footer">
-                                                     <button on:click={load_by_keystore} class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">{load_wallet_message}</span></button>
-                                                        <!-- <button class="tm-button tm-button-sm" on:click={load_by_keystore}><span style="color:#fff">{load_wallet_message}</span></button> -->
+                                                     <button on:click={() => unlockWalletButton(load_by_keystore)} class="btn btn-primary tm-button tm-button-sm"> <span class="text-white">{accessWalletButtonText}</span></button>
+
                                                     </div>
                                                     {#if error_message != ""}
                                                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -159,7 +183,9 @@ async function load_by_private() {
                                                             </div>
                                                         </div>
                                                         <div class="tm-pricebox-footer">
-                                                         <button class="btn btn-primary tm-button tm-button-sm" on:click={load_wallet} data-toggle="modal" data-target="#myModal"> <span class="text-white">Access my wallet</span></button>
+                                                         <button class="btn btn-primary tm-button tm-button-sm" on:click={
+                                                           () => unlockWalletButton(load_wallet)
+                                                          } data-toggle="modal" data-target="#myModal"> <span class="text-white">{accessWalletButtonText}</span></button>
                                                             <!-- <button class="tm-button tm-button-sm" on:click={load_wallet}><span style="color:#fff">Access my wallet</span></button> -->
                                                         </div>
                                                         {#if error_message != ""}
@@ -194,7 +220,7 @@ async function load_by_private() {
                                                                 </div>
                                                             </div>
                                                             <div class="tm-pricebox-footer">
-                                                            <button on:click={load_by_private} class="btn btn-primary tm-button tm-button-sm" data-toggle="modal" data-target="#myModal"> <span class="text-white">Access Wallet</span></button>
+                                                            <button on:click={() => unlockWalletButton(load_by_private)} class="btn btn-primary tm-button tm-button-sm" > <span class="text-white">{accessWalletButtonText}</span></button>
                                                                 <!-- <button class="tm-button tm-button-sm" on:click={load_by_private}><span style="color:#fff">Access Wallet</span></button> -->
                                                             </div>
                                                             {#if error_message != ""}
@@ -214,6 +240,7 @@ async function load_by_private() {
                     <!--// Single Pricebox -->
                 </div>
             </div>
+            <button id="modal-button" data-toggle="modal" data-target="#myModal" style="display:none">{load_wallet_message}</button>
         <!--// Breadcrumb Area -->
              <div class="modal" id="myModal">
                 <div class="modal-dialog">
@@ -237,7 +264,8 @@ async function load_by_private() {
                                         <span style=" color:#fff; text-align:center">Connect to Introducer</span>
                                         </button>
                                         <p style="display:{gotResponse?'block':'none'}">{gotResponse}</p>
-                                        <button class="tm-button tm-button-sm" style="display:{gotResponse&&(gotResponse==='Intoducer not found'||gotResponse==='success')?'block':'none'};cursor:pointer;" on:click={() => {
+                                        <button class="tm-button tm-button-sm" style="display:{gotResponse&&(gotResponse==='Intoducer not found'||gotResponse==='success')?'block':'none'};cursor:pointer;margin:auto" on:click={() => {
+                                          refer = '';
                                           document.getElementById("refer-modal-close-button").click();
                                           document.getElementById("dashboard").click();
                                         }}><span style=" color:#fff; text-align:center">Okay</span></button>
