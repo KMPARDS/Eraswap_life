@@ -56,8 +56,7 @@
               console.log(response2);
               unclaimedBenefits = response2.data.data.myActiveStakings;
             })();
-            console.log(response1.data.data.totalBenefit, response2.data.data.totalBenefit);
-
+      
             first_time = await get({address: wallet.address})
             if(first_time==="True" && refer) {
               document.getElementById("refer_model").click()

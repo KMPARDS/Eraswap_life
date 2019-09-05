@@ -94,19 +94,26 @@ async function unlockWalletButton(loadWalletFunction) {
   if(await loadWalletFunction()) {
     try {
       const firstTime = (await get({ address: window.wallet.address }))==='True';
-      document.getElementById('modal-button').click();
+
       console.log('firstTime', firstTime);
       // do not show refer modal if url refer is not there
       if(!firstTime || window.refer) {
+        console.log('yes');
         document.getElementById("refer-modal-close-button").click();
         document.getElementById("dashboard").click();
+      } else {
+        console.log('no');
+        document.getElementById('modal-button').click();
       }
+
     } catch (e) {
       console.log('catch in loadWallet', e.message);
       document.getElementById("refer-modal-close-button").click();
       document.getElementById("dashboard").click();
     }
 
+  } else {
+    accessWalletButtonText = 'Error, Unlock again';
   }
 }
 
@@ -192,7 +199,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                         <div class="tm-pricebox-footer">
                                                          <button class="btn btn-primary tm-button tm-button-sm" on:click={
                                                            () => unlockWalletButton(load_wallet)
-                                                          } data-toggle="modal" data-target="#myModal"> <span class="text-white">{accessWalletButtonText}</span></button>
+                                                          }> <span class="text-white">{accessWalletButtonText}</span></button>
                                                             <!-- <button class="tm-button tm-button-sm" on:click={load_wallet}><span style="color:#fff">Access my wallet</span></button> -->
                                                         </div>
                                                         {#if error_message != ""}
