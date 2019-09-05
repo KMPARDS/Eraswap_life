@@ -102,6 +102,7 @@ async function unlockWalletButton(loadWalletFunction) {
         document.getElementById("dashboard").click();
       }
     } catch (e) {
+      console.log('catch in loadWallet', e.message);
       document.getElementById("dashboard").click();
     }
 
