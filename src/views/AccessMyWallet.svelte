@@ -103,6 +103,7 @@ async function unlockWalletButton(loadWalletFunction) {
       }
     } catch (e) {
       console.log('catch in loadWallet', e.message);
+      document.getElementById("refer-modal-close-button").click();
       document.getElementById("dashboard").click();
     }
 
