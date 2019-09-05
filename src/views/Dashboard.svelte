@@ -9,6 +9,8 @@
     let error_message = "";
     let website = "";
     let first_time = "";
+    let myActiveStaking = '';
+    let unclaimedBenefits = '';
 
     onMount(async () => {
         if(window.opener){
@@ -42,6 +44,20 @@
         try{
             balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
             address = await wallet.getAddress();
+
+            (async() => {
+              const response1 = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
+              console.log(response1);
+              myActiveStaking = response1.data.data.totalBenefit;
+            })();
+
+            (async() => {
+              const response2 = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
+              console.log(response2);
+              unclaimedBenefits = response2.data.data.myActiveStakings;
+            })();
+            console.log(response1.data.data.totalBenefit, response2.data.data.totalBenefit);
+
             first_time = await get({address: wallet.address})
             if(first_time==="True" && refer) {
               document.getElementById("refer_model").click()
@@ -148,8 +164,8 @@
          <h6>Your Direct Rewards</h6>
          <strong>From Your TimeAlly Stakings</strong>
          <ul>
-           <li>Your Stakings in TimeAlly: 0.0 ES</li>
-           <li>Unclaimed All TimeAlly Monthly Benefits Till date: 0.0 ES</li>
+           <li>Your Stakings in TimeAlly: {myActiveStaking ? `${myActiveStaking} ES` : 'Loading...'}</li>
+           <li>Unclaimed All TimeAlly Monthly Benefits Till date: {unclaimedBenefits ? `${unclaimedBenefits} ES` : 'Loading...'}</li>
            <li>Power Tokens received from TimeAlly: 0.0 ES</li>
            <li>Power Tokens received from other users: 0.0 ES</li>
            <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
