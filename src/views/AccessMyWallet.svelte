@@ -57,7 +57,7 @@
 }
 
 async function load_by_keystore() {
-  const returnValue = false;
+  let returnValue = false;
   load_wallet_message = "Loading..."
   try{
     if (keystore,typeof(keystore) != "string"){
@@ -92,14 +92,19 @@ async function unlockWalletButton(loadWalletFunction) {
 
   // if wallet load failed then return
   if(await loadWalletFunction()) {
-    const firstTime = (await get({ address: window.wallet.address }))==='True';
-    document.getElementById('modal-button').click();
-    console.log('firstTime', firstTime);
-    // do not show refer modal if url refer is not there
-    if(!firstTime || window.refer) {
-      document.getElementById("refer-modal-close-button").click();
+    try {
+      const firstTime = (await get({ address: window.wallet.address }))==='True';
+      document.getElementById('modal-button').click();
+      console.log('firstTime', firstTime);
+      // do not show refer modal if url refer is not there
+      if(!firstTime || window.refer) {
+        document.getElementById("refer-modal-close-button").click();
+        document.getElementById("dashboard").click();
+      }
+    } catch (e) {
       document.getElementById("dashboard").click();
     }
+
   }
 }
 
