@@ -11,6 +11,8 @@
     let first_time = "";
     let myActiveStaking = '';
     let unclaimedBenefits = '';
+    let powerTokenReceived = '';
+    let powerTokenBalance = '';
 
     onMount(async () => {
         if(window.opener){
@@ -46,17 +48,24 @@
             address = await wallet.getAddress();
 
             (async() => {
-              const response1 = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
-              console.log(response1);
-              myActiveStaking = response1.data.data.totalBenefit;
+              const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
+              console.log('getBenefitFromAllStakingsOfUser', response);
+              myActiveStaking = response.data.data.totalBenefit;
             })();
 
             (async() => {
-              const response2 = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
-              console.log(response2);
-              unclaimedBenefits = response2.data.data.myActiveStakings;
+              const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
+              console.log('getActiveStakingsOfUser', response);
+              unclaimedBenefits = response.data.data.myActiveStakings;
             })();
-      
+
+            (async() => {
+              const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
+              console.log('fetch-power-token-balance', response);
+              powerTokenBalance = response.data.balance;
+              powerTokenReceived = response.data.received;
+            })();
+
             first_time = await get({address: wallet.address})
             if(first_time==="True" && refer) {
               document.getElementById("refer_model").click()
@@ -165,8 +174,8 @@
          <ul>
            <li>Your Stakings in TimeAlly: {myActiveStaking ? `${myActiveStaking} ES` : 'Loading...'}</li>
            <li>Unclaimed All TimeAlly Monthly Benefits Till date: {unclaimedBenefits ? `${unclaimedBenefits} ES` : 'Loading...'}</li>
-           <li>Power Tokens received from TimeAlly: 0.0 ES</li>
-           <li>Power Tokens received from other users: 0.0 ES</li>
+           <li>Power Tokens received from TimeAlly: {powerTokenReceived ? `${powerTokenReceived} ES` : 'Loading...'}</li>
+           <li>Power Tokens received from other users: {powerTokenBalance ? `${powerTokenBalance} ES` : 'Loading...'}</li>
            <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
          </ul>
          <strong>From Workpool NRT</strong>
