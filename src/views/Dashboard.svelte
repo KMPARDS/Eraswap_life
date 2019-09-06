@@ -13,6 +13,7 @@
     let unclaimedBenefits = '';
     let powerTokenReceived = '';
     let powerTokenBalance = '';
+    let timeswappersBenefit = '';
 
     onMount(async () => {
         if(window.opener){
@@ -48,23 +49,50 @@
             address = await wallet.getAddress();
 
             (async() => {
-              const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
-              console.log('getBenefitFromAllStakingsOfUser', response);
-              myActiveStaking = response.data.data.totalBenefit;
+              try {
+                const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
+                console.log('getBenefitFromAllStakingsOfUser', response);
+                myActiveStaking = response.data.data.totalBenefit;
+              } catch (err) {
+                console.log('error from getBenefitFromAllStakingsOfUser', err.message);
+                myActiveStaking = '0.0';
+              }
             })();
 
             (async() => {
-              const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
-              console.log('getActiveStakingsOfUser', response);
-              unclaimedBenefits = response.data.data.myActiveStakings;
+              try {
+                const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
+                console.log('getActiveStakingsOfUser', response);
+                unclaimedBenefits = response.data.data.myActiveStakings;
+              } catch (err) {
+                unclaimedBenefits = '0.0';
+              }
             })();
 
             (async() => {
-              const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
-              console.log('fetch-power-token-balance', response);
-              powerTokenBalance = response.data.balance;
-              powerTokenReceived = response.data.received;
+              try {
+                const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
+                console.log('fetch-power-token-balance', response);
+                powerTokenBalance = response.data.balance;
+                powerTokenReceived = response.data.received;
+              } catch (err) {
+                powerTokenBalance = '0.0';
+                powerTokenReceived = '0.0';
+              }
             })();
+
+            (async() => {
+              try {
+                const response = await axios.get(`https://eraswap.technology/dayswappers/getTFC?input=${address}`);
+                console.log('timeswappers-getTFC', response);
+                timeswappersBenefit = response.data.data.platform.Timeswappers.tfc * 0.28;
+              } catch (err) {
+                timeswappersBenefit = 0;
+                console.log(err.message);
+              }
+            })();
+
+
 
             first_time = await get({address: wallet.address})
             if(first_time==="True" && refer) {
@@ -181,7 +209,7 @@
          <strong>From Workpool NRT</strong>
          <ul>
            <li>As a Curator: 0.0 ES</li>
-           <li>As a Time Trader: 0.0 ES</li>
+           <li>As a Time Trader: {timeswappersBenefit ? `${timeswappersBenefit} ES` : 'Loading...'}</li>
            <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
          </ul>
          <strong>From Promotions as an introducer:</strong>
