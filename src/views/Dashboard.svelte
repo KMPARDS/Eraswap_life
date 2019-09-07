@@ -52,10 +52,10 @@
               try {
                 const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
                 console.log('getBenefitFromAllStakingsOfUser', response);
-                myActiveStaking = response.data.data.totalBenefit;
+                unclaimedBenefits = response.data.data.totalBenefit;
               } catch (err) {
                 console.log('error from getBenefitFromAllStakingsOfUser', err.message);
-                myActiveStaking = '0.0';
+                unclaimedBenefits = '0.0';
               }
             })();
 
@@ -63,9 +63,9 @@
               try {
                 const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
                 console.log('getActiveStakingsOfUser', response);
-                unclaimedBenefits = response.data.data.myActiveStakings;
+                myActiveStaking = response.data.data.myActiveStakings;
               } catch (err) {
-                unclaimedBenefits = '0.0';
+                myActiveStaking = '0.0';
               }
             })();
 
