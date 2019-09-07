@@ -94,8 +94,8 @@
 
 
 
-            first_time = await get({address: wallet.address})
-            if(first_time==="True" && refer) {
+            first_time = window.firstTime; // await get({address: wallet.address})
+            if(first_time && refer) {
               document.getElementById("refer_model").click()
             }
             // if(refer)

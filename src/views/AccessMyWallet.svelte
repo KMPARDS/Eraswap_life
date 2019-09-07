@@ -93,11 +93,11 @@ async function unlockWalletButton(loadWalletFunction) {
   // if wallet load failed then return
   if(await loadWalletFunction()) {
     try {
-      const firstTime = (await get({ address: window.wallet.address }))==='True';
+      window.firstTime = (await get({ address: window.wallet.address }))==='True';
 
-      console.log('firstTime', firstTime);
+      console.log('firstTime', window.firstTime);
       // do not show refer modal if url refer is not there
-      if(!firstTime || window.refer) {
+      if(!window.firstTime || window.refer) {
         console.log('yes');
         document.getElementById("refer-modal-close-button").click();
         document.getElementById("dashboard").click();
