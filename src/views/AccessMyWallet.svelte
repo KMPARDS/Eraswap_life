@@ -87,6 +87,27 @@ async function load_by_private() {
   }
 }
 
+async function connectMetamask() {
+  try {
+    window.ethereum.enable();
+
+    const onCorrectNetwork = window.web3.currentProvider.networkVersion == 1;
+    if(!onCorrectNetwork) throw new Error('Hey bro/sis, you are on testnet, please switch to mainnet.');
+
+    const metamaskWeb3Provider = new ethers.providers.Web3Provider(window.web3.currentProvider);
+
+    window.wallet = metamaskWeb3Provider.getSigner();
+    // console.log('window.wallet', window.wallet);
+    window.wallet.address = window.wallet.provider._web3Provider.selectedAddress;
+    // console.log('window.wallet', window.wallet);
+    alert(`Metamask connection success! Your address is ${wallet.address}, you will be prompted with a sign screen. This is a common Web 3.0 authentication for securely and safely registering as a DaySwapper.`);
+    return true;
+
+  } catch (e) {
+    error_message = e.message;
+  }
+}
+
 async function unlockWalletButton(loadWalletFunction) {
   accessWalletButtonText = 'Please wait...';
 
@@ -98,11 +119,9 @@ async function unlockWalletButton(loadWalletFunction) {
       console.log('firstTime', window.firstTime);
       // do not show refer modal if url refer is not there
       if(!window.firstTime || window.refer) {
-        console.log('yes');
         document.getElementById("refer-modal-close-button").click();
         document.getElementById("dashboard").click();
       } else {
-        console.log('no');
         document.getElementById('modal-button').click();
       }
 
@@ -117,6 +136,7 @@ async function unlockWalletButton(loadWalletFunction) {
   }
 }
 
+// window.testMetamask = true;
 </script>
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
     <Navbar title="Dashboard"/>
@@ -134,6 +154,10 @@ async function unlockWalletButton(loadWalletFunction) {
                         <li class="active"><a href="#Commentary" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px; text-align:center"><span style=" color:#fff">Keystore File</span></button></a></li>
                         <li><a href="#Videos" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Access through mnemonic</span></button></a></li>
                             <li><a href="#key" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Private Key</span></button></a></li>
+
+                          {#if window.testMetamask}
+                            <li><a href="#Metamask" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Metamask</span></button></a></li>
+                          {/if}
                     </ul>
                              <div class="tab-content" style="margin-top:-30px">
                                  <div role="tabpanel" class="tab-pane fade in active show" id="Commentary">
@@ -214,7 +238,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                     </div>
                                                 </div>
                                             </div>
-                                         <div role="tabpanel" class="tab-pane fade in active" id="key">
+                                         <div role="tabpanel" class="tab-pane fade in" id="key">
                                             <div class="row">
                                             <!-- Single Pricebox -->
                                                     <div class="col-lg-6 col-sm-12 col-md-12 mt-30 offset-xl-3 offset-lg-3">
@@ -249,7 +273,42 @@ async function unlockWalletButton(loadWalletFunction) {
                                                         </div>
                                                     </div>
                                                 </div>
-                                        </div>
+                      {#if window.testMetamask}
+                        <div role="tabpanel" class="tab-pane fade in" id="Metamask">
+                          <div class="row">
+                          <!-- Single Pricebox -->
+                            <div class="col-lg-6 col-sm-12 col-md-12 mt-30 offset-xl-3 offset-lg-3">
+                              <div class="tm-pricebox text-center">
+                                <div class="tm-pricebox-header">
+                                  <h4>Metamask</h4>
+                                </div>
+                                <div class="tm-pricebox-body"><br>
+                                  <div class="row">
+                                    <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
+                                      <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br><br>
+                                      <div class="tm-pricebox-price">
+                                        <button on:click={() => unlockWalletButton(connectMetamask)} class="btn btn-primary tm-button tm-button-sm" > <span class="text-white">{accessWalletButtonText === 'Unlock Wallet Now' ? 'Connect to Metamask' : accessWalletButtonText}</span></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {#if error_message != ""}
+                                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    {error_message}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                {/if}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      {/if}
+
+
+
+                    </div>
 
                     <!--// Single Pricebox -->
                 </div>
