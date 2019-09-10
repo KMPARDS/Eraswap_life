@@ -536,7 +536,7 @@
 
                             </div> -->
                             <div class="d-flex align-items-center mg-t-10">
-                              <div class="wd-10 ht-10 bg-teal rounded-circle pos-relative t--1"></div>
+                              <div class="wd-10 ht-10 bg-teal rounded-circle pos-relative t--1" style="background-color: #4D4D4D"></div>
                               <span class="tx-medium mg-l-10">Volume of 1 year stakings</span>
                               <span class="tx-rubik mg-l-auto" id="one-year-stakings">Loading...</span>
                               <!-- <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0.75% <i class="icon fa fa-long-arrow-up"></i></span> -->
@@ -548,7 +548,7 @@
 
                             </div> -->
                             <div class="d-flex align-items-center mg-t-10">
-                                <div class="wd-10 ht-10 rounded-circle pos-relative t--1" style="background-color: #4D4D4D"></div>
+                                <div class="wd-10 ht-10 rounded-circle pos-relative t--1" style="background-color: #6B0000"></div>
                                 <span class="tx-medium mg-l-10">Volume of 2 year stakings</span>
                                 <span class="tx-rubik mg-l-auto" id="two-year-stakings">Loading...</span>
                                 <!-- <span class="wd-60 tx-right tx-rubik mg-l-5 tx-danger">-0.58% <i class="icon fa fa-long-arrow-down"></i></span> -->
@@ -829,8 +829,8 @@
                     <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-pages">Loading...</div>
                   </div>
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Friends</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-friends">0 Views</div>
+                    <strong class="tx-12 tx-rubik">Swappers</strong>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-friends">Loading...</div>
                   </div>
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Active Users</strong>
@@ -2360,7 +2360,7 @@ if(!datapie2)
         $("#swapperswall-communities").html(result.data.communities+' communities');
         $("#swapperswall-groups").html(result.data.groups+' groups');
         $("#swapperswall-pages").html(result.data.pages+' pages');
-        $("#swapperswall-friends").html(result.data.friends+' friends');
+        $("#swapperswall-friends").html(result.data.friends+' swappers');
         $("#swapperswall-active-users").html(result.data.activeUsers+' active users');
         $("#swapperswall-media").html(result.data.mediaUploads+' media uploads');
     }});
