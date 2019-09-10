@@ -114,7 +114,7 @@ async function unlockWalletButton(loadWalletFunction) {
   // if wallet load failed then return
   if(await loadWalletFunction()) {
     try {
-      window.firstTime = (await get({ address: window.wallet.address }))==='True';
+      window.firstTime = (await get({ address: window.wallet.address.toLowerCase() }))==='True';
 
       console.log('firstTime', window.firstTime);
       // do not show refer modal if url refer is not there
