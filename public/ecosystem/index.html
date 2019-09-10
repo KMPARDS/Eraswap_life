@@ -129,7 +129,7 @@
         <div class="row row-xs">
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
             <div class="card card-body">
-              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES Total Supply</h6>
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES Current Supply</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="es-total-supply">Loading...</h3>
               </div>
@@ -867,19 +867,19 @@
                 <div class="list-group list-group-flush tx-13">
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Users Count</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-trainers-count">0 users</div>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="academy-userscount">Loading...</div>
                   </div>
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Courses</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-institute-count">6 courses</div>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="academy-courses">Loading...</div>
                   </div>
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Total ES deposited</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-users-count">0 ES</div>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="academy-deposits">Loading...</div>
                   </div>
                   <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                     <strong class="tx-12 tx-rubik">Users studying count</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="eraswapacademy-users-with-certificate">0 users</div>
+                    <div class="mg-l-auto tx-rubik tx-color-02" id="academy-userstudying">Loading...</div>
                   </div>
 
 
@@ -2322,14 +2322,14 @@ if(!datapie2)
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfDeposit',
       success: function(result){
         console.log('timeswappers-totalNoOfDeposit', result);
-        $("#timeswappers-totalNoOfDeposit").html(window.lessDecimals(result.data)+' ES');
+        $("#timeswappers-totalNoOfDeposit").html(result.data+' ES');
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfWithdraw',
       success: function(result){
         console.log('timeswappers-totalNoOfWithdraw', result);
-        $("#timeswappers-totalNoOfWithdraw").html(window.lessDecimals(result.data)+' ES');
+        $("#timeswappers-totalNoOfWithdraw").html(result.data+' ES');
     }});
 
     $.ajax({
@@ -2350,7 +2350,7 @@ if(!datapie2)
       url: 'https://apis.timeswappers.com/api/userDashboard/TfcGenerated',
       success: function(result){
         console.log('timeswappers-TfcGenerated', result);
-        $("#timeswappers-TfcGenerated").html(window.lessDecimals(result.data)+' ES');
+        $("#timeswappers-TfcGenerated").html(result.data+' ES');
     }});
 
     $.ajax({
@@ -2380,6 +2380,35 @@ if(!datapie2)
           );
         })
 
+    }});
+
+
+    $.ajax({
+      url: 'https://apis.eraswap.academy/api/userscount',
+      success: function(result){
+        console.log('academy-userscount', result);
+        $("#academy-userscount").html(result.data+' users');
+    }});
+
+    $.ajax({
+      url: 'https://apis.eraswap.academy/api/courses',
+      success: function(result){
+        console.log('academy-courses', result);
+        $("#academy-courses").html(result.data+' courses');
+    }});
+
+    $.ajax({
+      url: 'https://apis.eraswap.academy/api/deposits',
+      success: function(result){
+        console.log('academy-deposits', result);
+        $("#academy-deposits").html(result.data+' ES');
+    }});
+
+    $.ajax({
+      url: 'https://apis.eraswap.academy/api/userstudying',
+      success: function(result){
+        console.log('academy-userstudying', result);
+        $("#academy-userstudying").html(result.data+' users');
     }});
   </script>
 
