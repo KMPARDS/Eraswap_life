@@ -14,6 +14,7 @@
     let powerTokenReceived = '';
     let powerTokenBalance = '';
     let timeswappersBenefit = '';
+    let dayswapperReward = '';
 
     onMount(async () => {
         if(window.opener){
@@ -89,6 +90,17 @@
                 timeswappersBenefit = response.data.data.platform.Timeswappers.tfc * 0.28;
               } catch (err) {
                 timeswappersBenefit = '0.0';
+                console.log(err.message);
+              }
+            })();
+
+            (async() => {
+              try {
+                const response = await axios.get(`http://apis.dayswappers.com/userprofile/user_transaction?address=${address}`);
+                console.log('dayswapper-user_transaction', response);
+                dayswapperReward = ethers.utils.formatEther(ethers.utils.parseEther(String(response.data.liquid + response.data.staked)));
+              } catch (err) {
+                dayswapperReward = '0.0';
                 console.log(err.message);
               }
             })();
@@ -218,6 +230,10 @@
            <li>EraSwap Academy direct bounty incentive: 0.0 ES</li>
            <li>BetDeEx ÐApp direct bounty incentive: 0.0 ES</li>
            <li>TimeAlly Club direct bounty incentive: 0.0 ES</li>
+         </ul>
+         <strong>From your DaySwappers Tree</strong>
+         <ul>
+           <li>Dayswappers Reward: {dayswapperReward ? dayswapperReward + ' ES' : 'Loading...'}</li>
          </ul>
        </div>
        <!-- <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
