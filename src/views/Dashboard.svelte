@@ -73,6 +73,7 @@
               try {
                 const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
                 console.log('fetch-power-token-balance', response);
+                if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');
                 powerTokenBalance = response.data.balance;
                 powerTokenReceived = response.data.received;
               } catch (err) {
@@ -87,7 +88,7 @@
                 console.log('timeswappers-getTFC', response);
                 timeswappersBenefit = response.data.data.platform.Timeswappers.tfc * 0.28;
               } catch (err) {
-                timeswappersBenefit = 0;
+                timeswappersBenefit = '0.0';
                 console.log(err.message);
               }
             })();
