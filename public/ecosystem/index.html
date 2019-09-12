@@ -747,6 +747,14 @@
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-total-users">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total Liquid Rewards (last month)</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-liquid-rewards">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
+                      <strong class="tx-12 tx-rubik">Total TimeAlly Rewards (last month)</strong>
+                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-timeally-rewards">Loading...</div>
+                    </div>
+                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                       <strong class="tx-12 tx-rubik">Active Users</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-active">Loading...</div>
                     </div>
@@ -2402,13 +2410,19 @@ if(!datapie2)
         $("#academy-userstudying").html(result.data+' users');
     }});
 
-
-
     $.ajax({
       url: 'https://eraswap.technology/swapperswall/powerTokenDetails',
       success: function(result){
         console.log('swapperswall-powerTokenDetails', result);
         $("#unused-power-tokens").html(window.lessDecimals(result.data.unusedPowerToken)+' ES');
+    }});
+
+    $.ajax({
+      url: 'https://eraswap.technology/dayswappers/getTotalReward',
+      success: function(result){
+        console.log('dayswappers-getTotalReward', result);
+        $("#dayswappers-liquid-rewards").html(window.lessDecimals(result.data.liquidTotal)+' ES');
+        $("#dayswappers-timeally-rewards").html(window.lessDecimals(result.data.timeallyTotal)+' ES');
     }});
 
   </script>
