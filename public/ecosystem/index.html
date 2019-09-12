@@ -162,7 +162,7 @@
           </div><!-- col -->
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
             <div class="card card-body">
-              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Circulating ES</h6>
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Circulating ES (outside TA)</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="es-outside-timeally">Loading...</h3>
               </div>
@@ -216,17 +216,7 @@
                 </div><!-- chart-three -->
             </div>
           </div><!-- col -->
-          <div class="col-sm-6 col-lg-2 mg-t-10 ">
-            <div class="card card-body">
-              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">KYC DaySwappers</h6>
-              <div class="d-flex d-lg-block d-xl-flex align-items-end">
-                <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="kyc-users">Loading...</h3>
-              </div>
-              <div class="chart-three">
-                  <div id="flotChart4" class="flot-chart ht-30"></div>
-                </div><!-- chart-three -->
-            </div>
-          </div><!-- col -->
+
           <div class="col-sm-6 col-lg-2 mg-t-10 ">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Ecosystem transactions</h6>
@@ -249,7 +239,17 @@
                   </div><!-- chart-three -->
               </div>
             </div><!-- col -->
-
+            <div class="col-sm-6 col-lg-2 mg-t-10 ">
+              <div class="card card-body">
+                <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Unused Power Tokens</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                  <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="unused-power-tokens">Loading...</h3>
+                </div>
+                <div class="chart-three">
+                    <div id="flotChart4" class="flot-chart ht-30"></div>
+                  </div><!-- chart-three -->
+              </div>
+            </div><!-- col -->
             <div class="col-sm-6 col-lg-2 mg-t-10">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Luck Pool in NRT</h6>
@@ -408,7 +408,7 @@
                         </div>
                         <div class="d-flex justify-content-between mg-b-5">
                           <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-curators">Loading...</small></h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-timetraders">Loading...</small></h5>
                         </div>
                         <div class="progress ht-4 mg-b-0 op-5">
                           <div class="progress-bar bg-orange wd-0p" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
@@ -421,7 +421,7 @@
                         </div>
                         <div class="d-flex justify-content-between mg-b-5">
                           <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-timetraders">Loading...</small></h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-dayswappers">Loading...</small></h5>
                         </div>
                         <div class="progress ht-4 mg-b-0 op-5">
                           <div class="progress-bar bg-pink wd-0p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
@@ -434,7 +434,7 @@
                         </div>
                         <div class="d-flex justify-content-between mg-b-5">
                           <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-dayswappers">Loading...</small></h5>
+                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-buzcafe">Loading...</small></h5>
                         </div>
                         <div class="progress ht-4 mg-b-0 op-5">
                           <div class="progress-bar bg-primary wd-0p" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -447,7 +447,7 @@
                         </div>
                         <div class="d-flex align-items-end justify-content-between mg-b-5">
                           <h5 class="tx-normal tx-rubik lh-2 mg-b-0">0 ES</h5>
-                          <h6 class="tx-normal tx-rubik tx-color-03 lh-2 mg-b-0"><small id="nrtFractions-buzcafe">Loading...</small></h6>
+                          <h6 class="tx-normal tx-rubik tx-color-03 lh-2 mg-b-0"><small id="nrtFractions-curator">Loading...</small></h6>
                         </div>
                         <div class="progress ht-4 mg-b-0 op-5">
                           <div class="progress-bar bg-teal wd-0p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
@@ -659,10 +659,6 @@
                       <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-profile-views">0 Views</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total KYC Done</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-kyc-done">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
                       <strong class="tx-12 tx-rubik">Total Verified</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfVerifiedUser">Loading...</div>
                     </div>
@@ -759,35 +755,35 @@
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-kyc">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">White Belt</strong>
+                      <strong class="tx-12 tx-rubik">White Belt (last month)</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-white">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Yellow Belt</strong>
+                      <strong class="tx-12 tx-rubik">Yellow Belt (last month)</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-yellow">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Orange Belt</strong>
+                      <strong class="tx-12 tx-rubik">Orange Belt (last month)</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-orange">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Green Belt</strong>
+                      <strong class="tx-12 tx-rubik">Green Belt (last month)</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-green">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Blue Belt</strong>
+                      <strong class="tx-12 tx-rubik">Blue Belt (last month)</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-blue">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Brown Belt</strong>
+                      <strong class="tx-12 tx-rubik">Brown Belt (last month)</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-brown">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Red Belt</strong>
+                      <strong class="tx-12 tx-rubik">Red Belt (last month)</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-red">Loading...</div>
                     </div>
                     <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Black Belt</strong>
+                      <strong class="tx-12 tx-rubik">Black Belt (last month)</strong>
                       <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-black">Loading...</div>
                     </div>
                   </div><!-- list-group -->
@@ -1015,7 +1011,9 @@
                           <img src="images/computeEx-Favicon.png" height="20px">
                         </div><!-- crypto-icon -->
                         <div class="media-body pd-l-8">
-                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">ComputeEx <span class="tx-color-03 tx-normal"></span></h6>
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">
+                              <!-- ComputeEx -->
+                              <span class="tx-color-03 tx-normal"></span> (yet to live)</h6>
 
                         </div><!-- media-body -->
                       </div><!-- media -->
@@ -2076,7 +2074,7 @@
       success: function(result){
         console.log('nrtFractions', result);
         $("#nrt-released").html(window.lessDecimals(result.data.monthlyNRTAmount)+' ES');
-        $("#nrtFractions-curators").html(window.lessDecimals(result.data.workPoolCalculation.curators)+' ES');
+        $("#nrtFractions-curator").html(window.lessDecimals(result.data.workPoolCalculation.curators)+' ES');
         $("#nrtFractions-timetraders").html(window.lessDecimals(result.data.workPoolCalculation.timetraders)+' ES');
         $("#nrtFractions-dayswappers").html(window.lessDecimals(result.data.workPoolCalculation.dayswappers)+' ES');
         $("#nrtFractions-buzcafe").html(window.lessDecimals(result.data.workPoolCalculation.buzcafe)+' ES');
@@ -2184,7 +2182,7 @@ if(!datapie2)
         new Chart(ctx2, {
           type: 'horizontalBar',
           data: {
-            labels: ['Time Swappers', 'Buzcafe', 'Day Swappers', 'BetDeEx', 'ComputeEx', 'TimeAlly'],
+            labels: ['Time Swappers', 'Buzcafe', 'BetDeEx', 'ComputeEx', 'TimeAlly Club', 'TimeAlly Partners', 'Academy'],
             datasets: [{
               data: [
                 platformTFC['Time Swappers'],
@@ -2252,7 +2250,7 @@ if(!datapie2)
 
         $("#total_no_of_user").html(result.total_no_of_user+' users');
         $("#dayswappers-total-users").html(result.total_no_of_user+' users');
-        $("#kyc-users").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
+        // $("#kyc-users").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
         $("#dayswappers-kyc").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
         $("#dayswappers-active").html(result.active_users+' user'+(result.kyc_users>1?'s':''));
 
@@ -2295,13 +2293,6 @@ if(!datapie2)
       success: function(result){
         console.log('timeswappers-profile-views', result);
         $("#timeswappers-profile-views").html(result.data+' view'+(result.data>1?'s':''));
-    }});
-
-    $.ajax({
-      url: 'https://apis.timeswappers.com/api/userDashboard/totalKYCDone',
-      success: function(result){
-        console.log('timeswappers-kyc-done', result);
-        $("#timeswappers-kyc-done").html(result.data+' user'+(result.data>1?'s':''));
     }});
 
     $.ajax({
@@ -2410,6 +2401,16 @@ if(!datapie2)
         console.log('academy-userstudying', result);
         $("#academy-userstudying").html(result.data+' users');
     }});
+
+
+
+    $.ajax({
+      url: 'https://eraswap.technology/swapperswall/powerTokenDetails',
+      success: function(result){
+        console.log('swapperswall-powerTokenDetails', result);
+        $("#unused-power-tokens").html(window.lessDecimals(result.data.unusedPowerToken)+' ES');
+    }});
+
   </script>
 
 
