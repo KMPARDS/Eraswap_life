@@ -11,8 +11,11 @@
     let gotResponse = '';
     let provider = new ethers.providers.InfuraProvider("homestead");
     let accessWalletButtonText = 'Unlock Wallet Now';
+    window.testMetamask = true;
+    window.usingMetamask = false;
 
     function load_wallet() {
+      window.usingMetamask = false;
         try{
             let wallet = ethers.Wallet.fromMnemonic(mnemonic);
             window.wallet = new ethers.Wallet(wallet.privateKey, provider)
@@ -25,6 +28,10 @@
     }
 
     function send_refer() {
+      if(window.usingMetamask) {
+        // alert('Please check Metamask in your browser and click on Sign to connect to your introducer.');
+        gotResponse = 'Please check Metamask in your browser and click on Sign to connect to your introducer.'
+      }
       window.refer = document.getElementById('refer-address').value;
       if(window.refer.length === 42 && window.refer.slice(0,2) === '0x') {
         window.refer = window.refer.toLowerCase();
@@ -58,6 +65,7 @@
 
 async function load_by_keystore() {
   let returnValue = false;
+  window.usingMetamask = false;
   load_wallet_message = "Loading..."
   try{
     if (keystore,typeof(keystore) != "string"){
@@ -76,6 +84,7 @@ async function load_by_keystore() {
 }
 
 async function load_by_private() {
+  window.usingMetamask = false;
   try{
     window.wallet = await new ethers.Wallet(private_key);
     window.wallet = new ethers.Wallet(wallet.privateKey, provider)
@@ -89,6 +98,8 @@ async function load_by_private() {
 
 async function connectMetamask() {
   try {
+    window.usingMetamask = true;
+    accessWalletButtonText = 'Please check your Metamask';
     window.ethereum.enable();
 
     const onCorrectNetwork = window.web3.currentProvider.networkVersion == 1;
@@ -136,7 +147,6 @@ async function unlockWalletButton(loadWalletFunction) {
   }
 }
 
-// window.testMetamask = true;
 </script>
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
     <Navbar title="Dashboard"/>
