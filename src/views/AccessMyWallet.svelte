@@ -100,9 +100,9 @@ async function connectMetamask() {
   try {
     window.usingMetamask = true;
     accessWalletButtonText = 'Please check your Metamask';
+    window.ethereum.enable();
     await new Promise(function(resolve, reject) {
       const intervalId = setInterval(async() => {
-        window.ethereum.enable();
 
         const onCorrectNetwork = window.web3.currentProvider.networkVersion == 1;
         if(!onCorrectNetwork) throw new Error('Hey bro/sis, you are on testnet, please switch to mainnet.');
@@ -116,7 +116,7 @@ async function connectMetamask() {
           clearInterval(intervalId);
           resolve();
         }
-      }, 500);
+      }, 1000);
     });
     // console.log('window.wallet', window.wallet);
     alert(`Metamask connection success! Your address is ${window.wallet.address}, you will be prompted with a sign screen. This is a common Web 3.0 authentication for securely and safely registering as a DaySwapper.`);
@@ -132,23 +132,32 @@ async function unlockWalletButton(loadWalletFunction) {
 
   // if wallet load failed then return
   if(await loadWalletFunction()) {
-    try {
-      window.firstTime = (await get({ address: window.wallet.address.toLowerCase() }))==='True';
-
-      console.log('firstTime', window.firstTime);
-      // do not show refer modal if url refer is not there
-      if(!window.firstTime || window.refer) {
-        document.getElementById("refer-modal-close-button").click();
-        document.getElementById("dashboard").click();
-      } else {
-        document.getElementById('modal-button').click();
-      }
-
-    } catch (e) {
-      console.log('catch in loadWallet', e.message);
-      document.getElementById("refer-modal-close-button").click();
-      document.getElementById("dashboard").click();
-    }
+    // await new Promise(function(resolve, reject) {
+      // const intervalId = setInterval(async() => {
+        try {
+          console.log('1 print');
+          const response = (await get({ address: window.wallet.address.toLowerCase() }));
+          window.firstTime = response === 'True';
+          console.log('2 print');
+          console.log('firstTime', window.firstTime);
+          // do not show refer modal if url refer is not there
+          if(!window.firstTime || window.refer) {
+            document.getElementById("refer-modal-close-button").click();
+            document.getElementById("dashboard").click();
+          } else {
+            document.getElementById('modal-button').click();
+          }
+          console.log('3 print');
+          clearInterval(intervalId);
+          resolve();
+          console.log('4 print');
+        } catch (e) {
+          console.log('catch in loadWallet', e.message);
+          // document.getElementById("refer-modal-close-button").click();
+          // document.getElementById("dashboard").click();
+        }
+      // }, 500);
+    // });
 
   } else {
     accessWalletButtonText = 'Error, Unlock again';
@@ -167,16 +176,18 @@ async function unlockWalletButton(loadWalletFunction) {
                     </h2>Do not have a wallet?
                     <a style="font-size: 15px;" href="create-new-wallet"><b>Create A New Wallet</b></a><br><br>
                 </div>
-                <div class="container text-center" style="margin-top: -30px;">
-                    <ul id="myTabs" class="nav nav-pills nav-justified offset-xl-2 offset-lg-2" role="tablist" data-tabs="tabs">
-                        <li class="active"><a href="#Commentary" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px; text-align:center"><span style=" color:#fff">Keystore File</span></button></a></li>
-                        <li><a href="#Videos" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Access through mnemonic</span></button></a></li>
-                            <li><a href="#key" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Private Key</span></button></a></li>
+                <div class="container text-center" style="margin: -30px auto 0;">
+                    <div style="display:inline-block;">
+                      <ul id="myTabs" class="nav nav-pills nav-justified" role="tablist" data-tabs="tabs">
+                          <li class="active"><a href="#Commentary" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px; text-align:center"><span style=" color:#fff">Keystore File</span></button></a></li>
+                          <li><a href="#Videos" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Access through mnemonic</span></button></a></li>
+                              <li><a href="#key" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Private Key</span></button></a></li>
 
-                          {#if window.testMetamask}
-                            <li><a href="#Metamask" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Metamask</span></button></a></li>
-                          {/if}
-                    </ul>
+                            {#if window.testMetamask}
+                              <li><a href="#Metamask" data-toggle="tab"><button class="tm-button tm-button-sm" style="margin: 10px;"> <span style=" color:#fff; text-align:center">Metamask</span></button></a></li>
+                            {/if}
+                      </ul>
+                    </div>
                              <div class="tab-content" style="margin-top:-30px">
                                  <div role="tabpanel" class="tab-pane fade in active show" id="Commentary">
                                      <div class="row">
