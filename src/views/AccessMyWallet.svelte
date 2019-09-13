@@ -100,18 +100,26 @@ async function connectMetamask() {
   try {
     window.usingMetamask = true;
     accessWalletButtonText = 'Please check your Metamask';
-    window.ethereum.enable();
+    await new Promise(function(resolve, reject) {
+      const intervalId = setInterval(async() => {
+        window.ethereum.enable();
 
-    const onCorrectNetwork = window.web3.currentProvider.networkVersion == 1;
-    if(!onCorrectNetwork) throw new Error('Hey bro/sis, you are on testnet, please switch to mainnet.');
+        const onCorrectNetwork = window.web3.currentProvider.networkVersion == 1;
+        if(!onCorrectNetwork) throw new Error('Hey bro/sis, you are on testnet, please switch to mainnet.');
 
-    const metamaskWeb3Provider = new ethers.providers.Web3Provider(window.web3.currentProvider);
+        const metamaskWeb3Provider = new ethers.providers.Web3Provider(window.web3.currentProvider);
 
-    window.wallet = metamaskWeb3Provider.getSigner();
+        window.wallet = metamaskWeb3Provider.getSigner();
+        // console.log('window.wallet', window.wallet);
+        window.wallet.address = window.wallet.provider._web3Provider.selectedAddress;
+        if(window.wallet.address) {
+          clearInterval(intervalId);
+          resolve();
+        }
+      }, 500);
+    });
     // console.log('window.wallet', window.wallet);
-    window.wallet.address = window.wallet.provider._web3Provider.selectedAddress;
-    // console.log('window.wallet', window.wallet);
-    alert(`Metamask connection success! Your address is ${wallet.address}, you will be prompted with a sign screen. This is a common Web 3.0 authentication for securely and safely registering as a DaySwapper.`);
+    alert(`Metamask connection success! Your address is ${window.wallet.address}, you will be prompted with a sign screen. This is a common Web 3.0 authentication for securely and safely registering as a DaySwapper.`);
     return true;
 
   } catch (e) {
@@ -297,7 +305,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                     <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                       <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br><br>
                                       <div class="tm-pricebox-price">
-                                        <button on:click={() => unlockWalletButton(connectMetamask)} class="btn btn-primary tm-button tm-button-sm" > <span class="text-white">{accessWalletButtonText === 'Unlock Wallet Now' ? 'Connect to Metamask' : accessWalletButtonText}</span></button>
+                                        <button disabled={accessWalletButtonText === 'Please check your Metamask'} on:click={() => unlockWalletButton(connectMetamask)} class="btn btn-primary tm-button tm-button-sm" > <span class="text-white">{accessWalletButtonText === 'Unlock Wallet Now' ? 'Connect to Metamask' : accessWalletButtonText}</span></button>
                                       </div>
                                     </div>
                                   </div>
