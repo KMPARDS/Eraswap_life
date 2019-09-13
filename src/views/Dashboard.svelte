@@ -343,28 +343,52 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
+                                      {#if window.usingMetamask}
+                                        <a href="https://www.timeally.io/load-wallet/using-metamask" target="_blank">
+                                          <img src="/images/g-min.png" alt="">
+                                        </a>
+                                      {:else}
                                         <img src="/images/g-min.png" alt="" data="https://www.timeally.io/" on:click={load_website}>
+                                      {/if}
                                     </span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
+                                      {#if window.usingMetamask}
+                                        <a href="https://timeswappers.com/metamask-login?home=timeswappers" target="_blank">
+                                          <img src="/images/A-min.png" alt="">
+                                        </a>
+                                      {:else}
                                         <img src="/images/A-min.png" alt=""  data="https://timeswappers.com/wallet-login?home=timeswappers" on:click={load_website}>
+                                      {/if}
                                     </span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
+                                      {#if window.usingMetamask}
+                                        <a href="https://timeswappers.com/metamask-login?home=swapperswall" target="_blank">
+                                          <img src="/images/b-min.png" alt="">
+                                        </a>
+                                      {:else}
                                         <img src="/images/b-min.png" alt="" data="https://timeswappers.com/wallet-login?home=swapperswall" on:click={load_website}>
+                                      {/if}
                                     </span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
+                                      {#if window.usingMetamask}
+                                        <a href="http://buzcafe.com/metamask-login" target="_blank">
+                                          <img src="/images/c-min.png" alt="">
+                                        </a>
+                                      {:else}
                                         <img src="/images/c-min.png" alt="" data="http://buzcafe.com/wallet-login" on:click={load_website}>
+                                      {/if}
                                     </span>
                                 </div>
                             </div>
@@ -397,7 +421,13 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/1App_web_logos-01-min.png" alt="" data="https://eraswap.academy/wallet-login" on:click={load_website}>
+                                        {#if window.usingMetamask}
+                                          <a href="https://eraswap.academy/metaMaskLogin" target="_blank">
+                                            <img src="/images/1App_web_logos-01-min.png" alt="">
+                                          </a>
+                                        {:else}
+                                          <img src="/images/1App_web_logos-01-min.png" alt="" data="https://eraswap.academy/wallet-login" on:click={load_website}>
+                                        {/if}
                                     </span>
                                 </div>
                             </div>
@@ -406,7 +436,13 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
+                                      {#if window.usingMetamask}
+                                        <a href="https://www.betdeex.com/load-wallet/using-metamask" target="_blank">
+                                          <img src="/images/betdeex-logo-min.png" alt="">
+                                        </a>
+                                      {:else}
                                         <img src="/images/betdeex-logo-min.png" data="https://www.betdeex.com" on:click={load_website} alt="">
+                                      {/if}
                                     </span>
                                 </div>
                             </div>
