@@ -2190,15 +2190,16 @@ if(!datapie2)
         new Chart(ctx2, {
           type: 'horizontalBar',
           data: {
-            labels: ['Time Swappers', 'Buzcafe', 'BetDeEx', 'ComputeEx', 'TimeAlly Club', 'TimeAlly Partners', 'Academy'],
+            labels: ['Time Swappers', 'Buzcafe', 'BetDeEx', 'ComputeEx', 'TimeAlly Club', 'TimeAlly Partners', 'Eraswap Academy'],
             datasets: [{
               data: [
-                platformTFC['Time Swappers'],
+                platformTFC['Timeswappers'],
                 platformTFC['Buzcafe'],
-                platformTFC['Day Swappers'],
-                platformTFC['BetDeEx'],
-                platformTFC['ComputeEx'],
-                platformTFC['TimeAlly'],
+                platformTFC['BetdeEx'],
+                0,
+                platformTFC['Timeally Club'],
+                0,
+                platformTFC['EraswapAcademy']
               ],
               backgroundColor: ['#661111', '#661111','#661111','#661111','#661111','#661111']
             }]
