@@ -124,6 +124,7 @@ async function connectMetamask() {
 
   } catch (e) {
     error_message = e.message;
+    alert('Error: '+e.message);
   }
 }
 
