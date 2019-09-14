@@ -2193,13 +2193,13 @@ if(!datapie2)
             labels: ['Time Swappers', 'Buzcafe', 'BetDeEx', 'ComputeEx', 'TimeAlly Club', 'TimeAlly Partners', 'Eraswap Academy'],
             datasets: [{
               data: [
-                platformTFC['Timeswappers'],
-                platformTFC['Buzcafe'],
-                platformTFC['BetdeEx'],
+                platformTFC['Timeswappers'] || 0,
+                platformTFC['Buzcafe'] || 0,
+                platformTFC['BetdeEx'] || 0,
                 0,
-                platformTFC['Timeally Club'],
+                platformTFC['Timeally Club'] || 0,
                 0,
-                platformTFC['EraswapAcademy']
+                platformTFC['EraswapAcademy'] || 0
               ],
               backgroundColor: ['#661111', '#661111','#661111','#661111','#661111','#661111']
             }]
