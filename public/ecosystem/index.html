@@ -2425,6 +2425,42 @@ if(!datapie2)
         $("#dayswappers-timeally-rewards").html(window.lessDecimals(result.data.timeallyTotal)+' ES');
     }});
 
+    /////
+
+    $.ajax({
+      url: 'https://apis.buzcafe.com/api/fetch/users-count',
+      success: function(result){
+        console.log('buzcafe-users-count', result);
+        $("#buzcafe-users-count").html(result.data+' users');
+    }});
+
+    $.ajax({
+      url: 'https://apis.buzcafe.com/api/fetch/shops-count',
+      success: function(result){
+        console.log('buzcafe-shops-count', result);
+        $("#buzcafe-shops-count").html(result.data+' shops');
+    }});
+
+    $.ajax({
+      url: 'https://apis.buzcafe.com/api/fetch/deposits-count',
+      success: function(result){
+        console.log('buzcafe-deposits-count', result);
+        $("#buzcafe-deposits-count").html(result.data+' deposits');
+    }});
+
+    $.ajax({
+      url: 'https://apis.buzcafe.com/api/fetch/withdrawals-count',
+      success: function(result){
+        console.log('buzcafe-withdrawals-count', result);
+        $("#buzcafe-withdrawals-count").html(result.data+' withdrawls');
+    }});
+
+    $.ajax({
+      url: 'https://apis.buzcafe.com/api/fetch/transactions-count',
+      success: function(result){
+        console.log('buzcafe-transactions-count', result);
+        $("#buzcafe-transactions-count").html(result.data+' transactions');
+    }});
   </script>
 
 
