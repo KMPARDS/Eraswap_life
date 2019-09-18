@@ -412,13 +412,6 @@
                                 </div>
                             </div>
                             <div class="col-md-3">
-                             <div class="tm-funfact text-center">
-                                    <span class="tm-funfact-icon">
-                                        <img src="/images/e-min.png" alt="" data="https://computeex.net/login/" on:click={load_website}>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                         {#if window.usingMetamask}
@@ -431,8 +424,6 @@
                                     </span>
                                 </div>
                             </div>
-                        </div><br><br>
-                        <div class="row">
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
@@ -446,24 +437,34 @@
                                     </span>
                                 </div>
                             </div>
-                             <div class="col-md-3">
+                        </div><br><br>
+                        <div class="row">
+                            <div class="col-md-3">
+                               <div class="tm-funfact text-center">
+                                   <span class="tm-funfact-icon">
+                                       <img src="/images/T5.png" data="https://timeallyclub.com/" on:click={load_website} alt="">
+                                   </span>
+                               </div>
+                           </div>
+                            <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/D6.png" data="http://dateswappers.com/" on:click={load_website} alt="">
+                                        <img src="/images/ds-cs.png" data="http://dateswappers.com/" on:click={load_website} alt="">
                                     </span>
                                 </div>
                             </div>
                              <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/V8.png" data="http://valueoffarmers.org/" on:click={load_website} alt="">
+                                        <img src="/images/vof-cs.png" data="http://valueoffarmers.org/" on:click={load_website} alt="">
                                     </span>
                                 </div>
                             </div>
-                             <div class="col-md-3">
-                                <div class="tm-funfact text-center">
+
+                            <div class="col-md-3">
+                             <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/T5.png" data="https://timeallyclub.com/" on:click={load_website} alt="">
+                                        <img src="/images/computeex.png" alt="" data="https://computeex.net/login/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
