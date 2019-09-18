@@ -993,7 +993,7 @@
                                       </span>
                                       <p style="font-size:13px">eLearning Platform</p>
                                         </div>
-                                        <a href="https://eraswap.academy/wallet-login" target="_blank"> 
+                                        <a href="https://eraswap.academy/wallet-login" target="_blank">
                                       <div class="flip-card-back">
                                         <div class="tm-funfact text-center">
                                         <img src="images/academy.png" alt="" height="105px">
@@ -1229,16 +1229,53 @@
                             <!-- Accordion Wrapper -->
                             <div id="tm-accordion1" class="tm-accordion">
 
+
+                                <div class="card">
+                                    <div class="card-header" id="tm-accordion1-heading1n1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse1n1"
+                                                aria-expanded="true" aria-controls="tm-accordion1-collapse1n1">
+                                                <img src="/images/q.png"> What is Era Swap Life?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="tm-accordion1-collapse1n1" class="collapse" aria-labelledby="tm-accordion1-heading1n1"
+                                        data-parent="#tm-accordion1">
+                                        <div class="card-body offset-md-1">
+                                          <p>Please watch this video to understand "Era Swap Life - One World"</p>
+                                          <iframe src="https://www.youtube.com/embed/BABmKitmkic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="tm-accordion1-heading1n2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse1n2"
+                                                aria-expanded="true" aria-controls="tm-accordion1-collapse1n2">
+                                                <img src="/images/q.png"> What is Single Sign-on in Era Swap Ecosystem?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="tm-accordion1-collapse1n2" class="collapse" aria-labelledby="tm-accordion1-heading1n2"
+                                        data-parent="#tm-accordion1">
+                                        <div class="card-body offset-md-1">
+                                          <p>Please watch this video to understand "Era Swap Life - One World"</p>
+                                          <iframe src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="card">
                                     <div class="card-header" id="tm-accordion1-heading1">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link" data-toggle="collapse" data-target="#tm-accordion1-collapse1"
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse1"
                                                 aria-expanded="true" aria-controls="tm-accordion1-collapse1">
                                                 <img src="/images/q.png"> How to use Era Swap Life Single Sign On to access Era Swap Ecosystem?
                                             </button>
                                         </h5>
                                     </div>
-                                    <div id="tm-accordion1-collapse1" class="collapse show" aria-labelledby="tm-accordion1-heading1"
+                                    <div id="tm-accordion1-collapse1" class="collapse" aria-labelledby="tm-accordion1-heading1"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
                                           <iframe src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
