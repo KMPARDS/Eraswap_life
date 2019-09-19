@@ -464,7 +464,7 @@
                             <div class="col-md-3">
                              <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/computeex.png" alt="" data="https://computeex.net/login/" on:click={load_website}>
+                                        <img src="/images/computeex.png" alt="" data="https://computeex.net/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
