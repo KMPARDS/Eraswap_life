@@ -306,7 +306,7 @@
                                 <h3>Join Day Swappers Affiliate Programme</h3>
                                 <p>You are requested to complete your KYC to be eligible to avail Day Swappers rewards</p>
                                 <form id="tm-mailchimp-form" class="tm-subscribe-form text-center">
-                                    <button id="mc-submit" type="button" class="tm-button" ><span  data="http://dayswappers.com" on:click={load_website}>Now</span></button>
+                                    <button id="mc-submit" type="button" class="tm-button" ><span  data="https://dayswappers.com" on:click={load_website}>Now</span></button>
                                     <button id="mc-submit" type="button" class="tm-button" data-dismiss="modal"><span>Later</span></button>
                                 </form>
                                 <!-- Mailchimp Alerts -->
@@ -383,11 +383,11 @@
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
                                       {#if window.usingMetamask}
-                                        <a href="http://buzcafe.com/metamask-login" target="_blank">
+                                        <a href="https://buzcafe.com/metamask-login" target="_blank">
                                           <img src="/images/c-min.png" alt="">
                                         </a>
                                       {:else}
-                                        <img src="/images/c-min.png" alt="" data="http://buzcafe.com/wallet-login" on:click={load_website}>
+                                        <img src="/images/c-min.png" alt="" data="https://buzcafe.com/wallet-login" on:click={load_website}>
                                       {/if}
                                     </span>
                                 </div>
@@ -449,14 +449,14 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/ds-cs.png" data="http://dateswappers.com/" on:click={load_website} alt="">
+                                        <img src="/images/ds-cs.png" data="https://dateswappers.com/" on:click={load_website} alt="">
                                     </span>
                                 </div>
                             </div>
                              <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/vof-cs.png" data="http://valueoffarmers.org/" on:click={load_website} alt="">
+                                        <img src="/images/vof-cs.png" data="https://valueoffarmers.org/" on:click={load_website} alt="">
                                     </span>
                                 </div>
                             </div>
