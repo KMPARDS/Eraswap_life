@@ -138,6 +138,7 @@ async function unlockWalletButton(loadWalletFunction) {
         try {
           console.log('1 print');
           const response = (await get({ address: window.wallet.address.toLowerCase() }));
+          // throw new Error('test error');
           window.firstTime = response === 'True';
           console.log('2 print');
           console.log('firstTime', window.firstTime);
@@ -155,7 +156,7 @@ async function unlockWalletButton(loadWalletFunction) {
         } catch (e) {
           console.log('catch in loadWallet', e.message);
           // document.getElementById("refer-modal-close-button").click();
-          // document.getElementById("dashboard").click();
+          document.getElementById("dashboard").click();
         }
       // }, 500);
     // });
