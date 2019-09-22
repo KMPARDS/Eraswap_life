@@ -449,14 +449,14 @@
                             <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/ds-cs.png" data="https://dateswappers.com/" on:click={load_website} alt="">
+                                        <img src="/images/ds-cs.png" data="http://dateswappers.com/" on:click={load_website} alt="">
                                     </span>
                                 </div>
                             </div>
                              <div class="col-md-3">
                                 <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/vof-cs.png" data="https://valueoffarmers.org/" on:click={load_website} alt="">
+                                        <img src="/images/vof-cs.png" data="http://valueoffarmers.org/" on:click={load_website} alt="">
                                     </span>
                                 </div>
                             </div>
@@ -464,7 +464,7 @@
                             <div class="col-md-3">
                              <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
-                                        <img src="/images/computeex.png" alt="" data="https://computeex.net/" on:click={load_website}>
+                                        <img src="/images/computeex.png" alt="" data="http://computeex.net/" on:click={load_website}>
                                     </span>
                                 </div>
                             </div>
