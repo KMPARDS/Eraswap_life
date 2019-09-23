@@ -1071,7 +1071,7 @@
                                     </span>
                                      <p style="font-size:13px">Farming Community</p>
                                       </div>
-                                      <a href="http://valueoffarmers.org/" target="_blank">
+                                      <a href="https://valueoffarmers.org/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
                                         <img src="images/vof.png" alt="" height="105px">
@@ -1090,7 +1090,7 @@
                                     </span>
                                     <p style="font-size:13px">Next Gen Dating and Match-Making</p>
                                       </div>
-                                      <a href="http://dateswappers.com/" target="_blank">
+                                      <a href="https://dateswappers.com/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
                                         <img src="images/date.png" alt="" height="105px">
