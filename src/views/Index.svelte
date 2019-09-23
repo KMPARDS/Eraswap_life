@@ -954,7 +954,7 @@
                                      <p style="font-size:13px">Affiliate Programme</p>
 
                                       </div>
-                                   <a href="http://dayswappers.com/" target="_blank">
+                                   <a href="https://dayswappers.com/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
                                       <img src="images/d-min.png" alt="" height="105px">
