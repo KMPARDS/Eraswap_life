@@ -2170,20 +2170,21 @@ if(!datapie2)
 
 
     $.ajax({
-      url: 'https://apis.dayswappers.com/userprofile/transactions',
+      url: 'http://apis.dayswappers.com/userprofile/transaction_splits',
       success: function(result){
-        console.log('dayswappers transactions', result);
+        console.log('dayswappers transactions-split', result);
         let totalAmount = 0;
         const platformTFC = {};
-        for(const entry of result) {
-          totalAmount += entry.amount;
-          if(platformTFC[entry.platform] !== undefined) {
-            platformTFC[entry.platform] += entry.tfc;
+        for(const entry in result) {
+          console.log('entry', entry);
+          totalAmount += result[entry].amount;
+          if(platformTFC[entry] !== undefined) {
+            platformTFC[entry] += result[entry].tfc;
           } else {
-            platformTFC[entry.platform] = 0;
+            platformTFC[entry] = result[entry].tfc;
           }
         }
-        console.log('platformTFC', platformTFC);
+        console.log('dayswappers platformTFC', platformTFC);
         $("#platform-transactions-number").html(result.length+' txs');
         $("#volume-of-platform").html(totalAmount+' ES');
 
@@ -2242,7 +2243,7 @@ if(!datapie2)
                   max: Math.max(platformTFC['Time Swappers'] || 0,
                   platformTFC['Buzcafe'] || 0,
                   platformTFC['Day Swappers'] || 0,
-                  platformTFC['BetDeEx'] || 0,
+                  platformTFC['BetdeEx'] || 0,
                   platformTFC['ComputeEx'] || 0,
                   platformTFC['TimeAlly'] || 0)
                 }
@@ -2278,8 +2279,7 @@ if(!datapie2)
     //   success: function(result){
     //     console.log('dayswappers transaction_splits', result);
     //
-    //     $("#total_no_of_user").html(result.total_no_of_user+' users');
-    //     $("#kyc-users").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
+    //     // $("#kyc-users").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
     // }});
 
 
