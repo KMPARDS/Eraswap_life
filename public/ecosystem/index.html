@@ -85,7 +85,29 @@
       }
     </style>
     <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
+
+      h1 {
+        font-weight: normal;
+      }
+
+      li {
+        display: inline-block;
+        font-size: 1em;
+        list-style-type: none;
+        padding: 1em;
+        text-transform: uppercase;
+      }
+
+      li span {
+        display: block;
+        font-size: 2rem;
+      }
       </style>
   </head>
   <body class="page-profile">
@@ -120,11 +142,16 @@
             </nav>
             <h4 class="mg-b-0 tx-spacing--1">Welcome to Ecosystem Dashboard</h4>
           </div>
-          <!-- <div class="d-none d-md-block">
-            <button class="btn btn-sm pd-x-15 btn-white btn-uppercase"><i data-feather="mail" class="wd-10 mg-r-5"></i> Email</button>
-            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" onClick="window.print()"><i data-feather="printer" class="wd-10 mg-r-5"></i> Print</button>
-          </div> -->
+            <h3 align="center" id="head">NRT Countdown:</h3>
+            <ul>
+              <li style="padding-top:0;padding-bottom:0"><span id="days"></span>days</li>
+              <li style="padding-top:0;padding-bottom:0"><span id="hours"></span>Hours</li>
+              <li style="padding-top:0;padding-bottom:0"><span id="minutes"></span>Minutes</li>
+              <li style="padding-top:0;padding-bottom:0"><span id="seconds"></span>Seconds</li>
+            </ul>
+          </div>
         </div>
+
 
         <div class="row row-xs">
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
@@ -2170,22 +2197,23 @@ if(!datapie2)
 
 
     $.ajax({
-      url: 'https://apis.dayswappers.com/userprofile/transactions',
+      url: 'http://apis.dayswappers.com/userprofile/transaction_splits',
       success: function(result){
-        console.log('dayswappers transactions', result);
+        console.log('dayswappers transactions-split', result);
         let totalAmount = 0;
         const platformTFC = {};
-        for(const entry of result) {
-          totalAmount += entry.amount;
-          if(platformTFC[entry.platform] !== undefined) {
-            platformTFC[entry.platform] += entry.tfc;
+        for(const entry in result) {
+          console.log('entry', entry);
+          totalAmount += result[entry].amount;
+          if(platformTFC[entry] !== undefined) {
+            platformTFC[entry] += result[entry].tfc;
           } else {
-            platformTFC[entry.platform] = 0;
+            platformTFC[entry] = result[entry].tfc;
           }
         }
-        console.log('platformTFC', platformTFC);
-        $("#platform-transactions-number").html(result.length+' txs');
-        $("#volume-of-platform").html(totalAmount+' ES');
+        console.log('dayswappers platformTFC', platformTFC);
+        $("#platform-transactions-number").html(result.platform_count+' txs');
+        $("#volume-of-platform").html(result.platform_volume+' ES');
 
         new Chart(ctx2, {
           type: 'horizontalBar',
@@ -2242,7 +2270,7 @@ if(!datapie2)
                   max: Math.max(platformTFC['Time Swappers'] || 0,
                   platformTFC['Buzcafe'] || 0,
                   platformTFC['Day Swappers'] || 0,
-                  platformTFC['BetDeEx'] || 0,
+                  platformTFC['BetdeEx'] || 0,
                   platformTFC['ComputeEx'] || 0,
                   platformTFC['TimeAlly'] || 0)
                 }
@@ -2278,8 +2306,7 @@ if(!datapie2)
     //   success: function(result){
     //     console.log('dayswappers transaction_splits', result);
     //
-    //     $("#total_no_of_user").html(result.total_no_of_user+' users');
-    //     $("#kyc-users").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
+    //     // $("#kyc-users").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
     // }});
 
 
@@ -2462,8 +2489,46 @@ if(!datapie2)
         console.log('buzcafe-transactions-count', result);
         $("#buzcafe-transactions-count").html(result.data+' transactions');
     }});
+
+    /// @dev countdown timer for nrt release
+    const deployTimestamp = 1564336091 * 1000;
+    const monthDuration = 2629744 * 1000;
+
+    let seeFutureNrt = false;
+    let currentNrtMonthNumber = 0;
+    // let nextNrtTimestamp = deployTimestamp + monthDuration * (currentNrtMonthNumber + 1);
+
+    setInterval(() => {
+      $.ajax({
+        url: 'https://eraswap.technology/nrt/getCurrentNRTMonth',
+        success: function(result){
+          if(!currentNrtMonthNumber) {
+            currentNrtMonthNumber = result.data.nrtMonth;
+          } else if(result.data.nrtMonth !== currentNrtMonthNumber && !seeFutureNrt) {
+            window.location.reload();
+          }
+      }});
+    }, 3500);
+
+    setInterval(() => {
+      const nextNrtTimestamp = deployTimestamp + monthDuration * (currentNrtMonthNumber + 1);
+      const currentTimestamp = Date.now();
+
+      const timeRemaining = nextNrtTimestamp > currentTimestamp ? nextNrtTimestamp - currentTimestamp : 0;
+
+  //     console.log(timeRemaining);
+
+      const daysRemaining = Math.floor(timeRemaining / 1000 / 24 / 60 / 60);
+      const hoursRemaining = Math.floor((timeRemaining - daysRemaining * 1000 * 24 * 60 * 60) / 1000 / 60 / 60);
+      const minutesRemaining = Math.floor((timeRemaining - daysRemaining * 1000 * 24 * 60 * 60 - hoursRemaining * 1000 * 60 * 60) / 1000 / 60);
+      const secondsRemaining = Math.floor((timeRemaining - daysRemaining * 1000 * 24 * 60 * 60 - hoursRemaining * 1000 * 60 * 60 - minutesRemaining * 1000 * 60) / 1000)
+
+      // console.log(daysRemaining, hoursRemaining, minutesRemaining, secondsRemaining);
+      document.getElementById('days').innerText = daysRemaining;
+      document.getElementById('hours').innerText = hoursRemaining;
+      document.getElementById('minutes').innerText = minutesRemaining;
+      document.getElementById('seconds').innerText = secondsRemaining;
+  }, 1000);
   </script>
-
-
   </body>
 </html>

@@ -144,15 +144,14 @@ async function unlockWalletButton(loadWalletFunction) {
           console.log('firstTime', window.firstTime);
           // do not show refer modal if url refer is not there
           if(!window.firstTime || window.refer) {
+            console.log('a');
             document.getElementById("refer-modal-close-button").click();
             document.getElementById("dashboard").click();
           } else {
+            console.log('b');
             document.getElementById('modal-button').click();
           }
           console.log('3 print');
-          clearInterval(intervalId);
-          resolve();
-          console.log('4 print');
         } catch (e) {
           console.log('catch in loadWallet', e.message);
           // document.getElementById("refer-modal-close-button").click();
