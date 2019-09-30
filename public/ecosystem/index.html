@@ -2108,7 +2108,7 @@
       url: baseUrl+'/nrt/nrtFractions',
       success: function(result){
         console.log('nrtFractions', result);
-        $("#nrt-released").html(window.lessDecimals(result.data.monthlyNRTAmount)+' ES');
+        $("#nrt-released").html(window.lessDecimals(result.data.actualNRTDistributed)+' ES');
         $("#nrtFractions-curator").html(window.lessDecimals(result.data.workPoolCalculation.curators)+' ES');
         $("#nrtFractions-timetraders").html(window.lessDecimals(result.data.workPoolCalculation.timetraders)+' ES');
         $("#nrtFractions-dayswappers").html(window.lessDecimals(result.data.workPoolCalculation.dayswappers)+' ES');
