@@ -42,6 +42,8 @@ a:hover{
   <div class="dropdown">
      <i class="fa fa-th " style="color: #fff; font-size:20px" data-toggle="dropdown" aria-hidden="true"></i>
     <div class="dropdown-menu align-drop">
+    <a class="dropdown-item" href="https://eraswaptoken.io"  target="_blank"><img src="/images/es-maroon.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Utility Token</span></a>
+
      <a class="dropdown-item" href="https://timeswappers.com/swapperswall"  target="_blank"><img src="/images/12-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Social Community Platform</span></a>
 
       <a class="dropdown-item" href="https://www.timeally.io/"  target="_blank"><img src="/images/10-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Token Vesting</span></a>
