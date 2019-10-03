@@ -32,7 +32,7 @@
                 <div class="col-xl-4 col-lg- col-md-4 col-12">
                     <div class="single-widget widget-info">
                         <a href="/" class="widget-info-logo">
-                            <img src="/images/es_newlogo-white-min.png" alt="">
+                            <img src="/images/es_newlogo-white-min.png" width="180px" alt="">
                         </a>
                         <!-- <p>Dolor enim sit et perferendis quia in. Sed perferendis aliquid quo vel
                             necessitatibus commodi similique et. Veniam ducimus sed rerum cumque ipsum eos

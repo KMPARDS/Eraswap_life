@@ -38,10 +38,12 @@ a:hover{
 
 </style>
 <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="/" id="home"><img src="/images/es_newlogo-white-min.png"></a>
+  <a class="navbar-brand" href="/" id="home"><img src="/images/es_newlogo-white-min.png" style="width: 180px"></a>
   <div class="dropdown">
      <i class="fa fa-th " style="color: #fff; font-size:20px" data-toggle="dropdown" aria-hidden="true"></i>
     <div class="dropdown-menu align-drop">
+    <a class="dropdown-item" href="https://eraswaptoken.io"  target="_blank"><img src="/images/es-maroon.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Utility Token</span></a>
+
      <a class="dropdown-item" href="https://timeswappers.com/swapperswall"  target="_blank"><img src="/images/12-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Social Community Platform</span></a>
 
       <a class="dropdown-item" href="https://www.timeally.io/"  target="_blank"><img src="/images/10-min.png" alt=""  height="25px"> <span class="sec-menu" style="font-size:13px">Decentralized Token Vesting</span></a>
@@ -63,13 +65,18 @@ a:hover{
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
     <ul class="navbar-nav ml-auto navbar-right">
+      {#if !wallet}
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/create-new-wallet" >Create Wallet <span style="font-size:10px; ">New Users</span></a>
       </li>
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/access-my-wallet" >Load Wallet <span style="font-size:10px; ">Existing Users</span></a>
       </li>
+      {/if}
       {#if wallet}
+      <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/dashboard">Dashboard</a>
+      </li>
       <if class="nav-item" style="margin-right: 8px; margin-bottom:10px">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="#" on:click={logout}>Logout</a>
       </if>
