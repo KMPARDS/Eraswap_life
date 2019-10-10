@@ -137,7 +137,6 @@
             font-weight: bold;
             text-align: center;
           }
-
       </style>
   </head>
   <body class="page-profile">
@@ -340,6 +339,77 @@
               </div>
             </div><!-- col -->
 
+
+            <div class="col-sm-6 col-lg-2 mg-t-10 ">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Market Cap</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="market-cap">Loading...</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart9" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10 ">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">24HR Vol (Probit Global)</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="volume-of-probit">Loading...</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart110" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10 ">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">CrowdFund Price</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="crowdfund-price">Loading...</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart4" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10">
+                <div class="card card-body" id="roi-box" style="height:99px">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ROI <i class="fa fa-question-circle"></i></h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="roi-amount">Loading...</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart5" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">All time high</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">1.42 USDT</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart8" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">All time low</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">0.005 USDT</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart8" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+
+
+
+
           <div class="col-12 mg-t-10">
             <div class="card">
               <!-- <div class="card-header">
@@ -357,8 +427,9 @@
                         <div class="media-body pd-l-8">
                           <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Era Swap <span class="tx-color-03 tx-normal">(ES)</span></h6>
                           <div class="d-flex align-items-baseline tx-rubik">
-                            <h5 class="tx-20 mg-b-0" id="es-price">Loading...</h5>
-                            <!-- <p class="mg-b-0 tx-11 tx-danger mg-l-3"><i class="icon ion-md-arrow-down"></i> 0.80%</p> -->
+                            <h5 class="tx-20 mg-b-0" id="es-price" style="margin-right:2rem">Loading...</h5>
+                            <div id="es-percentage"></div>
+                            <!-- <p class="mg-b-0 tx-11 mg-l-3" style=""><i class="fa fa-arrow-down"></i> <span id="es-percentage">Loading...</span></p> -->
                           </div>
                         </div><!-- media-body -->
                       </div><!-- media -->
@@ -447,19 +518,17 @@
           </div><!-- col -->
 
 
-            <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
+            <!-- <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
                 <div class="card1">
-                  <!-- <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
-                    <h6 class="mg-b-0 ">All Platform TFC Generated of this month</h6>
-                  </div> -->
+
                   <div class="card-body pos-relative pd-0 ex5">
 
                     <div class="wrapper">
                       <div class="ht-100 ht-lg-200"> <canvas id="myChart"></canvas></div>
-                    </div><!-- df-example -->
-                  </div><!-- card-body -->
-                </div><!-- card -->
-              </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
 
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
@@ -2081,13 +2150,37 @@
     /// @dev code that aims to bring life to the Era Swap Life dashboard
 
     window.lessDecimals = (string, decimals = 2) => {
+      console.log('lessDecimals of', string);
+      if(!string) return console.log('string empty', string), string;
       let lessDecimals = string.split('.');
-      if(lessDecimals[1].length >= decimals) {
+      if(lessDecimals[1]&&lessDecimals[1].length >= decimals) {
         lessDecimals[1] = lessDecimals[1].slice(0, decimals);
       }
       return lessDecimals.join('.');
     }
+    window.moreDecimals = (string, decimals = 8) => {
+      if(!string) return string;
+      let lessDecimals = string.split('.');
+      if(lessDecimals[1].length <= decimals) {
+        lessDecimals[1] += '0'.repeat(decimals - lessDecimals[1].length);
+      }
+      return lessDecimals.join('.');
+    }
+
+  $('#roi-box')[0].addEventListener('click', () => alert('The approximate return on investment if purchased at the time of launch (or earliest known price)'));
+
   let funcx;
+
+  updateMarketCap = () => {
+    if(window.esPrice && window.esCurrentSupply) {
+      let marketCap = String(window.esPrice * window.esCurrentSupply);
+      if(marketCap.includes('.')) {
+        marketCap = marketCap.split('.')[0];
+      }
+      $('#market-cap').html('$'+(marketCap));
+    }
+  }
+
   setInterval(funcx = () => {
     console.log('doing');
     $.ajax({
@@ -2103,6 +2196,7 @@
       success: function(result){
         console.log('btc usd', result);
       $("#bitcoin-price-usd").html('$'+result.USD['15m']);
+      $("#crowdfund-price").html('$'+0.00437);
     }});
 
 
@@ -2118,8 +2212,38 @@
       url: "https://api.probit.com/api/exchange/v1/ticker?market_ids=ES-USDT%2CES-BTC",
       success: function(result){
         console.log('ES-USDT CES-BTC', result);
-        $("#es-price").html(result.data[0].last + ' USDT / '+result.data[1].last + ' BTC');
+        window.esPrice = Number(result.data[0].last);
+        updateMarketCap();
+        $("#es-price").html(result.data[0].last + ' USDT <br> '+window.moreDecimals(result.data[1].last,8) + ' BTC');
+        const increasePercentage = +result.data[1].last / 0.00000050 * 100;
+        console.log('increasePercentage', increasePercentage);
+        // $("#es-percentage").html(
+        //   `
+        //     (<strong>24HR</strong>)<br />
+        //     <p class="mg-b-0 tx-11 mg-l-3" style="color:${increasePercentage > 100 ? 'green' : 'red'}">
+        //
+        //       <i class="fa fa-arrow-${increasePercentage > 100 ? 'up' : 'down'}"></i> <span>${result.data[1].change+'%'}</span>
+        //     </p>
+        //   `
+        // );
+
+
+        $('#roi-amount').html(
+          `
+            <span style="color:${increasePercentage > 100 ? 'green' : 'red'}">
+              <i id="roi-question" class="fa fa-arrow-${increasePercentage > 100 ? 'up' : 'down'}"></i> <span>${window.lessDecimals(String(increasePercentage - 100))+'%'}</span>
+            </span>
+          `
+        );
+
+        let totalVolume = 0;
+        result.data.forEach(x => {
+          totalVolume += Number(x.base_volume);
+        });
+        $('#volume-of-probit').html(totalVolume + ' ES');
     }});
+
+
 
     const baseUrl = 'https://eraswap.technology';
 
@@ -2128,6 +2252,8 @@
       success: function(result){
         console.log('es total supply', result);
       $("#es-total-supply").html(window.lessDecimals(result.data.totalSupply)+' ES');
+      window.esCurrentSupply = Number(window.lessDecimals(result.data.totalSupply));
+      updateMarketCap();
       $("#es-outside-timeally").html(window.lessDecimals(result.data.outsideTimeAllySupply)+' ES');
     }});
 
