@@ -89,6 +89,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        padding-top: 3px;
       }
 
 
@@ -108,6 +109,35 @@
         display: block;
         font-size: 1rem;
       }
+         body, html{
+            background: #f1f1f1;
+            padding-top: 0px;
+          }
+
+          .wrapper{
+            width:100%;
+            height: 100%;
+            display:block;
+            overflow:hidden;
+            margin:0 auto;
+            padding: 0px 0px;
+            background:#fff;
+            border-radius:4px;
+          }
+
+          canvas{
+            background:#fff;
+          }
+
+          a{
+            margin-top:50px;
+            display: block;
+            text-decoration: none;
+            color: #6B0100;
+            font-weight: bold;
+            text-align: center;
+          }
+
       </style>
   </head>
   <body class="page-profile">
@@ -416,8 +446,24 @@
             </div><!-- card -->
           </div><!-- col -->
 
+
+            <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
+                <div class="card1">
+                  <!-- <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
+                    <h6 class="mg-b-0 ">All Platform TFC Generated of this month</h6>
+                  </div> -->
+                  <div class="card-body pos-relative pd-0 ex5">
+
+                    <div class="wrapper">
+                      <div class="ht-100 ht-lg-200"> <canvas id="myChart"></canvas></div>
+                    </div><!-- df-example -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+              </div>
+
+
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-            <div class="card">
+            <div class="card1">
               <div class="card-header bd-b-0 pd-t-10 pd-lg-t-25 pd-l-20 pd-lg-l-25 d-flex flex-column flex-sm-row align-items-sm-start justify-content-sm-between">
                 <div>
                   <h6 class="mg-b-5">Last month Work Pool NRT Utilisation</h6>
@@ -488,11 +534,11 @@
           </div>
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-            <div class="card">
+            <div class="card1">
               <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
-                <h6 class="mg-b-0">All Platform TFC Generated of this month</h6>
+                <h6 class="mg-b-0 ">All Platform TFC Generated of this month</h6>
               </div><!-- card-header -->
-              <div class="card-body pos-relative pd-0">
+              <div class="card-body pos-relative pd-0 ex5">
 
                 <div data-label="Example" class="df-example">
                   <div class="ht-100 ht-lg-200"><canvas id="chartBar2"></canvas></div>
@@ -501,7 +547,7 @@
             </div><!-- card -->
           </div>
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-                <div class="card">
+                <div class="card1">
                   <div class="card-header">
                     <h6 class="mg-b-0">Charity Pool</h6>
                   </div><!-- card-header -->
@@ -537,7 +583,7 @@
 
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card">
+              <div class="card1">
                   <div class="crypto card-header" style="padding-bottom: 0px;">
                       <div class="media mg-b-8">
                         <div class="">
@@ -655,7 +701,7 @@
 
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card">
+              <div class="card1">
                 <div class="crypto card-header" style="padding-bottom: 0px;">
                     <div class="media mg-b-8">
                       <div class="">
@@ -754,7 +800,7 @@
           </div> -->
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card ">
+              <div class="card1">
                   <div class="crypto card-header" style="padding-bottom: 0px;">
                       <div class="media mg-b-8">
                         <div class="">
@@ -825,7 +871,7 @@
               </div><!-- card -->
             </div><!-- col -->
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-            <div class="card">
+            <div class="card1">
               <!-- <div class="card-header">
                 <h6 class="lh-5 mg-b-5">Swappers Wall</h6>
               </div> -->
@@ -878,7 +924,7 @@
 
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-            <div class="card">
+            <div class="card1">
               <!-- <div class="card-header">
                 <h6 class="lh-5 mg-b-5">Eraswap Academy</h6>
               </div> -->
@@ -920,7 +966,7 @@
           </div><!-- col -->
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-             <div class="card">
+             <div class="card1">
                 <div class="crypto card-header" style="padding-bottom: 0px;">
                     <div class="media mg-b-8">
                       <div class="">
@@ -996,7 +1042,7 @@
           </div> -->
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card">
+              <div class="card1">
                   <div class="crypto card-header" style="padding-bottom: 0px;">
                       <div class="media mg-b-8">
                         <div class="">
@@ -1038,7 +1084,7 @@
 
 
           <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card">
+              <div class="card1">
                   <div class="crypto card-header" style="padding-bottom: 0px;">
                       <div class="media mg-b-8">
                         <div class="">
@@ -2041,7 +2087,9 @@
       }
       return lessDecimals.join('.');
     }
-  setInterval(() => {
+  let funcx;
+  setInterval(funcx = () => {
+    console.log('doing');
     $.ajax({
       url: "https://api.etherscan.io/api?module=stats&action=ethprice&apikey=YourApiKeyToken",
       success: function(result){
@@ -2222,6 +2270,14 @@ if(!datapie2)
         $("#platform-transactions-number").html(result.platform_count+' txs');
         $("#volume-of-platform").html(result.platform_volume+' ES');
 
+        const maxValue = Math.ceil((Math.max(platformTFC['Time Swappers'] || 0,
+                  platformTFC['Buzcafe'] || 0,
+                  platformTFC['Day Swappers'] || 0,
+                  platformTFC['BetdeEx'] || 0,
+                  platformTFC['ComputeEx'] || 0,
+                  platformTFC['TimeAlly'] || 0))/1000)*1000;
+        console.log('maxValue',maxValue);
+
         new Chart(ctx2, {
           type: 'horizontalBar',
           data: {
@@ -2274,12 +2330,7 @@ if(!datapie2)
                   beginAtZero: true,
                   fontSize: 10,
                   fontColor: '#182b49',
-                  max: Math.max(platformTFC['Time Swappers'] || 0,
-                  platformTFC['Buzcafe'] || 0,
-                  platformTFC['Day Swappers'] || 0,
-                  platformTFC['BetdeEx'] || 0,
-                  platformTFC['ComputeEx'] || 0,
-                  platformTFC['TimeAlly'] || 0)
+                  max: maxValue
                 }
               }]
             }
@@ -2499,6 +2550,9 @@ if(!datapie2)
 
   }, 10000);
 
+  /// @dev calling the above function to avoid setinterval delay while loading the page.
+  funcx();
+
     /// @dev countdown timer for nrt release
     const deployTimestamp = 1564336091 * 1000;
     const monthDuration = 2629744 * 1000;
@@ -2539,5 +2593,62 @@ if(!datapie2)
       document.getElementById('seconds').innerText = secondsRemaining;
   }, 1000);
   </script>
+  <script>
+       var ctx = document.getElementById('myChart').getContext("2d");
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+        datasets: [{
+            label: "Data",
+            borderColor: "#6B0100",
+            pointBorderColor: "#6B0100",
+            pointBackgroundColor: "#6B0100",
+            pointHoverBackgroundColor: "#6B0100",
+            pointHoverBorderColor: "#6B0100",
+            pointBorderWidth: 10,
+            pointHoverRadius: 10,
+            pointHoverBorderWidth: 1,
+            pointRadius: 1,
+            fill: false,
+            borderWidth: 4,
+            data: [0, 50, 150, 60, 180, 70, 260]
+        }]
+    },
+    options: {
+        legend: {
+            position: "bottom"
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    fontColor: "rgba(0,0,0,0.5)",
+                    fontStyle: "bold",
+                    beginAtZero: true,
+                    maxTicksLimit: 5,
+                    padding: 20
+                },
+                gridLines: {
+                    drawTicks: false,
+                    display: false
+                }
+
+            }],
+            xAxes: [{
+                gridLines: {
+                    zeroLineColor: "transparent"
+                },
+                ticks: {
+                    padding: 20,
+                    fontColor: "rgba(0,0,0,0.5)",
+                    fontStyle: "bold"
+                }
+            }]
+        }
+    }
+});
+    </script>
+
   </body>
 </html>

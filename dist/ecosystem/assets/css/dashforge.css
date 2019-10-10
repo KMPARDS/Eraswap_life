@@ -4221,6 +4221,17 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid #661111;
   border-radius: 0.25rem; }
+  .card1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 220px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #661111;
+    border-radius: 0.25rem; }
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -26523,7 +26534,7 @@ a.bg-twitter:hover, a.bg-twitter:focus, button.bg-twitter:hover, button.bg-twitt
   padding-left: 45px !important; }
 
 .pd-50 {
-  padding: 50px; }
+  padding: 22px; }
 
 .pd-50-f {
   padding: 50px !important; }
