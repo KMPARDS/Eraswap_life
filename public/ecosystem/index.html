@@ -2196,7 +2196,7 @@
       success: function(result){
         console.log('btc usd', result);
       $("#bitcoin-price-usd").html('$'+result.USD['15m']);
-      $("#crowdfund-price").html('$'+0.00437);
+      $("#crowdfund-price").html('$0.0078');
     }});
 
 
@@ -2240,7 +2240,7 @@
         result.data.forEach(x => {
           totalVolume += Number(x.base_volume);
         });
-        $('#volume-of-probit').html(totalVolume + ' ES');
+        $('#volume-of-probit').html(window.lessDecimals(String(window.esPrice * totalVolume)) + ' USDT');
     }});
 
 
