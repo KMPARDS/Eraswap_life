@@ -2041,7 +2041,9 @@
       }
       return lessDecimals.join('.');
     }
-  setInterval(() => {
+  let funcx;
+  setInterval(funcx = () => {
+    console.log('doing');
     $.ajax({
       url: "https://api.etherscan.io/api?module=stats&action=ethprice&apikey=YourApiKeyToken",
       success: function(result){
@@ -2498,6 +2500,9 @@ if(!datapie2)
     }});
 
   }, 10000);
+
+  /// @dev calling the above function to avoid setinterval delay while loading the page.
+  funcx();
 
     /// @dev countdown timer for nrt release
     const deployTimestamp = 1564336091 * 1000;
