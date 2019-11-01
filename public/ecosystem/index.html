@@ -137,7 +137,6 @@
             font-weight: bold;
             text-align: center;
           }
-     
       </style>
   </head>
   <body class="page-profile">
@@ -164,13 +163,13 @@
       <div class="container-fluid pd-x-0 pd-lg-x-10 pd-xl-x-0">
         <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
           <!-- <div>
-           
+
             <h4 class="mg-b-0 tx-spacing--1">Welcome to Ecosystem Dashboard</h4>
           </div> -->
-          
+
           <div align="center" class="d-none d-md-block"></div>
           <h1 class="mg-b-0 tx-spacing--1"><b>Welcome to Ecosystem Dashboard</b></h1>
-            
+
             <ul>
               <h6 align="center" id="head">Next NRT Count</h6>
               <li style="padding-top:0;padding-bottom:0"><span id="days"></span>days</li>
@@ -340,6 +339,77 @@
               </div>
             </div><!-- col -->
 
+
+            <div class="col-sm-6 col-lg-2 mg-t-10 ">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Market Cap</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="market-cap">Loading...</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart9" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10 ">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">24HR Vol (Probit Global)</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="volume-of-probit">Loading...</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart110" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10 ">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">CrowdFund Price</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="crowdfund-price">Loading...</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart4" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10">
+                <div class="card card-body" id="roi-box" style="height:99px">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ROI <i class="fa fa-question-circle"></i></h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="roi-amount">Loading...</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart5" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">All time high</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">1.42 USDT</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart8" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+              <div class="col-sm-6 col-lg-2 mg-t-10">
+                <div class="card card-body">
+                  <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">All time low</h6>
+                  <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                    <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">0.005 USDT</h3>
+                  </div>
+                  <div class="chart-three">
+                      <div id="flotChart8" class="flot-chart ht-30"></div>
+                    </div><!-- chart-three -->
+                </div>
+              </div><!-- col -->
+
+
+
+
           <div class="col-12 mg-t-10">
             <div class="card">
               <!-- <div class="card-header">
@@ -357,8 +427,9 @@
                         <div class="media-body pd-l-8">
                           <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Era Swap <span class="tx-color-03 tx-normal">(ES)</span></h6>
                           <div class="d-flex align-items-baseline tx-rubik">
-                            <h5 class="tx-20 mg-b-0" id="es-price">Loading...</h5>
-                            <!-- <p class="mg-b-0 tx-11 tx-danger mg-l-3"><i class="icon ion-md-arrow-down"></i> 0.80%</p> -->
+                            <h5 class="tx-20 mg-b-0" id="es-price" style="margin-right:2rem">Loading...</h5>
+                            <div id="es-percentage"></div>
+                            <!-- <p class="mg-b-0 tx-11 mg-l-3" style=""><i class="fa fa-arrow-down"></i> <span id="es-percentage">Loading...</span></p> -->
                           </div>
                         </div><!-- media-body -->
                       </div><!-- media -->
@@ -446,19 +517,20 @@
             </div><!-- card -->
           </div><!-- col -->
 
-         
-            <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
+
+            <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10" style="display:none">
                 <div class="card1">
-                  <!-- <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
-                    <h6 class="mg-b-0 ">All Platform TFC Generated of this month</h6>
-                  </div> -->
+
                   <div class="card-body pos-relative pd-0 ex5">
-    
+                    Please select an interval:
+                    <select id="probit-graph">
+                    </select>
                     <div class="wrapper">
                       <div class="ht-100 ht-lg-200"> <canvas id="myChart"></canvas></div>
-                    </div><!-- df-example -->
-                  </div><!-- card-body -->
-                </div><!-- card -->
+                    </div>
+
+                  </div>
+                </div>
               </div>
 
 
@@ -469,7 +541,7 @@
                   <h6 class="mg-b-5">Last month Work Pool NRT Utilisation</h6>
                 </div>
               </div>
-              <div class="card-body ex" >
+              <div class="card-body ex5" >
                 <div class="row align-items-sm-end">
                   <div class="col-12 mg-t-30 mg-lg-t-0">
                     <div class="row">
@@ -1142,6 +1214,7 @@
     <script src="assets/js/dashforge.settings.js"></script>
 
     <script>
+      window.isOnProduction = true;
       $(function(){
         'use strict'
 
@@ -2081,17 +2154,167 @@
     /// @dev code that aims to bring life to the Era Swap Life dashboard
 
     window.lessDecimals = (string, decimals = 2) => {
+      window.isOnProduction || console.log('lessDecimals of', string);
+      if(!string) return window.isOnProduction || console.log('string empty', string), string;
       let lessDecimals = string.split('.');
-      if(lessDecimals[1].length >= decimals) {
+      if(lessDecimals[1]&&lessDecimals[1].length >= decimals) {
         lessDecimals[1] = lessDecimals[1].slice(0, decimals);
       }
       return lessDecimals.join('.');
     }
-  setInterval(() => {
+    window.moreDecimals = (string, decimals = 8) => {
+      if(!string) return string;
+      let lessDecimals = string.split('.');
+      if(lessDecimals[1].length <= decimals) {
+        lessDecimals[1] += '0'.repeat(decimals - lessDecimals[1].length);
+      }
+      return lessDecimals.join('.');
+    }
+
+  $('#roi-box')[0].addEventListener('click', () => alert('The approximate return on investment if purchased at the time of launch (or earliest known price)'));
+
+window.probitIntervalArray = ['1m', '3m', '5m', '10m', '15m', '30m', '1h', '4h', '6h', '12h', '1D', '1W', '1M'];
+window.probitIntervalSecondsArray = [60, 180, 300, 600, 900, 1800, 3600, 14400, 21600, 43200, 86400, 604800, 2629744];
+
+window.probitIntervalArray.forEach(intervalId => {
+  document.getElementById('probit-graph').innerHTML += '<option value='+intervalId+'>'+intervalId+'</option>';
+});
+
+document.getElementById('probit-graph').addEventListener('change', event => {
+  window.probitInterval = event.target.value
+});
+window.probitInterval = '1D';
+
+/// @dev graph function
+const updateGraph = () => {
+  $.ajax({
+    url: 'https://api.probit.com/api/exchange/v1/candle?market_ids=ES-BTC&start_time=1970-01-01T00%3A00%3A00.000Z&end_time=2019-10-11T00%3A00%3A00.000Z&interval='+window.probitInterval+'&sort=desc&limit=20',
+    success: function(result){
+      window.isOnProduction || console.log('probit candle api response', result);
+
+      const labels = [];
+      const data = [];
+      for(let i = 0; i < 40; i++) {
+        const intervalSeconds = window.probitIntervalSecondsArray[window.probitIntervalArray.indexOf(window.probitInterval)];
+        const timeString = (new Date(Date.now() - intervalSeconds*1000*i)).toTimeString();
+        const dateString = (new Date(Date.now() - intervalSeconds*1000*i)).toDateString();
+        let label = '';
+        switch(window.probitInterval.slice(window.probitInterval.length-1)) {
+          case 'm':
+            label = timeString.slice(0,5);
+            break;
+          case 'h':
+            label = timeString.slice(0,5);
+            break;
+          case 'D':
+            label = dateString.split(' ').slice(0,3).join(' ')
+            break;
+          case 'W':
+            label = dateString.split(' ')[0]
+            break;
+          case 'M':
+            label = dateString.split(' ')[1];
+            break;
+        }
+        labels.push(label);
+        data.push(i);
+      }
+
+      const ctx = document.getElementById('myChart').getContext("2d");
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [{
+            label: "High",
+            borderColor: "#6B0100",
+            pointBorderColor: "#6B0100",
+            pointBackgroundColor: "#6B0100",
+            pointHoverBackgroundColor: "#6B0100",
+            pointHoverBorderColor: "#6B0100",
+            pointHoverRadius: 5,
+            pointHoverBorderWidth: 1,
+            pointBorderWidth: 1,
+            pointRadius: 3,
+            fill: false,
+            borderWidth: 4,
+            data
+          },{
+            label: "Low",
+            borderColor: "#6B0100",
+            pointBorderColor: "#6B0100",
+            pointBackgroundColor: "#6B0100",
+            pointHoverBackgroundColor: "#6B0100",
+            pointHoverBorderColor: "#6B0100",
+            pointHoverRadius: 5,
+            pointHoverBorderWidth: 1,
+            pointBorderWidth: 1,
+            pointRadius: 3,
+            fill: false,
+            borderWidth: 4,
+            data
+          }]
+        },
+        options: {
+          legend: {
+            position: "bottom"
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                fontColor: "rgba(0,0,0,0.5)",
+                fontStyle: "bold",
+                beginAtZero: true,
+                maxTicksLimit: 5,
+                padding: 20
+              },
+              gridLines: {
+                drawTicks: false,
+                display: false
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                zeroLineColor: "transparent"
+              },
+              ticks: {
+                padding: 20,
+                fontColor: "rgba(0,0,0,0.5)",
+                fontStyle: "bold"
+              }
+            }]
+          }
+        }
+      });
+  }});
+}
+
+
+
+
+
+
+
+  let funcx;
+
+  updateMarketCap = () => {
+    if(window.esPrice && window.esCurrentSupply) {
+      let marketCap = String(window.esPrice * window.esCurrentSupply);
+      if(marketCap.includes('.')) {
+        marketCap = marketCap.split('.')[0];
+      }
+      $('#market-cap').html('$'+(marketCap));
+    }
+  }
+
+  setInterval(funcx = () => {
+    updateGraph();
+
+    window.isOnProduction || console.log('doing');
     $.ajax({
       url: "https://api.etherscan.io/api?module=stats&action=ethprice&apikey=YourApiKeyToken",
       success: function(result){
-        console.log('eth usd', result);
+        window.isOnProduction || console.log('eth usd', result);
       $("#ether-price-usd").html('$'+result.result.ethusd);
     }});
 
@@ -2099,15 +2322,16 @@
     $.ajax({
       url: "https://blockchain.info/ticker",
       success: function(result){
-        console.log('btc usd', result);
+        window.isOnProduction || console.log('btc usd', result);
       $("#bitcoin-price-usd").html('$'+result.USD['15m']);
+      $("#crowdfund-price").html('$0.0078');
     }});
 
 
     $.ajax({
       url: "https://api.cryptonator.com/api/ticker/ltc-usd",
       success: function(result){
-        console.log('ltc usd', result);
+        window.isOnProduction || console.log('ltc usd', result);
       $("#ltc-price-usd").html('$'+result.ticker.price);
     }});
 
@@ -2115,52 +2339,84 @@
     $.ajax({
       url: "https://api.probit.com/api/exchange/v1/ticker?market_ids=ES-USDT%2CES-BTC",
       success: function(result){
-        console.log('ES-USDT CES-BTC', result);
-        $("#es-price").html(result.data[0].last + ' USDT / '+result.data[1].last + ' BTC');
+        window.isOnProduction || console.log('ES-USDT CES-BTC', result);
+        window.esPrice = Number(result.data[0].last);
+        updateMarketCap();
+        $("#es-price").html(result.data[0].last + ' USDT <br> '+window.moreDecimals(result.data[1].last,8) + ' BTC');
+        const increasePercentage = +result.data[1].last / 0.00000050 * 100;
+        window.isOnProduction || console.log('increasePercentage', increasePercentage);
+        // $("#es-percentage").html(
+        //   `
+        //     (<strong>24HR</strong>)<br />
+        //     <p class="mg-b-0 tx-11 mg-l-3" style="color:${increasePercentage > 100 ? 'green' : 'red'}">
+        //
+        //       <i class="fa fa-arrow-${increasePercentage > 100 ? 'up' : 'down'}"></i> <span>${result.data[1].change+'%'}</span>
+        //     </p>
+        //   `
+        // );
+
+
+        $('#roi-amount').html(
+          `
+            <span style="color:${increasePercentage > 100 ? 'green' : 'red'}">
+              <i id="roi-question" class="fa fa-arrow-${increasePercentage > 100 ? 'up' : 'down'}"></i> <span>${window.lessDecimals(String(increasePercentage - 100))+'%'}</span>
+            </span>
+          `
+        );
+
+        let totalVolume = 0;
+        result.data.forEach(x => {
+          totalVolume += Number(x.base_volume);
+        });
+        $('#volume-of-probit').html(window.lessDecimals(String(window.esPrice * totalVolume)) + ' USDT');
     }});
+
+
 
     const baseUrl = 'https://eraswap.technology';
 
     $.ajax({
       url: baseUrl+'/eraswap/esTotalSupply',
       success: function(result){
-        console.log('es total supply', result);
+        window.isOnProduction || console.log('es total supply', result);
       $("#es-total-supply").html(window.lessDecimals(result.data.totalSupply)+' ES');
+      window.esCurrentSupply = Number(window.lessDecimals(result.data.totalSupply));
+      updateMarketCap();
       $("#es-outside-timeally").html(window.lessDecimals(result.data.outsideTimeAllySupply)+' ES');
     }});
 
     $.ajax({
       url: baseUrl+'/eraswap/holdersOfEraSwap',
       success: function(result){
-        console.log('es holders', result);
+        window.isOnProduction || console.log('es holders', result);
       $("#es-holders").html(result.data.numberOfAddresses+' addresses');
     }});
 
     $.ajax({
       url: baseUrl+'/nrt/luckPoolBal',
       success: function(result){
-        console.log('luckPoolBal', result);
+        window.isOnProduction || console.log('luckPoolBal', result);
       $("#luck-pool-bal").html(window.lessDecimals(result.data.luckPoolBal)+' ES');
     }});
 
     $.ajax({
       url: baseUrl+'/nrt/burnTokenBal',
       success: function(result){
-        console.log('burnTokenBal', result);
+        window.isOnProduction || console.log('burnTokenBal', result);
       $("#burn-token-bal").html(window.lessDecimals(result.data.burnTokenBal)+' ES');
     }});
 
     $.ajax({
       url: baseUrl+'/nrt/totalTokensBurned',
       success: function(result){
-        console.log('totalTokensBurned', result);
+        window.isOnProduction || console.log('totalTokensBurned', result);
       $("#total-es-burned").html(window.lessDecimals(result.data.totalTokensBurned)+' ES');
     }});
 
     $.ajax({
       url: baseUrl+'/nrt/nrtFractions',
       success: function(result){
-        console.log('nrtFractions', result);
+        window.isOnProduction || console.log('nrtFractions', result);
         $("#nrt-released").html(window.lessDecimals(result.data.actualNRTDistributed)+' ES');
         $("#nrtFractions-curator").html(window.lessDecimals(result.data.workPoolCalculation.curators)+' ES');
         $("#nrtFractions-timetraders").html(window.lessDecimals(result.data.workPoolCalculation.timetraders)+' ES');
@@ -2177,7 +2433,7 @@
     $.ajax({
       url: baseUrl+'/timeally/getNumberOfStakings',
       success: function(result){
-        console.log('no of stakings', result);
+        window.isOnProduction || console.log('no of stakings', result);
         $("#number-of-ta-stakings").html(result.data.numberOfStakings+' stakings');
         $("#timeally-total-number-stakings").html(result.data.numberOfStakings+' stakings');
     }});
@@ -2185,7 +2441,7 @@
     $.ajax({
       url: baseUrl+'/timeally/getStakingPlanStatistics',
       success: function(result){
-        console.log('plan statistics', result);
+        window.isOnProduction || console.log('plan statistics', result);
         $("#one-year-stakers").html(result.data.plan0Count+' stakings');
         $("#one-year-stakings").html(window.lessDecimals(result.data.plan0Amount)+' ES');
 
@@ -2220,7 +2476,7 @@ if(!datapie2)
     $.ajax({
       url: baseUrl+'/timeally/getPlatformDetailsAllTime',
       success: function(result){
-        console.log('platform details', result);
+        window.isOnProduction || console.log('platform details', result);
         $("#total-staked-es").html(window.lessDecimals(result.data.totalStaking)+' ES');
         $("#number-of-stakers").html(result.data.totalPlatformUsers+' stakers');
 
@@ -2232,7 +2488,7 @@ if(!datapie2)
     $.ajax({
       url: baseUrl+'/betdeex/getNumberOfBets',
       success: function(result){
-        console.log('betdeex getNumberOfBets', result);
+        window.isOnProduction || console.log('betdeex getNumberOfBets', result);
         $("#betdeex-total-number-bets").html(result.data.numberOfBets+' events');
       }
     });
@@ -2240,7 +2496,7 @@ if(!datapie2)
     $.ajax({
       url: baseUrl+'/betdeex/getBettingDetails',
       success: function(result){
-        console.log('betdeex getBettingDetails', result);
+        window.isOnProduction || console.log('betdeex getBettingDetails', result);
         $("#betdeex-total-prediction-volume").html(window.lessDecimals(result.data.totalBetAmount)+' ES');
         $("#betdeex-highest-prediction-volume").html(window.lessDecimals(result.data.highestBetAmount)+' ES');
         $("#betdeex-average-prediction-volume").html(window.lessDecimals(result.data.averagePrediction)+' ES');
@@ -2250,13 +2506,13 @@ if(!datapie2)
 
 
     $.ajax({
-      url: 'http://apis.dayswappers.com/userprofile/transaction_splits',
+      url: 'https://apis.dayswappers.com/userprofile/transaction_splits',
       success: function(result){
-        console.log('dayswappers transactions-split', result);
+        window.isOnProduction || console.log('dayswappers transactions-split', result);
         let totalAmount = 0;
         const platformTFC = {};
         for(const entry in result) {
-          console.log('entry', entry);
+          window.isOnProduction || console.log('entry', entry);
           totalAmount += result[entry].amount;
           if(platformTFC[entry] !== undefined) {
             platformTFC[entry] += result[entry].tfc;
@@ -2264,7 +2520,7 @@ if(!datapie2)
             platformTFC[entry] = result[entry].tfc;
           }
         }
-        console.log('dayswappers platformTFC', platformTFC);
+        window.isOnProduction || console.log('dayswappers platformTFC', platformTFC);
         $("#platform-transactions-number").html(result.platform_count+' txs');
         $("#volume-of-platform").html(result.platform_volume+' ES');
 
@@ -2274,7 +2530,7 @@ if(!datapie2)
                   platformTFC['BetdeEx'] || 0,
                   platformTFC['ComputeEx'] || 0,
                   platformTFC['TimeAlly'] || 0))/1000)*1000;
-        console.log('maxValue',maxValue);
+        window.isOnProduction || console.log('maxValue',maxValue);
 
         new Chart(ctx2, {
           type: 'horizontalBar',
@@ -2339,7 +2595,7 @@ if(!datapie2)
     $.ajax({
       url: 'https://apis.dayswappers.com/userprofile/overview',
       success: function(result){
-        console.log('dayswappers overview', result);
+        window.isOnProduction || console.log('dayswappers overview', result);
 
         $("#total_no_of_user").html(result.total_no_of_user+' users');
         $("#dayswappers-total-users").html(result.total_no_of_user+' users');
@@ -2358,9 +2614,9 @@ if(!datapie2)
     }});
 
     // $.ajax({
-    //   url: 'http://apis.dayswappers.com/userprofile/transaction_splits',
+    //   url: 'https://apis.dayswappers.com/userprofile/transaction_splits',
     //   success: function(result){
-    //     console.log('dayswappers transaction_splits', result);
+    //     window.isOnProduction || console.log('dayswappers transaction_splits', result);
     //
     //     // $("#kyc-users").html(result.kyc_users+' user'+(result.kyc_users>1?'s':''));
     // }});
@@ -2369,77 +2625,77 @@ if(!datapie2)
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfUser',
       success: function(result){
-        console.log('timeswappers-no-of-users', result);
+        window.isOnProduction || console.log('timeswappers-no-of-users', result);
         $("#timeswappers-no-of-users").html(result.data+' user'+(result.data>1?'s':''));
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfFreelancerOrSeller',
       success: function(result){
-        console.log('timeswappers-no-of-freelancers', result);
+        window.isOnProduction || console.log('timeswappers-no-of-freelancers', result);
         $("#timeswappers-no-of-freelancers").html(result.data+' user'+(result.data>1?'s':''));
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalViewsOnProfile',
       success: function(result){
-        console.log('timeswappers-profile-views', result);
+        window.isOnProduction || console.log('timeswappers-profile-views', result);
         $("#timeswappers-profile-views").html(result.data+' view'+(result.data>1?'s':''));
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfVerifiedUser',
       success: function(result){
-        console.log('timeswappers-totalNoOfVerifiedUser', result);
+        window.isOnProduction || console.log('timeswappers-totalNoOfVerifiedUser', result);
         $("#timeswappers-totalNoOfVerifiedUser").html(result.data+' user'+(result.data>1?'s':''));
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfCertifiedUser',
       success: function(result){
-        console.log('timeswappers-totalNoOfCertifiedUser', result);
+        window.isOnProduction || console.log('timeswappers-totalNoOfCertifiedUser', result);
         $("#timeswappers-totalNoOfCertifiedUser").html(result.data+' user'+(result.data>1?'s':''));
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfDeposit',
       success: function(result){
-        console.log('timeswappers-totalNoOfDeposit', result);
+        window.isOnProduction || console.log('timeswappers-totalNoOfDeposit', result);
         $("#timeswappers-totalNoOfDeposit").html(result.data+' ES');
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalNoOfWithdraw',
       success: function(result){
-        console.log('timeswappers-totalNoOfWithdraw', result);
+        window.isOnProduction || console.log('timeswappers-totalNoOfWithdraw', result);
         $("#timeswappers-totalNoOfWithdraw").html(result.data+' ES');
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalJobsPosted',
       success: function(result){
-        console.log('timeswappers-totalJobsPosted', result);
+        window.isOnProduction || console.log('timeswappers-totalJobsPosted', result);
         $("#timeswappers-totalJobsPosted").html(result.data+' job'+(result.data>1?'s':''));
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/totalJobsDone',
       success: function(result){
-        console.log('timeswappers-totalJobsDone', result);
+        window.isOnProduction || console.log('timeswappers-totalJobsDone', result);
         $("#timeswappers-totalJobsDone").html(result.data+' job'+(result.data>1?'s':''));
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/userDashboard/TfcGenerated',
       success: function(result){
-        console.log('timeswappers-TfcGenerated', result);
+        window.isOnProduction || console.log('timeswappers-TfcGenerated', result);
         $("#timeswappers-TfcGenerated").html(result.data+' ES');
     }});
 
     $.ajax({
       url: 'https://apis.timeswappers.com/api/feedData/all-total',
       success: function(result){
-        console.log('swapperswall-feedData', result);
+        window.isOnProduction || console.log('swapperswall-feedData', result);
         $("#swapperswall-communities").html(result.data.communities+' communities');
         $("#swapperswall-groups").html(result.data.groups+' groups');
         $("#swapperswall-pages").html(result.data.pages+' pages');
@@ -2451,7 +2707,7 @@ if(!datapie2)
     $.ajax({
       url: 'https://apis.timeswappers.com/api/tokensData/top-ten-receivers',
       success: function(result){
-        console.log('swapperswall-top-ten-receivers', result);
+        window.isOnProduction || console.log('swapperswall-top-ten-receivers', result);
         result.data.forEach(object => {
           $("#swapperswall-top-ten-receivers").append(
             `
@@ -2469,42 +2725,42 @@ if(!datapie2)
     $.ajax({
       url: 'https://apis.eraswap.academy/api/userscount',
       success: function(result){
-        console.log('academy-userscount', result);
+        window.isOnProduction || console.log('academy-userscount', result);
         $("#academy-userscount").html(result.data+' users');
     }});
 
     $.ajax({
       url: 'https://apis.eraswap.academy/api/courses',
       success: function(result){
-        console.log('academy-courses', result);
+        window.isOnProduction || console.log('academy-courses', result);
         $("#academy-courses").html(result.data+' courses');
     }});
 
     $.ajax({
       url: 'https://apis.eraswap.academy/api/deposits',
       success: function(result){
-        console.log('academy-deposits', result);
+        window.isOnProduction || console.log('academy-deposits', result);
         $("#academy-deposits").html(result.data+' ES');
     }});
 
     $.ajax({
       url: 'https://apis.eraswap.academy/api/userstudying',
       success: function(result){
-        console.log('academy-userstudying', result);
+        window.isOnProduction || console.log('academy-userstudying', result);
         $("#academy-userstudying").html(result.data+' users');
     }});
 
     $.ajax({
       url: 'https://eraswap.technology/swapperswall/powerTokenDetails',
       success: function(result){
-        console.log('swapperswall-powerTokenDetails', result);
-        $("#unused-power-tokens").html(window.lessDecimals(result.data.unusedPowerToken)+' ES');
+        window.isOnProduction || console.log('swapperswall-powerTokenDetails', result);
+        $("#unused-power-tokens").html(result.data.error ? 'Inactive' : window.lessDecimals(result.data.unusedPowerToken)+' ES');
     }});
 
     $.ajax({
       url: 'https://eraswap.technology/dayswappers/getTotalReward',
       success: function(result){
-        console.log('dayswappers-getTotalReward', result);
+        window.isOnProduction || console.log('dayswappers-getTotalReward', result);
         $("#dayswappers-liquid-rewards").html(window.lessDecimals(result.data.liquidTotal)+' ES');
         $("#dayswappers-timeally-rewards").html(window.lessDecimals(result.data.timeallyTotal)+' ES');
     }});
@@ -2514,39 +2770,41 @@ if(!datapie2)
     $.ajax({
       url: 'https://apis.buzcafe.com/api/fetch/users-count',
       success: function(result){
-        console.log('buzcafe-users-count', result);
+        window.isOnProduction || console.log('buzcafe-users-count', result);
         $("#buzcafe-users-count").html(result.data+' users');
     }});
 
     $.ajax({
       url: 'https://apis.buzcafe.com/api/fetch/shops-count',
       success: function(result){
-        console.log('buzcafe-shops-count', result);
+        window.isOnProduction || console.log('buzcafe-shops-count', result);
         $("#buzcafe-shops-count").html(result.data+' shops');
     }});
 
     $.ajax({
       url: 'https://apis.buzcafe.com/api/fetch/deposits-count',
       success: function(result){
-        console.log('buzcafe-deposits-count', result);
+        window.isOnProduction || console.log('buzcafe-deposits-count', result);
         $("#buzcafe-deposits-count").html(result.data+' deposits');
     }});
 
     $.ajax({
       url: 'https://apis.buzcafe.com/api/fetch/withdrawals-count',
       success: function(result){
-        console.log('buzcafe-withdrawals-count', result);
+        window.isOnProduction || console.log('buzcafe-withdrawals-count', result);
         $("#buzcafe-withdrawals-count").html(result.data+' withdrawls');
     }});
 
     $.ajax({
       url: 'https://apis.buzcafe.com/api/fetch/transactions-count',
       success: function(result){
-        console.log('buzcafe-transactions-count', result);
+        window.isOnProduction || console.log('buzcafe-transactions-count', result);
         $("#buzcafe-transactions-count").html(result.data+' transactions');
     }});
-
   }, 10000);
+
+  /// @dev calling the above function to avoid setinterval delay while loading the page.
+  funcx();
 
     /// @dev countdown timer for nrt release
     const deployTimestamp = 1564336091 * 1000;
@@ -2574,76 +2832,19 @@ if(!datapie2)
 
       const timeRemaining = nextNrtTimestamp > currentTimestamp ? nextNrtTimestamp - currentTimestamp : 0;
 
-  //     console.log(timeRemaining);
+  //     window.isOnProduction || console.log(timeRemaining);
 
       const daysRemaining = Math.floor(timeRemaining / 1000 / 24 / 60 / 60);
       const hoursRemaining = Math.floor((timeRemaining - daysRemaining * 1000 * 24 * 60 * 60) / 1000 / 60 / 60);
       const minutesRemaining = Math.floor((timeRemaining - daysRemaining * 1000 * 24 * 60 * 60 - hoursRemaining * 1000 * 60 * 60) / 1000 / 60);
       const secondsRemaining = Math.floor((timeRemaining - daysRemaining * 1000 * 24 * 60 * 60 - hoursRemaining * 1000 * 60 * 60 - minutesRemaining * 1000 * 60) / 1000)
 
-      // console.log(daysRemaining, hoursRemaining, minutesRemaining, secondsRemaining);
+      // window.isOnProduction || console.log(daysRemaining, hoursRemaining, minutesRemaining, secondsRemaining);
       document.getElementById('days').innerText = daysRemaining;
       document.getElementById('hours').innerText = hoursRemaining;
       document.getElementById('minutes').innerText = minutesRemaining;
       document.getElementById('seconds').innerText = secondsRemaining;
   }, 1000);
   </script>
-  <script>
-       var ctx = document.getElementById('myChart').getContext("2d");
-
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
-        datasets: [{
-            label: "Data",
-            borderColor: "#6B0100",
-            pointBorderColor: "#6B0100",
-            pointBackgroundColor: "#6B0100",
-            pointHoverBackgroundColor: "#6B0100",
-            pointHoverBorderColor: "#6B0100",
-            pointBorderWidth: 10,
-            pointHoverRadius: 10,
-            pointHoverBorderWidth: 1,
-            pointRadius: 1,
-            fill: false,
-            borderWidth: 4,
-            data: [0, 50, 150, 60, 180, 70, 260]
-        }]
-    },
-    options: {
-        legend: {
-            position: "bottom"
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    fontColor: "rgba(0,0,0,0.5)",
-                    fontStyle: "bold",
-                    beginAtZero: true,
-                    maxTicksLimit: 5,
-                    padding: 20
-                },
-                gridLines: {
-                    drawTicks: false,
-                    display: false
-                }
-
-            }],
-            xAxes: [{
-                gridLines: {
-                    zeroLineColor: "transparent"
-                },
-                ticks: {
-                    padding: 20,
-                    fontColor: "rgba(0,0,0,0.5)",
-                    fontStyle: "bold"
-                }
-            }]
-        }
-    }
-});
-    </script>
-   
   </body>
 </html>
