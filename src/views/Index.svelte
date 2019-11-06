@@ -9,6 +9,7 @@
     try{
     refer = get_query("refer").toLowerCase();}catch(e){
     }
+    
 </script>
 <style>
     .tm-funfact{padding:0px; margin-bottom:10px}
@@ -1213,6 +1214,175 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+              <div class="tm-sectiontitle text-center">
+                    <h4>TESTIMONIAL'S</h4>
+                    <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+              </div>
+               <div class="testimonials">
+                <!-- CARD 1 START-->
+                <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"I always had to compramise with my goals and couldn't increase my savings with my previous plans . iheard from a friend about ES staking and now I am more focused and able to achieve my goals by myself, with the help of TimeAlly Plan"</p>
+                    <div class="image">
+                      <img src="images/mohid1.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Mohid Kazi <br>
+                        <span>1500ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <!-- CARD 1 end-->
+                
+                <!-- CARD 2 START-->
+                <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"I staked ES from TimeAlly, beacause it raises expectations from pathetic decades-old options to plan Goals systematically. Timeally got the potential to surpass all other retirement slutions & Goal achieving tools"</p>
+                    <div class="image">
+                      <img src="images/apurva.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Apurva Kulkarni <br>
+                        <span>1000ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <!-- CARD 2 end-->
+                <!-- CARD 3 START-->
+                <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"They were many technological "AWE" factors which motivates me take TimeVault plan. mainly its transparency which is achieved by blockchain's algorithmic complexity. Additionally,it is very awesome combination of nextgen technologies "</p>
+                    <div class="image">
+                      <img src="images/Gaurav.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Gourav Singh<br>
+                        <span>2500Es</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <!-- CARD 3 end-->
+                 <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"TSGAP lets you choose your staking amount in Era Swap according to your ES goals. So, it becomes a very convenient plan for everyone who look forward to increase their count of ES in future"<br><br></p>
+                    <div class="image">
+                      <img src="images/Mahadev.jpg" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Mahadev Kadam <br>
+                        <span>1000ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"While looking at decade old asset creation options I am thankful to find TSGAP smart contract based new asset class"<br><br><br><br><br></p>
+                    <div class="image">
+                      <img src="images/Pratik.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Pratik Gada <br>
+                        <span>10000ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                 <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"I invested in this plan because it is based on smart contract which means not even its developers can tamper wth it, once it is deployed"<br><br><br><br></p>
+                    <div class="image">
+                      <img src="images/Mehboob.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Mehboob Ali Shaikh<br>
+                        <span>1000ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                 <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"Since the increasing number of bank frauds, I don't believe in any other plan but this, beacause the staked ES in this plan can't be double-spend & moved out for any other purpose as this is completely managed by Blockchain-based smart contract "</p>
+                    <div class="image">
+                      <img src="images/Sanket.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Sanket Parab<br>
+                        <span>10000ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                 <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"I decided to stake ES because you don't have to be an experienced investor with sophisticated knowledge of financial markets to stake ES from TimeAlly. It's really simple and reliable"<br><br><br></p>
+                    <div class="image">
+                      <img src="images/Tejas.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Tejas Lende<br>
+                        <span>1667ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                 <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"Being a Blockchain developer I know the technology is fully transparent so I already know benefits. As its web 3.0 fully decentralised smart contract driven it will give guaranteed returns with profit"<br><br><br></p>
+                    <div class="image">
+                      <img src="images/Vishal Baraiya.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Vishal Baraiya<br>
+                        <span>12500ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                
+                 <div class="card">
+                  <div class="layer"></div>
+                  <div class="content">
+                    <p align="justify">"I am a fresher and I want to save my future. So i was looking for a plan which I can afford & then I came across TimeAlly Plan, and I am glad I did because TimeAlly lets you choose your minimum staking Era Swap"<br><br><br></p>
+                    <div class="image">
+                      <img src="images/Kaustubh.png" alt="">
+                    </div>
+                    <div class="details">
+                      <h2>
+                        Kaustubh Gudekar<br>
+                        <span>666ES</span>            
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+              
+                
             <!--// Services Area -->
              <div id="tm-area-faq" class="tm-faq-area tm-section tm-padding-section"  style="background: #eef2f4">
                 <div class="container">
@@ -1329,6 +1499,7 @@
 
 
     </div>
+    
 
      <Footer />
      <div id="css-only-modals">
