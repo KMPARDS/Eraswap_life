@@ -31,4 +31,10 @@ router('/dashboard', () =>
     )
 );
 
+router('/send-es', () =>
+    import(/* webpackChunkName: "something" */ './views/SendES.svelte').then(
+        module => page.set({ component: module.default })
+    )
+);
+
 export default router

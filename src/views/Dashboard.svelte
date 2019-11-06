@@ -203,7 +203,10 @@
          </div>
          <div class="tm-pricebox-body">
           <ul>
-                 <li>ES Balance - {es_balance}</li>
+                 <li>
+                  ES Balance - {es_balance}
+                  <a class="btn btn-outline-secondary" href="/send-es">Send ES</a>
+                 </li>
                  <li>ETH Balance - {balance}</li>
                  <li class="pcaddress"> Address - {address}</li>
                  <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)}</li>
