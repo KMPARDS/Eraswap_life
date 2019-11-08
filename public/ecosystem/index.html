@@ -518,7 +518,7 @@
           </div><!-- col -->
 
 
-            <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10" style="display:none">
+            <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
                 <div class="card1">
 
                   <div class="card-body pos-relative pd-0 ex5">
@@ -526,7 +526,7 @@
                     <select id="probit-graph">
                     </select>
                     <div class="wrapper">
-                      <div class="ht-100 ht-lg-200"> <canvas id="myChart"></canvas></div>
+                      <div class="ht-100 ht-lg-200" id="graph-container"> <canvas id="probitgraph"></canvas></div>
                     </div>
 
                   </div>
@@ -1214,7 +1214,7 @@
     <script src="assets/js/dashforge.settings.js"></script>
 
     <script>
-      window.isOnProduction = true;
+      window.isOnProduction = false;
       $(function(){
         'use strict'
 
@@ -2173,74 +2173,104 @@
 
   $('#roi-box')[0].addEventListener('click', () => alert('The approximate return on investment if purchased at the time of launch (or earliest known price)'));
 
-window.probitIntervalArray = ['1m', '3m', '5m', '10m', '15m', '30m', '1h', '4h', '6h', '12h', '1D', '1W', '1M'];
-window.probitIntervalSecondsArray = [60, 180, 300, 600, 900, 1800, 3600, 14400, 21600, 43200, 86400, 604800, 2629744];
+window.probit = {
+  intervalArray: ['1m', '3m', '5m', '10m', '15m', '30m', '1h', '4h', '6h', '12h', '1D', '1W', '1M'],
+  secondsArray: [60, 180, 300, 600, 900, 1800, 3600, 14400, 21600, 43200, 86400, 604800, 2629744],
+  intervalId: '1m'
+}
 
-window.probitIntervalArray.forEach(intervalId => {
+window.probit.intervalArray.forEach(intervalId => {
   document.getElementById('probit-graph').innerHTML += '<option value='+intervalId+'>'+intervalId+'</option>';
 });
 
 document.getElementById('probit-graph').addEventListener('change', event => {
-  window.probitInterval = event.target.value
+  window.probit.intervalId = event.target.value;
+  console.log('i am happening', event);
+  updateGraph();
 });
-window.probitInterval = '1D';
 
 /// @dev graph function
 const updateGraph = () => {
-  $.ajax({
-    url: 'https://api.probit.com/api/exchange/v1/candle?market_ids=ES-BTC&start_time=1970-01-01T00%3A00%3A00.000Z&end_time=2019-10-11T00%3A00%3A00.000Z&interval='+window.probitInterval+'&sort=desc&limit=20',
-    success: function(result){
-      window.isOnProduction || console.log('probit candle api response', result);
+  const padZeros = (c,length=2) => {
 
+    const stringc = String(c);
+    console.log(c, length-stringc.length)
+    return stringc.length === length ? stringc : '0'.repeat(length-stringc.length)+stringc
+  };
+  const date = new Date(Date.now());
+  const showTimeZero = ['D', 'W', 'M'].includes(window.probit.intervalId.slice(window.probit.intervalId.length-1));
+  const showDateZero = 'M' === window.probit.intervalId.slice(window.probit.intervalId.length-1);
+  const formatedTime = `${date.getFullYear()}-${padZeros(date.getMonth()+1)}-${showDateZero?'01':padZeros(date.getDate())}T${showTimeZero ? '00' : padZeros(date.getHours())}:${showTimeZero ? '00' : padZeros(date.getMinutes())}:${showTimeZero ? '00':padZeros(date.getSeconds())}.${showTimeZero ? '000' : padZeros(date.getMilliseconds(), 3)}Z`;
+  console.log(date, formatedTime);
+  $.ajax({
+    url: 'https://api.probit.com/api/exchange/v1/candle?market_ids=ES-BTC&start_time=1970-01-01T00%3A00%3A00.000Z&end_time='+formatedTime+'&interval='+window.probit.intervalId+'&sort=desc&limit=10',
+    success: function(result){
+      document.getElementById('graph-container').innerHTML = '';
+
+      // window.isOnProduction ||
+        console.log('probit candle api response', result);
+      const intervalSeconds = window.probit.secondsArray[window.probit. intervalArray.indexOf(window.probit.intervalId)];
+      console.log('intervalSeconds', intervalSeconds);
+      const currentTimestamp = Date.now();
       const labels = [];
-      const data = [];
-      for(let i = 0; i < 40; i++) {
-        const intervalSeconds = window.probitIntervalSecondsArray[window.probitIntervalArray.indexOf(window.probitInterval)];
-        const timeString = (new Date(Date.now() - intervalSeconds*1000*i)).toTimeString();
-        const dateString = (new Date(Date.now() - intervalSeconds*1000*i)).toDateString();
+      const highData = [];
+      const lowData = [];
+      for(let i = 0; i < 10; i++) {
+        const timeString = (new Date(currentTimestamp - intervalSeconds*1000*(9-i))).toTimeString();
+        const dateString = (new Date(currentTimestamp - intervalSeconds*1000*(9-i))).toDateString();
         let label = '';
-        switch(window.probitInterval.slice(window.probitInterval.length-1)) {
+        switch(window.probit.intervalId.slice(window.probit.intervalId.length-1)) {
           case 'm':
             label = timeString.slice(0,5);
             break;
           case 'h':
-            label = timeString.slice(0,5);
+            label = dateString.split(' ')[0]+' '+timeString.slice(0,5);
             break;
           case 'D':
-            label = dateString.split(' ').slice(0,3).join(' ')
+            label = dateString.split(' ')[0]
             break;
           case 'W':
-            label = dateString.split(' ')[0]
+            label = dateString.split(' ').slice(1,3).join(' ')
             break;
           case 'M':
             label = dateString.split(' ')[1];
             break;
         }
         labels.push(label);
-        data.push(i);
+        try {
+          highData.push(+result.data[i].high);
+          lowData.push(+result.data[i].low);
+        } catch(e) {
+          console.log(e.message);
+          highData.unshift(0.00000096);
+          lowData.unshift(0.00000096);
+        }
       }
-
-      const ctx = document.getElementById('myChart').getContext("2d");
+      document.getElementById('graph-container').innerHTML = '<canvas id="probitgraph"></canvas>';
+      const ctx = document.getElementById('probitgraph').getContext("2d");
       new Chart(ctx, {
         type: 'line',
         data: {
           labels,
           datasets: [{
             label: "High",
-            borderColor: "#6B0100",
-            pointBorderColor: "#6B0100",
-            pointBackgroundColor: "#6B0100",
-            pointHoverBackgroundColor: "#6B0100",
-            pointHoverBorderColor: "#6B0100",
+            lineTension: 0,
+            borderColor: "#006B01",
+            pointBorderColor: "#207B21",
+            pointBackgroundColor: "#006B01",
+            pointHoverBackgroundColor: "#006B01",
+            pointHoverBorderColor: "#006B01",
             pointHoverRadius: 5,
             pointHoverBorderWidth: 1,
             pointBorderWidth: 1,
             pointRadius: 3,
             fill: false,
             borderWidth: 4,
-            data
-          },{
+            data: highData
+          },
+          {
             label: "Low",
+            lineTension: 0,
             borderColor: "#6B0100",
             pointBorderColor: "#6B0100",
             pointBackgroundColor: "#6B0100",
@@ -2252,8 +2282,9 @@ const updateGraph = () => {
             pointRadius: 3,
             fill: false,
             borderWidth: 4,
-            data
-          }]
+            data: lowData
+          }
+          ]
         },
         options: {
           legend: {
@@ -2307,7 +2338,7 @@ const updateGraph = () => {
     }
   }
 
-  setInterval(funcx = () => {
+  // setInterval(funcx = () => {
     updateGraph();
 
     window.isOnProduction || console.log('doing');
@@ -2801,10 +2832,10 @@ if(!datapie2)
         window.isOnProduction || console.log('buzcafe-transactions-count', result);
         $("#buzcafe-transactions-count").html(result.data+' transactions');
     }});
-  }, 10000);
+  // }, 10000);
 
   /// @dev calling the above function to avoid setinterval delay while loading the page.
-  funcx();
+  // funcx();
 
     /// @dev countdown timer for nrt release
     const deployTimestamp = 1564336091 * 1000;
