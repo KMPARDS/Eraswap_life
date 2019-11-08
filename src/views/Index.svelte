@@ -1508,7 +1508,7 @@
 		<label for="modal1" class="css-only-modal-close"><i class="fa fa-times fa-2x"></i></label>
 		<!--<h2>Modal Title</h2>
 		<hr />-->
-		<img src="images/annoncement2.jpeg" class="img-responsive svelte-1ewjq1k" alt="" style=" width:100%">
+		<a href="https://www.probit.com/app/exchange/ES-BTC" target="_blank"><img src="images/annoncement2.jpeg" class="img-responsive svelte-1ewjq1k" alt="" style=" width:100%">  </a>
 		<!--<label for="modal1" class="css-only-modal-btn btn btn-primary btn-lg text-center">Okay</label>-->
 	</div>
 <div id="screen-shade"></div>

@@ -1954,7 +1954,7 @@ button.tm-button span {
   z-index: 3;
   vertical-align: baseline;
   font-weight: 100;
-  font-size: 17px
+  font-size: 15px
 }
 
 .tm-button i,
@@ -3039,7 +3039,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 }
 
 .tm-accordion .card-body {
-  padding: 15px 0 5px 50px;
+  padding: 15px 0 5px 26px;
   position: relative;
 }
 
