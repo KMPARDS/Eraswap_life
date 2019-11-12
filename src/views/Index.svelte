@@ -1224,14 +1224,14 @@
                 <div class="card">
                   <div class="layer"></div>
                   <div class="content">
-                    <p align="justify">"I always had to compramise with my goals and couldn't increase my savings with my previous plans . iheard from a friend about ES staking and now I am more focused and able to achieve my goals by myself, with the help of TimeAlly Plan"</p>
+                    <p align="justify">"I always had to compromise with my goals and couldn't increase my savings with my previous plans . I heard from a friend about ES staking and now I am more focused and able to achieve my goals by myself, with the help of TimeAlly Plan"</p>
                     <div class="image">
                       <img src="images/mohid1.png" alt="">
                     </div>
                     <div class="details">
                       <h2>
                         Mohid Kazi <br>
-                        <span>1500ES</span>            
+                        <span>1500 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1242,14 +1242,15 @@
                 <div class="card">
                   <div class="layer"></div>
                   <div class="content">
-                    <p align="justify">"I staked ES from TimeAlly, beacause it raises expectations from pathetic decades-old options to plan Goals systematically. Timeally got the potential to surpass all other retirement slutions & Goal achieving tools"</p>
+                    <p align="justify">"I staked ES from TimeAlly, because it raises expectations from pathetic decades-old options to plan Goals systematically. Timeally got the potential to surpass all other retirement solutions & Goal achieving tools"<br><br>
+                    </p>
                     <div class="image">
                       <img src="images/apurva.png" alt="">
                     </div>
                     <div class="details">
                       <h2>
                         Apurva Kulkarni <br>
-                        <span>1000ES</span>            
+                        <span>1000 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1259,14 +1260,14 @@
                 <div class="card">
                   <div class="layer"></div>
                   <div class="content">
-                    <p align="justify">"They were many technological "AWE" factors which motivates me take TimeVault plan. mainly its transparency which is achieved by blockchain's algorithmic complexity. Additionally,it is very awesome combination of nextgen technologies "</p>
+                    <p align="justify">"They are many technological "AWE" factors which motivates me take TimeVault plan. mainly its transparency which is achieved by blockchain's algorithmic complexity. Additionally,it is very awesome combination of nextgen technologies "</p>
                     <div class="image">
                       <img src="images/Gaurav.png" alt="">
                     </div>
                     <div class="details">
                       <h2>
                         Gourav Singh<br>
-                        <span>2500Es</span>            
+                        <span>2500 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1275,14 +1276,14 @@
                  <div class="card">
                   <div class="layer"></div>
                   <div class="content">
-                    <p align="justify">"TSGAP lets you choose your staking amount in Era Swap according to your ES goals. So, it becomes a very convenient plan for everyone who look forward to increase their count of ES in future"<br><br></p>
+                    <p align="justify">"TSGAP lets you choose your staking amount in Era Swap according to your ES goals. So, it becomes a very convenient plan for everyone who look forward to increase their count of ES in future"<br><br><br></p>
                     <div class="image">
                       <img src="images/Mahadev.jpg" alt="">
                     </div>
                     <div class="details">
                       <h2>
                         Mahadev Kadam <br>
-                        <span>1000ES</span>            
+                        <span>1000 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1297,7 +1298,7 @@
                     <div class="details">
                       <h2>
                         Pratik Gada <br>
-                        <span>10000ES</span>            
+                        <span>10000 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1312,7 +1313,7 @@
                     <div class="details">
                       <h2>
                         Mehboob Ali Shaikh<br>
-                        <span>1000ES</span>            
+                        <span>1000 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1320,14 +1321,14 @@
                  <div class="card">
                   <div class="layer"></div>
                   <div class="content">
-                    <p align="justify">"Since the increasing number of bank frauds, I don't believe in any other plan but this, beacause the staked ES in this plan can't be double-spend & moved out for any other purpose as this is completely managed by Blockchain-based smart contract "</p>
+                    <p align="justify">"Since the increasing number of bank frauds, I don't believe in any other plan but this, because the staked ES in this plan can't be double-spend & moved out for any other purpose as this is completely managed by Blockchain-based smart contract "</p>
                     <div class="image">
                       <img src="images/Sanket.png" alt="">
                     </div>
                     <div class="details">
                       <h2>
                         Sanket Parab<br>
-                        <span>10000ES</span>            
+                        <span>10000 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1335,14 +1336,14 @@
                  <div class="card">
                   <div class="layer"></div>
                   <div class="content">
-                    <p align="justify">"I decided to stake ES because you don't have to be an experienced investor with sophisticated knowledge of financial markets to stake ES from TimeAlly. It's really simple and reliable"<br><br><br></p>
+                    <p align="justify">"I decided to stake ES because you don't have to be an experienced investor with sophisticated knowledge of financial markets to stake ES from TimeAlly. It's really simple and reliable"<br><br><br><br></p>
                     <div class="image">
                       <img src="images/Tejas.png" alt="">
                     </div>
                     <div class="details">
                       <h2>
                         Tejas Lende<br>
-                        <span>1667ES</span>            
+                        <span>1667 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1357,7 +1358,7 @@
                     <div class="details">
                       <h2>
                         Vishal Baraiya<br>
-                        <span>12500ES</span>            
+                        <span>12500 ES</span>            
                       </h2>
                     </div>
                   </div>
@@ -1373,7 +1374,7 @@
                     <div class="details">
                       <h2>
                         Kaustubh Gudekar<br>
-                        <span>666ES</span>            
+                        <span>666 ES</span>            
                       </h2>
                     </div>
                   </div>
