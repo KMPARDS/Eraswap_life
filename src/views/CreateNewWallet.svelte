@@ -3,11 +3,17 @@
     import Footer from './Footer.svelte'
     import Logo from './Logo.svelte'
 
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 
     onMount(async () => {
         document.getElementById("pop_up").click();
-	});
+	    });
+
+      onDestroy(() => {
+        if(document.getElementById('terms').getAttribute('class').split(' ').filter(className => className === 'show').length) {
+          document.getElementById("pop_up").click();
+        }
+      });
 
     let size = 128;
     let is_256 = false;
@@ -218,8 +224,8 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
         <div class="tm-breadcrumb text-center">
          <span class="blinking">Through this Single Sign-On, you can access all the platforms of Era Swap Ecosystem.</span><br>
             <h2 style="font-size: 20px; font-weight:800">Sign Up / Create<br>
-            New Wallet 
-            
+            New Wallet
+
             </h2 >Already have a wallet?<a href="access-my-wallet"><b> Access My Wallet</b></a>
         </div>
     </div>
@@ -250,17 +256,35 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             <input type="text" bind:value={clipboard} id="myInput" style="display: none">
         </p>
         <div class="row offset-xl-2">
-            {#each mnemonic as word, i} {#if word!='-'}
-            <div class="memonics col-4">{i+1}. <div class="mnemonic_entry">{word}</div></div>
-            {:else}
-            <div class="col-3">
-            {i+1}. <input type="text" class="mnemonic_entry form-control" on:change={check_noted}>
-            </div>
-            {/if} {/each}
+            {#each mnemonic as word, i}
+
+              <div class="memonics col-4 my-4">
+                <div class="row">
+                  <div class="col-auto">
+                    {i+1}.
+                  </div>
+                  <div class="col">
+                    {#if word!='-'}
+                      <div class="mnemonic_entry" style="padding:7px 0 6px">{word}</div>
+                    {:else}
+                      <input type="text" style="line-height:0" class="mnemonic_entry form-control" on:keyup={check_noted}>
+                    {/if}
+                  </div>
+                </div>
+              </div>
+
+
+            {/each}
         </div>
 <br><br>
-    <button class="btn btn-default text-white offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px;" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
-    <a href="/access-my-wallet" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5" class:hide={status!=5}><span style="color:#fff">Access your dashboard</span></a>
+    <div style="text-align:center">
+    {#if status==2 || status==3}
+      <button class="btn btn-default text-white offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px; display:inline" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
+    {/if}
+    {#if status==5}
+      <a href="/access-my-wallet" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5"><span style="color:#fff">Access your dashboard</span></a>
+    {/if}
+    </div>
         </div>
     </div>
 </div><br><br><br><br>
@@ -272,6 +296,10 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                         </div>
                         <div class="modal-body" style="text-align: center">
                              <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                             {#if status === 2}
+                                <p>Your mnemonic inputs seem incorrect. You can re-enter the mnemonic else you can <strong>Generate Random</strong> and try again.</p>
+                                <a class="nav-link text-white tm-button tm-button-lg" data-dismiss="modal" aria-hidden="true"><span style="color:#fff">Close</span></a>
+                             {/if}
                             <input type="password" bind:value={wallet_password} class:hide={status!=3} placeholder="Enter your password"><br><br>
 
                             <button class="tm-button tm-button-sm " on:click={generate_wallet} class:hide={status!=3}><span style="color:#fff">Generate Wallet</span></button>
@@ -295,5 +323,3 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                 </div>
         </div>
 <Footer />
-
-
