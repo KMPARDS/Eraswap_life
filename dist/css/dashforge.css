@@ -41097,7 +41097,7 @@ a.bg-twitter:hover, a.bg-twitter:focus, button.bg-twitter:hover, button.bg-twitt
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
 }
 
 .flip-card-front, .flip-card-back {
@@ -41115,5 +41115,5 @@ a.bg-twitter:hover, a.bg-twitter:focus, button.bg-twitter:hover, button.bg-twitt
 .flip-card-back {
   background-color: #2980b9;
   color: white;
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
 }
