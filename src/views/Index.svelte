@@ -59,6 +59,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(94.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(94.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(2) {
       position: absolute;
@@ -66,6 +67,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(99deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(99deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(3) {
       position: absolute;
@@ -73,6 +75,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(103.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(103.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(4) {
       position: absolute;
@@ -80,6 +83,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(108deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(108deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(5) {
       position: absolute;
@@ -87,6 +91,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(112.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(112.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(6) {
       position: absolute;
@@ -94,6 +99,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(117deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(117deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(7) {
       position: absolute;
@@ -101,6 +107,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(121.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(121.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(8) {
       position: absolute;
@@ -108,6 +115,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(126deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(126deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(9) {
       position: absolute;
@@ -115,6 +123,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(130.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(130.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(10) {
       position: absolute;
@@ -122,6 +131,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(135deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(135deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(11) {
       position: absolute;
@@ -129,6 +139,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(139.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(139.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(12) {
       position: absolute;
@@ -136,6 +147,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(144deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(144deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(13) {
       position: absolute;
@@ -143,6 +155,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(148.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(148.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(14) {
       position: absolute;
@@ -150,6 +163,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(153deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(153deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(15) {
       position: absolute;
@@ -157,6 +171,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(157.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(157.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(16) {
       position: absolute;
@@ -164,6 +179,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(162deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(162deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(17) {
       position: absolute;
@@ -171,6 +187,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(166.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(166.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(18) {
       position: absolute;
@@ -178,6 +195,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(171deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(171deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(19) {
       position: absolute;
@@ -185,6 +203,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(175.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(175.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(20) {
       position: absolute;
@@ -192,6 +211,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(180deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(180deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(21) {
       position: absolute;
@@ -199,6 +219,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(184.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(184.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(22) {
       position: absolute;
@@ -206,6 +227,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(189deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(189deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(23) {
       position: absolute;
@@ -213,6 +235,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(193.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(193.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(24) {
       position: absolute;
@@ -220,6 +243,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(198deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(198deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(25) {
       position: absolute;
@@ -227,6 +251,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(202.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(202.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(26) {
       position: absolute;
@@ -234,6 +259,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(207deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(207deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(27) {
       position: absolute;
@@ -241,6 +267,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(211.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(211.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(28) {
       position: absolute;
@@ -248,6 +275,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(216deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(216deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(29) {
       position: absolute;
@@ -255,6 +283,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(220.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(220.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(30) {
       position: absolute;
@@ -262,6 +291,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(225deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(225deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(31) {
       position: absolute;
@@ -269,6 +299,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(229.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(229.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(32) {
       position: absolute;
@@ -276,6 +307,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(234deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(234deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(33) {
       position: absolute;
@@ -283,6 +315,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(238.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(238.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(34) {
       position: absolute;
@@ -290,6 +323,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(243deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(243deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(35) {
       position: absolute;
@@ -297,6 +331,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(247.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(247.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(36) {
       position: absolute;
@@ -304,6 +339,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(252deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(252deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(37) {
       position: absolute;
@@ -311,6 +347,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(256.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(256.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(38) {
       position: absolute;
@@ -318,6 +355,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(261deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(261deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(39) {
       position: absolute;
@@ -325,6 +363,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(265.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(265.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(40) {
       position: absolute;
@@ -332,6 +371,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(270deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(270deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(41) {
       position: absolute;
@@ -339,6 +379,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(274.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(274.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(42) {
       position: absolute;
@@ -346,6 +387,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(279deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(279deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(43) {
       position: absolute;
@@ -353,6 +395,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(283.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(283.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(44) {
       position: absolute;
@@ -360,6 +403,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(288deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(288deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(45) {
       position: absolute;
@@ -367,6 +411,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(292.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(292.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(46) {
       position: absolute;
@@ -374,6 +419,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(297deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(297deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(47) {
       position: absolute;
@@ -381,6 +427,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(301.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(301.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(48) {
       position: absolute;
@@ -388,6 +435,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(306deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(306deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(49) {
       position: absolute;
@@ -395,6 +443,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(310.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(310.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(50) {
       position: absolute;
@@ -402,6 +451,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(315deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(315deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(51) {
       position: absolute;
@@ -409,6 +459,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(319.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(319.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(52) {
       position: absolute;
@@ -416,6 +467,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(324deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(324deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(53) {
       position: absolute;
@@ -423,6 +475,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(328.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(328.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(54) {
       position: absolute;
@@ -430,6 +483,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(333deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(333deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(55) {
       position: absolute;
@@ -437,6 +491,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(337.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(337.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(56) {
       position: absolute;
@@ -444,6 +499,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(342deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(342deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(57) {
       position: absolute;
@@ -451,6 +507,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(346.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(346.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(58) {
       position: absolute;
@@ -458,6 +515,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(351deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(351deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(59) {
       position: absolute;
@@ -465,6 +523,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(355.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(355.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(60) {
       position: absolute;
@@ -472,6 +531,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(360deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(360deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(61) {
       position: absolute;
@@ -479,6 +539,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(364.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(364.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(62) {
       position: absolute;
@@ -486,6 +547,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(369deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(369deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(63) {
       position: absolute;
@@ -493,6 +555,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(373.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(373.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(64) {
       position: absolute;
@@ -500,6 +563,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(378deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(378deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(65) {
       position: absolute;
@@ -507,6 +571,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(382.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(382.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(66) {
       position: absolute;
@@ -514,6 +579,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(387deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(387deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(67) {
       position: absolute;
@@ -521,6 +587,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(391.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(391.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(68) {
       position: absolute;
@@ -528,6 +595,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(396deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(396deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(69) {
       position: absolute;
@@ -535,6 +603,7 @@
       width: 20px;
       background:gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(400.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(400.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(70) {
       position: absolute;
@@ -542,6 +611,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(405deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(405deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(71) {
       position: absolute;
@@ -549,6 +619,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(409.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(409.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(72) {
       position: absolute;
@@ -556,6 +627,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(414deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(414deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(73) {
       position: absolute;
@@ -563,6 +635,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(418.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(418.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(74) {
       position: absolute;
@@ -570,6 +643,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(423deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(423deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(75) {
       position: absolute;
@@ -577,6 +651,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(427.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(427.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(76) {
       position: absolute;
@@ -584,6 +659,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(432deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(432deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(77) {
       position: absolute;
@@ -591,6 +667,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(436.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(436.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(78) {
       position: absolute;
@@ -598,6 +675,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(441deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(441deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(79) {
       position: absolute;
@@ -605,6 +683,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(445.5deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(445.5deg) translateX(150px) rotateY(90deg);
     }
     .coin__edge div:nth-child(80) {
       position: absolute;
@@ -612,6 +691,7 @@
       width: 20px;
       background: gold;
       transform: translateY(144.1125px) translateX(140px) rotateZ(450deg) translateX(150px) rotateY(90deg);
+      -ms-transform: translateY(144.1125px) translateX(140px) rotateZ(450deg) translateX(150px) rotateY(90deg);
     }
     .coin__shadow {
       position: absolute;
@@ -638,6 +718,10 @@
       50% {
         transform: translateY(-300px) rotate(-40deg);
       }
+    }
+
+    .custom-height {
+      height: 250px;
     }
 
 </style>
@@ -794,7 +878,7 @@
                         <div class="col-lg-12 col-md-12 col-xl-12 col-xs-12" style="margin-bottom: -108px;">
                             <div class="tm-service-image offset-md-3">
                                 <div class="tm-service-image-1 is-visible" style="margin-top: -92px; margin-bottom: -130px;">
-                                 <iframe  class="pcvid" src="https://www.youtube.com/embed/BABmKitmkic?rel=0&amp;showinfo=0" frameborder="0"  allowFullScreen />
+                                 <iframe  class="pcvid" src="https://www.youtube.com/embed/CHfxYfYnKpE?rel=0&amp;showinfo=0" frameborder="0"  allowFullScreen />
 
                                  <!-- <iframe class="pcvid" src="https://www.youtube.com/embed/BABmKitmkic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                 </div>
@@ -828,6 +912,7 @@
   }
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    -mo-z-transform: rotateY(180deg);
   }
   .flip-card-front, .flip-card-back {
     position: absolute;
@@ -840,6 +925,11 @@
     background-color: #2980b9;
     /* color: white; */
     transform: rotateY(180deg);
+    /* -mo-z-transform: rotateY(0deg); */
+  }
+  .flip-card:hover .flip-card-back {
+    backface-visibility: visible;
+    -mo-z-transform: rotateY(180deg);
   }
 
 </style>
@@ -1108,6 +1198,25 @@
           </div>
             <!--// About Us Area -->
 
+          <!--// Global Exchange -->
+
+          <div id="tm-area-services" class="tm-services-area tm-section tm-padding-section bg-white">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="tm-sectiontitle text-center">
+                                <h4>Global Exchange</h4>
+                               <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                                <br><br>
+                            </div>
+                        </div>
+                        <div class="">
+                          <img class="img-responsive custom-height" src="/images/probitexchange.png" height="auto">
+                        </div>
+                    </div>
+                </div>
+          </div>
+
             <!-- Services Area -->
             <div id="tm-area-services" class="tm-services-area tm-section tm-padding-section bg-white">
                 <div class="container">
@@ -1214,173 +1323,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
-              <div class="tm-sectiontitle text-center">
-                    <h4>TESTIMONIAL'S</h4>
-                    <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
-              </div>
-               <div class="testimonials">
-                <!-- CARD 1 START-->
-                <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"I always had to compramise with my goals and couldn't increase my savings with my previous plans . iheard from a friend about ES staking and now I am more focused and able to achieve my goals by myself, with the help of TimeAlly Plan"</p>
-                    <div class="image">
-                      <img src="images/mohid1.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Mohid Kazi <br>
-                        <span>1500ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <!-- CARD 1 end-->
-                
-                <!-- CARD 2 START-->
-                <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"I staked ES from TimeAlly, beacause it raises expectations from pathetic decades-old options to plan Goals systematically. Timeally got the potential to surpass all other retirement slutions & Goal achieving tools"</p>
-                    <div class="image">
-                      <img src="images/apurva.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Apurva Kulkarni <br>
-                        <span>1000ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <!-- CARD 2 end-->
-                <!-- CARD 3 START-->
-                <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"They were many technological "AWE" factors which motivates me take TimeVault plan. mainly its transparency which is achieved by blockchain's algorithmic complexity. Additionally,it is very awesome combination of nextgen technologies "</p>
-                    <div class="image">
-                      <img src="images/Gaurav.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Gourav Singh<br>
-                        <span>2500Es</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <!-- CARD 3 end-->
-                 <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"TSGAP lets you choose your staking amount in Era Swap according to your ES goals. So, it becomes a very convenient plan for everyone who look forward to increase their count of ES in future"<br><br></p>
-                    <div class="image">
-                      <img src="images/Mahadev.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Mahadev Kadam <br>
-                        <span>1000ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"While looking at decade old asset creation options I am thankful to find TSGAP smart contract based new asset class"<br><br><br><br><br></p>
-                    <div class="image">
-                      <img src="images/Pratik.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Pratik Gada <br>
-                        <span>10000ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                 <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"I invested in this plan because it is based on smart contract which means not even its developers can tamper wth it, once it is deployed"<br><br><br><br></p>
-                    <div class="image">
-                      <img src="images/Mehboob.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Mehboob Ali Shaikh<br>
-                        <span>1000ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                 <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"Since the increasing number of bank frauds, I don't believe in any other plan but this, beacause the staked ES in this plan can't be double-spend & moved out for any other purpose as this is completely managed by Blockchain-based smart contract "</p>
-                    <div class="image">
-                      <img src="images/Sanket.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Sanket Parab<br>
-                        <span>10000ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                 <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"I decided to stake ES because you don't have to be an experienced investor with sophisticated knowledge of financial markets to stake ES from TimeAlly. It's really simple and reliable"<br><br><br></p>
-                    <div class="image">
-                      <img src="images/Tejas.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Tejas Lende<br>
-                        <span>1667ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                 <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"Being a Blockchain developer I know the technology is fully transparent so I already know benefits. As its web 3.0 fully decentralised smart contract driven it will give guaranteed returns with profit"<br><br><br></p>
-                    <div class="image">
-                      <img src="images/Vishal Baraiya.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Vishal Baraiya<br>
-                        <span>12500ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                
-                 <div class="card">
-                  <div class="layer"></div>
-                  <div class="content">
-                    <p align="justify">"I am a fresher and I want to save my future. So i was looking for a plan which I can afford & then I came across TimeAlly Plan, and I am glad I did because TimeAlly lets you choose your minimum staking Era Swap"<br><br><br></p>
-                    <div class="image">
-                      <img src="images/Kaustubh.png" alt="">
-                    </div>
-                    <div class="details">
-                      <h2>
-                        Kaustubh Gudekar<br>
-                        <span>666ES</span>            
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              
-              </div>
-            </div>
+            
               
                 
             <!--// Services Area -->
@@ -1413,12 +1356,12 @@
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
                                           <p>Please watch this video to understand "Era Swap Life - One World"</p>
-                                          <iframe src="https://www.youtube.com/embed/BABmKitmkic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <iframe src="https://www.youtube.com/embed/CHfxYfYnKpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-header" id="tm-accordion1-heading1n2">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse1n2"
@@ -1434,7 +1377,7 @@
                                           <iframe src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="card">
                                     <div class="card-header" id="tm-accordion1-heading1">
@@ -1448,7 +1391,7 @@
                                     <div id="tm-accordion1-collapse1" class="collapse" aria-labelledby="tm-accordion1-heading1"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
-                                          <iframe src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <iframe src="https://www.youtube.com/embed/NElgJEKOReI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -1465,7 +1408,7 @@
                                     <div id="tm-accordion1-collapse2" class="collapse" aria-labelledby="tm-accordion1-heading2"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
-                                           <iframe  src="https://www.youtube.com/embed/qn1q9_SPeT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                           <iframe  src="https://www.youtube.com/embed/Jtc3unocmEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>

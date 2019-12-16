@@ -29,7 +29,7 @@
 </div>
         <div class="tm-footer-toparea tm-padding-section" >
             <div class="row widgets tm-footer-widgets" style="padding-top: 0px !important; padding-bottom: 3px !important;">
-                <div class="col-xl-4 col-lg- col-md-4 col-12">
+                <div class="col-xl-3 col-lg- col-md-4 col-12">
                     <div class="single-widget widget-info">
                         <a href="/" class="widget-info-logo">
                             <img src="/images/es_newlogo-white-min.png" width="180px" alt="">
@@ -40,15 +40,17 @@
                     </div>
                 </div>
 
-                <div class="col-xl-2 col-lg-4 col-md-4 col-12">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-12">
                     <div class="single-widget">
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
-                            <li><i class="fa fa-angle-double-right"></i> <a href="/create-new-wallet">Create Wallet</a></li>
-                            <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li>
-                            <!-- <li><a href="#">Advantages to Community</a></li> -->
-                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
-                          
+                            <li><h4 class="text-white">Smart Contracts Address</h4></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>Era Swap Token (ES)</span></a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x20ee679d73559e4c4b5e3b3042b61be723828d6c#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>Newly Released Token (NRT)</span></a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x42225682113E6Ed3616B36B4A72BbaE376041D7c#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>BetDeEx DApp</span></a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x5630ee5f247bd6b61991fbb2f117bbeb45990876#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>TimeAlly DApp</span></a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0xbad9af4db5401b7d5e8177a18c1d69c35fc03fd3#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>TSGAP DApp</span></a></li>
+                            <!-- <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -56,14 +58,18 @@
                     <div class="single-widget">
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
+                            <li><h4 class="text-white">Useful Links</h4></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/EraSwapLife.pdf" target="_blank">User Guide</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">White Paper</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_lightpaper.pdf" target="_blank">Light Paper</a></li>
-                             <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/EraSwapLife.pdf" target="_blank">User Guide</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="/create-new-wallet">Create Wallet</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12" on:click={toggle}>
-                    <iframe src="https://www.youtube.com/embed/X4zp5zRP3_Y?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/WTydWvczn8g?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-recentpost">                       
@@ -72,7 +78,7 @@
             </div>            
         </div>
     </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-12 offset-md-5">
                     <h4 class="text-white">Smart Contracts Address</h4><br>
                 </div>        
@@ -91,7 +97,10 @@
                  <div class="col-md-3">
                      <a href="https://etherscan.io/address/0x5630ee5f247bd6b61991fbb2f117bbeb45990876#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>TimeAlly DApp</span></a>
                 </div>
-            </div>
+                <div class="col-md-3">
+                     <a href="https://etherscan.io/address/0xbad9af4db5401b7d5e8177a18c1d69c35fc03fd3#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>TSGAP DApp</span></a>
+                </div>
+            </div> -->
         <div class="tm-footer-bottomarea">
             <div class="row align-items-center">
                 <div class="col-md-7">

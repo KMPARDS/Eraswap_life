@@ -582,7 +582,7 @@ input:checked + .slider:before {
 	text-align: center;
 	white-space: nowrap;
   height: 100%;
-  
+  display: none;
 }
 
 #css-only-modals:before {
@@ -5838,7 +5838,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 }
 
 .single-widget {
-  margin-top: 40px;
+  margin-bottom: 40px;
   padding: 30px;
   background: #F5F9FB;
 }
