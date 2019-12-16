@@ -521,14 +521,15 @@
             <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
                 <div class="card1">
 
-                  <div class="card-body pos-relative pd-0 ex5">
+                  <div class="card-body pos-relative pd-0 ex5 p-2">
+                    <h4>ES/BTC</h4>
                     Please select an interval:
                     <select id="probit-graph">
                     </select>
+                    <a style="display:inline; margin:0" target="_blank" href="https://www.probit.com/app/exchange/ES-BTC">(Source ProbitGlobal)</a>
                     <div class="wrapper">
                       <div class="ht-100 ht-lg-200" id="graph-container"> <canvas id="probitgraph"></canvas></div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -2366,10 +2367,16 @@ const updateGraph = () => {
       $("#ltc-price-usd").html('$'+result.ticker.price);
     }});
 
+    const baseUrl = 'https://eraswap.technology';
+    // const baseUrl = 'http://localhost:3000'
 
     $.ajax({
-      url: "https://api.probit.com/api/exchange/v1/ticker?market_ids=ES-USDT%2CES-BTC",
-      success: function(result){
+      url: baseUrl+'/probit/getESPrice',//"https://api.probit.com/api/exchange/v1/ticker?market_ids=ES-USDT%2CES-BTC",
+      success: function(result2){
+        if(!result2.data.success) {
+          return console.log('ERROR from Probit API:', result2.data.error);
+        }
+        const result = result2.data.probitResponse;
         window.isOnProduction || console.log('ES-USDT CES-BTC', result);
         window.esPrice = Number(result.data[0].last);
         updateMarketCap();
@@ -2401,10 +2408,6 @@ const updateGraph = () => {
         });
         $('#volume-of-probit').html(window.lessDecimals(String(window.esPrice * totalVolume)) + ' USDT');
     }});
-
-
-
-    const baseUrl = 'https://eraswap.technology';
 
     $.ajax({
       url: baseUrl+'/eraswap/esTotalSupply',
