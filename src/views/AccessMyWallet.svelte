@@ -123,8 +123,9 @@ async function connectMetamask() {
     return true;
 
   } catch (e) {
-    error_message = e.message;
-    alert('Error: '+e.message);
+    const emessage = e.message.includes('window.ethereum') ? 'It seems that Metamask is not installed. If you already have it installed, please check if it is allowed for EraSwap.Life website.' : e.message;
+    error_message = emessage;
+    alert('Error: '+emessage);
   }
 }
 
