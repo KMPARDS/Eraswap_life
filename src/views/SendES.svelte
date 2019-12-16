@@ -211,7 +211,7 @@
                     })()} ETH
                   <button disabled={txHash} on:click={sendES}>{!txHash ? (signing ? 'Signing tx...' : 'Sign Tx and Send it') : 'Tx sent'}</button>
                   {#if txHash}
-                    <a href={`https://etherscan.io/tx/${txHash}`}>View on EtherScan</a>
+                    <a target="_blank" rel="noopenner noreferrer" href={`https://etherscan.io/tx/${txHash}`}>View on EtherScan</a>
                   {/if}
                 {/if}
               </div>
