@@ -9,7 +9,7 @@
     try{
     refer = get_query("refer").toLowerCase();}catch(e){
     }
-    
+
 </script>
 <style>
     .tm-funfact{padding:0px; margin-bottom:10px}
@@ -724,6 +724,11 @@
       height: 250px;
     }
 
+    .anchor-link {
+      /* color: blue; */
+      text-decoration: underline;
+    }
+
 </style>
     <!-- Wrapper -->
     <div id="wrapper" class="wrapper">
@@ -870,17 +875,22 @@
                               <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
                                 <br><br>
                                 <h6>Watch this exclusive teaser to see multiple platforms under Era Swap Ecosystem where Era Swap (ES) will be utilized as a decentralized utility token</h6>
-
+                                <a href="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE?rel=0&amp;" target="_blank" rel="noopenner noreferrer" >
+                                 <img style="margin-top:20px" src="/images/es-one-world.jpg" />
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="row ">
                         <div class="col-lg-12 col-md-12 col-xl-12 col-xs-12" style="margin-bottom: -108px;">
-                            <div class="tm-service-image offset-md-3">
-                                <div class="tm-service-image-1 is-visible" style="margin-top: -92px; margin-bottom: -130px;">
-                                 <iframe  class="pcvid" src="https://www.youtube.com/embed/CHfxYfYnKpE?rel=0&amp;showinfo=0" frameborder="0"  allowFullScreen />
+                            <div class="py-4 offset-md-3">
+                                <div class="tm-service-image-1 is-visible" style="margin-top: -82px; margin-bottom: -130px;">
+                                 <!-- <iframe  class="pcvid" src="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE?rel=0&amp;showinfo=0" frameborder="0"  allowFullScreen /> -->
+                                 <!-- <a class="anchor-link" href="https://www.youtube-nocookie.com/embed/WTydWvczn8g?rel=0&amp;" target="_blank" rel="noopenner noreferrer" >
+                                  <img src="/images/es-one-world.jpg" />
+                                 </a> -->
 
-                                 <!-- <iframe class="pcvid" src="https://www.youtube.com/embed/BABmKitmkic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                 <!-- <iframe class="pcvid" src="https://www.youtube-nocookie.com/embed/BABmKitmkic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                 </div>
                                 <div class="tm-service-image-2">
                                 </div>
@@ -1323,9 +1333,9 @@
                     </div>
                 </div>
             </div>
-            
-              
-                
+
+
+
             <!--// Services Area -->
              <div id="tm-area-faq" class="tm-faq-area tm-section tm-padding-section"  style="background: #eef2f4">
                 <div class="container">
@@ -1356,7 +1366,8 @@
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
                                           <p>Please watch this video to understand "Era Swap Life - One World"</p>
-                                          <iframe src="https://www.youtube.com/embed/CHfxYfYnKpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <!-- <iframe src="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                          <a class="anchor-link" href="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE?rel=0&amp;" target="_blank" rel="noopenner noreferrer">Click here to open this video on Youtube in a new tab.</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1374,7 +1385,7 @@
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
                                           <p>Please watch this video to understand "Era Swap Life - One World"</p>
-                                          <iframe src="https://www.youtube.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <iframe src="https://www.youtube-nocookie.com/embed/Wfxgd4l9cmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div> -->
@@ -1391,7 +1402,8 @@
                                     <div id="tm-accordion1-collapse1" class="collapse" aria-labelledby="tm-accordion1-heading1"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
-                                          <iframe src="https://www.youtube.com/embed/NElgJEKOReI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <!-- <iframe src="https://www.youtube-nocookie.com/embed/NElgJEKOReI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                          <a class="anchor-link" href="https://www.youtube-nocookie.com/embed/NElgJEKOReI?rel=0&amp;" target="_blank" rel="noopenner noreferrer">Click here to open this video on Youtube in a new tab.</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1408,7 +1420,9 @@
                                     <div id="tm-accordion1-collapse2" class="collapse" aria-labelledby="tm-accordion1-heading2"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
-                                           <iframe  src="https://www.youtube.com/embed/Jtc3unocmEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                           <!-- <iframe  src="https://www.youtube-nocookie.com/embed/Jtc3unocmEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                           <a class="anchor-link" href="https://www.youtube-nocookie.com/embed/Jtc3unocmEA?rel=0&amp;" target="_blank" rel="noopenner noreferrer">Click here to open this video on Youtube in a new tab.</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1442,7 +1456,7 @@
 
 
     </div>
-    
+
 
      <Footer />
      <div id="css-only-modals">

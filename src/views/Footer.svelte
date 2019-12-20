@@ -69,22 +69,25 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-12" on:click={toggle}>
-                    <iframe src="https://www.youtube.com/embed/WTydWvczn8g?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                
+                    <!-- <iframe src="https://www.youtube-nocookie.com/embed/WTydWvczn8g?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <h4 class="text-white">Era Swap Life</h4>
+                    <p style="margin-bottom:5px">Era Swap Life is Single Sign On (SSO) gateway which provides access to multiple utility platforms accepting Era Swap (ES) Utility token.</p>
+                    <a style="text-decoration:underline;" href="https://www.youtube-nocookie.com/embed/WTydWvczn8g?rel=0&amp" target="_blank" rel="noopenner noreferrer">View Era Swap Teaser</a>
+
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-                    <div class="single-widget widget-recentpost">                       
+                    <div class="single-widget widget-recentpost">
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </div>
             <!-- <div class="row">
                 <div class="col-md-12 offset-md-5">
                     <h4 class="text-white">Smart Contracts Address</h4><br>
-                </div>        
+                </div>
             </div>
-            
-            <div class="row offset-md-1" style="padding-bottom: 40px;">            
+
+            <div class="row offset-md-1" style="padding-bottom: 40px;">
                 <div class="col-md-3">
                      <a href="https://etherscan.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574#code" target="_blank" class="tm-button tm-button-lg tm-button-white tm-button-transparent" style="height: 41px; line-height: 36px"><i class="zmdi zmdi-apple"></i><span>Era Swap Token (ES)</span></a>
                 </div>

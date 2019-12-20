@@ -10,6 +10,7 @@
     let website = "";
     let first_time = "";
     let myActiveStaking = '';
+    let unStakedTokens = '';
     let unclaimedBenefits = '';
     let powerTokenReceived = '';
     let powerTokenBalance = '';
@@ -48,7 +49,7 @@
         try{
             balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
             address = wallet.address.toLowerCase();
-
+            // address = '0x52F88a1fFa3B21d0791014cBcF0d9FE3bdEb91D1'.toLowerCase()
             (async() => {
               try {
                 const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
@@ -57,6 +58,17 @@
               } catch (err) {
                 console.log('error from getBenefitFromAllStakingsOfUser', err.message);
                 unclaimedBenefits = '0.0';
+              }
+            })();
+
+            (async() => {
+              try {
+                const response = await axios.get(`https://eraswap.technology/timeally/getTimeAllyRewardsOfUser?input=${address}`);
+                console.log('getTimeAllyRewardsOfUser', response);
+                unStakedTokens = response.data.data.timeAllyRewards;
+              } catch (err) {
+                console.log('error from getTimeAllyRewardsOfUser', err.message);
+                unStakedTokens = '0.0';
               }
             })();
 
@@ -72,7 +84,6 @@
 
             (async() => {
               try {
-                const address = '0x52f88a1ffa3b21d0791014cbcf0d9fe3bdeb91d1';
                 const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
                 console.log('fetch-power-token-balance', response);
                 if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');
@@ -218,6 +229,11 @@
          <strong>From Your TimeAlly Stakings</strong>
          <ul>
            <li>Your Stakings in TimeAlly: {myActiveStaking ? `${myActiveStaking} ES` : 'Loading...'}</li>
+           <li>Your Unstaked Tokens in TimeAlly: {unStakedTokens ? `${unStakedTokens} ES` : 'Loading...'}
+            {#if unStakedTokens && unStakedTokens != '0.0'}
+              <a href="https://www.youtube-nocookie.com/embed/ZgkMopYEpZM?rel=0" rel="noopenner noreferrer" target="_blank">(How to Stake?)</a>
+            {/if}
+           </li>
            <li>Unclaimed All TimeAlly Monthly Benefits Till date: {unclaimedBenefits ? `${unclaimedBenefits} ES` : 'Loading...'}</li>
            <li>Power Tokens received from TimeAlly: {powerTokenReceived ? `${powerTokenReceived} ES` : 'Loading...'}</li>
            <li>Power Tokens received from other users: {powerTokenBalance ? `${powerTokenBalance} ES` : 'Loading...'}</li>
