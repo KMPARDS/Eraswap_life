@@ -391,10 +391,10 @@
                                     <span class="tm-funfact-icon">
                                       {#if window.usingMetamask}
                                         <a href="https://timeswappers.com/metamask-login?home=swapperswall" target="_blank">
-                                          <img src="/images/b-min.png" alt="">
+                                          <img src="/images/SW_Logo_Gold_Pyramid-01.png" alt="">
                                         </a>
                                       {:else}
-                                        <img src="/images/b-min.png" alt="" data="https://timeswappers.com/wallet-login?home=swapperswall" on:click={load_website}>
+                                        <img src="/images/SW_Logo_Gold_Pyramid-01.png" alt="" data="https://timeswappers.com/wallet-login?home=swapperswall" on:click={load_website}>
                                       {/if}
                                     </span>
                                 </div>
