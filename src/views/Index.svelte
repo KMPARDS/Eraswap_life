@@ -968,7 +968,7 @@
                                     </div>
                                <a href="https://timeswappers.com/swapperswall" target="_blank">  <div class="flip-card-back">
                                   <div class="tm-funfact text-center">
-                                     <img src="images/b-min.png" alt="" height="105px">
+                                     <img src="images/SW_Logo_Gold_Pyramid-01.png" alt="" height="105px">
                                   </div>
                                 </div></a>
                                 </div>
