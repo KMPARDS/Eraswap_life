@@ -47,7 +47,7 @@
     (async () => {
         try{
             balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
-            address = await wallet.getAddress();
+            address = wallet.address.toLowerCase();
 
             (async() => {
               try {
@@ -72,6 +72,7 @@
 
             (async() => {
               try {
+                const address = '0x52f88a1ffa3b21d0791014cbcf0d9fe3bdeb91d1';
                 const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
                 console.log('fetch-power-token-balance', response);
                 if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');

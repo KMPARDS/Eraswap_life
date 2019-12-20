@@ -123,8 +123,9 @@ async function connectMetamask() {
     return true;
 
   } catch (e) {
-    error_message = e.message;
-    alert('Error: '+e.message);
+    const emessage = e.message.includes('window.ethereum') ? 'It seems that Metamask is not installed. If you already have it installed, please check if it is allowed for EraSwap.Life website.' : e.message;
+    error_message = emessage;
+    alert('Error: '+emessage);
   }
 }
 
@@ -136,22 +137,22 @@ async function unlockWalletButton(loadWalletFunction) {
     // await new Promise(function(resolve, reject) {
       // const intervalId = setInterval(async() => {
         try {
-          console.log('1 print');
+          // console.log('1 print');
           const response = (await get({ address: window.wallet.address.toLowerCase() }));
           // throw new Error('test error');
           window.firstTime = response === 'True';
-          console.log('2 print');
+          // console.log('2 print');
           console.log('firstTime', window.firstTime);
           // do not show refer modal if url refer is not there
           if(!window.firstTime || window.refer) {
-            console.log('a');
+            // console.log('a');
             document.getElementById("refer-modal-close-button").click();
             document.getElementById("dashboard").click();
           } else {
-            console.log('b');
+            // console.log('b');
             document.getElementById('modal-button').click();
           }
-          console.log('3 print');
+          // console.log('3 print');
         } catch (e) {
           console.log('catch in loadWallet', e.message);
           // document.getElementById("refer-modal-close-button").click();
@@ -345,7 +346,7 @@ async function unlockWalletButton(loadWalletFunction) {
             </div>
             <button id="modal-button" data-toggle="modal" data-target="#myModal" style="display:none">{load_wallet_message}</button>
         <!--// Breadcrumb Area -->
-             <div class="modal" id="myModal">
+             <div class="modal" id="myModal" data-backdrop="static" data-keyboard="false">
                 <div class="modal-dialog">
                     <div class="modal-content">
 

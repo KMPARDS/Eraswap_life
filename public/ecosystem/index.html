@@ -2367,10 +2367,16 @@ const updateGraph = () => {
       $("#ltc-price-usd").html('$'+result.ticker.price);
     }});
 
+    const baseUrl = 'https://eraswap.technology';
+    // const baseUrl = 'http://localhost:3000'
 
     $.ajax({
-      url: "https://api.probit.com/api/exchange/v1/ticker?market_ids=ES-USDT%2CES-BTC",
-      success: function(result){
+      url: baseUrl+'/probit/getESPrice',//"https://api.probit.com/api/exchange/v1/ticker?market_ids=ES-USDT%2CES-BTC",
+      success: function(result2){
+        if(!result2.data.success) {
+          return console.log('ERROR from Probit API:', result2.data.error);
+        }
+        const result = result2.data.probitResponse;
         window.isOnProduction || console.log('ES-USDT CES-BTC', result);
         window.esPrice = Number(result.data[0].last);
         updateMarketCap();
@@ -2402,10 +2408,6 @@ const updateGraph = () => {
         });
         $('#volume-of-probit').html(window.lessDecimals(String(window.esPrice * totalVolume)) + ' USDT');
     }});
-
-
-
-    const baseUrl = 'https://eraswap.technology';
 
     $.ajax({
       url: baseUrl+'/eraswap/esTotalSupply',
