@@ -3,9 +3,9 @@
     import Footer from './Footer.svelte'
     import axios from 'axios'
 	import { onMount } from 'svelte';
-    let balance = "-";
-    let es_balance = "-";
-    let address = "-";
+    let balance = "Loading...";
+    let es_balance = "Loading...";
+    let address = "Loading...";
     let error_message = "";
     let website = "";
     let first_time = "";
@@ -16,6 +16,7 @@
     let powerTokenBalance = '';
     let timeswappersBenefit = '';
     let dayswapperReward = '';
+    let copied = false;
 
     onMount(async () => {
         if(window.opener){
@@ -160,6 +161,31 @@
         let url = event.srcElement.attributes.data.value;
     	website = await window.open( url);
     }
+
+    function copyToClipboard(containerid) {
+      if (window.getSelection) {
+        if (window.getSelection().empty) { // Chrome
+            window.getSelection().empty();
+        } else if (window.getSelection().removeAllRanges) { // Firefox
+            window.getSelection().removeAllRanges();
+        }
+      } else if (document.selection) { // IE?
+          document.selection.empty();
+      }
+
+      if (document.selection) {
+          var range = document.body.createTextRange();
+          range.moveToElementText(document.getElementById(containerid));
+          range.select().createTextRange();
+          document.execCommand("copy");
+      } else if (window.getSelection) {
+          var range = document.createRange();
+          range.selectNode(document.getElementById(containerid));
+          window.getSelection().addRange(range);
+          document.execCommand("copy");
+      }
+      copied = true;
+    }
 </script>
 
 <style>
@@ -216,44 +242,44 @@
          <div class="tm-pricebox-body">
           <ul>
                  <li>
-                  ES Balance - {es_balance}
-                  <a class="btn btn-outline-secondary" href="/send-es">Send ES</a>
+                  ES Balance - <u>{es_balance}</u>
+                  {#if !['Loading...', '0.0'].includes(es_balance)}<a class="btn btn-outline-primary" style="color:#007bff" href="/send-es">Send ES</a>{/if}
                  </li>
-                 <li>ETH Balance - {balance}</li>
-                 <li class="pcaddress"> Address - {address}</li>
-                 <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)}</li>
+                 <li>ETH Balance - <u>{balance}</u></li>
+                 <li class="pcaddress"> Address - <span id="address-text">{address}</span> {#if address !== 'Loading...'}<button class="btn btn-outline-secondary px-2 py-0" on:click={copyToClipboard.bind(null, 'address-text')}>{copied ? '✓ Copied' : '📁 Copy'}</button>{/if}</li>
+                 <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)} {#if address !== 'Loading...'}<span style="cursor:pointer" on:click={copyToClipboard.bind(null, 'address-text')}>{copied ? '✓ Copied' : '📁 Copy'}</span>{/if}</li>
          </ul>
        </div>
        <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
          <h6>Your Direct Rewards</h6>
          <strong>From Your TimeAlly Stakings</strong>
          <ul>
-           <li>Your Stakings in TimeAlly: {myActiveStaking ? `${myActiveStaking} ES` : 'Loading...'}</li>
-           <li>Your Unstaked Tokens in TimeAlly: {unStakedTokens ? `${unStakedTokens} ES` : 'Loading...'}
+           <li>Your Stakings in TimeAlly: <u>{myActiveStaking ? `${myActiveStaking} ES` : 'Loading...'}</u></li>
+           <li>Your Unstaked Tokens in TimeAlly: <u>{unStakedTokens ? `${unStakedTokens} ES` : 'Loading...'}</u>
             {#if unStakedTokens && unStakedTokens != '0.0'}
               <a href="https://www.youtube-nocookie.com/embed/ZgkMopYEpZM?rel=0" rel="noopenner noreferrer" target="_blank">(How to Stake?)</a>
             {/if}
            </li>
-           <li>Unclaimed All TimeAlly Monthly Benefits Till date: {unclaimedBenefits ? `${unclaimedBenefits} ES` : 'Loading...'}</li>
-           <li>Power Tokens received from TimeAlly: {powerTokenReceived ? `${powerTokenReceived} ES` : 'Loading...'}</li>
-           <li>Power Tokens received from other users: {powerTokenBalance ? `${powerTokenBalance} ES` : 'Loading...'}</li>
+           <li>Unclaimed All TimeAlly Monthly Benefits Till date: <u>{unclaimedBenefits ? `${unclaimedBenefits} ES` : 'Loading...'}</u></li>
+           <li>Power Tokens balance (received from TimeAlly): <u>{powerTokenBalance ? `${powerTokenBalance} ES` : 'Loading...'}</u></li>
+           <li>Power Tokens received from other users: <u>{powerTokenReceived ? `${powerTokenReceived} ES` : 'Loading...'}</u></li>
            <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
          </ul>
          <strong>From Workpool NRT</strong>
          <ul>
-           <li>As a Curator: 0.0 ES</li>
-           <li>As a Time Trader: {timeswappersBenefit ? `${timeswappersBenefit} ES` : 'Loading...'}</li>
+           <li>As a Curator: <u>0.0 ES</u></li>
+           <li>As a Time Trader: <u>{timeswappersBenefit ? `${timeswappersBenefit} ES` : 'Loading...'}</u></li>
            <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
          </ul>
          <strong>From Promotions as an introducer:</strong>
          <ul>
-           <li>EraSwap Academy direct bounty incentive: 0.0 ES</li>
-           <li>BetDeEx ÐApp direct bounty incentive: 0.0 ES</li>
-           <li>TimeAlly Club direct bounty incentive: 0.0 ES</li>
+           <li>EraSwap Academy direct bounty incentive: <u>0.0 ES</u></li>
+           <li>BetDeEx ÐApp direct bounty incentive: <u>0.0 ES</u></li>
+           <li>TimeAlly Club direct bounty incentive: <u>0.0 ES</u></li>
          </ul>
          <strong>From your DaySwappers Tree</strong>
          <ul>
-           <li>Dayswappers Reward: {dayswapperReward ? dayswapperReward + ' ES' : 'Loading...'}</li>
+           <li>Dayswappers Reward: <u>{dayswapperReward ? dayswapperReward + ' ES' : 'Loading...'}</u></li>
          </ul>
        </div>
        <!-- <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
