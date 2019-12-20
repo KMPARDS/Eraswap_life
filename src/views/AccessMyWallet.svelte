@@ -14,6 +14,19 @@
     window.testMetamask = true;
     window.usingMetamask = false;
 
+    function getSubmitOnEnterPress() {
+      let enterButtonAllowed = true; // to avoid issue due to user pressing enter twice
+      return (loadWalletFunction, event) => {
+        enterButtonAllowed = true;
+        if (event.keyCode === 13 && enterButtonAllowed) {
+          enterButtonAllowed = false;
+          unlockWalletButton(loadWalletFunction);
+        }
+      }
+    }
+
+    const submitOnEnterPress = getSubmitOnEnterPress();
+
     function load_wallet() {
       window.usingMetamask = false;
         try{
@@ -208,7 +221,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                         </div>
 
                                                         <div class="tm-pricebox-price">
-                                                          <input style="height: 39px" type="password" bind:value={wallet_password} placeholder="Enter the Password">
+                                                          <input style="height: 39px" type="password" on:keyup={submitOnEnterPress.bind(null, load_by_keystore)} bind:value={wallet_password} placeholder="Enter the Password">
                                                         </div>
 
                                                         </div>
@@ -244,7 +257,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                               <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br>
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
-                                                            <textarea bind:value={mnemonic}></textarea>
+                                                            <textarea on:keyup={submitOnEnterPress.bind(null, load_wallet)} bind:value={mnemonic}></textarea>
 
                                                             <a href="/dashboard" id="dashboard" style="display: none">Access</a>
                                                             </div>
@@ -281,7 +294,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                             <div class="row">
                                                                 <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                                                  <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br><br>
-                                                                <input  type="text" bind:value={private_key} placeholder="Enter Private Key">
+                                                                <input  type="text" on:keyup={submitOnEnterPress.bind(null, load_by_private)} bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
 
                                                                 </div>
