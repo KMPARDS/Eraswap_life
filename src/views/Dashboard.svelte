@@ -1,7 +1,8 @@
 <script>
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
-    import axios from 'axios'
+    import axios from 'axios';
+    import copy from 'copy-to-clipboard';
 	import { onMount } from 'svelte';
     let balance = "Loading...";
     let es_balance = "Loading...";
@@ -162,28 +163,8 @@
     	website = await window.open( url);
     }
 
-    function copyToClipboard(containerid) {
-      if (window.getSelection) {
-        if (window.getSelection().empty) { // Chrome
-            window.getSelection().empty();
-        } else if (window.getSelection().removeAllRanges) { // Firefox
-            window.getSelection().removeAllRanges();
-        }
-      } else if (document.selection) { // IE?
-          document.selection.empty();
-      }
-
-      if (document.selection) {
-          var range = document.body.createTextRange();
-          range.moveToElementText(document.getElementById(containerid));
-          range.select().createTextRange();
-          document.execCommand("copy");
-      } else if (window.getSelection) {
-          var range = document.createRange();
-          range.selectNode(document.getElementById(containerid));
-          window.getSelection().addRange(range);
-          document.execCommand("copy");
-      }
+    function copyToClipboard() {
+      copy(address);
       copied = true;
     }
 </script>
@@ -246,8 +227,8 @@
                   {#if !['Loading...', '0.0'].includes(es_balance)}<a class="btn btn-outline-primary" style="color:#007bff" href="/send-es">Send ES</a>{/if}
                  </li>
                  <li>ETH Balance - <u>{balance}</u></li>
-                 <li class="pcaddress"> Address - <span id="address-text">{address}</span> {#if address !== 'Loading...'}<button class="btn btn-outline-secondary px-2 py-0" on:click={copyToClipboard.bind(null, 'address-text')}>{copied ? '✓ Copied' : '📁 Copy'}</button>{/if}</li>
-                 <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)} {#if address !== 'Loading...'}<span style="cursor:pointer" on:click={copyToClipboard.bind(null, 'address-text')}>{copied ? '✓ Copied' : '📁 Copy'}</span>{/if}</li>
+                 <li class="pcaddress"> Address - {address} {#if address !== 'Loading...'}<button class="btn btn-outline-secondary px-2 py-0" on:click={copyToClipboard}>{copied ? '✓ Copied' : '📁 Copy'}</button>{/if}</li>
+                 <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)} {#if address !== 'Loading...'}<button class="btn btn-outline-secondary px-2 py-0" on:click={copyToClipboard}>{copied ? '✓ Copied' : '📁 Copy'}</button>{/if}</li>
          </ul>
        </div>
        <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
