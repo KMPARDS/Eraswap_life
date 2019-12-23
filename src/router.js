@@ -37,4 +37,10 @@ router('/send-es', () =>
     )
 );
 
+router('/swapperswall', () =>
+    import(/* webpackChunkName: "something" */ './views/SwappersWall.svelte').then(
+        module => page.set({ component: module.default })
+    )
+);
+
 export default router
