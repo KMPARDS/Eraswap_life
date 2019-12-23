@@ -46,10 +46,10 @@
   <p>Since, SwappersWall is a Web 3.0 based website, you will need to have a Ethereum-compatible crypto-wallet. If you don't have one, it's very easy to create a new wallet on your own computer and use it to access SwappersWall.</p>
 
   <p>To proceed by creating a new wallet, click on the below button.</p>
-  <button>Create New Wallet</button>
+  <a href="/create-new-wallet" class="btn btn-primary tm-button tm-button-sm text-white"><span class="text-white">Create New Wallet</span></a>
 
   <p>If you already have a Ethereum-compatible crypto-wallet, i.e. keystore file, private key, mnemonic phrase, Metamask (supports Hardware Wallets), you can click the below button to access SwappersWall using your existing wallet.</p>
-  <button>Access My Wallet</button>
+  <a href="/access-my-wallet" class="btn btn-primary tm-button tm-button-sm"><span class="text-white">Access My Wallet</span></a>
 
 {/if}
 
