@@ -4,8 +4,8 @@
     import axios from 'axios';
     import copy from 'copy-to-clipboard';
 	import { onMount } from 'svelte';
-    let balance = "Loading...";
-    let es_balance = "Loading...";
+    let balance = "";
+    let es_balance = "";
     let address = "Loading...";
     let error_message = "";
     let website = "";
@@ -18,6 +18,13 @@
     let timeswappersBenefit = '';
     let dayswapperReward = '';
     let copied = false;
+    let esPriceUSDT;
+    let ethPriceUSDT;
+    let showMore = false;
+    const COPYSTATE = {
+      DEFAULT: 0, HOVER: 1, COPIED: 2
+    }
+    let addressCopied = COPYSTATE.DEFAULT;
 
     onMount(async () => {
         if(window.opener){
@@ -89,8 +96,8 @@
                 const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
                 console.log('fetch-power-token-balance', response);
                 if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');
-                powerTokenBalance = response.data.balance;
-                powerTokenReceived = response.data.received;
+                powerTokenBalance = response.data.balance || '0.0';
+                powerTokenReceived = response.data.received || '0.0';
               } catch (err) {
                 powerTokenBalance = '0.0';
                 powerTokenReceived = '0.0';
@@ -118,6 +125,31 @@
                 console.log(err.message);
               }
             })();
+
+            (async() => {
+              try {
+                const response = await axios.get(`https://eraswap.technology/probit/getESPrice`);
+                console.log('es-price-probit', response.data);
+                esPriceUSDT = +response.data.data.probitResponse.data[0].last;
+              } catch (err) {
+                esPriceUSDT = null;
+                console.log(err.message);
+              }
+            })();
+
+            (async() => {
+              try {
+                const response = await axios.get(`https://api.coinmarketcap.com/v1/ticker/ethereum/`);
+                console.log('eth-price-cmc', response.data);
+                ethPriceUSDT = +response.data[0]['price_usd'];
+              } catch (err) {
+                ethPriceUSDT = null;
+                console.log(err.message);
+              }
+              console.log(balance,+balance,+balance*ethPriceUSDT)
+            })();
+
+
 
 
 
@@ -185,13 +217,13 @@
 <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
     <Navbar title="Access My Wallet"/>
     </div>
-    <br><br><br><br>
         <div class="tm-breadcrumb text-center">
             <!-- <h2 style="font-size: 32px; font-weight:100"></h2> -->
             <!-- <a href="createmywallet.html" class="tm-button"><span>Create A New Wallet</span></a> -->
         </div>
     <div class="container">
         {#if error_message != ""}
+        <br><br>
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
         {error_message}
         <a href="/access-my-wallet">Here</a>
@@ -202,12 +234,12 @@
 {/if}
   <div class="row justify-content-center">
   <style>
-@media(max-width:768px){
+@media(max-width:991px){
     .pcaddress{
         display:none;
     }
 }
-@media(min-width:769px){
+@media(min-width:991px){
     .maddress{
         display:none;
     }
@@ -221,29 +253,57 @@
              <h4>Your Dashboard</h4>
          </div>
          <div class="tm-pricebox-body">
-          <ul>
-                 <li>
-                  ES Balance - <u>{es_balance}</u>
-                  {#if !['Loading...', '0.0'].includes(es_balance)}<a class="btn btn-outline-primary" style="color:#007bff" href="/send-es">Send ES</a>{/if}
-                 </li>
-                 <li>ETH Balance - <u>{balance}</u></li>
-                 <li class="pcaddress"> Address - {address} {#if address !== 'Loading...'}<button class="btn btn-outline-secondary px-2 py-0" on:click={copyToClipboard}>{copied ? '✓ Copied' : '📁 Copy'}</button>{/if}</li>
-                 <li class="maddress"> Address - {address.substring(0,6)+"...."+address.substring(36,100)} {#if address !== 'Loading...'}<button class="btn btn-outline-secondary px-2 py-0" on:click={copyToClipboard}>{copied ? '✓ Copied' : '📁 Copy'}</button>{/if}</li>
-         </ul>
+
+
+           <table style="width:100%;">
+            <tr >
+              <td width="50%">
+                <div class="my-2 ml-2 mr-1" style="border: 0px solid #000; border-radius:5px">{es_balance ? ethers.utils.commify(window.lessDecimals(es_balance)) : 'Loading'} <b>ES</b> {#if !['', '0.0'].includes(es_balance)} {#if esPriceUSDT}(~{ethers.utils.commify(window.lessDecimals(String(+es_balance * esPriceUSDT),3))} USDT){/if} <a style="color:#007bff;text-decoration:underline" href="/send-es">Send ES</a>{/if}</div>
+              </td>
+              <td width="50%">
+                <div class="my-2 mr-2 ml-1" style="border: 0px solid #000; border-radius:5px">{balance ? ethers.utils.commify(window.lessDecimals(balance)) : 'Loading'} <b>ETH</b> {#if !['', '0.0'].includes(balance) && ethPriceUSDT}(~{ethers.utils.commify(window.lessDecimals(String(+balance * ethPriceUSDT),3))} USDT){/if}</div>
+              </td>
+            </tr>
+            <tr><td colspan="2">
+              <div class="m-2" style="border: 0px solid #000; border-radius:5px; cursor:pointer" on:mouseover={() => {
+                if(address !== 'Loading...' && addressCopied !== COPYSTATE.COPIED) addressCopied = COPYSTATE.HOVER;
+              }} on:mouseout={() => {
+                if(address !== 'Loading...' && addressCopied !== COPYSTATE.COPIED) addressCopied = COPYSTATE.DEFAULT;
+              }} on:click={() => {
+                if(address !== 'Loading...' && addressCopied !== COPYSTATE.COPIED) {
+                  addressCopied = COPYSTATE.COPIED;
+                  copy(address);
+                  setTimeout(() => {
+                    addressCopied = COPYSTATE.DEFAULT
+                  },1000);
+                }
+              }}>
+                {#if addressCopied === COPYSTATE.DEFAULT}
+                <div class="pcaddress"> Your address - {address}</div>
+                <div class="maddress"> Your address - {address.substring(0,6)+"...."+address.substring(36,100)}</div>
+                {:else if addressCopied === COPYSTATE.HOVER}
+                  Click to Copy to Clipboard
+                {:else}
+                  ✓ Copied
+                {/if}
+              </div>
+            </td></tr>
+           </table>
        </div>
+      {#if showMore}
        <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
          <h6>Your Direct Rewards</h6>
          <strong>From Your TimeAlly Stakings</strong>
          <ul>
-           <li>Your Stakings in TimeAlly: <u>{myActiveStaking ? `${myActiveStaking} ES` : 'Loading...'}</u></li>
-           <li>Your Unstaked Tokens in TimeAlly: <u>{unStakedTokens ? `${unStakedTokens} ES` : 'Loading...'}</u>
+           <li>Your Stakings in TimeAlly: <u>{myActiveStaking ? `${ethers.utils.commify(window.lessDecimals(myActiveStaking))} ES` : 'Loading...'}</u> {#if !['', '0.0'].includes(myActiveStaking) && esPriceUSDT} (~{ethers.utils.commify(window.lessDecimals(String(+myActiveStaking * esPriceUSDT),3))} USDT) {/if}</li>
+           <li>Your Unstaked Tokens in TimeAlly: <u>{unStakedTokens ? `${ethers.utils.commify(window.lessDecimals(unStakedTokens))} ES` : 'Loading...'}</u> {#if !['', '0.0'].includes(unStakedTokens) && esPriceUSDT} (~{ethers.utils.commify(window.lessDecimals(String(+unStakedTokens * esPriceUSDT),3))} USDT) {/if}
             {#if unStakedTokens && unStakedTokens != '0.0'}
               <a href="https://www.youtube-nocookie.com/embed/ZgkMopYEpZM?rel=0" rel="noopenner noreferrer" target="_blank">(How to Stake?)</a>
             {/if}
            </li>
-           <li>Unclaimed All TimeAlly Monthly Benefits Till date: <u>{unclaimedBenefits ? `${unclaimedBenefits} ES` : 'Loading...'}</u></li>
-           <li>Power Tokens balance (received from TimeAlly): <u>{powerTokenBalance ? `${powerTokenBalance} ES` : 'Loading...'}</u></li>
-           <li>Power Tokens received from other users: <u>{powerTokenReceived ? `${powerTokenReceived} ES` : 'Loading...'}</u></li>
+           <li>Unclaimed All TimeAlly Monthly Benefits Till date: <u>{unclaimedBenefits ? `${ethers.utils.commify(window.lessDecimals(unclaimedBenefits))} ES` : 'Loading...'}</u> {#if !['', '0.0'].includes(unclaimedBenefits) && esPriceUSDT} (~{ethers.utils.commify(window.lessDecimals(String(+unclaimedBenefits * esPriceUSDT),3))} USDT) {/if}</li>
+           <li>Power Tokens balance (received from TimeAlly): <u>{powerTokenBalance ? `${ethers.utils.commify(window.lessDecimals(powerTokenBalance))} ES` : 'Loading...'}</u> {#if !['', '0.0'].includes(powerTokenBalance) && esPriceUSDT} (~{ethers.utils.commify(window.lessDecimals(String(+powerTokenBalance * esPriceUSDT),3))} USDT) {/if}</li>
+           <li>Power Tokens received from other users: <u>{powerTokenReceived ? `${ethers.utils.commify(window.lessDecimals(powerTokenReceived))} ES` : 'Loading...'}</u> {#if !['', '0.0'].includes(powerTokenReceived) && esPriceUSDT} (~{ethers.utils.commify(window.lessDecimals(String(+powerTokenReceived * esPriceUSDT),3))} USDT) {/if}</li>
            <!-- <li>As a BuzCafe Merchant: 0.0 ES</li> -->
          </ul>
          <strong>From Workpool NRT</strong>
@@ -263,6 +323,9 @@
            <li>Dayswappers Reward: <u>{dayswapperReward ? dayswapperReward + ' ES' : 'Loading...'}</u></li>
          </ul>
        </div>
+      {:else}
+        <button on:click={() => showMore = true}>Show More</button>
+      {/if}
        <!-- <div style="background-color: #fafafa; border-radius: 4px; margin: .5rem; text-align:left; padding: .5rem">
          <h6>Indirect Incentives from your DaySwappers Tree</h6>
          <strong>From Workpool NRT</strong>
@@ -357,9 +420,10 @@
                         <div class="col-lg-12">
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->
-                                  <h2><b>Era Swap Life is Gateway to</b></h2>
+                                  <h2><b>Welcome to Era Swap Life</b></h2>
                                    <span class="tm-sectiontitle-divider"><img src="/images/S_LIFE.png" ></span>
                                    <br><br>
+                                   <p style="font-weight: 700; text-decoration:strong">Era Swap Life is a Single Sign On (SSO) to access multiple interlinked platforms of Era Swap Ecosystem.<br>You can click on the respective icon to access the platform.</p>
                             </div>
 
                         </div>

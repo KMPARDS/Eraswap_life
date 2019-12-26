@@ -130,10 +130,10 @@
 
     /* robot */
 
-    
+
     </style>
     <style>
-      
+
           .testimonials{
             margin:20px auto 100px;
             display:grid;
@@ -194,7 +194,7 @@
             color:#fff;
           }
     </style>
-    
+
 
 <script type="application/ld+json">
   {
@@ -275,6 +275,19 @@
 
 //zemse console
 console.log('...../##/   _-_%%\\\n..../##/   /%%\\%%%\\\n.../###\\   \\%%%%%%%\\\n../#####\\__  \\%%%%%%\\\n..\\########\\  \\%%%%%/\n...\\#######|  |%%%%/\n....\\######/  /%%%/\n.....\\#\\--/  /%%%/\n\nHi there, nice to meet you!\n\nInterested to contribute to the Web 3.0 revolution? At EraSwap, we are building and engineering Web 3.0 applications for the next generation and we are in search for hackers like you to join the mission. Currently, there are openings for Blockchain Engineers, Javascript Engineers, CSS Experts, Graphics Designers. You can email: support@eraswaptechnologies.com');
+
+window.lessDecimals = (string, decimals = 2) => {
+  if (typeof string !== 'string') {
+    string = String(string);
+  }
+  window.isOnProduction || console.log('lessDecimals of', string);
+  if(!string) return window.isOnProduction || console.log('string empty', string), string;
+  let lessDecimals = string.split('.');
+  if(lessDecimals[1]&&lessDecimals[1].length >= decimals) {
+    lessDecimals[1] = lessDecimals[1].slice(0, decimals);
+  }
+  return lessDecimals.join('.');
+}
 
 </script>
 
