@@ -74,6 +74,8 @@
         keystore = json;
     };
     readFile.readAsText(uploadedFile);
+
+    document.getElementById('keystore-password').focus();
 }
 
 async function load_by_keystore() {
@@ -221,7 +223,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                         </div>
 
                                                         <div class="tm-pricebox-price">
-                                                          <input style="height: 39px" type="password" on:keyup={submitOnEnterPress.bind(null, load_by_keystore)} bind:value={wallet_password} placeholder="Enter the Password">
+                                                          <input id="keystore-password" style="height: 39px" type="password" on:keyup={submitOnEnterPress.bind(null, load_by_keystore)} bind:value={wallet_password} placeholder="Enter the Password">
                                                         </div>
 
                                                         </div>
