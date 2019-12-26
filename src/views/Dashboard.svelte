@@ -257,10 +257,10 @@
 
            <table style="width:100%;">
             <tr >
-              <td width="50%">
+              <td width="50%" valign="top">
                 <div class="my-2 ml-2 mr-1" style="border: 0px solid #000; border-radius:5px">{es_balance ? ethers.utils.commify(window.lessDecimals(es_balance)) : 'Loading'} <b>ES</b> {#if !['', '0.0'].includes(es_balance)} {#if esPriceUSDT}(~{ethers.utils.commify(window.lessDecimals(String(+es_balance * esPriceUSDT),3))} USDT){/if} <a style="color:#007bff;text-decoration:underline" href="/send-es">Send ES</a>{/if}</div>
               </td>
-              <td width="50%">
+              <td width="50%" valign="top">
                 <div class="my-2 mr-2 ml-1" style="border: 0px solid #000; border-radius:5px">{balance ? ethers.utils.commify(window.lessDecimals(balance)) : 'Loading'} <b>ETH</b> {#if !['', '0.0'].includes(balance) && ethPriceUSDT}(~{ethers.utils.commify(window.lessDecimals(String(+balance * ethPriceUSDT),3))} USDT){/if}</div>
               </td>
             </tr>
