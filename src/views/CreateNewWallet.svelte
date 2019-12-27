@@ -35,8 +35,9 @@
     async function generate_wallet(event) {
         if(noted){
             status = 4;
-            let wallet = await ethers.Wallet.fromMnemonic(saved_mnemonic.join(" "))
-            let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent((await wallet.encrypt(wallet_password)));
+            window.wallet = await ethers.Wallet.fromMnemonic(saved_mnemonic.join(" "))
+            let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent((await window.wallet.encrypt(wallet_password)));
+            window.wallet = window.wallet.connect(ethers.getDefaultProvider());
             let dlAnchorElem = document.getElementById('downloadAnchorElem');
             dlAnchorElem.setAttribute("href",     dataStr     );
             dlAnchorElem.setAttribute("download", "UTC-"+wallet.address+".json");
@@ -239,7 +240,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                         <!-- <a  href="#prices" class="btn btn-default active" style="background: #811515; color:#fff; padding:20px; margin-right: 3px" data-toggle="tab">Generate Random</a> -->
                     </li>
                     <li>
-                    <button  class="btn btn-default"  style="background: #811515; color:#fff; padding:3px 19px"  data-toggle="tab" on:click={noted_down} class:hide={status!=1}>I Wrote down My Mnemonic Phrase</button>
+
                     <!-- <a href="#features" class="btn btn-default"  style="background: #811515; color:#fff; padding:20px"  data-toggle="tab">By Mnemonic Phrase</a> -->
                     </li>
                 </ul>
@@ -275,6 +276,12 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
 
 
             {/each}
+
+            <p class:hide={status!=1}>Please write down the above mnemonic phrase on a piece of paper and keep it safe such that no one can find it. If you ever forget your keys, this mnemonic phrase can be used to recover your wallet's private key. Hence, because of the same reason it is not recommended to take screenshot of this or copy pasting the mnemonic in a file for security reasons. Once you have wrote it, press the below button to proceed.</p>
+
+            <div style="margin:auto">
+              <button  class="btn btn-default"  style="background: #811515; color:#fff; padding:3px 19px"  data-toggle="tab" on:click={noted_down} class:hide={status!=1}>I Wrote down My Mnemonic Phrase</button>
+            </div>
         </div>
 <br><br>
     <div style="text-align:center">
@@ -282,7 +289,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
       <button class="btn btn-default text-white offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px; display:inline" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
     {/if}
     {#if status==5}
-      <a href="/access-my-wallet" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5"><span style="color:#fff">Access your dashboard</span></a>
+      <a href="/dashboard" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5"><span style="color:#fff">Go to your dashboard</span></a>
     {/if}
     </div>
         </div>

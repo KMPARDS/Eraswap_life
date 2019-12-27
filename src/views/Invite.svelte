@@ -34,7 +34,7 @@
         break;
     }
 
-
+    // window.referPlatform = platform;
 
     address = ethers.utils.getAddress(refer);
     (async() => {

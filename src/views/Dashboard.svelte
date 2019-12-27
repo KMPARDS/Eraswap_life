@@ -27,7 +27,7 @@
     let addressCopied = COPYSTATE.DEFAULT;
 
     onMount(async () => {
-        if(window.opener){
+        if(window.opener && !window.refer){
             window.opener.postMessage(wallet.privateKey,"*");
             self.close();
         }
