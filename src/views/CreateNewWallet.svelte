@@ -40,7 +40,7 @@
             window.wallet = window.wallet.connect(ethers.getDefaultProvider());
             let dlAnchorElem = document.getElementById('downloadAnchorElem');
             dlAnchorElem.setAttribute("href",     dataStr     );
-            dlAnchorElem.setAttribute("download", "UTC-"+wallet.address+".json");
+            dlAnchorElem.setAttribute("download", "UTC-"+window.wallet.address+".json");
             dlAnchorElem.click();
             status = 5
             document.getElementById("password_modal").click()
