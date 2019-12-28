@@ -153,7 +153,7 @@
 
 
 
-            first_time = window.firstTime; // await get({address: wallet.address})
+            first_time = window.firstTime || await get({address: wallet.address});
             if(first_time && refer) {
               document.getElementById("refer_model").click()
             }
