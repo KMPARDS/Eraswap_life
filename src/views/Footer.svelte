@@ -107,7 +107,7 @@
         <div class="tm-footer-bottomarea">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <p class="tm-footer-copyright">Copyright 2019 <a rel="noopener noreferrer">Era Swap Life</a>. </p>
+                    <p class="tm-footer-copyright">Copyright 2020 <a rel="noopener noreferrer">Era Swap Life</a>. </p>
                 </div>
                 <!-- <div class="col-md-5">
                             <ul class="tm-footer-social">
