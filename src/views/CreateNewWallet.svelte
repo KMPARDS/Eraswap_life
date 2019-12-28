@@ -65,8 +65,9 @@
         let word = "";
         for(let e in elements){
             word = elements[e].innerText? elements[e].innerText: elements[e].value;
-            input_entry += word +" ";
+            input_entry += word && word.toLowerCase() + " ";
         }
+        // console.log(input_entry, input_entry.substring(0,saved_mnemonic.join(" ").length), saved_mnemonic.join(" "));
         noted = input_entry.substring(0,saved_mnemonic.join(" ").length) == saved_mnemonic.join(" ");
         if(noted){
             status = 3;
