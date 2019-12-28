@@ -30,6 +30,7 @@
     function load_wallet() {
       window.usingMetamask = false;
         try{
+            mnemonic = mnemonic.split('\n').join('');
             let wallet = ethers.Wallet.fromMnemonic(mnemonic);
             window.wallet = new ethers.Wallet(wallet.privateKey, provider)
             // document.getElementById("dashboard").click()
