@@ -288,6 +288,26 @@
                 {/if}
               </div>
             </td></tr>
+
+              <tr><td colspan="2">
+                Your total Era Swap portfolio:
+                  {#if es_balance && myActiveStaking && unStakedTokens && unclaimedBenefits && powerTokenReceived && esPriceUSDT}
+                  <u>~{ethers.utils.commify(
+                    window.lessDecimals(
+                      String(
+                        (+es_balance
+                        + +myActiveStaking
+                        + +unStakedTokens
+                        + +unclaimedBenefits
+                        + +powerTokenReceived) * esPriceUSDT
+                      )
+                    ,3)
+                  )} USDT</u> (excluding TA Power since Inception)
+                {:else}
+                  Calculating...
+                {/if}
+              </td></tr>
+
            </table>
        </div>
       {#if showMore}
@@ -323,6 +343,8 @@
            <li>Dayswappers Reward: <u>{dayswapperReward ? dayswapperReward + ' ES' : 'Loading...'}</u></li>
          </ul>
        </div>
+
+       <button on:click={() => showMore = false}>Show Less</button>
       {:else}
         <button on:click={() => showMore = true}>Show More</button>
       {/if}
