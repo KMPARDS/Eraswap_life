@@ -290,7 +290,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
       <button class="btn btn-default text-white offset-xl-5"  data-toggle="modal" data-target="#mnemonics"  style="background: #b3b3b3; color:#fff; padding:3px 19px; display:inline" on:click={check_noted} class:hide={status!=2} class:red_button={status==3}><span style="color:#fff">Submit Mnemonic</span></button>
     {/if}
     {#if status==5}
-      <a href="/dashboard" class="btn btn-default text-white tm-button tm-button-lg offset-xl-5"><span style="color:#fff">Go to your dashboard</span></a>
+      <a href={refer?'/dashboard':'/access-my-wallet'} class="btn btn-default text-white tm-button tm-button-lg offset-xl-5"><span style="color:#fff">{refer?'Go to your dashboard':'Load your Wallet now'}</span></a>
     {/if}
     </div>
         </div>
