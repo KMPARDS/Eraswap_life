@@ -50,6 +50,7 @@
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x42225682113E6Ed3616B36B4A72BbaE376041D7c#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>BetDeEx DApp</span></a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x5630ee5f247bd6b61991fbb2f117bbeb45990876#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>TimeAlly DApp</span></a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0xbad9af4db5401b7d5e8177a18c1d69c35fc03fd3#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>TSGAP DApp</span></a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x69e7960f6A1d6332a4be7e22916F627a3d95b1bc#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>PET DApp</span></a></li>
                             <!-- <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li> -->
                         </ul>
                     </div>
