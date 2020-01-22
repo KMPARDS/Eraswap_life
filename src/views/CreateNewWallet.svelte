@@ -37,7 +37,7 @@
             status = 4;
             window.wallet = await ethers.Wallet.fromMnemonic(saved_mnemonic.join(" "))
             let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent((await window.wallet.encrypt(wallet_password)));
-            window.wallet = window.wallet.connect(ethers.getDefaultProvider());
+            window.wallet = window.wallet.connect(new ethers.providers.InfuraProvider("homestead", "v3/3837e5b9f0f143f78f02be3aaf5c74e8"));
             let dlAnchorElem = document.getElementById('downloadAnchorElem');
             dlAnchorElem.setAttribute("href",     dataStr     );
             dlAnchorElem.setAttribute("download", "UTC-"+window.wallet.address+".json");

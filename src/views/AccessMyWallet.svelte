@@ -9,7 +9,7 @@
     let load_wallet_message = "Load wallet";
     let private_key ="";
     let gotResponse = '';
-    let provider = new ethers.providers.InfuraProvider("homestead");
+    let provider = new ethers.providers.InfuraProvider("homestead", "v3/3837e5b9f0f143f78f02be3aaf5c74e8");
     let accessWalletButtonText = 'Unlock Wallet Now';
     window.testMetamask = true;
     window.usingMetamask = false;
