@@ -793,11 +793,11 @@
         <main class="page-content">
             <!-- Features Area -->
             <div id="tm-area-features" class="tm-features-area tm-section tm-padding-section bg-white" >
-                <div class="container">
+                <div class="container" id="about_us_1">
                         <div class="tm-sectiontitle text-center">
                         <!-- <h2>About Era Swap Life</h2> -->
                             <h4>Era Swap Life is Gateway to</h4>
-                              <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                              <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                               <br>
                         </div>
                     <div class="row justify-content-center mt-30-reverse">
@@ -872,11 +872,11 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>Era Swap Life - One World</h4>
-                              <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                              <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                                 <br><br>
                                 <h6>Watch this exclusive teaser to see multiple platforms under Era Swap Ecosystem where Era Swap (ES) will be utilized as a decentralized utility token</h6>
                                 <a href="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE?rel=0&amp;" target="_blank" rel="noopenner noreferrer" >
-                                 <img style="margin-top:20px" src="/images/es-one-world.jpg" />
+                                 <img style="margin-top:20px" src="/images/es-one-world.jpg" alt="es-one-world" />
                                 </a>
                             </div>
                         </div>
@@ -953,7 +953,7 @@
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->
                                   <h4>Why Era Swap Life</h4>
-                                   <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                                   <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                                    <br><br>
                                 <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
                                 <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
@@ -971,14 +971,14 @@
                                   <div class="flip-card-inner">
                                  <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
-                                      <img src="/images/12-min.png" alt="">
+                                      <img src="/images/12-min.png" alt="12-min">
 
                                       </span>
                                          <p style="font-size:13px">Social Community Platform</p>
                                     </div>
                                <a href="https://timeswappers.com/swapperswall" target="_blank">  <div class="flip-card-back">
                                   <div class="tm-funfact text-center">
-                                     <img src="images/SW_Logo_Gold_Pyramid-01.png" alt="" height="105px">
+                                     <img src="images/SW_Logo_Gold_Pyramid-01.png" alt="SW_logo" height="105px">
                                   </div>
                                 </div></a>
                                 </div>
@@ -989,14 +989,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                         <span class="tm-funfact-icon">
-                                           <img src="/images/10-min.png" alt="">
+                                           <img src="/images/10-min.png" alt="10-min">
                                       </span>
                                       <p style="font-size:13px">Decentralized Token Vesting</p>
                                       </div>
                                   <a href="https://www.timeally.io/" target="_blank">
                                   <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/g-min.png" alt="" height="105px">
+                                        <img src="images/g-min.png" alt="g-min" height="105px">
                                     </div>
                                   </div>
                                   </a>
@@ -1008,14 +1008,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                        <span class="tm-funfact-icon">
-                                        <img src="/images/8-min.png" alt="">
+                                        <img src="/images/8-min.png" alt="8-min">
                                     </span>
                                     <p style="font-size:13px">Decentralized Wallet</p>
                                       </div>
                                 <a href="https://eraswapwallet.com/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/f-min.png" alt="" height="105px">
+                                        <img src="images/f-min.png" alt="f-min" height="105px">
                                     </div>
                                   </div>
                                   </a>
@@ -1027,14 +1027,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                        <span class="tm-funfact-icon">
-                                        <img src="/images/2-min.png" alt="">
+                                        <img src="/images/2-min.png" alt="2-min">
                                        </span>
                                     <p style="font-size:13px">P2P Marketplace Platform</p>
                                       </div>
                                   <a href="https://timeswappers.com" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                      <img src="images/A-min.png" alt="" height="105px">
+                                      <img src="images/A-min.png" alt="A-min" height="105px">
                                     </div>
                                   </div>
                                   </a>
@@ -1050,7 +1050,7 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
-                                      <img src="/images/9-min.png" alt="">
+                                      <img src="/images/9-min.png" alt="9-min">
                                     </span>
                                      <p style="font-size:13px">Affiliate Programme</p>
 
@@ -1058,7 +1058,7 @@
                                    <a href="https://dayswappers.com/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                      <img src="images/d-min.png" alt="" height="105px">
+                                      <img src="images/d-min.png" alt="d-min" height="105px">
                                       </div>
                                     </div>
                                   </a>
@@ -1071,14 +1071,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
-                                        <img src="/images/11-min.png" alt="">
+                                        <img src="/images/11-min.png" alt="11-min">
                                     </span>
                                     <p style="font-size:13px">Merchants & Shoppers e-Retail</p>
                                       </div>
                                       <a href="https://buzcafe.com/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/c-min.png" alt="" height="105px">
+                                        <img src="images/c-min.png" alt="c-min" height="105px">
                                     </div>
                                   </div>
                                   </a>
@@ -1090,14 +1090,14 @@
                                       <div class="flip-card-inner">
                                         <div class="flip-card-front">
                                         <span class="tm-funfact-icon">
-                                          <img src="/images/3-min.png" alt="">
+                                          <img src="/images/3-min.png" alt="3-min">
                                       </span>
                                       <p style="font-size:13px">eLearning Platform</p>
                                         </div>
                                         <a href="https://eraswap.academy/wallet-login" target="_blank">
                                       <div class="flip-card-back">
                                         <div class="tm-funfact text-center">
-                                        <img src="images/academy.png" alt="" height="105px">
+                                        <img src="images/academy.png" alt="academy" height="105px">
                                       </div>
                                     </div>
                                     </a>
@@ -1109,14 +1109,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                        <span class="tm-funfact-icon">
-                                        <img src="/images/5-min.png" alt="">
+                                        <img src="/images/5-min.png" alt="5-min">
                                     </span>
                                     <p style="font-size:13px">Decentralized Prediction Platform</p>
                                       </div>
                                       <a href="https://www.betdeex.com/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/betdeex-logo.png" alt="" height="105px">
+                                        <img src="images/betdeex-logo.png" alt="betdeex-logo" height="105px">
                                       </div>
                                     </div>
                                     </a>
@@ -1131,14 +1131,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                         <span class="tm-funfact-icon">
-                                        <img src="/images/7-min.png" alt="">
+                                        <img src="/images/7-min.png" alt="7-min">
                                        </span>
                                     <p style="font-size:13px">P2P Lend & Borrow</p>
                                       </div>
                                       <a href="https://computeex.net" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/comp-lb.png" alt="" height="105px" >
+                                        <img src="images/comp-lb.png" alt="comp-lb" height="105px" >
                                     </div>
                                   </div>
                                   </a>
@@ -1150,14 +1150,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                        <span class="tm-funfact-icon">
-                                        <img src="/images/6-min.png" alt="">
+                                        <img src="/images/6-min.png" alt="6-min">
                                         </span>
                                     <p style="font-size:13px">Multi Exchange Solution</p>
                                       </div>
                                       <a href="https://computeex.net" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                       <img src="images/comp.png" alt="" height="105px">
+                                       <img src="images/comp.png" alt="comp" height="105px">
                                     </div>
                                     </a>
                                   </div>
@@ -1168,14 +1168,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
-                                         <img src="/images/Farmer.png" alt="">
+                                         <img src="/images/Farmer.png" alt="Farmer">
                                     </span>
                                      <p style="font-size:13px">Farming Community</p>
                                       </div>
                                       <a href="https://valueoffarmers.org/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/vof.png" alt="" height="105px">
+                                        <img src="images/vof.png" alt="vof" height="105px">
                                     </div>
                                   </div>
                                   </a>
@@ -1187,14 +1187,14 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                       <span class="tm-funfact-icon">
-                                        <img src="/images/Dating.png" alt="">
+                                        <img src="/images/Dating.png" alt="Dating">
                                     </span>
                                     <p style="font-size:13px">Next Gen Dating and Match-Making</p>
                                       </div>
                                       <a href="https://dateswappers.com/" target="_blank">
                                     <div class="flip-card-back">
                                       <div class="tm-funfact text-center">
-                                        <img src="images/date.png" alt="" height="105px">
+                                        <img src="images/date.png" alt="date" height="105px">
                                     </div>
                                   </div>
                                   </a>
@@ -1216,12 +1216,12 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>Global Exchange</h4>
-                               <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                               <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                                 <br><br>
                             </div>
                         </div>
                         <div class="">
-                          <img class="img-responsive custom-height" src="/images/probitexchange.png" height="auto">
+                          <img class="img-responsive custom-height" src="/images/probitexchange.png" alt="probitexchange" height="auto">
                         </div>
                     </div>
                 </div>
@@ -1234,7 +1234,7 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>Advantages to Era Swap Community Members</h4>
-                               <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                               <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                                 <br><br>
                             </div>
                         </div>
@@ -1254,7 +1254,7 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4><img src="/images/divider-logo-min.png"/> Single Sign On to Ecosystem (SSO)</h4>
+                                            <h4><img src="/images/divider-logo-min.png" alt="divider-logo-min"/> Single Sign On to Ecosystem (SSO)</h4>
                                             <p style="margin-left: 33px;">Ease of access and convenience to users for getting access to all platforms of Era Swap Ecosystem</p>
                                         </div>
                                     </div>
@@ -1272,7 +1272,7 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4><img src="/images/divider-logo-min.png"/> Integrated with Wallet</h4>
+                                            <h4><img src="/images/divider-logo-min.png" alt="divider-logo-min"/> Integrated with Wallet</h4>
                                             <p style="margin-left: 33px;">Integrated with your Wallet to receive all benefits from inter-linked platforms</p>
                                         </div>
                                     </div>
@@ -1290,7 +1290,7 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4><img src="/images/divider-logo-min.png"/> Self Control</h4>
+                                            <h4><img src="/images/divider-logo-min.png" alt="divider-logo-min"/> Self Control</h4>
                                             <p style="margin-left: 33px;">Control and privacy in your hands as the private keys stays with you only</p>
                                         </div>
                                     </div>
@@ -1308,7 +1308,7 @@
                                             </svg>
                                         </span>
                                         <div class="tm-service-content">
-                                            <h4><img src="/images/divider-logo-min.png"/> Mapping</h4>
+                                            <h4><img src="/images/divider-logo-min.png" alt="divider-logo-min"/> Mapping</h4>
                                             <p style="margin-left: 33px;">Mapped with your usage, utility, rewards and referrals</p>
                                         </div>
                                     </div>
@@ -1343,7 +1343,7 @@
                         <div class="col-lg-8">
                             <div class="tm-sectiontitle text-center">
                                 <h4>FAQ's</h4>
-                                <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                                <span class=""><img src="/images/S_LIFE.png" alt="s_life" height="30px"></span>
                             </div>
                         </div>
                     </div>
@@ -1358,7 +1358,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse1n1"
                                                 aria-expanded="true" aria-controls="tm-accordion1-collapse1n1">
-                                                <img src="/images/q.png"> What is Era Swap Life?
+                                                <img src="/images/q.png" alt="q"> What is Era Swap Life?
                                             </button>
                                         </h5>
                                     </div>
@@ -1395,7 +1395,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse1"
                                                 aria-expanded="true" aria-controls="tm-accordion1-collapse1">
-                                                <img src="/images/q.png"> How to use Era Swap Life Single Sign On to access Era Swap Ecosystem?
+                                                <img src="/images/q.png" alt="q"> How to use Era Swap Life Single Sign On to access Era Swap Ecosystem?
                                             </button>
                                         </h5>
                                     </div>
@@ -1413,7 +1413,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse2"
                                                 aria-expanded="false" aria-controls="tm-accordion1-collapse2">
-                                               <img src="/images/q.png">  How to Stake TimeAlly from Era Swap Life?
+                                               <img src="/images/q.png" alt="q">  How to Stake TimeAlly from Era Swap Life?
                                             </button>
                                         </h5>
                                     </div>
@@ -1431,7 +1431,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#tm-accordion1-collapse3"
                                                 aria-expanded="false" aria-controls="tm-accordion1-collapse3">
-                                               <img src="/images/q.png">  What if my private key got exposed?
+                                               <img src="/images/q.png" alt="q">  What if my private key got exposed?
                                             </button>
                                         </h5>
                                     </div>

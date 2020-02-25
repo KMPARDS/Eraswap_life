@@ -167,7 +167,7 @@
           <div class="col-12 mg-t-10">
             <div class="card">
               <div class="card-header">
-                <h5 class="mg-b-0">1 ES <img src="images/S_LIFE.png" height="24px"></h5>
+                <h5 class="mg-b-0">1 ES <img src="images/S_LIFE.png" height="24px" alt="S_LIFE"></h5>
               </div><!-- card-header -->
               <div class="card-body pd-0">
                 <div class="row no-gutters">

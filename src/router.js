@@ -43,4 +43,12 @@ router('/invite', () =>
     )
 );
 
+router('/*', () =>
+    import(/* webpackChunkName: "something" */ './views/404.svelte').then(
+        module => page.set({ component: module.default })
+    )
+);
+
+
+
 export default router
