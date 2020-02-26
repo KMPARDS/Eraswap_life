@@ -218,7 +218,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                     <div class="tm-pricebox-body"><br>
                                                      <div class="row">
                                                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                                             <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br>
+                                                             <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span><br>
                                                         <div class="tm-pricebox-price">
                                                           <input style="height: 39px" type="file"  on:change={load_keystore}>
                                                         </div>
@@ -257,7 +257,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                         <div class="tm-pricebox-body"><br>
                                                          <div class="row">
                                                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                                              <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br>
+                                                              <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span><br>
                                                              <p>Please type in your mnemonic phrase.</p>
                                                             <div class="tm-pricebox-price">
                                                             <textarea on:keyup={submitOnEnterPress.bind(null, load_wallet)} bind:value={mnemonic}></textarea>
@@ -296,7 +296,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                             <div class="tm-pricebox-body"><br>
                                                             <div class="row">
                                                                 <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                                                 <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br><br>
+                                                                 <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span><br><br>
                                                                 <input  type="text" on:keyup={submitOnEnterPress.bind(null, load_by_private)} bind:value={private_key} placeholder="Enter Private Key">
                                                                 <div class="tm-pricebox-price">
 
@@ -332,7 +332,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                 <div class="tm-pricebox-body"><br>
                                   <div class="row">
                                     <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                      <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br><br>
+                                      <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span><br><br>
                                       <div class="tm-pricebox-price">
                                         <button disabled={accessWalletButtonText === 'Please check your Metamask'} on:click={() => unlockWalletButton(connectMetamask)} class="btn btn-primary tm-button tm-button-sm" > <span class="text-white">{accessWalletButtonText === 'Unlock Wallet Now' ? 'Connect to Metamask' : accessWalletButtonText}</span></button>
                                       </div>
@@ -376,7 +376,7 @@ async function unlockWalletButton(loadWalletFunction) {
                     <div class="container">
                          <div class="row">
                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
-                                <img src="/images/S_LIFE.png" style=" display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
+                                <img src="/images/S_LIFE.png" style=" display: block; margin-left: auto; margin-right: auto; width: 50%" alt="S_LIFE"><br>
                                 <p style="text-align:center">Please enter your Referral Address</p>
                                     <div class="tm-pricebox-price" style="text-align:center">
                                         <input type="text" id="refer-address" placeholder="Enter ETH address of introducer">

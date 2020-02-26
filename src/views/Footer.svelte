@@ -5,16 +5,21 @@
 		user.loggedIn = !user.loggedIn;
 	}
 </script>
+
+
+
 <style>
 .tm-padding-section {
   padding-top: 80px;
   padding-bottom: 0px !important;
 }
+
+
 </style>
 <!-- Footer Area -->
 <div class="tm-footer bg-gradient">
     <div class="container">
-    <img src="/images/chatbot.png" class="open-button" onclick="openForm()" style="width:120px">
+    <img src="/images/chatbot.png" alt="chatbot" class="open-button" onclick="openForm()" style="width:120px">
 
 <div class="chat-popup" id="myForm">
   <form class="form-container">
@@ -34,6 +39,14 @@
                         <a href="/" class="widget-info-logo">
                             <img src="/images/es_newlogo-white-min.png" width="180px" alt="">
                         </a>
+                        <ul class="policy_list">
+                            <li><a href="https://www.facebook.com/eraswap/" target="_blank"><i class="fa fa-facebook" style="font-size:22px"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/eraswap/" target="_blank"><i class="fa fa-linkedin" style="font-size:22px"></i></a></li>
+							<li><a href="https://www.pinterest.com/eraswapt/" target="_blank"><i class="fa fa-pinterest" style="font-size:22px"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UCGCP4f5DF1W6sbCjS6y3T1g" target="_blank"><i class="fa fa-youtube" style="font-size:22px"></i></a></li>
+							<li><a href="https://www.instagram.com/eraswap/" target="_blank"><i class="fa fa-instagram" style="font-size:22px"></i></a></li>
+							<li><a href="https://medium.com/@eraswap" target="_blank"><i class="fa fa-medium" aria-hidden="true" style="font-size:22px"></i></a></li>
+                        </ul>
                         <!-- <p>Dolor enim sit et perferendis quia in. Sed perferendis aliquid quo vel
                             necessitatibus commodi similique et. Veniam ducimus sed rerum cumque ipsum eos
                             omnis eos blanditiis.</p> -->
@@ -75,6 +88,7 @@
                     <h4 class="text-white">Era Swap Life</h4>
                     <p style="margin-bottom:5px">Era Swap Life is Single Sign On (SSO) gateway which provides access to multiple utility platforms accepting Era Swap (ES) Utility token.</p>
                     <a style="text-decoration:underline;" href="https://www.youtube-nocookie.com/embed/WTydWvczn8g?rel=0&amp" target="_blank" rel="noopenner noreferrer">View Era Swap Teaser</a>
+                    
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-recentpost">
@@ -110,6 +124,10 @@
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <p class="tm-footer-copyright">Copyright 2020 <a rel="noopener noreferrer">Era Swap Life</a>. </p>
+                    <ul class="policy_list">
+                        <li><a href="/#about_us_1">About us</a> |</li>
+                        <li><a href="sitemap.html" target="_blank">Sitemap</a></li>
+                    </ul>
                 </div>
                 <!-- <div class="col-md-5">
                             <ul class="tm-footer-social">

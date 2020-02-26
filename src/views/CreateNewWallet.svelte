@@ -205,7 +205,7 @@ input:checked + .slider:after
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
               </div>
               <div class="modal-body" style="text-align: center">
-                  <span class=""><img src="/images/S_LIFE.png" height="30px"></span><br><br>
+                  <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span><br><br>
                 <h3>What is ES Life Wallet? </h3>
                 ES Life Wallet is a free, open-source, client-side interface.  ES Life Wallet allows you to interact directly with the blockchain, while you remain in full control of your keys and funds.<br><br>
 
@@ -303,7 +303,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="password_modal"> × </button>
                         </div>
                         <div class="modal-body" style="text-align: center">
-                             <span class=""><img src="/images/S_LIFE.png" height="30px"></span>
+                             <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                              {#if status === 2}
                                 <p>Your mnemonic inputs seem incorrect. You can re-enter the mnemonic else you can <strong>Generate Random</strong> and try again.</p>
                                 <a class="nav-link text-white tm-button tm-button-lg" data-dismiss="modal" aria-hidden="true"><span style="color:#fff">Close</span></a>
