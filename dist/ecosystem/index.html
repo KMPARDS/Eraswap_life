@@ -26,6 +26,8 @@
 
     <link rel="stylesheet" href="assets/css/dashforge.css">
     <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <style>
       .tx-normal{
         font-size: 18px;
@@ -84,60 +86,7 @@
         overflow-x: hidden
       }
     </style>
-    <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        padding-top: 0px;
-      }
-
-
-      h1 {
-        font-weight: normal;
-      }
-
-      li {
-        display: inline-block;
-        font-size: 1em;
-        list-style-type: none;
-        padding: 1em;
-        text-transform: uppercase;
-      }
-
-      li span {
-        display: block;
-        font-size: 1rem;
-      }
-         body, html{
-            background: #f1f1f1;
-            padding-top: 0px;
-          }
-
-          .wrapper{
-            width:100%;
-            height: 100%;
-            display:block;
-            overflow:hidden;
-            margin:0 auto;
-            padding: 0px 0px;
-            background:#fff;
-            border-radius:4px;
-          }
-
-          canvas{
-            background:#fff;
-          }
-
-          a{
-            margin-top:50px;
-            display: block;
-            text-decoration: none;
-            color: #6B0100;
-            font-weight: bold;
-            text-align: center;
-          }
-      </style>
+    
   </head>
   <body class="page-profile">
 
@@ -155,17 +104,92 @@
             <li class="nav-item"><a href="https://themeforest.net/item/dashforge-responsive-admin-dashboard-template/23725961" class="btn btn-buy"> <span>Sign Up </span> <span style="font-size: 10px">New Users</span></a></li>
             <li class="nav-item"><a href="https://themeforest.net/item/dashforge-responsive-admin-dashboard-template/23725961" class="btn btn-buy"><span>Sign In  <span style="font-size: 10px">Existing Users</span></span></a></li>
           </ul>
-      </div>
+      </div> 
       -->
     </header>
 
-    <div class="content content-fixed">
-      <div class="container-fluid pd-x-0 pd-lg-x-10 pd-xl-x-0">
-        <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
-          <!-- <div>
+    <div class="container-fluid custom_mg">
 
-            <h4 class="mg-b-0 tx-spacing--1">Welcome to Ecosystem Dashboard</h4>
-          </div> -->
+      <div style="margin-bottom: 10px;">
+        <div class="row">
+          <h4 class="mg-l-15 text-white">Dashboard</h4>
+        </div>
+        <div class="row">
+         <div class="col-lg-9">
+           <div class="card ES-card">
+             <div class="row">
+             <div class="col-lg-3">
+              <div class="row">
+                <div class="col-md-9 col-8 col-sm-6 pr-0">
+                  <div class="box-1">
+                    <h6 class="card-title float-left">Era Swap (ES)</h6>
+                    <p class="card-text float-left clear_both mg-b-0 text-1">0.0468 USDT</p>
+                    <p class="card-text float-left clear_both text-1">0.00000523 BTC</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-4 col-sm-6 p-0">
+                  <div class="box-img">
+                    <img src="images/ES.png" class="width-50" alt="bitcoin">
+                  </div>
+                </div>
+            </div>
+            </div>
+          <div class="col-lg-3 mrg-10">
+            <div class="card card-body height-95 top-card">
+              <div class="card-title">
+                <p class="txt-clr names">ES Current supply</p>
+              </div>
+              <div class="class-text">
+                <p class="txt-clr text-center" id="es-total-supply">Loading...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mrg-10">
+            <div class="card card-body height-95 top-card">
+              <div class="card-title">
+                <p class="txt-clr names">Total Es Users</p>
+              </div>
+              <div class="class-text">
+                <p class="txt-clr text-center" id="es-holders">Loading...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mrg-10">
+            <div class="card card-body height-95 top-card">
+              <div class="card-title">
+                <p class="txt-clr names">Total Stakers Es</p>
+              </div>
+              <div class="class-text">
+                <p class="txt-clr text-center" id="total-staked-es">Loading...</p>
+              </div>
+            </div>
+        </div>
+        </div>
+           </div>
+         </div>
+         <div class="col-lg-3 time-box mrg-10">
+          <h4 class="text-center text-white">Next NRT Count</h4>
+          <div class="row pd-lr-18">
+            <div class="bg_black">
+              <ul>
+                <li class="text-white"><span id="days"></span>days</li>
+                <li class="text-white"><span id="hours"></span>Hours</li>
+                <li class="text-white"><span id="minutes"></span>Minutes</li>
+                <li class="text-white"><span id="seconds"></span>Seconds</li>
+              </ul>
+          </div>
+          </div>
+         </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="content content-fixed main_content">
+      
+      <!-- <div class="container-fluid pd-x-0 pd-lg-x-10 pd-xl-x-0">
+        <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+          
 
           <div align="center" class="d-none d-md-block"></div>
           <h1 class="mg-b-0 tx-spacing--1"><b>Welcome to Ecosystem Dashboard</b></h1>
@@ -178,65 +202,124 @@
               <li style="padding-top:0;padding-bottom:0"><span id="seconds"></span>Seconds</li>
             </ul>
           </div>
-        </div>
+        </div> -->
 
 
         <div class="row row-xs">
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
-            <div class="card card-body">
+            <div class="card height-80 shadow">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-8 col-8 col-sm-6">
+                    <h6 class="card-title float-left">Bitcoin (BTC)</h6>
+                    <p class="card-text float-left clear_both txt-size">$9029.61</p>
+                  </div>
+                  <div class="col-md-4 col-4 col-sm-6">
+                    <img src="images/BitCoin.png" class="width-25" alt="bitcoin">
+                  </div>
+                </div>
+
+             </div>
+            </div>
+            <!-- <div class="card card-body">
               <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES Current Supply</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="es-total-supply">Loading...</h3>
               </div>
               <div class="chart-three">
                   <div id="flotChart6" class="flot-chart ht-30"></div>
-                </div><!-- chart-three -->
-            </div>
+                </div>chart-three
+            </div> -->
           </div><!-- col -->
+
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
-            <div class="card card-body">
+            <div class="card height-80 shadow">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-8 col-8 col-sm-6">
+                    <h6 class="card-title float-left">Ethereum (ETH)</h6>
+                    <p class="card-text float-left clear_both txt-size">$171.9</p>
+                  </div>
+                  <div class="col-md-4 col-4 col-sm-6">
+                    <img src="images/Etherum.png" class="width-25" alt="bitcoin">
+                  </div>
+
+              </div>
+              </div>
+            </div>
+            <!-- <div class="card card-body">
               <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Total ES Users</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="es-holders">Loading...</h3>
               </div>
               <div class="chart-three">
                   <div id="flotChart7" class="flot-chart ht-30"></div>
-                </div><!-- chart-three -->
-            </div>
+                </div>chart-three
+            </div> -->
           </div><!-- col -->
+
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
-            <div class="card card-body">
+            <div class="card card-body height-80 shadow">
+                <div class="card-title">
+                  <p class="names">Circulating outside ta</p>
+                </div>
+                <div class="class-text">
+                  <p class="count" id="es-outside-timeally">Loading...</p>
+                </div>
+            </div>
+            <!-- <div class="card card-body">
               <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Total Staked ES</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="total-staked-es">Loading...</h3>
               </div>
               <div class="chart-three">
                   <div id="flotChartAvailableEST" class="flot-chart ht-30"></div>
-                </div><!-- chart-three -->
-            </div>
+                </div>chart-three
+            </div> -->
           </div><!-- col -->
+
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
-            <div class="card card-body">
+            <div class="card card-body height-80 shadow">
+              <div class="card-title">
+                <p class="names">Es from nrt this month</p>
+              </div>
+              <div class="class-text">
+                <p class="count" id="nrt-released">Loading...</p>
+              </div>
+          </div>
+            <!-- <div class="card card-body">
               <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Circulating outside TA</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="es-outside-timeally">Loading...</h3>
               </div>
               <div class="chart-three">
                   <div id="flotChartAvailableEST" class="flot-chart ht-30"></div>
-                </div><!-- chart-three -->
-            </div>
+                </div> chart-three 
+            </div> -->
           </div><!-- col -->
+
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
-            <div class="card card-body">
+            <div class="card card-body height-80 shadow">
+              <div class="card-title">
+                <p class="names">numbers of dayswappers</p>
+              </div>
+              <div class="class-text">
+                <p class="count" id="total_no_of_user">Loading...</p>
+              </div>
+          </div>
+            <!-- <div class="card card-body">
               <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ES from NRT this month</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="nrt-released">Loading...</h3>
               </div>
               <div class="chart-three">
                   <div id="flotChart8" class="flot-chart ht-30"></div>
-                </div><!-- chart-three -->
-            </div>
+                </div> chart-three 
+            </div> -->
           </div><!-- col -->
+
           <!-- <div class="col-sm-6 col-lg-2 mg-t-10 mg-sm-t-0">
             <div class="card card-body">
               <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of TimeAlly Stakings</h6>
@@ -260,19 +343,728 @@
                 </div>
             </div>
           </div> -->
+
           <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
-            <div class="card card-body">
+            <div class="card card-body height-80 shadow">
+              <div class="card-title">
+                <p class="names">Ecosystem transactions</p>
+              </div>
+              <div class="class-text">
+                <p class="count" id="platform-transactions-number">Loading...</p>
+              </div>
+          </div>
+            <!-- <div class="card card-body">
               <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Number of DaySwappers</h6>
               <div class="d-flex d-lg-block d-xl-flex align-items-end">
                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1" id="total_no_of_user">Loading...</h3>
               </div>
               <div class="chart-three">
                   <div id="flotChart120" class="flot-chart ht-30"></div>
-                </div><!-- chart-three -->
-            </div>
+                </div> chart-three 
+            </div> -->
           </div><!-- col -->
 
-          <div class="col-sm-6 col-lg-2 mg-t-10 ">
+          <div class="container">
+            <div class="row d-flex justify-content-lg-around">
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">Ecosystem volume</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count" id="volume-of-platform">Loading...</p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">unused power token</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count" id="unused-power-tokens">Loading...</p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">Luck pool in nrt</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count" id="luck-pool-bal">Loading...</p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">Burn pool (IN NEXT NRT)</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count" id="burn-token-bal">Loading...</p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">Total Es Burned</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count" id="total-es-burned">Loading...</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="container">
+
+            <div class="row d-flex justify-content-lg-around">
+              <div class="col-sm-6 col-md-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">Market cap</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count" id="market-cap">Loading...</p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">24HR Vol (Probit Global)</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count" id="volume-of-probit">Loading...</p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">CrowdFund price</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count" id="crowdfund-price">Loading...</p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">All time high</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count">1.42 USDT</p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-lg-2 mg-t-10 pd_rl_6">
+                <div class="card card-body height-80 wd-120 shadow">
+                  <div class="card-title">
+                    <p class="names">ALL time low</p>
+                  </div>
+                  <div class="class-text">
+                    <p class="count">0.005 USDT</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row graph_con">
+              <div class="col-lg-6 pd-0">
+                <div class="card platform shadow">
+                  <div class="card-body tfc">
+                    <h6 class="card-title sub_heading_1">All Platform TFC Generated of this month</h6>
+                    <div data-label="Example" class="df-example">
+                      <div class="ht-100 ht-lg-300"><canvas id="chartBar2" class="chart_size"></canvas></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 charity_pool">
+                    <div class="card card-body shadow">
+                      <h6 class="card-title">Charity Pool</h6>
+                      <canvas id="doughnutChart" style="height: 150px; width: 100%;"></canvas>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 pd-0 pd_tr_15">
+                    <div class="card card-body shadow">
+                      <span class="test" style=" position:absolute;bottom:10px;left:calc(50% - 10px);display:block;" id="roi-amount">Loading</span>
+                      <span class="test" style=" position:absolute;bottom:30px;left:calc(50% - 10px);display:block;">ROI</span>
+                        <canvas id="myChart" width="400" height="215" class="m_b_20" ></canvas>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mt-2">
+                  <div class="col-lg-12 pr-0 lmwp">
+                    <div class="card card-body shadow">
+                      <h6 class="card-title">Last Month Work Pool NRT Utilisation</h6>
+                      <div class="d-flex justify-content-between">
+                        <div class="row">
+                          <div class="col-lg-12 txt_p">TIMESWAPPERS</div>
+                          <div class="col-lg-12 txt_p">0 ES</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12 txt_p text-right">0% (NRT utilized)</div>
+                          <div class="col-lg-12 txt_p text-right" id="nrtFractions-timetraders">Loading...</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="progress" style="height:2px;">
+                            <div class="progress-bar" style="width:0%;height:10px; background-color:green;"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-between mt-2">
+                        <div class="row">
+                          <div class="col-lg-12 txt_p">DAYSWAPPERS</div>
+                          <div class="col-lg-12 txt_p">0 ES</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12 txt_p text-right">0% (NRT utilized)</div>
+                          <div class="col-lg-12 txt_p text-right" id="nrtFractions-dayswappers">Loading...</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="progress" style="height:2px;">
+                            <div class="progress-bar" style="width:0%;height:10px; background-color:yellow;"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-between mt-2">
+                        <div class="row">
+                          <div class="col-lg-12 txt_p">BUZCAFE</div>
+                          <div class="col-lg-12 txt_p">0 ES</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12 txt_p text-right">0% (NRT utilized)</div>
+                          <div class="col-lg-12 txt_p text-right" id="nrtFractions-buzcafe">Loading...</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="progress" style="height:2px;">
+                            <div class="progress-bar" style="width:0%;height:10px; background-color:orange;"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-between mt-2">
+                        <div class="row">
+                          <div class="col-lg-12 txt_p">CURATOR</div>
+                          <div class="col-lg-12 txt_p">0 ES</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12 txt_p text-right">0% (NRT utilized)</div>
+                          <div class="col-lg-12 txt_p text-right" id="nrtFractions-curator">Loading...</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="progress" style="height:2px;">
+                            <div class="progress-bar" style="width:0%;height:10px; background-color:blue;"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              
+              <div class="col-lg-4">
+                <div class="card card-body shadow">
+                  <div class="row">
+                    <div class="col-lg-12 float_image">
+                        <img src="images/Time-Swappers-Favicon.png" height="25px"><h6 class="card-title">TIMESWAPPERS</h6>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-lg-5 text-center">
+                      <p class="txt_p pdy-2 para_1">Total Number of Users</p>
+                      <p class="txt_p pdy-2 para_2" id="timeswappers-no-of-users">Loading...</p>
+                    </div>
+                    <div class="col-lg-7 text-center">
+                      <p class="txt_p pdy-2 para_1">Total Number of Freelancer/Services</p>
+                      <p class="txt_p pdy-2 para_2" id="timeswappers-no-of-freelancers">Loading...</p>
+                    </div>
+                  </div>
+                  <hr class="hr_clss">
+                  <div class="row">
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-40 ht-20">TFC generated</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="timeswappers-TfcGenerated">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-40 ht-20">Total Verified</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="timeswappers-totalNoOfVerifiedUser">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 pdy-2 col-6"><p class="txt_p ht-40 ht-20">Total Certified</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="timeswappers-totalNoOfCertifiedUser">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-40 ht-20">Total Deposit Done</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="timeswappers-totalNoOfDeposit">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss">
+                  <div class="row">
+                    <div class="col-lg-6 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-40">Number of views on Freelancer Portfolio Pages</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="timeswappers-profile-views">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-40">Total Withdraw Done</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="timeswappers-totalNoOfWithdraw">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss">
+                  <div class="row">
+                    <div class="col-lg-6 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p">Total Jobs Posted</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="timeswappers-totalJobsPosted">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 pdy-2 col-6"><p class="txt_p">Total Jobs Done</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="timeswappers-totalJobsDone">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card card-body shadow mrg-15">
+                  <div class="row">
+                    <div class="col-lg-12 float_image">
+                        <img src="images/Day-Swappers--Favicon.png" height="25px"><h6 class="card-title">DAYSWAPPERS</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Total Day Swappers</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="dayswappers-total-users">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Total Liquid Rewards</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-liquid-rewards">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Total TimeAlly Rewards</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-timeally-rewards">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss_green">
+
+                  <div class="row">
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Active Users</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="dayswappers-active">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">KYC Users</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-kyc">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">White Belt</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-white">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Yellow Belt</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-yellow">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss_green">
+
+                  <div class="row">
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Orange Belt</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p" id="dayswappers-orange">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Green Belt</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-green">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Blue Belt</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-blue">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Brown Belt</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-brown">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="hr_clss_green">
+                  <div class="row">
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Red Belt</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-red">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29">Black Belt</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="dayswappers-black">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card card-body shadow">
+                  <div class="row">
+                    <div class="col-lg-12 float_image">
+                        <img src="images/Swappers-Wall-Favicon.png" height="25px"><h6 class="card-title">SWAPPERS WALL</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-40 px-1 ht-20">Power tokens this month</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="swapperswall-powertokens">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-40 ht-20">Communities</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="swapperswall-communities">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-40 ht-20">Group</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="swapperswall-groups">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss_blue">
+
+                  <div class="row">
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Pages</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="swapperswall-pages">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Swappers</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="swapperswall-friends">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Active Users</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="swapperswall-active-users">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss_blue">
+                  <div class="row">
+                    <div class="col-lg-12 pdy-2 text-center m-1">
+                      <div class="row pb-5">
+                        <div class="col-lg-12 col-6 pdy-2 text-center"><p class="txt_p ht-29 ht-20">Media Uploads</p></div>
+                        <div class="col-lg-12 col-6 pdy-2 text-center"> <p class="txt_p" id="swapperswall-media">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 py-3">
+                <div class="card card-body shadow">
+                  <div class="row">
+                    <div class="col-lg-12 float_image">
+                        <img src="images/Acadmey-Favicon.png" height="25px"><h6 class="card-title">ERASWAP ACADEMY</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-5 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Users Counts</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="academy-userscount">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Courses</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="academy-courses">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss_red">
+
+                  <div class="row">
+                    <div class="col-lg-5 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Total ES Deposited</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="academy-deposits">Loading...</p></div>
+                    </div>
+                    </div>
+                    <div class="col-lg-7 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Users Studying Count</p></div>
+                        <div class="col-lg-12 col-6 pdy-2 pb-4"> <p class="txt_p" id="academy-userstudying">Loading...</p></div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 py-3">
+                <div class="card card-body shadow">
+                  <div class="row">
+                    <div class="col-lg-12 float_image">
+                        <img src="images/BuzCafe-Favicons.png" height="25px"><h6 class="card-title">BUZCAFE</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Total Users</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="buzcafe-users-count">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Total Shops</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="buzcafe-shops-count">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Total Deposit</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="buzcafe-deposits-count">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss">
+
+                  <div class="row">
+                    <div class="col-lg-5 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Total Withdrawal</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="buzcafe-withdrawals-count">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Total Internal Transaction</p></div>
+                        <div class="col-lg-12 col-6 pdy-2 pb-4"> <p class="txt_p" id="buzcafe-transactions-count">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 py-3">
+                <div class="card card-body shadow">
+                  <div class="row">
+                    <div class="col-lg-12 float_image">
+                        <img src="images/BetDeEx-Favicons.png" height="25px"><h6 class="card-title">BETDEEX</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-5 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Total Number Of Events</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="betdeex-total-number-bets">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-20">Total Number Of Predictors</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="betdeex-total-number-bettorss">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss_green">
+
+                  <div class="row">
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-60">Total ES Volume Predicted On BetDeEx</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="betdeex-total-prediction-volume">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-60">Highest Prediction On BetDeEx</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="betdeex-highest-prediction-volume">Loading...</p></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                      <div class="row">
+                        <div class="col-lg-12 col-6 pdy-2"><p class="txt_p ht-29 ht-60">Average Prediction On BetDeEx</p></div>
+                        <div class="col-lg-12 col-6 pdy-2"> <p class="txt_p" id="betdeex-average-prediction-volume">Loading...</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4">
+                <div class="card card-body shadow">
+                  <div class="row">
+                    <div class="col-lg-12 float_image">
+                        <img src="images/TimeAlly-Favicon.png" height="25px"><h6 class="card-title">TIMEALLY STAKERS</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-4 col-6">
+                      <div class="chart-thirteen"><canvas id="chartDonut2"></canvas></div>
+                    </div>
+                    <div class="col-lg-8 col-6">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-2 pr-0"><div style=" margin:5px; width: 15px; height: 15px; background-color: #661111;"></div></div>
+                                <div class="col-lg-10 p-0 text-left"><p class="mb-0">Volume Of 1 Year Stakings</p></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 text-center"><p class="mb-1" id="one-year-stakings">Loading...</p></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-2 pr-0"><div style=" margin:5px; width: 15px; height: 15px; background-color: #4d4d4d;"></div></div>
+                                <div class="col-lg-10 p-0 text-left"><p class="mb-0">Volume Of 2 Year Stakings</p></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 text-center"><p class="mb-1" id="two-year-stakings">Loading...</p></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="d-flex align-items-center mg-t-10">
+                        <div class="wd-10 ht-10 bg-teal rounded-circle pos-relative t--1" style="background-color: #4D4D4D"></div>
+                        <span class="tx-medium mg-l-10">Volume of 1 year stakings</span>
+                        <span class="tx-rubik mg-l-auto" id="one-year-stakings">Loading...</span>
+                      </div> -->
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p class="txt_p pdy-2">Total Volume Of Stakings</p>
+                    </div>
+                    <div class="col-lg-6">
+                      <p class="txt_p pdy-2" style="color: blue;" id="timeally-total-stakings-volume">Loading...</p>
+                    </div>
+                  </div>
+                  <hr class="hr_clss_brown">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p class="txt_p pdy-2">NRT Released For TimeAlly</p>
+                    </div>
+                    <div class="col-lg-6">
+                      <p class="txt_p pdy-2" style="color: blue;" id="timeally-nrt">Loading...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card card-body shadow">
+                  <div class="row">
+                    <div class="col-lg-12 float_image">
+                        <img src="images/computeEx-Favicon.png" height="25px"><h6 class="card-title">COMPUTEEX ( Yet to go Live )</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-12 pdy-2 text-center">
+                      <div class="col-lg-12 pdy-2 text-center"><p class="txt_p ht-29">Total Number Of Transactions</p></div>
+                        <div class="col-lg-12 text-center"> <p class="txt_p" id="computeex-total-number-transactions">0.0</p></div>
+                    </div>
+                  </div>
+                  <hr class="hr_clss_green">
+
+                  <div class="row">
+                    <div class="col-lg-12 pdy-2 text-center">
+                      <div class="col-lg-12 pdy-2 text-center"><p class="txt_p ht-29">Total Volume</p></div>
+                        <div class="col-lg-12 text-center"> <p class="txt_p pb-5" id="computeex-volume">0.0</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+
+          
+         
+          
+          <!-- <div class="col-sm-6 col-lg-2 mg-t-10">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Ecosystem transactions</h6>
                 <div class="d-flex d-lg-block d-xl-flex align-items-end">
@@ -280,9 +1072,10 @@
                 </div>
                 <div class="chart-three">
                     <div id="flotChart9" class="flot-chart ht-30"></div>
-                  </div><!-- chart-three -->
+                  </div>
               </div>
-            </div><!-- col -->
+            </div>
+            
             <div class="col-sm-6 col-lg-2 mg-t-10 ">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Ecosystem Volume</h6>
@@ -291,9 +1084,9 @@
                 </div>
                 <div class="chart-three">
                     <div id="flotChart110" class="flot-chart ht-30"></div>
-                  </div><!-- chart-three -->
+                  </div>
               </div>
-            </div><!-- col -->
+            </div>
             <div class="col-sm-6 col-lg-2 mg-t-10 ">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Unused Power Tokens</h6>
@@ -302,9 +1095,9 @@
                 </div>
                 <div class="chart-three">
                     <div id="flotChart4" class="flot-chart ht-30"></div>
-                  </div><!-- chart-three -->
+                  </div>
               </div>
-            </div><!-- col -->
+            </div>
             <div class="col-sm-6 col-lg-2 mg-t-10">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Luck Pool in NRT</h6>
@@ -313,9 +1106,9 @@
                 </div>
                 <div class="chart-three">
                     <div id="flotChart5" class="flot-chart ht-30"></div>
-                  </div><!-- chart-three -->
+                  </div>
               </div>
-            </div><!-- col -->
+            </div>
             <div class="col-sm-6 col-lg-2 mg-t-10">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Burn Pool (in next NRT)</h6>
@@ -324,9 +1117,12 @@
                 </div>
                 <div class="chart-three">
                     <div id="flotChart8" class="flot-chart ht-30"></div>
-                  </div><!-- chart-three -->
+                  </div>
               </div>
-            </div><!-- col -->
+            </div>
+
+
+
             <div class="col-sm-6 col-lg-2 mg-t-10">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Total ES Burned</h6>
@@ -335,12 +1131,12 @@
                 </div>
                 <div class="chart-three">
                     <div id="flotChart8" class="flot-chart ht-30"></div>
-                  </div><!-- chart-three -->
+                  </div>
               </div>
-            </div><!-- col -->
+            </div> -->
 
 
-            <div class="col-sm-6 col-lg-2 mg-t-10 ">
+            <!-- <div class="col-sm-6 col-lg-2 mg-t-10">
                 <div class="card card-body">
                   <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Market Cap</h6>
                   <div class="d-flex d-lg-block d-xl-flex align-items-end">
@@ -348,9 +1144,9 @@
                   </div>
                   <div class="chart-three">
                       <div id="flotChart9" class="flot-chart ht-30"></div>
-                    </div><!-- chart-three -->
+                    </div>
                 </div>
-              </div><!-- col -->
+              </div>
               <div class="col-sm-6 col-lg-2 mg-t-10 ">
                 <div class="card card-body">
                   <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">24HR Vol (Probit Global)</h6>
@@ -359,9 +1155,9 @@
                   </div>
                   <div class="chart-three">
                       <div id="flotChart110" class="flot-chart ht-30"></div>
-                    </div><!-- chart-three -->
+                    </div>
                 </div>
-              </div><!-- col -->
+              </div>
               <div class="col-sm-6 col-lg-2 mg-t-10 ">
                 <div class="card card-body">
                   <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">CrowdFund Price</h6>
@@ -370,10 +1166,11 @@
                   </div>
                   <div class="chart-three">
                       <div id="flotChart4" class="flot-chart ht-30"></div>
-                    </div><!-- chart-three -->
+                    </div>
                 </div>
-              </div><!-- col -->
-              <div class="col-sm-6 col-lg-2 mg-t-10">
+              </div> -->
+
+              <!-- <div class="col-sm-6 col-lg-2 mg-t-10">
                 <div class="card card-body" id="roi-box" style="height:87px">
                   <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">ROI <i class="fa fa-question-circle"></i></h6>
                   <div class="d-flex d-lg-block d-xl-flex align-items-end">
@@ -381,10 +1178,11 @@
                   </div>
                   <div class="chart-three">
                       <div id="flotChart5" class="flot-chart ht-30"></div>
-                    </div><!-- chart-three -->
+                    </div>
                 </div>
-              </div><!-- col -->
-              <div class="col-sm-6 col-lg-2 mg-t-10">
+              </div> -->
+
+              <!-- <div class="col-sm-6 col-lg-2 mg-t-10">
                 <div class="card card-body">
                   <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">All time high</h6>
                   <div class="d-flex d-lg-block d-xl-flex align-items-end">
@@ -392,9 +1190,9 @@
                   </div>
                   <div class="chart-three">
                       <div id="flotChart8" class="flot-chart ht-30"></div>
-                    </div><!-- chart-three -->
+                    </div>
                 </div>
-              </div><!-- col -->
+              </div>
               <div class="col-sm-6 col-lg-2 mg-t-10">
                 <div class="card card-body">
                   <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">All time low</h6>
@@ -403,790 +1201,15 @@
                   </div>
                   <div class="chart-three">
                       <div id="flotChart8" class="flot-chart ht-30"></div>
-                    </div><!-- chart-three -->
+                    </div>
                 </div>
-              </div><!-- col -->
-
-
-
-
-          <div class="col-12 mg-t-10">
-            <div class="card">
-              <!-- <div class="card-header">
-                <h5 class="mg-b-0">1 ES <img src="images/es-life.png" height="24px"></h5>
               </div> -->
-              <!-- card-header -->
-              <div class="card-body pd-0">
-                <div class="row no-gutters">
-                  <div class="col col-sm-6 col-lg">
-                    <div class="crypto">
-                      <div class="media mg-b-10">
-                           <div class="crypto-icon bg-secondary">
-                              <img src="images/es-icon.png">
-                            </div>
-                        <div class="media-body pd-l-8">
-                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Era Swap <span class="tx-color-03 tx-normal">(ES)</span></h6>
-                          <div class="d-flex align-items-baseline tx-rubik">
-                            <h5 class="tx-20 mg-b-0" id="es-price" style="margin-right:2rem">Loading...</h5>
-                            <div id="es-percentage"></div>
-                            <!-- <p class="mg-b-0 tx-11 mg-l-3" style=""><i class="fa fa-arrow-down"></i> <span id="es-percentage">Loading...</span></p> -->
-                          </div>
-                        </div><!-- media-body -->
-                      </div><!-- media -->
-                      <!-- <div class="chart-twelve">
-                        <div id="flotChart2" class="flot-chart"></div>
-                      </div> -->
-                      <!-- chart-twelve -->
-
-                      <!-- <div class="pos-absolute b-5 l-20 tx-medium">
-                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
-                          <a href="" class="link-01 tx-semibold">12</a> USD Markets
-                        </label>
-                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
-                          <a href="" class="link-01 tx-semibold">81</a> ETH Markets
-                        </label>
-                      </div> -->
-                    </div><!-- crypto -->
-                  </div>
-                  <div class="col col-sm-6 col-lg bd-t bd-lg-t-0 bd-sm-l">
-                    <div class="crypto">
-                        <div class="media mg-b-10">
-                             <div class="crypto-icon bg-secondary">
-                                <i class="fa fa-btc"></i>
-                              </div>
-                            <div class="media-body pd-l-8">
-                              <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Bitcoin <span class="tx-color-03 tx-normal">(BTC)</span></h6>
-                              <div class="d-flex align-items-baseline tx-rubik">
-                                <h5 class="tx-20 mg-b-0" id="bitcoin-price-usd">Loading...</h5>
-                                <!-- <p class="mg-b-0 tx-11 tx-success mg-l-3"><i class="icon ion-md-arrow-up"></i> 4.34%</p> -->
-                              </div>
-                            </div><!-- media-body -->
-                          </div><!-- media -->
-
-                      <!-- <div class="chart-twelve">
-                        <div id="flotChart5" class="flot-chart"></div>
-                      </div> -->
-                      <!-- chart-twelve -->
-
-                      <!-- <div class="pos-absolute b-5 l-20 tx-medium">
-                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
-                          <a href="" class="link-01 tx-semibold">6</a> USD Markets
-                        </label>
-                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
-                          <a href="" class="link-01 tx-semibold">31</a> DASH Markets
-                        </label>
-                      </div> -->
-                    </div><!-- crypto -->
-                  </div>
-                  <div class="col col-sm-6 col-lg bd-t bd-sm-t-0 bd-sm-l">
-                    <div class="crypto">
-                        <div class="media mg-b-10">
-                            <div class="crypto-icon bg-secondary">
-                              <i class="cf cf-eth"></i>
-                            </div>
-                            <!-- crypto-icon -->
-                            <div class="media-body pd-l-8">
-                              <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Ethereum <span class="tx-color-03 tx-normal">(ETH)</span></h6>
-                              <div class="d-flex align-items-baseline tx-rubik">
-                                <h5 class="tx-20 mg-b-0" id="ether-price-usd">Loading...</h5>
-                                <!-- <p class="mg-b-0 tx-11 tx-danger mg-l-3"><i class="icon ion-md-arrow-down"></i> 0.77%</p> -->
-                              </div>
-                            </div><!-- media-body -->
-                          </div><!-- media -->
 
 
-                      <!-- <div class="chart-twelve">
-                        <div id="flotChartBTCCash" class="flot-chart"></div>
-                      </div> -->
-                      <!-- chart-twelve -->
-
-                      <!-- <div class="pos-absolute b-5 l-20 tx-medium">
-                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
-                          <a href="" class="link-01 tx-semibold">11</a> USD Markets
-                        </label>
-                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
-                          <a href="" class="link-01 tx-semibold">74</a> BCH Markets
-                        </label>
-                      </div> -->
-                    </div><!-- crypto -->
-                  </div>
 
 
-                </div><!-- row -->
-              </div><!-- card-body -->
-            </div><!-- card -->
-          </div><!-- col -->
-
-
-            <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10" style="display: none;">
-                <div class="card1">
-
-                  <div class="card-body pos-relative pd-0 ex5 p-2">
-                    <h4>ES/BTC</h4>
-                    Please select an interval:
-                    <select id="probit-graph">
-                    </select>
-                    <a style="display:inline; margin:0" target="_blank" href="https://www.probit.com/app/exchange/ES-BTC">(Source ProbitGlobal)</a>
-                    <div class="wrapper">
-                      <div class="ht-100 ht-lg-200" id="graph-container"> <canvas id="probitgraph"></canvas></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-            <div class="card1">
-              <div class="card-header bd-b-0 pd-t-10 pd-lg-t-25 pd-l-20 pd-lg-l-25 d-flex flex-column flex-sm-row align-items-sm-start justify-content-sm-between">
-                <div>
-                  <h6 class="mg-b-5">Last month Work Pool NRT Utilisation</h6>
-                </div>
-              </div>
-              <div class="card-body ex5" >
-                <div class="row align-items-sm-end">
-                  <div class="col-12 mg-t-30 mg-lg-t-0">
-                    <div class="row">
-                      <div class="col-sm-6 col-lg-12">
-                        <div class="d-flex align-items-center justify-content-between mg-b-5">
-                          <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">TimeTraders</h6>
-                          <span class="tx-10 tx-color-04">0% (NRT utilized)</span>
-                        </div>
-                        <div class="d-flex justify-content-between mg-b-5">
-                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-timetraders">Loading...</small></h5>
-                        </div>
-                        <div class="progress ht-4 mg-b-0 op-5">
-                          <div class="progress-bar bg-orange wd-0p" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-12 mg-t-30">
-                        <div class="d-flex align-items-center justify-content-between mg-b-5">
-                          <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">DaySwappers</h6>
-                          <span class="tx-10 tx-color-04">0% (NRT utilized)</span>
-                        </div>
-                        <div class="d-flex justify-content-between mg-b-5">
-                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-dayswappers">Loading...</small></h5>
-                        </div>
-                        <div class="progress ht-4 mg-b-0 op-5">
-                          <div class="progress-bar bg-pink wd-0p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-12 mg-t-30">
-                        <div class="d-flex align-items-center justify-content-between mg-b-5">
-                          <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">BuzCafe</h6>
-                          <span class="tx-10 tx-color-04">0% (NRT utilized)</span>
-                        </div>
-                        <div class="d-flex justify-content-between mg-b-5">
-                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                          <h5 class="tx-normal tx-rubik tx-color-03 mg-b-0"><small id="nrtFractions-buzcafe">Loading...</small></h5>
-                        </div>
-                        <div class="progress ht-4 mg-b-0 op-5">
-                          <div class="progress-bar bg-primary wd-0p" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-12 mg-t-30 mg-sm-t-0 mg-lg-t-30">
-                        <div class="d-flex align-items-center justify-content-between mg-b-5">
-                          <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-0">Curator</h6>
-                          <span class="tx-10 tx-color-04">0% (NRT utilized)</span>
-                        </div>
-                        <div class="d-flex align-items-end justify-content-between mg-b-5">
-                          <h5 class="tx-normal tx-rubik lh-2 mg-b-0">0 ES</h5>
-                          <h6 class="tx-normal tx-rubik tx-color-03 lh-2 mg-b-0"><small id="nrtFractions-curator">Loading...</small></h6>
-                        </div>
-                        <div class="progress ht-4 mg-b-0 op-5">
-                          <div class="progress-bar bg-teal wd-0p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-            <div class="card1">
-              <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
-                <h6 class="mg-b-0 ">All Platform TFC Generated of this month</h6>
-              </div><!-- card-header -->
-              <div class="card-body pos-relative pd-0 ex5">
-
-                <div data-label="Example" class="df-example">
-                  <div class="ht-100 ht-lg-200"><canvas id="chartBar2"></canvas></div>
-                </div><!-- df-example -->
-              </div><!-- card-body -->
-            </div><!-- card -->
-          </div>
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-                <div class="card1">
-                  <div class="card-header">
-                    <h6 class="mg-b-0">Charity Pool</h6>
-                  </div><!-- card-header -->
-                  <!-- <div class="card-body pd-lg-25">
-                    <div class="chart-seven"><canvas id="chartDonut3"></canvas></div>
-                  </div> -->
-                  <!-- card-body -->
-                  <div class="card-footer pd-50">
-                    <div class="row">
-                      <div class="col-12">
-                        <p class="tx-13 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-5">Charity Collected</p>
-                        <div class="d-flex align-items-center">
-                          <div class="wd-10 ht-10 rounded-circle bg-pink mg-r-5"></div>
-                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                        </div>
-                      </div><!-- col -->
-                      <div class="col-12 mg-t-20">
-                        <p class="tx-13 tx-uppercase tx-medium tx-color-03 tx-spacing-1 mg-b-5">Charity Given</p>
-                        <div class="d-flex align-items-center">
-                          <div class="wd-10 ht-10 rounded-circle bg-teal mg-r-5"></div>
-                          <h5 class="tx-normal tx-rubik mg-b-0">0 ES</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- <div class="d-flex mg-t-25">
-                    <button class="btn btn-sm btn-uppercase btn-white flex-fill tx-spacing-1">Become A Curator</button>
-                    <button class="btn btn-sm btn-uppercase btn-primary flex-fill tx-spacing-1 mg-l-10">Become A Time Trader</button>
-                </div> -->
-        </div>
-
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card1">
-                  <div class="crypto card-header" style="padding-bottom: 0px;">
-                      <div class="media mg-b-8">
-                        <div class="">
-                          <img src="images/TimeAlly-Favicon.png" height="25px">
-                        </div><!-- crypto-icon -->
-                        <div class="media-body pd-l-8">
-                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">TimeAlly Stakers</span></h6>
-
-                        </div><!-- media-body -->
-                      </div><!-- media -->
-                  </div>
-                  <div class="card-body pd-y-25 ex1">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="chart-thirteen"><canvas id="chartDonut2"></canvas></div>
-                      </div>
-                      <div class="col-12 tx-12 ">
-                          <!-- <div class="d-flex align-items-center">
-                              <div class="wd-10 ht-10 bg-primary rounded-circle pos-relative t--1"></div>
-                              <span class="tx-medium mg-l-10">Number of 1 year stakers</span>
-                              <span class="tx-rubik mg-l-auto" id="one-year-stakers">Loading...</span>
-
-                            </div> -->
-                            <div class="d-flex align-items-center mg-t-10">
-                              <div class="wd-10 ht-10 bg-teal rounded-circle pos-relative t--1" style="background-color: #4D4D4D"></div>
-                              <span class="tx-medium mg-l-10">Volume of 1 year stakings</span>
-                              <span class="tx-rubik mg-l-auto" id="one-year-stakings">Loading...</span>
-                              <!-- <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0.75% <i class="icon fa fa-long-arrow-up"></i></span> -->
-                            </div>
-                            <!-- <div class="d-flex align-items-center mg-t-10">
-                              <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
-                              <span class="tx-medium mg-l-10">Number of 2 year stakers</span>
-                              <span class="tx-rubik mg-l-auto" id="two-year-stakers">Loading...</span>
-
-                            </div> -->
-                            <div class="d-flex align-items-center mg-t-10">
-                                <div class="wd-10 ht-10 rounded-circle pos-relative t--1" style="background-color: #6B0000"></div>
-                                <span class="tx-medium mg-l-10">Volume of 2 year stakings</span>
-                                <span class="tx-rubik mg-l-auto" id="two-year-stakings">Loading...</span>
-                                <!-- <span class="wd-60 tx-right tx-rubik mg-l-5 tx-danger">-0.58% <i class="icon fa fa-long-arrow-down"></i></span> -->
-                              </div>
-                          </div>
-                    </div>
-
-                    <div class="card-body pd-0">
-                      <div class="list-group list-group-flush tx-13">
-                        <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-
-                        </div>
-                        <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                          <strong class="tx-12 tx-rubik">Total Volume of Stakings</strong>
-                          <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-stakings-volume">Loading...</div>
-                        </div>
-
-                        <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                          <strong class="tx-12 tx-rubik">NRT Released for TimeAlly</strong>
-                          <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-nrt">Loading...</div>
-                        </div>
-
-
-                      </div><!-- list-group -->
-                      <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for new stakings fulfilling TimeAlly Club criteria. Please go to the platform site for more information on this.</p>
-                    </div>
-
-
-                  </div><!-- card-body -->
-                </div><!-- card -->
-          </div>
-          <!-- <div class="col-md-3 col-xl-4 mg-t-10">
-              <div class="card">
-                  <div class="card-header d-flex justify-content-between">
-                    <h6 class="lh-5 mg-b-0">Total ES utilised in WorkPool NRT</h6>
-                  </div>
-                  <div class="card-body pd-y-25">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="chart-thirteen"><canvas id="chartDonuts"></canvas></div>
-                      </div>
-                      <div class="col-12 tx-12 mg-t-40">
-                        <div class="d-flex align-items-center">
-                          <div class="wd-10 ht-10 bg-primary rounded-circle pos-relative t--1"></div>
-                          <span class="tx-medium mg-l-10">Utilised by Curator</span>
-                          <span class="tx-rubik mg-l-auto">0 ES</span>
-                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
-                        </div>
-                        <div class="d-flex align-items-center mg-t-10">
-                          <div class="wd-10 ht-10 bg-teal rounded-circle pos-relative t--1"></div>
-                          <span class="tx-medium mg-l-10">Utilised by TimeTraders</span>
-                          <span class="tx-rubik mg-l-auto">0 ES</span>
-                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
-                        </div>
-                        <div class="d-flex align-items-center mg-t-10">
-                          <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
-                          <span class="tx-medium mg-l-10">Utilised by Day Swappers</span>
-                          <span class="tx-rubik mg-l-auto">0 ES</span>
-                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
-                        </div>
-                        <div class="d-flex align-items-center mg-t-10">
-                          <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
-                          <span class="tx-medium mg-l-10">Utilised by BuzCafe</span>
-                          <span class="tx-rubik mg-l-auto">0 ES</span>
-                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
-                        </div>
-                        <div class="d-flex align-items-center mg-t-10">
-                          <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
-                          <span class="tx-medium mg-l-10">Utilised by Day Swappers</span>
-                          <span class="tx-rubik mg-l-auto">0 ES</span>
-                          <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">0% NRT</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          </div> -->
-
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card1">
-                <div class="crypto card-header" style="padding-bottom: 0px;">
-                    <div class="media mg-b-8">
-                      <div class="">
-                        <img src="images/Time-Swappers-Favicon.png" height="25px">
-                      </div><!-- crypto-icon -->
-                      <div class="media-body pd-l-8">
-                        <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Time Swappers <span class="tx-color-03 tx-normal"></span></h6>
-                      </div><!-- media-body -->
-                    </div><!-- media -->
-                </div>
-                <div class="card-body ex1 pd-0">
-                  <div class="list-group list-group-flush tx-13">
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Number of Users</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-no-of-users">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Number of Freelancers/Sellers</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-no-of-freelancers">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">TFC generated</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-TfcGenerated">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Number of Views on Freelancer Portfolio pages</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-profile-views">0 Views</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Verified</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfVerifiedUser">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Certified</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfCertifiedUser">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Deposit done</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfDeposit">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Withdraw done</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalNoOfWithdraw">0 ES</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Jobs Posted</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalJobsPosted">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Jobs done</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="timeswappers-totalJobsDone">Loading...</div>
-                    </div>
-                  </div><!-- list-group -->
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div><!-- col -->
-
-          <!-- <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
-            <div class="card">
-                <div class="crypto card-header" style="padding-bottom: 0px;">
-                    <div class="media mg-b-8">
-                      <div class="">
-                        <img src="images/Swappers-Wall-Favicon.png" height="25px">
-                      </div>
-                      <div class="media-body pd-l-8">
-                        <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Top 10 Power Token Receivers on Swappers Wall</h6>
-                      </div>
-                    </div>
-                </div>
-              <div class="card-body pd-0" style="padding-top:17px">
-                <div class="list-group list-group-flush tx-13" id="swapperswall-top-ten-receivers">
-
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
-            <div class="card">
-                <div class="crypto card-header" style="padding-bottom: 0px;">
-                    <div class="media mg-b-8">
-                      <div class="">
-                        <img src="images/Time-Swappers-Favicon.png" height="25px">
-                      </div>
-                      <div class="media-body pd-l-8">
-                        <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Top 5 Services on Time Swappers</h6>
-                      </div>
-                    </div>
-                </div>
-              <div class="card-body ex3 pd-0">
-                <div class="list-group list-group-flush tx-13" id="timeswappers-topServices">
-
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card1">
-                  <div class="crypto card-header" style="padding-bottom: 0px;">
-                      <div class="media mg-b-8">
-                        <div class="">
-                          <img src="images/Day-Swappers--Favicon.png" height="25px">
-                        </div><!-- crypto-icon -->
-                        <div class="media-body pd-l-8">
-                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">DaySwappers <span class="tx-color-03 tx-normal"></span></h6>
-
-                        </div><!-- media-body -->
-                      </div><!-- media -->
-                  </div>
-                <div class="card-body pd-0 ex1">
-                  <div class="list-group list-group-flush tx-13">
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total DaySwappers</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-total-users">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total Liquid Rewards (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-liquid-rewards">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Total TimeAlly Rewards (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-timeally-rewards">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Active Users</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-active">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">KYC Users</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-kyc">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">White Belt (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-white">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Yellow Belt (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-yellow">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Orange Belt (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-orange">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Green Belt (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-green">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Blue Belt (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-blue">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Brown Belt (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-brown">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Red Belt (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-red">Loading...</div>
-                    </div>
-                    <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                      <strong class="tx-12 tx-rubik">Black Belt (last month)</strong>
-                      <div class="mg-l-auto tx-rubik tx-color-02" id="dayswappers-black">Loading...</div>
-                    </div>
-                  </div><!-- list-group -->
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div><!-- col -->
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-            <div class="card1">
-              <!-- <div class="card-header">
-                <h6 class="lh-5 mg-b-5">Swappers Wall</h6>
-              </div> -->
-              <div class="crypto card-header" style="padding-bottom: 0px;">
-                  <div class="media mg-b-8">
-                    <div class="">
-                      <img src="images/Swappers-Wall-Favicon.png" height="25px">
-                    </div><!-- crypto-icon -->
-                    <div class="media-body pd-l-8">
-                      <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Swappers Wall <span class="tx-color-03 tx-normal"></span></h6>
-
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-              </div>
-              <div class="card-body pd-0 ex5">
-                <div class="list-group list-group-flush tx-13">
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">PowerTokens this month</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-powertokens">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Communities</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-communities">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Group</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-groups">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Pages</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-pages">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Swappers</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-friends">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Active Users</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-active-users">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Media Uploads</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="swapperswall-media">Loading...</div>
-                  </div>
-
-                </div><!-- list-group -->
-              </div><!-- card-body -->
-            </div><!-- card -->
-          </div><!-- col -->
-
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-            <div class="card1">
-              <!-- <div class="card-header">
-                <h6 class="lh-5 mg-b-5">Eraswap Academy</h6>
-              </div> -->
-              <div class="crypto card-header" style="padding-bottom: 0px;">
-                  <div class="media mg-b-8">
-                    <div class="">
-                      <img src="images/Acadmey-Favicon.png" height="25px">
-                    </div><!-- crypto-icon -->
-                    <div class="media-body pd-l-8">
-                      <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Eraswap Academy <span class="tx-color-03 tx-normal"></span></h6>
-
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-              </div>
-              <div class="card-body ex5 pd-0">
-                <div class="list-group list-group-flush tx-13">
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Users Count</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="academy-userscount">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Courses</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="academy-courses">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total ES deposited</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="academy-deposits">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Users studying count</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="academy-userstudying">Loading...</div>
-                  </div>
-
-
-                </div><!-- list-group -->
-                <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for every course sale on Eraswap Academy. Please go to the platform site for more information on this.</p>
-              </div><!-- card-body -->
-            </div><!-- card -->
-          </div><!-- col -->
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-             <div class="card1">
-                <div class="crypto card-header" style="padding-bottom: 0px;">
-                    <div class="media mg-b-8">
-                      <div class="">
-                        <img src="images/BuzCafe-Favicons.png" height="25px">
-                      </div><!-- crypto-icon -->
-                      <div class="media-body pd-l-8">
-                        <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">BuzCafe <span class="tx-color-03 tx-normal"></span></h6>
-
-                      </div><!-- media-body -->
-                    </div><!-- media -->
-                </div>
-              <div class="card-body pd-0 ex5">
-                <div class="list-group list-group-flush tx-13">
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total Users</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-users-count">0 users</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total Shops</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-shops-count">0 shops</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total Deposits</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-deposits-count">0 deposits</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total Withdrawl</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-withdrawals-count">0 ES</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total Internal Transactions</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="buzcafe-transactions-count">0 transactions</div>
-                  </div>
-
-                </div><!-- list-group -->
-              </div><!-- card-body -->
-            </div><!-- card -->
-          </div><!-- col -->
-
-          <!-- <div class="col-sm-6 col-md-4 col-lg-4 mg-t-10">
-              <div class="card">
-                  <div class="crypto card-header" style="padding-bottom: 0px;">
-                      <div class="media mg-b-8">
-                        <div class="">
-                          <img src="images/TimeAlly-Favicon.png" height="25px">
-                        </div>
-                        <div class="media-body pd-l-8">
-                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">TimeAlly <span class="tx-color-03 tx-normal"></span></h6>
-
-                        </div>
-                      </div>
-                  </div>
-
-              <div class="card-body ex4 pd-0">
-                <div class="list-group list-group-flush tx-13">
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total Volume of Stakings</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-stakings-volume">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total Volume of 1 year stakings</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-one-year-stakings-olume">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total Volume of 2 year stakings</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="timeally-total-two-year-stakings-volume">Loading...</div>
-                  </div>
-
-                </div>
-                <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for new stakings fulfilling TimeAlly Club criteria. Please go to the platform site for more information on this.</p>
-              </div>
-            </div>
-          </div> -->
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card1">
-                  <div class="crypto card-header" style="padding-bottom: 0px;">
-                      <div class="media mg-b-8">
-                        <div class="">
-                          <img src="images/BetDeEx-Favicons.png" height="25px">
-                        </div><!-- crypto-icon -->
-                        <div class="media-body pd-l-8">
-                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">BetDeEx <span class="tx-color-03 tx-normal"></span></h6>
-
-                        </div><!-- media-body -->
-                      </div><!-- media -->
-                  </div>
-              <div class="card-body ex6 pd-0">
-                <div class="list-group list-group-flush tx-13">
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total number of Events</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-total-number-bets">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total number of Predictors</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-total-number-bettorss">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total ES volume predicted on BetDeEx</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-total-prediction-volume">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Highest Prediction on BetDeEx</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-highest-prediction-volume">Loading...</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Average Prediction on BetDeEx</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="betdeex-average-prediction-volume">Loading...</div>
-                  </div>
-                </div><!-- list-group -->
-                <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for every prediction on BetDeEx. Please go to the platform site for more information on this.</p>
-              </div><!-- card-body -->
-            </div><!-- card -->
-          </div><!-- col -->
-
-
-          <div class="col-sm-12 col-md-6 col-xl-4 mg-t-10">
-              <div class="card1">
-                  <div class="crypto card-header" style="padding-bottom: 0px;">
-                      <div class="media mg-b-8">
-                        <div class="">
-                          <img src="images/computeEx-Favicon.png" height="20px">
-                        </div><!-- crypto-icon -->
-                        <div class="media-body pd-l-8">
-                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">
-                              <!-- ComputeEx -->
-                              <span class="tx-color-03 tx-normal"></span> (yet to live)</h6>
-
-                        </div><!-- media-body -->
-                      </div><!-- media -->
-                  </div>
-              <div class="card-body pd-0">
-                <div class="list-group list-group-flush tx-13">
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total number of Transactions</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="computeex-total-number-transactions">0 transactions</div>
-                  </div>
-                  <div class="list-group-item pd-y-5 pd-x-20 d-flex align-items-center">
-                    <strong class="tx-12 tx-rubik">Total volume</strong>
-                    <div class="mg-l-auto tx-rubik tx-color-02" id="computeex-volume">0 ES</div>
-                  </div>
-                </div><!-- list-group -->
-                <p style="font-size:12px; padding:10px; margin: 0">There is bounty incentives temporarily running for every transaction on ComputeEx. Please go to the platform site for more information on this.</p>
-              </div><!-- card-body -->
-
-            </div><!-- card -->
-          </div><!-- col -->
+          
+          
       </div><!-- container -->
       </div>
     </div>
@@ -1954,12 +1977,12 @@
           };
 
           // For a pie chart
-          var ctx8 = document.getElementById('chartDonuts');
-          var myDonutChart = new Chart(ctx8, {
-            type: 'doughnut',
-            data: datapie,
-            options: optionpie
-          });
+          // var ctx8 = document.getElementById('chartDonuts');
+          // var myDonutChart = new Chart(ctx8, {
+          //   type: 'doughnut',
+          //   data: datapie,
+          //   options: optionpie
+          // });
 
 
            /** PIE CHART **/
@@ -2010,55 +2033,55 @@
             }
           };
           // For a pie chart
-          var ctx11 = document.getElementById('chartDonut3');
-          var myDonutChart3 = new Chart(ctx11, {
-            type: 'doughnut',
-            data: datapie3,
-            options: optionpie
-          });
+          // var ctx11 = document.getElementById('chartDonut3');
+          // var myDonutChart3 = new Chart(ctx11, {
+          //   type: 'doughnut',
+          //   data: datapie3,
+          //   options: optionpie
+          // });
   </script>
   <script>
   // Markets
-  $.plot('#flotChart18', [{
-            data: df1,
-            color: '#661111',
-            lines: {
-              lineWidth: 1.7,
-              fill: true,
-              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.4 } ] }
-            }
-          },{
-            data: df2,
-            color: '#661111',
-            lines: {
-              lineWidth: 1,
-              fill: true,
-              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
-            }
-          }], {
-    			series: {
-    				shadowSize: 0,
-            lines: {
-              show: true,
-            }
-    			},
-          grid: {
-            borderWidth: 0,
-            labelMargin: 10,
-            aboveData: true
-          },
-    			yaxis: {
-            show: false,
-            max: 150
-          },
-    			xaxis: {
-            show: true,
-            tickColor: 'rgba(72,94,144, 0.07)',
-            ticks: [[25,'mar 10'],[50,'mar 11'],[75,'mar 12'],[100,'mar 13'],[125,'mar 14']],
-            //min: 35,
-            //max: 125
-          }
-    		});
+  // $.plot('#flotChart18', [{
+  //           data: df1,
+  //           color: '#661111',
+  //           lines: {
+  //             lineWidth: 1.7,
+  //             fill: true,
+  //             fillColor: { colors: [ { opacity: 0 }, { opacity: 0.4 } ] }
+  //           }
+  //         },{
+  //           data: df2,
+  //           color: '#661111',
+  //           lines: {
+  //             lineWidth: 1,
+  //             fill: true,
+  //             fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+  //           }
+  //         }], {
+  //   			series: {
+  //   				shadowSize: 0,
+  //           lines: {
+  //             show: true,
+  //           }
+  //   			},
+  //         grid: {
+  //           borderWidth: 0,
+  //           labelMargin: 10,
+  //           aboveData: true
+  //         },
+  //   			yaxis: {
+  //           show: false,
+  //           max: 150
+  //         },
+  //   			xaxis: {
+  //           show: true,
+  //           tickColor: 'rgba(72,94,144, 0.07)',
+  //           ticks: [[25,'mar 10'],[50,'mar 11'],[75,'mar 12'],[100,'mar 13'],[125,'mar 14']],
+  //           //min: 35,
+  //           //max: 125
+  //         }
+  //   		});
 
         $.plot('#flotChart25', [{
           data: [[0,55],[1,38],[2,20],[3,70],[4,50],[5,15],[6,30],[7,50],[8,40],[9,55],[10,60],[11,40],[12,32],[13,17],[14,28],[15,36],[16,53],[17,66],[18,58],[19,46]],
@@ -2090,64 +2113,64 @@
           }
         });
 
-        var ctx18 = document.getElementById('chartBar1').getContext('2d');
-        new Chart(ctx18, {
-          type: 'bar',
-          data: {
-            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-            datasets: [{
-              data: [150,110,90,115,125,160,160,140,100,110,120,120],
-              backgroundColor: '#66a4fb'
-            },{
-              data: [100,140,120,135,155,170,180,150,140,150,130,130],
-              backgroundColor: '#661111'
-            },{
-              data: [180,140,120,135,155,170,180,150,140,150,130,130],
-              backgroundColor: '#10b759'
-            },{
-              data: [180,140,120,135,155,170,180,150,140,150,130,130],
-              backgroundColor: '#888'
-            },{
-              data: [180,140,120,135,155,170,180,150,140,150,130,130],
-              backgroundColor: '#ccc'
-            },{
-              data: [180,140,120,135,155,170,180,150,140,150,130,130],
-              backgroundColor: '#65e0e0'
-            },{
-              data: [180,140,120,135,155,170,180,150,140,150,130,130],
-              backgroundColor: '#65e0e0'
-            },{
-              data: [180,140,120,135,155,170,180,150,140,150,130,130],
-              backgroundColor: '#65e0e0'
-            }]
-          },
-          options: {
-            maintainAspectRatio: false,
-            legend: {
-              display: false,
-                labels: {
-                  display: false
-                }
-            },
-            scales: {
-              xAxes: [{
-                display: false,
-                barPercentage: 0.5
-              }],
-              yAxes: [{
-                gridLines: {
-                  color: '#ebeef3'
-                },
-                ticks: {
-                  fontColor: '#8392a5',
-                  fontSize: 10,
-                  min: 80,
-                  max: 200
-                }
-              }]
-            }
-          }
-        });
+        // var ctx18 = document.getElementById('chartBar1').getContext('2d');
+        // new Chart(ctx18, {
+        //   type: 'bar',
+        //   data: {
+        //     labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        //     datasets: [{
+        //       data: [150,110,90,115,125,160,160,140,100,110,120,120],
+        //       backgroundColor: '#66a4fb'
+        //     },{
+        //       data: [100,140,120,135,155,170,180,150,140,150,130,130],
+        //       backgroundColor: '#661111'
+        //     },{
+        //       data: [180,140,120,135,155,170,180,150,140,150,130,130],
+        //       backgroundColor: '#10b759'
+        //     },{
+        //       data: [180,140,120,135,155,170,180,150,140,150,130,130],
+        //       backgroundColor: '#888'
+        //     },{
+        //       data: [180,140,120,135,155,170,180,150,140,150,130,130],
+        //       backgroundColor: '#ccc'
+        //     },{
+        //       data: [180,140,120,135,155,170,180,150,140,150,130,130],
+        //       backgroundColor: '#65e0e0'
+        //     },{
+        //       data: [180,140,120,135,155,170,180,150,140,150,130,130],
+        //       backgroundColor: '#65e0e0'
+        //     },{
+        //       data: [180,140,120,135,155,170,180,150,140,150,130,130],
+        //       backgroundColor: '#65e0e0'
+        //     }]
+        //   },
+        //   options: {
+        //     maintainAspectRatio: false,
+        //     legend: {
+        //       display: false,
+        //         labels: {
+        //           display: false
+        //         }
+        //     },
+        //     scales: {
+        //       xAxes: [{
+        //         display: false,
+        //         barPercentage: 0.5
+        //       }],
+        //       yAxes: [{
+        //         gridLines: {
+        //           color: '#ebeef3'
+        //         },
+        //         ticks: {
+        //           fontColor: '#8392a5',
+        //           fontSize: 10,
+        //           min: 80,
+        //           max: 200
+        //         }
+        //       }]
+        //     }
+        //   }
+        // });
 
   </script>
 
@@ -2172,154 +2195,154 @@
       return lessDecimals.join('.');
     }
 
-  $('#roi-box')[0].addEventListener('click', () => alert('The approximate return on investment if purchased at the time of launch (or earliest known price)'));
+  // $('#roi-box')[0].addEventListener('click', () => alert('The approximate return on investment if purchased at the time of launch (or earliest known price)'));
 
-window.probit = {
-  intervalArray: ['1m', '3m', '5m', '10m', '15m', '30m', '1h', '4h', '6h', '12h', '1D', '1W', '1M'],
-  secondsArray: [60, 180, 300, 600, 900, 1800, 3600, 14400, 21600, 43200, 86400, 604800, 2629744],
-  intervalId: '1m'
-}
+// window.probit = {
+//   intervalArray: ['1m', '3m', '5m', '10m', '15m', '30m', '1h', '4h', '6h', '12h', '1D', '1W', '1M'],
+//   secondsArray: [60, 180, 300, 600, 900, 1800, 3600, 14400, 21600, 43200, 86400, 604800, 2629744],
+//   intervalId: '1m'
+// }
 
-window.probit.intervalArray.forEach(intervalId => {
-  document.getElementById('probit-graph').innerHTML += '<option value='+intervalId+'>'+intervalId+'</option>';
-});
+// window.probit.intervalArray.forEach(intervalId => {
+//   document.getElementById('probit-graph').innerHTML += '<option value='+intervalId+'>'+intervalId+'</option>';
+// });
 
-document.getElementById('probit-graph').addEventListener('change', event => {
-  window.probit.intervalId = event.target.value;
-  console.log('i am happening', event);
-  updateGraph();
-});
+// document.getElementById('probit-graph').addEventListener('change', event => {
+//   window.probit.intervalId = event.target.value;
+//   console.log('i am happening', event);
+//   updateGraph();
+// });
 
-/// @dev graph function
-const updateGraph = () => {
-  const padZeros = (c,length=2) => {
+// /// @dev graph function
+// const updateGraph = () => {
+//   const padZeros = (c,length=2) => {
 
-    const stringc = String(c);
-    console.log(c, length-stringc.length)
-    return stringc.length === length ? stringc : '0'.repeat(length-stringc.length)+stringc
-  };
-  const date = new Date(Date.now());
-  const showTimeZero = ['D', 'W', 'M'].includes(window.probit.intervalId.slice(window.probit.intervalId.length-1));
-  const showDateZero = 'M' === window.probit.intervalId.slice(window.probit.intervalId.length-1);
-  const formatedTime = `${date.getFullYear()}-${padZeros(date.getMonth()+1)}-${showDateZero?'01':padZeros(date.getDate())}T${showTimeZero ? '00' : padZeros(date.getHours())}:${showTimeZero ? '00' : padZeros(date.getMinutes())}:${showTimeZero ? '00':padZeros(date.getSeconds())}.${showTimeZero ? '000' : padZeros(date.getMilliseconds(), 3)}Z`;
-  console.log(date, formatedTime);
-  $.ajax({
-    url: 'https://api.probit.com/api/exchange/v1/candle?market_ids=ES-BTC&start_time=1970-01-01T00%3A00%3A00.000Z&end_time='+formatedTime+'&interval='+window.probit.intervalId+'&sort=desc&limit=10',
-    success: function(result){
-      document.getElementById('graph-container').innerHTML = '';
+//     const stringc = String(c);
+//     console.log(c, length-stringc.length)
+//     return stringc.length === length ? stringc : '0'.repeat(length-stringc.length)+stringc
+//   };
+//   const date = new Date(Date.now());
+//   const showTimeZero = ['D', 'W', 'M'].includes(window.probit.intervalId.slice(window.probit.intervalId.length-1));
+//   const showDateZero = 'M' === window.probit.intervalId.slice(window.probit.intervalId.length-1);
+//   const formatedTime = `${date.getFullYear()}-${padZeros(date.getMonth()+1)}-${showDateZero?'01':padZeros(date.getDate())}T${showTimeZero ? '00' : padZeros(date.getHours())}:${showTimeZero ? '00' : padZeros(date.getMinutes())}:${showTimeZero ? '00':padZeros(date.getSeconds())}.${showTimeZero ? '000' : padZeros(date.getMilliseconds(), 3)}Z`;
+//   console.log(date, formatedTime);
+//   $.ajax({
+//     url: 'https://api.probit.com/api/exchange/v1/candle?market_ids=ES-BTC&start_time=1970-01-01T00%3A00%3A00.000Z&end_time='+formatedTime+'&interval='+window.probit.intervalId+'&sort=desc&limit=10',
+//     success: function(result){
+//       document.getElementById('graph-container').innerHTML = '';
 
-      // window.isOnProduction ||
-        console.log('probit candle api response', result);
-      const intervalSeconds = window.probit.secondsArray[window.probit. intervalArray.indexOf(window.probit.intervalId)];
-      console.log('intervalSeconds', intervalSeconds);
-      const currentTimestamp = Date.now();
-      const labels = [];
-      const highData = [];
-      const lowData = [];
-      for(let i = 0; i < 10; i++) {
-        const timeString = (new Date(currentTimestamp - intervalSeconds*1000*(9-i))).toTimeString();
-        const dateString = (new Date(currentTimestamp - intervalSeconds*1000*(9-i))).toDateString();
-        let label = '';
-        switch(window.probit.intervalId.slice(window.probit.intervalId.length-1)) {
-          case 'm':
-            label = timeString.slice(0,5);
-            break;
-          case 'h':
-            label = dateString.split(' ')[0]+' '+timeString.slice(0,5);
-            break;
-          case 'D':
-            label = dateString.split(' ')[0]
-            break;
-          case 'W':
-            label = dateString.split(' ').slice(1,3).join(' ')
-            break;
-          case 'M':
-            label = dateString.split(' ')[1];
-            break;
-        }
-        labels.push(label);
-        try {
-          highData.push(+result.data[i].high);
-          lowData.push(+result.data[i].low);
-        } catch(e) {
-          console.log(e.message);
-          highData.unshift(0.00000096);
-          lowData.unshift(0.00000096);
-        }
-      }
-      document.getElementById('graph-container').innerHTML = '<canvas id="probitgraph"></canvas>';
-      const ctx = document.getElementById('probitgraph').getContext("2d");
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels,
-          datasets: [{
-            label: "High",
-            lineTension: 0,
-            borderColor: "#006B01",
-            pointBorderColor: "#207B21",
-            pointBackgroundColor: "#006B01",
-            pointHoverBackgroundColor: "#006B01",
-            pointHoverBorderColor: "#006B01",
-            pointHoverRadius: 5,
-            pointHoverBorderWidth: 1,
-            pointBorderWidth: 1,
-            pointRadius: 3,
-            fill: false,
-            borderWidth: 4,
-            data: highData
-          },
-          {
-            label: "Low",
-            lineTension: 0,
-            borderColor: "#6B0100",
-            pointBorderColor: "#6B0100",
-            pointBackgroundColor: "#6B0100",
-            pointHoverBackgroundColor: "#6B0100",
-            pointHoverBorderColor: "#6B0100",
-            pointHoverRadius: 5,
-            pointHoverBorderWidth: 1,
-            pointBorderWidth: 1,
-            pointRadius: 3,
-            fill: false,
-            borderWidth: 4,
-            data: lowData
-          }
-          ]
-        },
-        options: {
-          legend: {
-            position: "bottom"
-          },
-          scales: {
-            yAxes: [{
-              ticks: {
-                fontColor: "rgba(0,0,0,0.5)",
-                fontStyle: "bold",
-                beginAtZero: true,
-                maxTicksLimit: 5,
-                padding: 20
-              },
-              gridLines: {
-                drawTicks: false,
-                display: false
-              }
-            }],
-            xAxes: [{
-              gridLines: {
-                zeroLineColor: "transparent"
-              },
-              ticks: {
-                padding: 20,
-                fontColor: "rgba(0,0,0,0.5)",
-                fontStyle: "bold"
-              }
-            }]
-          }
-        }
-      });
-  }});
-}
+//       // window.isOnProduction ||
+//         console.log('probit candle api response', result);
+//       const intervalSeconds = window.probit.secondsArray[window.probit. intervalArray.indexOf(window.probit.intervalId)];
+//       console.log('intervalSeconds', intervalSeconds);
+//       const currentTimestamp = Date.now();
+//       const labels = [];
+//       const highData = [];
+//       const lowData = [];
+//       for(let i = 0; i < 10; i++) {
+//         const timeString = (new Date(currentTimestamp - intervalSeconds*1000*(9-i))).toTimeString();
+//         const dateString = (new Date(currentTimestamp - intervalSeconds*1000*(9-i))).toDateString();
+//         let label = '';
+//         switch(window.probit.intervalId.slice(window.probit.intervalId.length-1)) {
+//           case 'm':
+//             label = timeString.slice(0,5);
+//             break;
+//           case 'h':
+//             label = dateString.split(' ')[0]+' '+timeString.slice(0,5);
+//             break;
+//           case 'D':
+//             label = dateString.split(' ')[0]
+//             break;
+//           case 'W':
+//             label = dateString.split(' ').slice(1,3).join(' ')
+//             break;
+//           case 'M':
+//             label = dateString.split(' ')[1];
+//             break;
+//         }
+//         labels.push(label);
+//         try {
+//           highData.push(+result.data[i].high);
+//           lowData.push(+result.data[i].low);
+//         } catch(e) {
+//           console.log(e.message);
+//           highData.unshift(0.00000096);
+//           lowData.unshift(0.00000096);
+//         }
+//       }
+//       document.getElementById('graph-container').innerHTML = '<canvas id="probitgraph"></canvas>';
+//       const ctx = document.getElementById('probitgraph').getContext("2d");
+//       new Chart(ctx, {
+//         type: 'line',
+//         data: {
+//           labels,
+//           datasets: [{
+//             label: "High",
+//             lineTension: 0,
+//             borderColor: "#006B01",
+//             pointBorderColor: "#207B21",
+//             pointBackgroundColor: "#006B01",
+//             pointHoverBackgroundColor: "#006B01",
+//             pointHoverBorderColor: "#006B01",
+//             pointHoverRadius: 5,
+//             pointHoverBorderWidth: 1,
+//             pointBorderWidth: 1,
+//             pointRadius: 3,
+//             fill: false,
+//             borderWidth: 4,
+//             data: highData
+//           },
+//           {
+//             label: "Low",
+//             lineTension: 0,
+//             borderColor: "#6B0100",
+//             pointBorderColor: "#6B0100",
+//             pointBackgroundColor: "#6B0100",
+//             pointHoverBackgroundColor: "#6B0100",
+//             pointHoverBorderColor: "#6B0100",
+//             pointHoverRadius: 5,
+//             pointHoverBorderWidth: 1,
+//             pointBorderWidth: 1,
+//             pointRadius: 3,
+//             fill: false,
+//             borderWidth: 4,
+//             data: lowData
+//           }
+//           ]
+//         },
+//         options: {
+//           legend: {
+//             position: "bottom"
+//           },
+//           scales: {
+//             yAxes: [{
+//               ticks: {
+//                 fontColor: "rgba(0,0,0,0.5)",
+//                 fontStyle: "bold",
+//                 beginAtZero: true,
+//                 maxTicksLimit: 5,
+//                 padding: 20
+//               },
+//               gridLines: {
+//                 drawTicks: false,
+//                 display: false
+//               }
+//             }],
+//             xAxes: [{
+//               gridLines: {
+//                 zeroLineColor: "transparent"
+//               },
+//               ticks: {
+//                 padding: 20,
+//                 fontColor: "rgba(0,0,0,0.5)",
+//                 fontStyle: "bold"
+//               }
+//             }]
+//           }
+//         }
+//       });
+//   }});
+// }
 
 
 
@@ -2340,7 +2363,7 @@ const updateGraph = () => {
   }
 
   // setInterval(funcx = () => {
-    updateGraph();
+    // updateGraph();
 
     window.isOnProduction || console.log('doing');
     $.ajax({
@@ -2401,6 +2424,36 @@ const updateGraph = () => {
             </span>
           `
         );
+
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+              labels: ["ROI"],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [
+                    // Math.atan(2000 / 300) * 2 / Math.PI * 100,
+                    // 100-Math.atan(2000 / 300) * 2 / Math.PI * 100
+                    increasePercentage - 100
+                  ],
+                  text: "ff",
+                  backgroundColor: [
+                  
+                      '#661111'
+                  ],
+                  borderColor: [
+                    
+                      '#661111'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              rotation: 1 * Math.PI,
+              circumference: 1 * Math.PI
+          }
+        });
 
         let totalVolume = 0;
         result.data.forEach(x => {
@@ -2880,5 +2933,32 @@ if(!datapie2)
       document.getElementById('seconds').innerText = secondsRemaining;
   }, 1000);
   </script>
+
+<script>
+  window.onload = function () {
+
+   //doughnut
+var ctxD = document.getElementById("doughnutChart").getContext('2d');
+var myLineChart = new Chart(ctxD, {
+type: 'doughnut',
+data: {
+labels: ["Charity collect 0 ES", "Charity Given 0 ES"],
+datasets: [{
+data: [80, 50],
+backgroundColor: ["#F7464A", "#46BFBD"],
+hoverBackgroundColor: ["#FF5A5E", "#5AD3D1"]
+}]
+},
+options: {
+responsive: true
+}
+});
+
+
+}
+</script>
+
+<script src="assets/js/Chart.min.js" charset="utf-8"></script>
+
   </body>
 </html>
