@@ -86,7 +86,7 @@
         overflow-x: hidden
       }
     </style>
-    
+
   </head>
   <body class="page-profile">
 
@@ -104,7 +104,7 @@
             <li class="nav-item"><a href="https://themeforest.net/item/dashforge-responsive-admin-dashboard-template/23725961" class="btn btn-buy"> <span>Sign Up </span> <span style="font-size: 10px">New Users</span></a></li>
             <li class="nav-item"><a href="https://themeforest.net/item/dashforge-responsive-admin-dashboard-template/23725961" class="btn btn-buy"><span>Sign In  <span style="font-size: 10px">Existing Users</span></span></a></li>
           </ul>
-      </div> 
+      </div>
       -->
     </header>
 
@@ -123,8 +123,8 @@
                 <div class="col-md-9 col-8 col-sm-6 pr-0">
                   <div class="box-1">
                     <h6 class="card-title float-left">Era Swap (ES)</h6>
-                    <p class="card-text float-left clear_both mg-b-0 text-1">0.0468 USDT</p>
-                    <p class="card-text float-left clear_both text-1">0.00000523 BTC</p>
+                    <p class="card-text float-left clear_both mg-b-0 text-1" id="es-price-usdt">Loading...</p>
+                    <p class="card-text float-left clear_both text-1" id="es-price-btc">Loading...</p>
                   </div>
                 </div>
                 <div class="col-md-3 col-4 col-sm-6 p-0">
@@ -186,10 +186,10 @@
     </div>
 
     <div class="content content-fixed main_content">
-      
+
       <!-- <div class="container-fluid pd-x-0 pd-lg-x-10 pd-xl-x-0">
         <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
-          
+
 
           <div align="center" class="d-none d-md-block"></div>
           <h1 class="mg-b-0 tx-spacing--1"><b>Welcome to Ecosystem Dashboard</b></h1>
@@ -213,7 +213,7 @@
                 <div class="row">
                   <div class="col-md-8 col-8 col-sm-6">
                     <h6 class="card-title float-left">Bitcoin (BTC)</h6>
-                    <p class="card-text float-left clear_both txt-size">$9029.61</p>
+                    <p class="card-text float-left clear_both txt-size" id="bitcoin-price-usd">Loading...</p>
                   </div>
                   <div class="col-md-4 col-4 col-sm-6">
                     <img src="images/BitCoin.png" class="width-25" alt="bitcoin">
@@ -240,7 +240,7 @@
                 <div class="row">
                   <div class="col-md-8 col-8 col-sm-6">
                     <h6 class="card-title float-left">Ethereum (ETH)</h6>
-                    <p class="card-text float-left clear_both txt-size">$171.9</p>
+                    <p class="card-text float-left clear_both txt-size" id="ether-price-usd">Loading...</p>
                   </div>
                   <div class="col-md-4 col-4 col-sm-6">
                     <img src="images/Etherum.png" class="width-25" alt="bitcoin">
@@ -296,7 +296,7 @@
               </div>
               <div class="chart-three">
                   <div id="flotChartAvailableEST" class="flot-chart ht-30"></div>
-                </div> chart-three 
+                </div> chart-three
             </div> -->
           </div><!-- col -->
 
@@ -316,7 +316,7 @@
               </div>
               <div class="chart-three">
                   <div id="flotChart8" class="flot-chart ht-30"></div>
-                </div> chart-three 
+                </div> chart-three
             </div> -->
           </div><!-- col -->
 
@@ -360,7 +360,7 @@
               </div>
               <div class="chart-three">
                   <div id="flotChart120" class="flot-chart ht-30"></div>
-                </div> chart-three 
+                </div> chart-three
             </div> -->
           </div><!-- col -->
 
@@ -589,7 +589,7 @@
             </div>
 
             <div class="row">
-              
+
               <div class="col-lg-4">
                 <div class="card card-body shadow">
                   <div class="row">
@@ -597,7 +597,7 @@
                         <img src="images/Time-Swappers-Favicon.png" height="25px"><h6 class="card-title">TIMESWAPPERS</h6>
                     </div>
                   </div>
-                  
+
                   <div class="row">
                     <div class="col-lg-5 text-center">
                       <p class="txt_p pdy-2 para_1">Total Number of Users</p>
@@ -966,7 +966,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="col-lg-4">
                 <div class="card card-body shadow">
                   <div class="row">
@@ -1010,7 +1010,7 @@
                         <span class="tx-rubik mg-l-auto" id="one-year-stakings">Loading...</span>
                       </div> -->
                     </div>
-                    
+
                   </div>
                   <div class="row">
                     <div class="col-lg-6">
@@ -1057,13 +1057,13 @@
                 </div>
               </div>
 
-              
+
             </div>
           </div>
 
-          
-         
-          
+
+
+
           <!-- <div class="col-sm-6 col-lg-2 mg-t-10">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Ecosystem transactions</h6>
@@ -1075,7 +1075,7 @@
                   </div>
               </div>
             </div>
-            
+
             <div class="col-sm-6 col-lg-2 mg-t-10 ">
               <div class="card card-body">
                 <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Ecosystem Volume</h6>
@@ -1208,8 +1208,8 @@
 
 
 
-          
-          
+
+
       </div><!-- container -->
       </div>
     </div>
@@ -2403,7 +2403,8 @@
         window.isOnProduction || console.log('ES-USDT CES-BTC', result);
         window.esPrice = Number(result.data[0].last);
         updateMarketCap();
-        $("#es-price").html(result.data[0].last + ' USDT <br> '+window.moreDecimals(result.data[1].last,8) + ' BTC');
+        $("#es-price-usdt").html(result.data[0].last + ' USDT');
+        $("#es-price-btc").html(window.moreDecimals(result.data[1].last,8) + ' BTC');
         const increasePercentage = +result.data[1].last / 0.00000050 * 100;
         window.isOnProduction || console.log('increasePercentage', increasePercentage);
         // $("#es-percentage").html(
@@ -2439,11 +2440,11 @@
                   ],
                   text: "ff",
                   backgroundColor: [
-                  
+
                       '#661111'
                   ],
                   borderColor: [
-                    
+
                       '#661111'
                   ],
                   borderWidth: 1
