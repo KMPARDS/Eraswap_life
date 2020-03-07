@@ -1,0 +1,41 @@
+.main-content {
+    position: relative;
+}
+.radius_img img{border-radius: 10px !important;}
+
+
+/* owl nav */
+.owl-prev span, .owl-next span {
+	color: #FFF;
+}
+
+.owl-prev span:hover, 
+.owl-next span:hover {
+	color: #FFF;
+}
+
+.owl-prev, .owl-next {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+.owl-prev {
+	left: 50px;
+}
+
+.owl-next {
+	right: 50px;
+}
+
+button:hover {
+	background-color: #fff !important;
+	color: #000 !important;
+}
+/* removing blue outline from buttons */
+button:focus, button:active {
+   outline: none;
+}
+.main-content{padding: 10px;}
+.owl-theme .owl-nav{margin-top: 0 !important;}
+.owl-carousel.owl-loaded{width: 80% !important; margin: 0 auto; position: static;}

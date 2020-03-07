@@ -3,7 +3,9 @@
     import Footer from './Footer.svelte'
     import Logo from './Logo.svelte'
 
-	import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
+  
+  import copy from 'copy-to-clipboard';
 
     onMount(async () => {
         document.getElementById("pop_up").click();
@@ -24,6 +26,13 @@
     let wallet = "";
     let status = 1;  // 1=> noted mnemonic 2=> submit mnemonic 3=> generate wallet 4=> Loading 5=> Login
     let noted = false;
+    let copied = false;
+    function copyToClipboard() {
+      copy(clipboard);
+      copied = true;
+      setTimeout(() => copied = false, 1500);
+    }
+
     function generate_random() {
         status = 1;
         noted = false;
@@ -281,6 +290,7 @@ Please think about this carefully. YOU are the one who is in control.  ES Life W
             <p class:hide={status!=1}>Please write down the above mnemonic phrase on a piece of paper and keep it safe such that no one can find it. If you ever forget your keys, this mnemonic phrase can be used to recover your wallet's private key. Hence, because of the same reason it is not recommended to take screenshot of this or copy pasting the mnemonic in a file for security reasons. Once you have wrote it, press the below button to proceed.</p>
 
             <div style="margin:auto">
+            <button  class="btn btn-default"  style="background: #811515; color:#fff; padding:3px 19px"  data-toggle="tab" class:hide={status!=1} on:click={copyToClipboard}>{#if copied}Copied{:else}Copy Mnemonic{/if}</button>
               <button  class="btn btn-default"  style="background: #811515; color:#fff; padding:3px 19px"  data-toggle="tab" on:click={noted_down} class:hide={status!=1}>I Wrote down My Mnemonic Phrase</button>
             </div>
         </div>
