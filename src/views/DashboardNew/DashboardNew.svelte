@@ -216,7 +216,7 @@
 function openNav() {
     document.getElementById("receivesidebar").style.width = "350px";
         }
-        
+
         function closeNav() {
           document.getElementById("receivesidebar").style.width = "0";
         }
@@ -300,7 +300,7 @@ function openNav() {
 
 /* responsive start */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-    
+
     .left-content{
         margin: 0px auto;
     }
@@ -310,7 +310,7 @@ function openNav() {
         height: 22px;
         margin: 5px auto;
     }
-    
+
     /* .send-btn {
         margin: 0 20px !important;
     } */
@@ -318,7 +318,7 @@ function openNav() {
     .received_btn {
         margin: 0 30px;
     }
-    
+
     .pd-l-3 {
         padding: 0px;
     }
@@ -380,12 +380,12 @@ function openNav() {
 
     .wrapper {
         width: 90%;
-    } 
+    }
 
     .marg-tp-50 {
         margin-top: 20px;
     }
-    
+
 }
 
 
@@ -722,7 +722,7 @@ function openNav() {
     margin-top:15px;
   }
 
- 
+
 .tab_head .nav-pills .nav-link.active, .nav-link:hover
 {
     box-shadow:inset 0 -2px 0 #f7972F;
@@ -758,7 +758,7 @@ function openNav() {
 
 
 
-           
+
     </style>
 
      <!-- <nav class="navbar navbar-header fixed-top">
@@ -769,7 +769,7 @@ function openNav() {
     <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
         <Navbar title="Dashboard" />
     </div>
-    
+
 
     <div class="container">
         <div id="receivesidebar" class="sidepanel">
@@ -778,7 +778,7 @@ function openNav() {
                     <div class="row p-0">
                         <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={closeNav}><i class="fa fa-arrow-left p-2"></i></span></div>
                     </div>
-                    
+
                     <ul class="nav" id="pills-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link text-white active" id="eraswap_tab" data-toggle="pill" href="#eraswap" role="tab" aria-controls="eraswap" aria-selected="true">Era Swap</a>
@@ -806,7 +806,7 @@ function openNav() {
                             <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">ES Balance</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">{es_balance}</p></div>
@@ -857,7 +857,7 @@ function openNav() {
                             <!-- <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">BCH</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -875,7 +875,7 @@ function openNav() {
                             <!-- <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">ERC 20</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -893,7 +893,7 @@ function openNav() {
                             <!-- <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">XRP</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -917,7 +917,7 @@ function openNav() {
                     <div class="row p-0">
                         <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={hideNav}><i class="fa fa-arrow-left p-2"></i></span></div>
                     </div>
-                    
+
                     <ul class="nav" id="pills-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link text-white active" id="senderaswap_tab" data-toggle="pill" href="#senderaswap" role="tab" aria-controls="eraswap" aria-selected="true">Era Swap</a>
@@ -945,7 +945,7 @@ function openNav() {
                             <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">ES Balance</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -973,7 +973,7 @@ function openNav() {
                             <div class="row pt-2">
                                 <div class="col-lg-5 col-6 pl-1 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6 p-0"><p class="tap_text">Ethereum Balance</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -1001,7 +1001,7 @@ function openNav() {
                             <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">BTC Balance</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -1029,7 +1029,7 @@ function openNav() {
                             <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">BCH Balance</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -1057,7 +1057,7 @@ function openNav() {
                             <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">ERC 20 Balance</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -1085,7 +1085,7 @@ function openNav() {
                             <div class="row pt-2">
                                 <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
                                 <div class="col-lg-7 col-6"><p class="tap_text">XRP Balance</p></div>
-                                
+
                             </div>
                             <div class="row text-center">
                                 <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
@@ -1121,7 +1121,7 @@ function openNav() {
                     <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={closeToken}><i class="fa fa-arrow-left p-2"></i></span></div>
                     <div class="col-lg-12 text-center"><button type="button" class="btn"><i class="fa fa-plus-circle"></i>Add Token</button></div>
                 </div>
-            </div>    
+            </div>
             <div class="card-body">
                 <form action="">
                     <div class="row">
@@ -1155,7 +1155,7 @@ function openNav() {
             <p style="font-weight: 700; text-decoration:strong; margin: .5rem auto">Era Swap Life is a Single Sign On (SSO) to access multiple interlinked platforms of Era Swap Ecosystem.<br>You can click on the respective icon to access the platform.</p>
         </div>
 
-        <div class="platforms text-center"> 
+        <div class="platforms text-center">
         <button on:click={() => {
             platformsExpanded=!platformsExpanded;
             if(!platformsExpanded) showSlider();
@@ -1163,7 +1163,7 @@ function openNav() {
         {#if !platformsExpanded}
         <div class="flexslider carousel">
                 <ul class="slides">
-      
+
 
                     <li style="cursor:pointer;">
                          {#if window.usingMetamask}
@@ -1370,15 +1370,15 @@ function openNav() {
 
             {/if}
         </div>
-      
+
 
     </div>
-    
+
 
 
     <!-- <div id="tm-area-about" class="tm-about-area tm-section" style="background: #eef2f4">
                 <div class="container">
-                    
+
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
                         <div class="row">
@@ -1565,16 +1565,16 @@ function openNav() {
                         <div class="row border_right">
                             <div class="col-lg-12">
                                 <div class="row">
-                                    
+
                                     <div class="col-lg-6 col-md-6 text-center">
                                         <p class="text-p">MAIN ES BALANCE</p>
-                                        <p class="text-p" style="font-size: 25px;">{es_balance || '0'} ES</p>
+                                        <p class="text-p" style="font-size: 25px;">{window.lessDecimals(es_balance) || '0'} ES</p>
                                     </div>
                                     <div class="col-lg-6 col-md-6 text-center">
                                         <p class="text-p">ETHER BALANCE</p>
-                                        <p class="text-p" style="font-size: 25px;">{balance || '0'} ETH</p>
+                                        <p class="text-p" style="font-size: 25px;">{window.lessDecimals(balance, 8) || '0'} ETH</p>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="col-lg-12 my-3">
@@ -1605,7 +1605,7 @@ function openNav() {
                                         <span><button type="button" class="btn small-bnt" on:click={openToken} disabled>Add Token</button></span>
                                     </div>
                                     <div class="col-lg-6 col-6 my-2 text-right">coming soon</div>
-                                    
+
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 col-6 my-2">XRP</div>
@@ -1661,33 +1661,33 @@ function openNav() {
                                         </div>
                                         <div class="col-lg-12 time_track">
                                             <a href="#collapseExample1" class=" d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample1">
-                                                <p>TimeAlly Staking:</p> 
+                                                <p>TimeAlly Staking:</p>
                                                 <i class="fa fa-angle-down" style="font-size: 22px;"></i>
                                             </a>
                                         </div>
-                                        
+
                                         <div class="collapse" id="collapseExample1">
                                             <div class="row ml-1 br_bt time_track">
                                                 <div class="col-lg-6">Stakings in TimeAlly:</div>
-                                                <div class="col-lg-6 pb-2">{myActiveStaking || '0'} ES</div>
+                                                <div class="col-lg-6 pb-2">{window.lessDecimals(myActiveStaking) || '0'} ES</div>
                                             </div>
                                             <div class="row ml-1 br_bt time_track">
                                                 <div class="col-lg-6">Unstaked Tokens:</div>
-                                                <div class="col-lg-6 pb-2">{unStakedTokens || '0'} ES</div>
+                                                <div class="col-lg-6 pb-2">{window.lessDecimals(unStakedTokens) || '0'} ES</div>
                                             </div>
                                             <div class="row ml-1 br_bt time_track">
                                                 <div class="col-lg-6">Unclaimed All TimeAlly Monthly Benefits Till Date:</div>
-                                                <div class="col-lg-6 pt-4">{unclaimedBenefits || '0'} ES</div>
+                                                <div class="col-lg-6 pt-4">{window.lessDecimals(unclaimedBenefits) || '0'} ES</div>
                                             </div>
-                                        </div> 
-                                        
+                                        </div>
+
                                         <div class="col-lg-12 time_track">
                                             <a href="#collapseExample2" class=" d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample2">
-                                                <p>TSGAP:</p> 
+                                                <p>TSGAP:</p>
                                                 <i class="fa fa-angle-down" style="font-size: 22px;"></i>
                                             </a>
                                         </div>
-                                        
+
                                         <div class="collapse" id="collapseExample2">
                                             <!-- <div class="row ml-1 br_bt time_track">
                                                 <div class="col-lg-6">Stakings in TimeAlly:</div>
@@ -1708,11 +1708,11 @@ function openNav() {
 
                                         <div class="col-lg-12 time_track">
                                             <a href="#collapseExample3" class=" d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample3">
-                                                <p>PET:</p> 
+                                                <p>PET:</p>
                                                 <i class="fa fa-angle-down" style="font-size: 22px;"></i>
                                             </a>
                                         </div>
-                                        
+
                                         <div class="collapse" id="collapseExample3">
                                             <!-- <div class="row ml-1 br_bt time_track">
                                                 <div class="col-lg-6">Stakings in TimeAlly:</div>
@@ -1773,22 +1773,22 @@ function openNav() {
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <!-- <div class="col-lg-12">
                                         <div class="row time_track mt_bt br_bt">
                                             <div class="col-lg-6 col-md-6"><p>Balance:</p></div>
-                                            <div class="col-lg-6 col-md-6 text-center"><p>{timeswappersBenefit || '0'} ES</p></div>
+                                            <div class="col-lg-6 col-md-6 text-center"><p>{window.lessDecimals(timeswappersBenefit) || '0'} ES</p></div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col-lg-12">
                                         <div class="row time_track mt_bt br_bt">
                                             <div class="col-lg-6 col-md-6"><p>Power Token Balance:(received form TimeAlly)</p></div>
-                                            <div class="col-lg-6 col-md-6 text-center"><p>{powerTokenBalance || '0'} ES</p></div>
+                                            <div class="col-lg-6 col-md-6 text-center"><p>{window.lessDecimals(powerTokenBalance) || '0'} ES</p></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="row time_track mt_bt br_bt">
                                             <div class="col-lg-6 col-md-6"><p>Power token received from other users:</p></div>
-                                            <div class="col-lg-6 col-md-6 text-center"><p>{powerTokenReceived || '0'} ES</p></div>
+                                            <div class="col-lg-6 col-md-6 text-center"><p>{window.lessDecimals(powerTokenReceived) || '0'} ES</p></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -1809,7 +1809,7 @@ function openNav() {
                                         <button type="button" class="btn btn-w-d" disabled>Deposit</button>
                                     </div>
                                     <div class="col-lg-6 col-6">
-                                        <button type="button" class="btn btn-w-d" disabled>Widthdraw</button>
+                                        <button type="button" class="btn btn-w-d" disabled>Withdraw</button>
                                     </div>
                                 </div>
                             </div>
@@ -1840,7 +1840,7 @@ function openNav() {
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                     <div class="col-lg-6 pl-0">
                                         <div class="row mt_bt">
                                             <div class="col-lg-12 col-md-6">
@@ -1906,8 +1906,8 @@ function openNav() {
                                         </div>
                                         <div class="row time_track">
                                             <div class="col-lg-6 p-0 col-md-6"><p>Rewards:</p></div>
-                                            <div class="col-lg-6 p-0 col-md-6 text-center"><p>{dayswapperReward || '0'} ES</p></div>
-                                        
+                                            <div class="col-lg-6 p-0 col-md-6 text-center"><p>{window.lessDecimals(dayswapperReward) || '0'} ES</p></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1919,5 +1919,5 @@ function openNav() {
         </div>
     </section>
 
-    
+
 <Footer />
