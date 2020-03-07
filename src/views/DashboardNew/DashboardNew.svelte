@@ -302,7 +302,11 @@ function openNav() {
 @media only screen and (min-width: 320px) and (max-width: 768px) {
 
     .left-content{
-        margin: 0px auto;
+        margin: 10px auto !important;
+    }
+
+    .px-5 {
+      padding: 0px auto !important;
     }
 
     .centerImg {
@@ -384,6 +388,14 @@ function openNav() {
 
     .marg-tp-50 {
         margin-top: 20px;
+    }
+
+    .wrapper {
+      width: 90% !important;
+    }
+
+    .wrapper .right-sec {
+      margin: 0px;
     }
 
 }
@@ -750,10 +762,6 @@ function openNav() {
    */
 
 /* style css end */
-
-
-
-
 
 
 
@@ -1741,11 +1749,11 @@ function openNav() {
                                     </div>
                                    <div class="row time_track br_bt mt_bt">
                                         <div class="col-lg-6 col-md-6"><p>Balance:</p></div>
-                                        <div class="col-lg-6 col-md-6 text-center"><p>0.0 ES</p></div>
+                                        <div class="col-lg-6 col-md-6 text-center"><p>Coming Soon</p></div>
                                    </div>
                                    <div class="row time_track mt_bt">
                                         <div class="col-lg-6 col-md-6"><p>Number of Business Listed:</p></div>
-                                        <div class="col-lg-6 col-md-6 text-center"><p>0211</p></div>
+                                        <div class="col-lg-6 col-md-6 text-center"><p>Coming Soon</p></div>
                                     </div>
                                     <div class="row time_track pt-5 pad-0">
                                         <div class="col-lg-6 col-6 text-right">
