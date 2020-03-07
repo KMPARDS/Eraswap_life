@@ -35,7 +35,7 @@
         <div class="tm-footer-toparea tm-padding-section" >
             <div class="row widgets tm-footer-widgets" style="padding-top: 0px !important; padding-bottom: 3px !important;">
                 <div class="col-xl-3 col-lg- col-md-4 col-12">
-                    <div class="single-widget widget-info">
+                    <div class="single-widget widget-info" style="padding-right:0">
                         <a href="/" class="widget-info-logo">
                             <img src="/images/es_newlogo-white-min.png" width="180px" alt="">
                         </a>
@@ -46,6 +46,7 @@
 							<li><a href="https://www.youtube.com/channel/UCGCP4f5DF1W6sbCjS6y3T1g" target="_blank"><i class="fa fa-youtube" style="font-size:22px"></i></a></li>
 							<li><a href="https://www.instagram.com/eraswap/" target="_blank"><i class="fa fa-instagram" style="font-size:22px"></i></a></li>
 							<li><a href="https://medium.com/@eraswap" target="_blank"><i class="fa fa-medium" aria-hidden="true" style="font-size:22px"></i></a></li>
+                            <li><a href="https://coinmarketcap.com/currencies/era-swap/" target="_blank"><img src="/images/cmc.png" style="height: 22px; margin-bottom: 7px;" /></a></li>
                         </ul>
                         <!-- <p>Dolor enim sit et perferendis quia in. Sed perferendis aliquid quo vel
                             necessitatibus commodi similique et. Veniam ducimus sed rerum cumque ipsum eos
