@@ -32,9 +32,10 @@
     "fix": "eslint . --ext .js,.svelte --fix"
   },
   "dependencies": {
-    "axios": "^0.19.0",
-    "copy-to-clipboard": "^3.2.0",
-    "eslint-plugin-svelte3": "^1.0.0",
-    "sveltestrap": "^1.0.0"
+    "axios": "0.19.0",
+    "copy-to-clipboard": "3.2.0",
+    "eslint-plugin-svelte3": "1.0.0",
+    "qrcode": "1.4.4",
+    "sveltestrap": "1.0.0"
   }
 }
