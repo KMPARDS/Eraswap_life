@@ -3,7 +3,11 @@
     import Footer from '../Footer.svelte'
     import axios from 'axios';
     import copy from 'copy-to-clipboard';
+    const QRCode = require('qrcode');
 	import { onMount } from 'svelte';
+
+  import SendSidebar from './SendSidebar.svelte';
+
     let balance = "";
     let es_balance = "";
     let address = "Loading...";
@@ -175,6 +179,9 @@
             error_message=""
 
             let contract = new ethers.Contract("0xef1344bdf80bef3ff4428d8becec3eea4a2cf574", abi, wallet)
+            // let contract = new ethers.Contract("0x53e750ee41c562c171d65bcb51405b16a56cf676", abi, wallet)
+            window.contract = contract;
+
             es_balance = ethers.utils.formatEther(await contract.functions.balanceOf(wallet.address));
 
         }catch (e) {
@@ -260,7 +267,7 @@ function openNav() {
         .sidepanel  {
             width: 0px;
             position: fixed;
-            z-index: 1;
+            z-index: 100;
             height: 100%;
             top: 58;
             left: 0;
@@ -769,358 +776,146 @@ function openNav() {
 
     </style>
 
-     <!-- <nav class="navbar navbar-header fixed-top">
-        <a class="navbar-brand" href="">
-            <img class="brand_logo" src="images/dashboardNew/es_newlogo-white-min.png" alt="logo" width="50" height="50">
-        </a>
-    </nav> -->
-    <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
-        <Navbar title="Dashboard" />
+    <div id="receivesidebar" class="sidepanel">
+        <div class="card">
+            <div class="card-header bg-dark tab_head text-white p-0">
+                <div class="row p-0">
+                    <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={closeNav}><i class="fa fa-arrow-left p-2"></i></span></div>
+                </div>
+
+                <ul class="nav" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" id="eraswap_tab" data-toggle="pill" href="#eraswap" role="tab" aria-controls="eraswap" aria-selected="true">ES / ETH / *ERC20</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link text-white"  id="ethereum_tab" data-toggle="pill" href="#ethereum" role="tab" aria-controls="ethereum" aria-selected="false">Ethereum</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link text-white"  id="btc_tab" data-toggle="pill" href="#btc" role="tab" aria-controls="btc" aria-selected="false">BTC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"  id="bch_tab" data-toggle="pill" href="#bch" role="tab" aria-controls="bch" aria-selected="false">BCH</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"  id="erc_tab" data-toggle="pill" href="#erc" role="tab" aria-controls="erc" aria-selected="false">ERC 20</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"  id="xrp_tab" data-toggle="pill" href="#xrp" role="tab" aria-controls="xrp" aria-selected="false">XRP</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="eraswap" role="tabpanel" aria-labelledby="eraswap_tab">
+                        <p>To receive ES, ETH or any ERC20 you can use your same ethereum wallet address.</p>
+                        <!-- <div class="row pt-2">
+                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
+                            <div class="col-lg-7 col-6"><p class="tap_text">ES Balance</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">{es_balance}</p></div>
+                        </div> -->
+                        <hr class="h">
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">Receive Era Swap / Ether / any ERC20 Token</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><canvas id="qrcode" /></div>
+                        </div>
+                    </div>
+                    <!-- <div class="tab-pane fade" id="ethereum" role="tabpanel" aria-labelledby="ethereum_tab">
+                        <div class="row pt-2">
+                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
+                            <div class="col-lg-7 col-6"><p class="tap_text">Ethereum</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
+                        </div>
+                        <hr class="h">
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">Receive Ethereum</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p id="qrcode"></p></div>
+                        </div>
+                    </div> -->
+                    <div class="tab-pane fade" id="btc" role="tabpanel" aria-labelledby="btc_tab">
+                        Comming Soon.....
+                        <!-- <div class="row pt-2">
+                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
+                            <div class="col-lg-7 col-6"><p class="tap_text">BTC</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
+                        </div>
+                        <hr class="h">
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">Receive BTC</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p id="qrcode"></p></div>
+                        </div> -->
+                    </div>
+                    <div class="tab-pane fade" id="bch" role="tabpanel" aria-labelledby="bch_tab">
+                        Comming Soon...
+                        <!-- <div class="row pt-2">
+                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
+                            <div class="col-lg-7 col-6"><p class="tap_text">BCH</p></div>
+
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
+                        </div>
+                        <hr class="h">
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">Receive BCH</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p id="qrcode"></p></div>
+                        </div> -->
+                    </div>
+                    <div class="tab-pane fade" id="erc" role="tabpanel" aria-labelledby="erc_tab">
+                        Comming Soon...
+                        <!-- <div class="row pt-2">
+                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
+                            <div class="col-lg-7 col-6"><p class="tap_text">ERC 20</p></div>
+
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
+                        </div>
+                        <hr class="h">
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">Receive ERC 20</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p id="qrcode"></p></div>
+                        </div> -->
+                    </div>
+                    <div class="tab-pane fade" id="xrp" role="tabpanel" aria-labelledby="xrp_tab">
+                        Comming Soon...
+                        <!-- <div class="row pt-2">
+                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
+                            <div class="col-lg-7 col-6"><p class="tap_text">XRP</p></div>
+
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
+                        </div>
+                        <hr class="h">
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p class="tap_text">Receive XRP</p></div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-lg-12"><p id="qrcode"></p></div>
+                        </div> -->
+                    </div>
+                  </div>
+            </div>
+         </div>
     </div>
 
-
-    <div class="container">
-        <div id="receivesidebar" class="sidepanel">
-            <div class="card">
-                <div class="card-header bg-dark tab_head text-white p-0">
-                    <div class="row p-0">
-                        <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={closeNav}><i class="fa fa-arrow-left p-2"></i></span></div>
-                    </div>
-
-                    <ul class="nav" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link text-white active" id="eraswap_tab" data-toggle="pill" href="#eraswap" role="tab" aria-controls="eraswap" aria-selected="true">Era Swap</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="ethereum_tab" data-toggle="pill" href="#ethereum" role="tab" aria-controls="ethereum" aria-selected="false">Ethereum</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="btc_tab" data-toggle="pill" href="#btc" role="tab" aria-controls="btc" aria-selected="false">BTC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="bch_tab" data-toggle="pill" href="#bch" role="tab" aria-controls="bch" aria-selected="false">BCH</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="erc_tab" data-toggle="pill" href="#erc" role="tab" aria-controls="erc" aria-selected="false">ERC 20</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="xrp_tab" data-toggle="pill" href="#xrp" role="tab" aria-controls="xrp" aria-selected="false">XRP</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="eraswap" role="tabpanel" aria-labelledby="eraswap_tab">
-                            <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">ES Balance</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">{es_balance}</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">Receive Era Swap</p></div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p id="qrcode"></p></div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="ethereum" role="tabpanel" aria-labelledby="ethereum_tab">
-                            <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">Ethereum</p></div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">Receive Ethereum</p></div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p id="qrcode"></p></div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="btc" role="tabpanel" aria-labelledby="btc_tab">
-                            Comming Soon.....
-                            <!-- <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">BTC</p></div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">Receive BTC</p></div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p id="qrcode"></p></div>
-                            </div> -->
-                        </div>
-                        <div class="tab-pane fade" id="bch" role="tabpanel" aria-labelledby="bch_tab">
-                            Comming Soon...
-                            <!-- <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">BCH</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">Receive BCH</p></div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p id="qrcode"></p></div>
-                            </div> -->
-                        </div>
-                        <div class="tab-pane fade" id="erc" role="tabpanel" aria-labelledby="erc_tab">
-                            Comming Soon...
-                            <!-- <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">ERC 20</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">Receive ERC 20</p></div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p id="qrcode"></p></div>
-                            </div> -->
-                        </div>
-                        <div class="tab-pane fade" id="xrp" role="tabpanel" aria-labelledby="xrp_tab">
-                            Comming Soon...
-                            <!-- <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">XRP</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">Receive XRP</p></div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p id="qrcode"></p></div>
-                            </div> -->
-                        </div>
-                      </div>
-                </div>
-             </div>
-        </div>
-
-        <div id="sendsidebar" class="sidepanel">
-            <div class="card">
-                <div class="card-header bg-dark tab_head text-white p-0">
-                    <div class="row p-0">
-                        <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={hideNav}><i class="fa fa-arrow-left p-2"></i></span></div>
-                    </div>
-
-                    <ul class="nav" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link text-white active" id="senderaswap_tab" data-toggle="pill" href="#senderaswap" role="tab" aria-controls="eraswap" aria-selected="true">Era Swap</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="sendethereum_tab" data-toggle="pill" href="#sendethereum" role="tab" aria-controls="ethereum" aria-selected="false">Ethereum</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="sendbtc_tab" data-toggle="pill" href="#sendbtc" role="tab" aria-controls="btc" aria-selected="false">BTC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="sendbch_tab" data-toggle="pill" href="#sendbch" role="tab" aria-controls="bch" aria-selected="false">BCH</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="senderc_tab" data-toggle="pill" href="#senderc" role="tab" aria-controls="erc" aria-selected="false">ERC 20</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white"  id="sendxrp_tab" data-toggle="pill" href="#sendxrp" role="tab" aria-controls="xrp" aria-selected="false">XRP</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="senderaswap" role="tabpanel" aria-labelledby="senderaswap_tab">
-                            <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">ES Balance</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12 time_track text-left">
-                                    <p>Send Era Swap</p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <form action="">
-                                        <div class="row">
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Receiver's ES address">
-                                            </div>
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Amount of ES transfer">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="sendethereum" role="tabpanel" aria-labelledby="sendethereum_tab">
-                            <div class="row pt-2">
-                                <div class="col-lg-5 col-6 pl-1 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6 p-0"><p class="tap_text">Ethereum Balance</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12 time_track text-left">
-                                    <p>Send Ethereum</p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <form action="">
-                                        <div class="row">
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Receiver's Ethereum address">
-                                            </div>
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Amount of Ethereum transfer">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="sendbtc" role="tabpanel" aria-labelledby="sendbtc_tab">
-                            <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">BTC Balance</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12 time_track text-left">
-                                    <p>Send BTC</p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <form action="">
-                                        <div class="row">
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Receiver's BTC address">
-                                            </div>
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Amount of BTC transfer">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="sendbch" role="tabpanel" aria-labelledby="sendbch_tab">
-                            <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">BCH Balance</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12 time_track text-left">
-                                    <p>Send BCH</p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <form action="">
-                                        <div class="row">
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Receiver's BCH address">
-                                            </div>
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Amount of BCH transfer">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="senderc" role="tabpanel" aria-labelledby="senderc_tab">
-                            <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">ERC 20 Balance</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12 time_track text-left">
-                                    <p>Send ERC 20</p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <form action="">
-                                        <div class="row">
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Receiver's ERC 20 address">
-                                            </div>
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Amount of ERC 20 transfer">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="sendxrp" role="tabpanel" aria-labelledby="sendxrp_tab">
-                            <div class="row pt-2">
-                                <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
-                                <div class="col-lg-7 col-6"><p class="tap_text">XRP Balance</p></div>
-
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                            </div>
-                            <hr class="h">
-                            <div class="row text-center">
-                                <div class="col-lg-12 time_track text-left">
-                                    <p>Send XRP</p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <form action="">
-                                        <div class="row">
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Receiver's XRP address">
-                                            </div>
-                                            <div class="col-lg-12 form-group">
-                                                <input type="text" class="form-control" placeholder="Enter Amount of XRP transfer">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                </div>
-             </div>
-        </div>
+    <SendSidebar balance={balance} esbalance={es_balance} />
 
     <div id="token_slide" class="sidepanel">
         <div class="card">
@@ -1151,8 +946,17 @@ function openNav() {
         </div>
     </div>
 
+    <!-- <nav class="navbar navbar-header fixed-top">
+       <a class="navbar-brand" href="">
+           <img class="brand_logo" src="images/dashboardNew/es_newlogo-white-min.png" alt="logo" width="50" height="50">
+       </a>
+   </nav> -->
+   <div  style="background:linear-gradient(90deg, #6b1111 0%, #170301 100%)">
+       <Navbar title="Dashboard" />
+   </div>
 
 
+    <div class="container">
         <div class="row text-center" style="margin-top: 60px;">
             <div class="col-lg-12">
                 <h1 class="welcome">Welcome to Era Swap Life</h1>
@@ -1588,10 +1392,17 @@ function openNav() {
                             <div class="col-lg-12 my-3">
                                 <div class="row">
                                     <div class="col-lg-6 col-6 col-md-6 send-btn">
-                                        <button type="button" class="btn bnt-SR" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn bnt-SR" on:click={() => {
+                                          window.sendEsToAdd = null;
+                                          window.sendEsDisplay = null;
+                                          showNav();
+                                        }}>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 col-md-6 received_btn">
-                                        <button type="button" class="btn bnt-SR" on:click={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn bnt-SR" on:click={() => {
+                                          openNav();
+                                          QRCode.toCanvas(document.getElementById('qrcode'), address);
+                                        }}>Receive</button>
                                     </div>
                                 </div>
                             </div>
@@ -1757,7 +1568,11 @@ function openNav() {
                                     </div>
                                     <div class="row time_track pt-5 pad-0">
                                         <div class="col-lg-6 col-6 text-right">
-                                            <button type="button" class="btn btn-w-d" disabled>Deposit</button>
+                                            <button type="button" class="btn btn-w-d" on:click={() => {
+                                              window.sendEsToAdd = '0x8e2C3c90f83FF5a93324a7eb0B55B995E1340681';
+                                              window.sendEsDisplay = 'Buzcafe Deposit Address';
+                                              showNav();
+                                            }}>Deposit</button>
                                         </div>
                                         <div class="col-lg-6 col-6">
                                             <button type="button" class="btn btn-w-d" disabled>Widthdraw</button>
@@ -1814,7 +1629,11 @@ function openNav() {
                                 </div>
                                 <div class="row time_track marg-tp-70 mrg-bt-28">
                                     <div class="col-lg-6 col-6 text-right">
-                                        <button type="button" class="btn btn-w-d" disabled>Deposit</button>
+                                        <button type="button" class="btn btn-w-d" on:click={() => {
+                                          window.sendEsToAdd = '0x63410b1170A89Ba76c46005a6717669f99dF7b7c';
+                                          window.sendEsDisplay = 'TimeSwappers Deposit Address';
+                                          showNav();
+                                        }}>Deposit</button>
                                     </div>
                                     <div class="col-lg-6 col-6">
                                         <button type="button" class="btn btn-w-d" disabled>Withdraw</button>
@@ -1844,7 +1663,11 @@ function openNav() {
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 marg-tp-50">
-                                                <button type="button" class="btn btn-w-d" disabled>Deposit</button>
+                                                <button type="button" class="btn btn-w-d" on:click={() => {
+                                                  window.sendEsToAdd = '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd';
+                                                  window.sendEsDisplay = 'Era Swap Academy Deposit Address';
+                                                  showNav();
+                                                }}>Deposit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1863,7 +1686,11 @@ function openNav() {
                                             <div class="col-lg-12 pt-4 marg-t-36">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-6 text-right">
-                                                        <button type="button" class="btn btn-w-d" disabled>Deposit</button>
+                                                        <button type="button" class="btn btn-w-d" on:click={() => {
+                                                          window.sendEsToAdd = '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd';
+                                                          window.sendEsDisplay = 'Era Swap Academy Deposit Address';
+                                                          showNav();
+                                                        }}>Deposit</button>
                                                     </div>
                                                     <div class="col-lg-6 col-6">
                                                         <button type="button" class="btn btn-w-d" disabled>Widthdraw</button>

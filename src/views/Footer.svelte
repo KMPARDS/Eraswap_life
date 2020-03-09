@@ -17,7 +17,7 @@
 
 </style>
 <!-- Footer Area -->
-<div class="tm-footer bg-gradient">
+<div class="tm-footer bg-gradient" style="z-index: auto">
     <div class="container">
     <img src="/images/chatbot.png" alt="chatbot" class="open-button" onclick="openForm()" style="width:120px">
 
@@ -89,7 +89,7 @@
                     <h4 class="text-white">Era Swap Life</h4>
                     <p style="margin-bottom:5px">Era Swap Life is Single Sign On (SSO) gateway which provides access to multiple utility platforms accepting Era Swap (ES) Utility token.</p>
                     <a style="text-decoration:underline;" href="https://www.youtube-nocookie.com/embed/WTydWvczn8g?rel=0&amp" target="_blank" rel="noopenner noreferrer">View Era Swap Teaser</a>
-                    
+
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-widget widget-recentpost">
