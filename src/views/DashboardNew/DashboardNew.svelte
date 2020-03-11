@@ -169,6 +169,7 @@
 
             first_time = window.firstTime || await get({address: wallet.address});
             if(first_time && refer) {
+              console.log('clicked on refer model');
               document.getElementById("refer_model").click()
             }
             // if(refer)
@@ -775,6 +776,40 @@ function openNav() {
 
 
     </style>
+
+    <button class="btn btn-default offset-xl-5"  id="refer_model" data-toggle="modal" data-target="#model"  style="display: none">Submit</button>
+
+    <div id="model" class="modal" data-backdrop="static" data-easein="bounceIn"  tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+                   </div>
+                   <div class="modal-body" style="text-align: center">
+                       <div class="col-lg-12">
+                       <div class="tm-subscribe-content text-center">
+                           <h3>Are you refered by </h3>
+                           <p style="font-size:14px">{refer}</p>
+                           <form id="tm-mailchimp-form" class="tm-subscribe-form text-center">
+                               <button id="mc-submit" type="button" class="tm-button" data-dismiss="modal" on:click={submit_refer}><span>Accept</span></button>
+                               <button id="mc-submit" type="button" class="tm-button" data-dismiss="modal"><span>Reject</span></button>
+                           </form>
+                           <!-- Mailchimp Alerts -->
+                           <div class="tm-mailchimp-alerts">
+                               <div class="tm-mailchimp-submitting"></div>
+                               <div class="mailchimp-success"></div>
+                               <div class="tm-mailchimp-error"></div>
+                           </div>
+                           <!--// Mailchimp Alerts -->
+                       </div>
+                   </div>
+
+
+                   </div>
+
+               </div>
+           </div>
+     </div>
 
     <div id="receivesidebar" class="sidepanel">
         <div class="card">
