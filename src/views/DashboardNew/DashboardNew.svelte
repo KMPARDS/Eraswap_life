@@ -1049,7 +1049,7 @@ function openNav() {
                         {/if}
                     </li>
                     <li style="cursor:pointer;"><img src="images/dashboardNew/Dayswappers.jpg" alt="" data="https://dayswappers.com/" on:click={load_website}></li>
-                    <li style="cursor:pointer;"><img src="images/dashboardNew/DateSwappers.jpg" alt="" data="https://eraswapwallet.com/" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/DateSwappers.jpg" alt="" data="https://dateswappers.com/" on:click={load_website}></li>
                     <li style="cursor:pointer;">
                         {#if window.usingMetamask}
                             <a href="https://eraswap.academy/metaMaskLogin" target="_blank">
@@ -1119,7 +1119,7 @@ function openNav() {
                         <img src="images/dashboardNew/Dayswappers.jpg" alt="" data="https://dayswappers.com/" on:click={load_website}>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
-                        <img src="images/dashboardNew/DateSwappers.jpg" alt="" data="https://eraswapwallet.com/" on:click={load_website}>
+                        <img src="images/dashboardNew/DateSwappers.jpg" alt="" data="https://dateswappers.com/" on:click={load_website}>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
                         {#if window.usingMetamask}
