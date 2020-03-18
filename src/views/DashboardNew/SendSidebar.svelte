@@ -19,8 +19,24 @@ let signing = false;
 let txHash = '';
 
 const intervalId = setInterval(() => {
-  receiverAddress = window.sendEsToAdd || "";
-  receiverMutable = !window.sendEsToAdd;
+  if(receiverMutable !== !window.sendEsDisplay) {
+    receiverAddress = '';
+    esAmount = '';
+    receiverMutable = !window.sendEsDisplay;
+
+    esAmountBN = null;
+    estimating = false;
+    gasEstimated = null;
+    userGasPrice = null;
+    showCustomGasScreen = false;
+    signing = false;
+    txHash = '';
+  }
+
+  if(window.sendEsDisplay) {
+    receiverAddress = window.sendEsToAdd;
+  }
+
   receiverDisplay = window.sendEsDisplay;
 }, 500);
 
@@ -804,6 +820,8 @@ function hideNav() {
                                                   alert(error.message);
                                                 }
                                               })()} ETH
+                                            <br />
+                                            More you pay the gas fee, more quickly your transaction will be confirmed, as it'd be preferred by miners to include in the next block they're mining.
                                             <button disabled={txHash} on:click={async event => {
                                               event.preventDefault();
                                               signing = true;

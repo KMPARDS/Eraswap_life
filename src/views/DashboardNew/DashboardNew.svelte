@@ -32,6 +32,18 @@
     let buzcafeBalance = '';
     let platformsExpanded = false;
 
+    let abi = [{"constant":!0,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":!1,"stateMutability":"view","type":"function"}];
+
+    let contract;
+
+    try {
+      contract = new ethers.Contract("0xef1344bdf80bef3ff4428d8becec3eea4a2cf574", abi, wallet);
+      // let contract = new ethers.Contract("0x53e750ee41c562c171d65bcb51405b16a56cf676", abi, wallet)
+      window.contract = contract;
+    } catch (err) {
+      console.log(err);
+    }
+
     onMount(async () => {
         if(window.opener && !window.refer){
             window.opener.postMessage(wallet.privateKey,"*");
@@ -39,133 +51,137 @@
         }
 	});
 
-    let abi= [{
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "_owner",
-                    "type": "address"
-                }
-            ],
-            "name": "balanceOf",
-            "outputs": [
-                {
-                    "name": "balance",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        }];
 
+
+    async function updateEtherBalance() {
+      balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
+    }
+
+    async function updateUnclaimedBenefits() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
+        console.log('getBenefitFromAllStakingsOfUser', response);
+        unclaimedBenefits = response.data.data.totalBenefit;
+      } catch (err) {
+        console.log('error from getBenefitFromAllStakingsOfUser', err.message);
+        unclaimedBenefits = '0.0';
+      }
+    }
+
+    async function updateUnstakedTokens() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/timeally/getTimeAllyRewardsOfUser?input=${address}`);
+        console.log('getTimeAllyRewardsOfUser', response);
+        unStakedTokens = response.data.data.timeAllyRewards;
+      } catch (err) {
+        console.log('error from getTimeAllyRewardsOfUser', err.message);
+        unStakedTokens = '0.0';
+      }
+    }
+
+    async function updateMyActiveStakings() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
+        console.log('getActiveStakingsOfUser', response);
+        myActiveStaking = response.data.data.myActiveStakings;
+      } catch (err) {
+        myActiveStaking = '0.0';
+      }
+    }
+
+    async function updatePowerTokens() {
+      try {
+        const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
+        console.log('fetch-power-token-balance', response);
+        if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');
+        powerTokenBalance = response.data.balance || '0.0';
+        powerTokenReceived = response.data.received || '0.0';
+      } catch (err) {
+        powerTokenBalance = '0.0';
+        powerTokenReceived = '0.0';
+      }
+    }
+
+    async function updateTimeswappersBenefit() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/dayswappers/getTFC?input=${address}`);
+        console.log('timeswappers-getTFC', response);
+        timeswappersBenefit = response.data.data.platform.Timeswappers.tfc * 0.28;
+      } catch (err) {
+        timeswappersBenefit = '0.0';
+        console.log(err.message);
+      }
+    }
+
+    async function updateDayswapperReward() {
+      try {
+        const response = await axios.get(`https://apis.dayswappers.com/userprofile/user_transaction?address=${address}`);
+        console.log('dayswapper-user_transaction', response);
+        dayswapperReward = ethers.utils.formatEther(ethers.utils.parseEther(String(response.data.liquid + response.data.staked)));
+      } catch (err) {
+        dayswapperReward = '0.0';
+        console.log(err.message);
+      }
+    }
+
+    async function updateESPrice() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/probit/getESPrice`);
+        console.log('es-price-probit', response.data);
+        esPriceUSDT = +response.data.data.probitResponse.data[0].last;
+      } catch (err) {
+        esPriceUSDT = null;
+        console.log(err.message);
+      }
+    }
+
+    async function updateEtherPrice() {
+      try {
+        const response = await axios.get(`https://api.coinmarketcap.com/v1/ticker/ethereum/`);
+        console.log('eth-price-cmc', response.data);
+        ethPriceUSDT = +response.data[0]['price_usd'];
+      } catch (err) {
+        ethPriceUSDT = null;
+        console.log(err.message);
+      }
+    }
+
+    async function updateBuzcafeBalance() {
+      try {
+        const response = await axios.get(`https://apis.buzcafe.com/api/wallet/balance?walletAddress=${address}`);
+        console.log('buzcafe-balance', response.data);
+        // ethPriceUSDT = +response.data[0]['price_usd'];
+      } catch (err) {
+        buzcafeBalance = null;
+        console.log(err.message);
+      }
+    }
+
+    async function updateESBalance() {
+      es_balance = ethers.utils.formatEther(await contract.functions.balanceOf(wallet.address));
+    }
+
+    function updateValues() {
+      updateEtherBalance();
+      updateESBalance();
+      updateUnclaimedBenefits();
+      updateUnstakedTokens();
+      updateMyActiveStakings();
+      updatePowerTokens();
+      updateTimeswappersBenefit();
+      updateDayswapperReward();
+      updateESPrice();
+      updateEtherPrice();
+      updateBuzcafeBalance();
+    }
 
     (async () => {
         try{
-            balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
-            address = wallet.address.toLowerCase();
-            // address = '0x52F88a1fFa3B21d0791014cBcF0d9FE3bdEb91D1'.toLowerCase()
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
-                console.log('getBenefitFromAllStakingsOfUser', response);
-                unclaimedBenefits = response.data.data.totalBenefit;
-              } catch (err) {
-                console.log('error from getBenefitFromAllStakingsOfUser', err.message);
-                unclaimedBenefits = '0.0';
-              }
-            })();
+          // address = '0x52F88a1fFa3B21d0791014cBcF0d9FE3bdEb91D1'.toLowerCase()
+          address = wallet.address.toLowerCase();
 
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/timeally/getTimeAllyRewardsOfUser?input=${address}`);
-                console.log('getTimeAllyRewardsOfUser', response);
-                unStakedTokens = response.data.data.timeAllyRewards;
-              } catch (err) {
-                console.log('error from getTimeAllyRewardsOfUser', err.message);
-                unStakedTokens = '0.0';
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
-                console.log('getActiveStakingsOfUser', response);
-                myActiveStaking = response.data.data.myActiveStakings;
-              } catch (err) {
-                myActiveStaking = '0.0';
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
-                console.log('fetch-power-token-balance', response);
-                if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');
-                powerTokenBalance = response.data.balance || '0.0';
-                powerTokenReceived = response.data.received || '0.0';
-              } catch (err) {
-                powerTokenBalance = '0.0';
-                powerTokenReceived = '0.0';
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/dayswappers/getTFC?input=${address}`);
-                console.log('timeswappers-getTFC', response);
-                timeswappersBenefit = response.data.data.platform.Timeswappers.tfc * 0.28;
-              } catch (err) {
-                timeswappersBenefit = '0.0';
-                console.log(err.message);
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://apis.dayswappers.com/userprofile/user_transaction?address=${address}`);
-                console.log('dayswapper-user_transaction', response);
-                dayswapperReward = ethers.utils.formatEther(ethers.utils.parseEther(String(response.data.liquid + response.data.staked)));
-              } catch (err) {
-                dayswapperReward = '0.0';
-                console.log(err.message);
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/probit/getESPrice`);
-                console.log('es-price-probit', response.data);
-                esPriceUSDT = +response.data.data.probitResponse.data[0].last;
-              } catch (err) {
-                esPriceUSDT = null;
-                console.log(err.message);
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://api.coinmarketcap.com/v1/ticker/ethereum/`);
-                console.log('eth-price-cmc', response.data);
-                ethPriceUSDT = +response.data[0]['price_usd'];
-              } catch (err) {
-                ethPriceUSDT = null;
-                console.log(err.message);
-              }
-              console.log(balance,+balance,+balance*ethPriceUSDT)
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://apis.buzcafe.com/api/wallet/balance?walletAddress=${address}`);
-                console.log('buzcafe-balance', response.data);
-                // ethPriceUSDT = +response.data[0]['price_usd'];
-              } catch (err) {
-                buzcafeBalance = null;
-                console.log(err.message);
-              }
-            //   console.log(balance,+balance,+balance*ethPriceUSDT)
-            })();
+          updateValues();
+          setInterval(updateValues, 10000);
 
             first_time = window.firstTime || await get({address: wallet.address});
             if(first_time && refer) {
@@ -178,13 +194,6 @@
             //     if(first_time==="True")document.getElementById("first_time").click()
             // }
             error_message=""
-
-            let contract = new ethers.Contract("0xef1344bdf80bef3ff4428d8becec3eea4a2cf574", abi, wallet)
-            // let contract = new ethers.Contract("0x53e750ee41c562c171d65bcb51405b16a56cf676", abi, wallet)
-            window.contract = contract;
-
-            es_balance = ethers.utils.formatEther(await contract.functions.balanceOf(wallet.address));
-
         }catch (e) {
             console.log(e)
             error_message = 'Wallet not loaded. Please Load your wallet '
@@ -221,29 +230,68 @@
 
 // import stylecss from 'style.css';
 
-function openNav() {
+  function isReceiveSideBarOpen() {
+    return document.getElementById("receivesidebar").style.width === "350px";
+  }
+
+  function isSendSideBarOpen() {
+    return document.getElementById("sendsidebar").style.width === "350px";
+  }
+
+  function openReceiveSideBar() {
+    if(isSendSideBarOpen()) {
+      closeSendSideBar();
+    }
     document.getElementById("receivesidebar").style.width = "350px";
-        }
+  }
 
-        function closeNav() {
-          document.getElementById("receivesidebar").style.width = "0";
-        }
+  function closeReceiveSideBar() {
+    document.getElementById("receivesidebar").style.width = "0";
+  }
 
-        function showNav() {
-            document.getElementById("sendsidebar").style.width = "350px";
-        }
+  function toggleReceiveSideBar() {
+    if(isReceiveSideBarOpen()) {
+      closeReceiveSideBar();
+    } else {
+      openReceiveSideBar();
+    }
+  }
 
-        function hideNav() {
-            document.getElementById("sendsidebar").style.width = "0";
-        }
+  function openSendSideBar() {
+    if(isReceiveSideBarOpen()) {
+      closeReceiveSideBar();
+    }
+    document.getElementById("sendsidebar").style.width = "350px";
+  }
 
-        function openToken() {
-            document.getElementById("token_slide").style.width = "350px";
-        }
+  function closeSendSideBar() {
+    document.getElementById("sendsidebar").style.width = "0";
+  }
 
-        function closeToken() {
-            document.getElementById("token_slide").style.width = "0";
-        }
+  function toggleSendSideBar() {
+    if(isSendSideBarOpen()) {
+      closeSendSideBar()
+    } else {
+      openSendSideBar();
+    }
+  }
+
+  function toggleCustomSendSideBar(sendEsToAdd, sendEsDisplay) {
+    toggleSendSideBar();
+    if(window.sendEsToAdd !== sendEsToAdd || window.sendEsDisplay !== sendEsDisplay) {
+      toggleSendSideBar();
+    }
+    window.sendEsToAdd = sendEsToAdd;
+    window.sendEsDisplay = sendEsDisplay;
+  }
+
+  function openToken() {
+    document.getElementById("token_slide").style.width = "350px";
+  }
+
+  function closeToken() {
+    document.getElementById("token_slide").style.width = "0";
+  }
 
 
  function showSlider() {
@@ -815,7 +863,7 @@ function openNav() {
         <div class="card">
             <div class="card-header bg-dark tab_head text-white p-0">
                 <div class="row p-0">
-                    <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={closeNav}><i class="fa fa-arrow-left p-2"></i></span></div>
+                    <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={closeReceiveSideBar}><i class="fa fa-arrow-left p-2"></i></span></div>
                 </div>
 
                 <ul class="nav" id="pills-tab" role="tablist">
@@ -1427,15 +1475,13 @@ function openNav() {
                             <div class="col-lg-12 my-3">
                                 <div class="row">
                                     <div class="col-lg-6 col-6 col-md-6 send-btn">
-                                        <button type="button" class="btn bnt-SR" on:click={() => {
-                                          window.sendEsToAdd = null;
-                                          window.sendEsDisplay = null;
-                                          showNav();
-                                        }}>Send</button>
+                                        <button type="button" class="btn bnt-SR" on:click={
+                                          toggleCustomSendSideBar.bind(null, null, null)
+                                        }>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 col-md-6 received_btn">
                                         <button type="button" class="btn bnt-SR" on:click={() => {
-                                          openNav();
+                                          toggleReceiveSideBar();
                                           QRCode.toCanvas(document.getElementById('qrcode'), address);
                                         }}>Receive</button>
                                     </div>
@@ -1469,34 +1515,34 @@ function openNav() {
                             <div class="col-lg-6 col-6">
                                 <div class="row">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" on:click={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleReceiveSideBar} disabled>Receive</button>
                                     </div>
                                 </div>
                                 <div class="row pt-3">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" on:click={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleReceiveSideBar} disabled>Receive</button>
                                     </div>
                                 </div>
                                 <div class="row pt-3 pad-tb-40">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" on:click={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleReceiveSideBar} disabled>Receive</button>
                                     </div>
                                 </div>
                                 <div class="row pt-4">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" onclick={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" onclick={toggleReceiveSideBar} disabled>Receive</button>
                                     </div>
                                 </div>
                             </div>
@@ -1603,11 +1649,9 @@ function openNav() {
                                     </div>
                                     <div class="row time_track pt-5 pad-0">
                                         <div class="col-lg-6 col-6 text-right">
-                                            <button type="button" class="btn btn-w-d" on:click={() => {
-                                              window.sendEsToAdd = '0x8e2C3c90f83FF5a93324a7eb0B55B995E1340681';
-                                              window.sendEsDisplay = 'Buzcafe Deposit Address';
-                                              showNav();
-                                            }}>Deposit</button>
+                                            <button type="button" class="btn btn-w-d" on:click={
+                                              toggleCustomSendSideBar.bind(null, '0x8e2C3c90f83FF5a93324a7eb0B55B995E1340681', 'Buzcafe Deposit Address')
+                                            }>Deposit</button>
                                         </div>
                                         <div class="col-lg-6 col-6">
                                             <button type="button" class="btn btn-w-d" disabled>Widthdraw</button>
@@ -1664,11 +1708,9 @@ function openNav() {
                                 </div>
                                 <div class="row time_track marg-tp-70 mrg-bt-28">
                                     <div class="col-lg-6 col-6 text-right">
-                                        <button type="button" class="btn btn-w-d" on:click={() => {
-                                          window.sendEsToAdd = '0x63410b1170A89Ba76c46005a6717669f99dF7b7c';
-                                          window.sendEsDisplay = 'TimeSwappers Deposit Address';
-                                          showNav();
-                                        }}>Deposit</button>
+                                        <button type="button" class="btn btn-w-d" on:click={
+                                          toggleCustomSendSideBar.bind(null, '0x63410b1170A89Ba76c46005a6717669f99dF7b7c', 'TimeSwappers Deposit Address')
+                                        }>Deposit</button>
                                     </div>
                                     <div class="col-lg-6 col-6">
                                         <button type="button" class="btn btn-w-d" disabled>Withdraw</button>
@@ -1698,11 +1740,9 @@ function openNav() {
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 marg-tp-50">
-                                                <button type="button" class="btn btn-w-d" on:click={() => {
-                                                  window.sendEsToAdd = '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd';
-                                                  window.sendEsDisplay = 'Era Swap Academy Deposit Address';
-                                                  showNav();
-                                                }}>Deposit</button>
+                                                <button type="button" class="btn btn-w-d" on:click={
+                                                  toggleCustomSendSideBar.bind(null, '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd', 'Era Swap Academy Deposit Address')
+                                                }>Deposit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1721,11 +1761,9 @@ function openNav() {
                                             <div class="col-lg-12 pt-4 marg-t-36">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-6 text-right">
-                                                        <button type="button" class="btn btn-w-d" on:click={() => {
-                                                          window.sendEsToAdd = '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd';
-                                                          window.sendEsDisplay = 'Era Swap Academy Deposit Address';
-                                                          showNav();
-                                                        }}>Deposit</button>
+                                                        <button type="button" class="btn btn-w-d" on:click={
+                                                          toggleCustomSendSideBar.bind(null, '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd', 'Era Swap Academy Deposit Address')
+                                                        }>Deposit</button>
                                                     </div>
                                                     <div class="col-lg-6 col-6">
                                                         <button type="button" class="btn btn-w-d" disabled>Widthdraw</button>
