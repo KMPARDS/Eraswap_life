@@ -32,6 +32,9 @@
     let buzcafeBalance = '';
     let platformsExpanded = false;
 
+    let sendSideBarOpen = false;
+    let receiveSideBarOpen = false;
+
     onMount(async () => {
         if(window.opener && !window.refer){
             window.opener.postMessage(wallet.privateKey,"*");
@@ -221,29 +224,64 @@
 
 // import stylecss from 'style.css';
 
-function openNav() {
+  function openReceiveSideBar() {
+    if(sendSideBarOpen) {
+      closeSendSideBar();
+    }
     document.getElementById("receivesidebar").style.width = "350px";
-        }
+    receiveSideBarOpen = true;
+  }
 
-        function closeNav() {
-          document.getElementById("receivesidebar").style.width = "0";
-        }
+  function closeReceiveSideBar() {
+    document.getElementById("receivesidebar").style.width = "0";
+    receiveSideBarOpen = false;
+  }
 
-        function showNav() {
-            document.getElementById("sendsidebar").style.width = "350px";
-        }
+  function toggleReceiveSideBar() {
+    if(receiveSideBarOpen) {
+      closeReceiveSideBar();
+    } else {
+      openReceiveSideBar();
+    }
+  }
 
-        function hideNav() {
-            document.getElementById("sendsidebar").style.width = "0";
-        }
+  function openSendSideBar() {
+    if(receiveSideBarOpen) {
+      closeReceiveSideBar();
+    }
+    document.getElementById("sendsidebar").style.width = "350px";
+    sendSideBarOpen = true;
+  }
 
-        function openToken() {
-            document.getElementById("token_slide").style.width = "350px";
-        }
+  function closeSendSideBar() {
+    document.getElementById("sendsidebar").style.width = "0";
+    sendSideBarOpen = false;
+  }
 
-        function closeToken() {
-            document.getElementById("token_slide").style.width = "0";
-        }
+  function toggleSendSideBar() {
+    if(sendSideBarOpen) {
+      closeSendSideBar()
+    } else {
+      openSendSideBar();
+    }
+  }
+
+  function toggleCustomSendSideBar(sendEsToAdd, sendEsDisplay) {
+    toggleSendSideBar();
+    if(window.sendEsToAdd !== sendEsToAdd || window.sendEsDisplay !== sendEsDisplay) {
+      toggleSendSideBar();
+    }
+    window.sendEsToAdd = sendEsToAdd;
+    window.sendEsDisplay = sendEsDisplay;
+  }
+
+  function openToken() {
+    document.getElementById("token_slide").style.width = "350px";
+  }
+
+  function closeToken() {
+    document.getElementById("token_slide").style.width = "0";
+  }
 
 
  function showSlider() {
@@ -815,7 +853,7 @@ function openNav() {
         <div class="card">
             <div class="card-header bg-dark tab_head text-white p-0">
                 <div class="row p-0">
-                    <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={closeNav}><i class="fa fa-arrow-left p-2"></i></span></div>
+                    <div class="col-lg-12 text-right"><span href="javascript:void(0)" class="closebtn" on:click={closeReceiveSideBar}><i class="fa fa-arrow-left p-2"></i></span></div>
                 </div>
 
                 <ul class="nav" id="pills-tab" role="tablist">
@@ -1427,15 +1465,13 @@ function openNav() {
                             <div class="col-lg-12 my-3">
                                 <div class="row">
                                     <div class="col-lg-6 col-6 col-md-6 send-btn">
-                                        <button type="button" class="btn bnt-SR" on:click={() => {
-                                          window.sendEsToAdd = null;
-                                          window.sendEsDisplay = null;
-                                          showNav();
-                                        }}>Send</button>
+                                        <button type="button" class="btn bnt-SR" on:click={
+                                          toggleCustomSendSideBar.bind(null, null, null)
+                                        }>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 col-md-6 received_btn">
                                         <button type="button" class="btn bnt-SR" on:click={() => {
-                                          openNav();
+                                          toggleReceiveSideBar();
                                           QRCode.toCanvas(document.getElementById('qrcode'), address);
                                         }}>Receive</button>
                                     </div>
@@ -1469,34 +1505,34 @@ function openNav() {
                             <div class="col-lg-6 col-6">
                                 <div class="row">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" on:click={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleReceiveSideBar} disabled>Receive</button>
                                     </div>
                                 </div>
                                 <div class="row pt-3">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" on:click={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleReceiveSideBar} disabled>Receive</button>
                                     </div>
                                 </div>
                                 <div class="row pt-3 pad-tb-40">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" on:click={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleReceiveSideBar} disabled>Receive</button>
                                     </div>
                                 </div>
                                 <div class="row pt-4">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={showNav} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" onclick={openNav} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" onclick={toggleReceiveSideBar} disabled>Receive</button>
                                     </div>
                                 </div>
                             </div>
@@ -1603,11 +1639,9 @@ function openNav() {
                                     </div>
                                     <div class="row time_track pt-5 pad-0">
                                         <div class="col-lg-6 col-6 text-right">
-                                            <button type="button" class="btn btn-w-d" on:click={() => {
-                                              window.sendEsToAdd = '0x8e2C3c90f83FF5a93324a7eb0B55B995E1340681';
-                                              window.sendEsDisplay = 'Buzcafe Deposit Address';
-                                              showNav();
-                                            }}>Deposit</button>
+                                            <button type="button" class="btn btn-w-d" on:click={
+                                              toggleCustomSendSideBar.bind(null, '0x8e2C3c90f83FF5a93324a7eb0B55B995E1340681', 'Buzcafe Deposit Address')
+                                            }>Deposit</button>
                                         </div>
                                         <div class="col-lg-6 col-6">
                                             <button type="button" class="btn btn-w-d" disabled>Widthdraw</button>
@@ -1664,11 +1698,9 @@ function openNav() {
                                 </div>
                                 <div class="row time_track marg-tp-70 mrg-bt-28">
                                     <div class="col-lg-6 col-6 text-right">
-                                        <button type="button" class="btn btn-w-d" on:click={() => {
-                                          window.sendEsToAdd = '0x63410b1170A89Ba76c46005a6717669f99dF7b7c';
-                                          window.sendEsDisplay = 'TimeSwappers Deposit Address';
-                                          showNav();
-                                        }}>Deposit</button>
+                                        <button type="button" class="btn btn-w-d" on:click={
+                                          toggleCustomSendSideBar.bind(null, '0x63410b1170A89Ba76c46005a6717669f99dF7b7c', 'TimeSwappers Deposit Address')
+                                        }>Deposit</button>
                                     </div>
                                     <div class="col-lg-6 col-6">
                                         <button type="button" class="btn btn-w-d" disabled>Withdraw</button>
@@ -1698,11 +1730,9 @@ function openNav() {
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 marg-tp-50">
-                                                <button type="button" class="btn btn-w-d" on:click={() => {
-                                                  window.sendEsToAdd = '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd';
-                                                  window.sendEsDisplay = 'Era Swap Academy Deposit Address';
-                                                  showNav();
-                                                }}>Deposit</button>
+                                                <button type="button" class="btn btn-w-d" on:click={
+                                                  toggleCustomSendSideBar.bind(null, '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd', 'Era Swap Academy Deposit Address')
+                                                }>Deposit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1721,11 +1751,9 @@ function openNav() {
                                             <div class="col-lg-12 pt-4 marg-t-36">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-6 text-right">
-                                                        <button type="button" class="btn btn-w-d" on:click={() => {
-                                                          window.sendEsToAdd = '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd';
-                                                          window.sendEsDisplay = 'Era Swap Academy Deposit Address';
-                                                          showNav();
-                                                        }}>Deposit</button>
+                                                        <button type="button" class="btn btn-w-d" on:click={
+                                                          toggleCustomSendSideBar.bind(null, '0xFE59882bEf1c6540eeC6b39BC0293e3a51f41dBd', 'Era Swap Academy Deposit Address')
+                                                        }>Deposit</button>
                                                     </div>
                                                     <div class="col-lg-6 col-6">
                                                         <button type="button" class="btn btn-w-d" disabled>Widthdraw</button>
