@@ -32,8 +32,17 @@
     let buzcafeBalance = '';
     let platformsExpanded = false;
 
-    let sendSideBarOpen = false;
-    let receiveSideBarOpen = false;
+    let abi = [{"constant":!0,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":!1,"stateMutability":"view","type":"function"}];
+
+    let contract;
+
+    try {
+      contract = new ethers.Contract("0xef1344bdf80bef3ff4428d8becec3eea4a2cf574", abi, wallet);
+      // let contract = new ethers.Contract("0x53e750ee41c562c171d65bcb51405b16a56cf676", abi, wallet)
+      window.contract = contract;
+    } catch (err) {
+      console.log(err);
+    }
 
     onMount(async () => {
         if(window.opener && !window.refer){
@@ -42,133 +51,137 @@
         }
 	});
 
-    let abi= [{
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "_owner",
-                    "type": "address"
-                }
-            ],
-            "name": "balanceOf",
-            "outputs": [
-                {
-                    "name": "balance",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        }];
 
+
+    async function updateEtherBalance() {
+      balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
+    }
+
+    async function updateUnclaimedBenefits() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
+        console.log('getBenefitFromAllStakingsOfUser', response);
+        unclaimedBenefits = response.data.data.totalBenefit;
+      } catch (err) {
+        console.log('error from getBenefitFromAllStakingsOfUser', err.message);
+        unclaimedBenefits = '0.0';
+      }
+    }
+
+    async function updateUnstakedTokens() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/timeally/getTimeAllyRewardsOfUser?input=${address}`);
+        console.log('getTimeAllyRewardsOfUser', response);
+        unStakedTokens = response.data.data.timeAllyRewards;
+      } catch (err) {
+        console.log('error from getTimeAllyRewardsOfUser', err.message);
+        unStakedTokens = '0.0';
+      }
+    }
+
+    async function updateMyActiveStakings() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
+        console.log('getActiveStakingsOfUser', response);
+        myActiveStaking = response.data.data.myActiveStakings;
+      } catch (err) {
+        myActiveStaking = '0.0';
+      }
+    }
+
+    async function updatePowerTokens() {
+      try {
+        const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
+        console.log('fetch-power-token-balance', response);
+        if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');
+        powerTokenBalance = response.data.balance || '0.0';
+        powerTokenReceived = response.data.received || '0.0';
+      } catch (err) {
+        powerTokenBalance = '0.0';
+        powerTokenReceived = '0.0';
+      }
+    }
+
+    async function updateTimeswappersBenefit() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/dayswappers/getTFC?input=${address}`);
+        console.log('timeswappers-getTFC', response);
+        timeswappersBenefit = response.data.data.platform.Timeswappers.tfc * 0.28;
+      } catch (err) {
+        timeswappersBenefit = '0.0';
+        console.log(err.message);
+      }
+    }
+
+    async function updateDayswapperReward() {
+      try {
+        const response = await axios.get(`https://apis.dayswappers.com/userprofile/user_transaction?address=${address}`);
+        console.log('dayswapper-user_transaction', response);
+        dayswapperReward = ethers.utils.formatEther(ethers.utils.parseEther(String(response.data.liquid + response.data.staked)));
+      } catch (err) {
+        dayswapperReward = '0.0';
+        console.log(err.message);
+      }
+    }
+
+    async function updateESPrice() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/probit/getESPrice`);
+        console.log('es-price-probit', response.data);
+        esPriceUSDT = +response.data.data.probitResponse.data[0].last;
+      } catch (err) {
+        esPriceUSDT = null;
+        console.log(err.message);
+      }
+    }
+
+    async function updateEtherPrice() {
+      try {
+        const response = await axios.get(`https://api.coinmarketcap.com/v1/ticker/ethereum/`);
+        console.log('eth-price-cmc', response.data);
+        ethPriceUSDT = +response.data[0]['price_usd'];
+      } catch (err) {
+        ethPriceUSDT = null;
+        console.log(err.message);
+      }
+    }
+
+    async function updateBuzcafeBalance() {
+      try {
+        const response = await axios.get(`https://apis.buzcafe.com/api/wallet/balance?walletAddress=${address}`);
+        console.log('buzcafe-balance', response.data);
+        // ethPriceUSDT = +response.data[0]['price_usd'];
+      } catch (err) {
+        buzcafeBalance = null;
+        console.log(err.message);
+      }
+    }
+
+    async function updateESBalance() {
+      es_balance = ethers.utils.formatEther(await contract.functions.balanceOf(wallet.address));
+    }
+
+    function updateValues() {
+      updateEtherBalance();
+      updateESBalance();
+      updateUnclaimedBenefits();
+      updateUnstakedTokens();
+      updateMyActiveStakings();
+      updatePowerTokens();
+      updateTimeswappersBenefit();
+      updateDayswapperReward();
+      updateESPrice();
+      updateEtherPrice();
+      updateBuzcafeBalance();
+    }
 
     (async () => {
         try{
-            balance = String(await ethers.utils.formatEther(String(await wallet.getBalance())));
-            address = wallet.address.toLowerCase();
-            // address = '0x52F88a1fFa3B21d0791014cBcF0d9FE3bdEb91D1'.toLowerCase()
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
-                console.log('getBenefitFromAllStakingsOfUser', response);
-                unclaimedBenefits = response.data.data.totalBenefit;
-              } catch (err) {
-                console.log('error from getBenefitFromAllStakingsOfUser', err.message);
-                unclaimedBenefits = '0.0';
-              }
-            })();
+          // address = '0x52F88a1fFa3B21d0791014cBcF0d9FE3bdEb91D1'.toLowerCase()
+          address = wallet.address.toLowerCase();
 
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/timeally/getTimeAllyRewardsOfUser?input=${address}`);
-                console.log('getTimeAllyRewardsOfUser', response);
-                unStakedTokens = response.data.data.timeAllyRewards;
-              } catch (err) {
-                console.log('error from getTimeAllyRewardsOfUser', err.message);
-                unStakedTokens = '0.0';
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
-                console.log('getActiveStakingsOfUser', response);
-                myActiveStaking = response.data.data.myActiveStakings;
-              } catch (err) {
-                myActiveStaking = '0.0';
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
-                console.log('fetch-power-token-balance', response);
-                if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');
-                powerTokenBalance = response.data.balance || '0.0';
-                powerTokenReceived = response.data.received || '0.0';
-              } catch (err) {
-                powerTokenBalance = '0.0';
-                powerTokenReceived = '0.0';
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/dayswappers/getTFC?input=${address}`);
-                console.log('timeswappers-getTFC', response);
-                timeswappersBenefit = response.data.data.platform.Timeswappers.tfc * 0.28;
-              } catch (err) {
-                timeswappersBenefit = '0.0';
-                console.log(err.message);
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://apis.dayswappers.com/userprofile/user_transaction?address=${address}`);
-                console.log('dayswapper-user_transaction', response);
-                dayswapperReward = ethers.utils.formatEther(ethers.utils.parseEther(String(response.data.liquid + response.data.staked)));
-              } catch (err) {
-                dayswapperReward = '0.0';
-                console.log(err.message);
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://eraswap.technology/probit/getESPrice`);
-                console.log('es-price-probit', response.data);
-                esPriceUSDT = +response.data.data.probitResponse.data[0].last;
-              } catch (err) {
-                esPriceUSDT = null;
-                console.log(err.message);
-              }
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://api.coinmarketcap.com/v1/ticker/ethereum/`);
-                console.log('eth-price-cmc', response.data);
-                ethPriceUSDT = +response.data[0]['price_usd'];
-              } catch (err) {
-                ethPriceUSDT = null;
-                console.log(err.message);
-              }
-              console.log(balance,+balance,+balance*ethPriceUSDT)
-            })();
-
-            (async() => {
-              try {
-                const response = await axios.get(`https://apis.buzcafe.com/api/wallet/balance?walletAddress=${address}`);
-                console.log('buzcafe-balance', response.data);
-                // ethPriceUSDT = +response.data[0]['price_usd'];
-              } catch (err) {
-                buzcafeBalance = null;
-                console.log(err.message);
-              }
-            //   console.log(balance,+balance,+balance*ethPriceUSDT)
-            })();
+          updateValues();
+          setInterval(updateValues, 10000);
 
             first_time = window.firstTime || await get({address: wallet.address});
             if(first_time && refer) {
@@ -181,13 +194,6 @@
             //     if(first_time==="True")document.getElementById("first_time").click()
             // }
             error_message=""
-
-            let contract = new ethers.Contract("0xef1344bdf80bef3ff4428d8becec3eea4a2cf574", abi, wallet)
-            // let contract = new ethers.Contract("0x53e750ee41c562c171d65bcb51405b16a56cf676", abi, wallet)
-            window.contract = contract;
-
-            es_balance = ethers.utils.formatEther(await contract.functions.balanceOf(wallet.address));
-
         }catch (e) {
             console.log(e)
             error_message = 'Wallet not loaded. Please Load your wallet '
@@ -224,21 +230,27 @@
 
 // import stylecss from 'style.css';
 
+  function isReceiveSideBarOpen() {
+    return document.getElementById("receivesidebar").style.width === "350px";
+  }
+
+  function isSendSideBarOpen() {
+    return document.getElementById("sendsidebar").style.width === "350px";
+  }
+
   function openReceiveSideBar() {
-    if(sendSideBarOpen) {
+    if(isSendSideBarOpen()) {
       closeSendSideBar();
     }
     document.getElementById("receivesidebar").style.width = "350px";
-    receiveSideBarOpen = true;
   }
 
   function closeReceiveSideBar() {
     document.getElementById("receivesidebar").style.width = "0";
-    receiveSideBarOpen = false;
   }
 
   function toggleReceiveSideBar() {
-    if(receiveSideBarOpen) {
+    if(isReceiveSideBarOpen()) {
       closeReceiveSideBar();
     } else {
       openReceiveSideBar();
@@ -246,20 +258,18 @@
   }
 
   function openSendSideBar() {
-    if(receiveSideBarOpen) {
+    if(isReceiveSideBarOpen()) {
       closeReceiveSideBar();
     }
     document.getElementById("sendsidebar").style.width = "350px";
-    sendSideBarOpen = true;
   }
 
   function closeSendSideBar() {
     document.getElementById("sendsidebar").style.width = "0";
-    sendSideBarOpen = false;
   }
 
   function toggleSendSideBar() {
-    if(sendSideBarOpen) {
+    if(isSendSideBarOpen()) {
       closeSendSideBar()
     } else {
       openSendSideBar();
