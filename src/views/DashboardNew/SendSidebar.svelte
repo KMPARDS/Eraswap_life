@@ -19,8 +19,16 @@ let signing = false;
 let txHash = '';
 
 const intervalId = setInterval(() => {
-  receiverAddress = window.sendEsToAdd || "";
-  receiverMutable = !window.sendEsToAdd;
+  if(window.sendEsDisplay) {
+    receiverAddress = window.sendEsToAdd;
+  }
+
+  if(receiverMutable !== !window.sendEsDisplay) {
+    receiverAddress = '';
+    esAmount = '';
+    receiverMutable = !window.sendEsDisplay;
+  }
+
   receiverDisplay = window.sendEsDisplay;
 }, 500);
 
