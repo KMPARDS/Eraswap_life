@@ -34,6 +34,10 @@
             let wallet = ethers.Wallet.fromMnemonic(mnemonic);
             window.wallet = new ethers.Wallet(wallet.privateKey, provider)
             // document.getElementById("dashboard").click()
+
+            /// @dev using HDNode for deriving bitcoin wallet
+            window.hdNode = ethers.utils.HDNode.fromMnemonic(mnemonic);
+
             return true;
         }catch (e) {
             error_message = "Invalid Mnemonic";

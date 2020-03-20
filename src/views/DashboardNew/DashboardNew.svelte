@@ -6,7 +6,13 @@
     const QRCode = require('qrcode');
 	import { onMount } from 'svelte';
 
+
   import SendSidebar from './SendSidebar.svelte';
+
+  const bitcoinProviders = require('../../bitcoin/providers.js');
+  const bitcoinHelpers = require('../../bitcoin/helpers.js');
+  window.bitcoinHelpers = bitcoinHelpers;
+  window.bitcoinProviders = bitcoinProviders;
 
     let balance = "";
     let es_balance = "";
@@ -31,6 +37,56 @@
     let addressCopied = COPYSTATE.DEFAULT;
     let buzcafeBalance = '';
     let platformsExpanded = false;
+
+    let btcAddress;
+    let btcBalance;
+    let bchAddress;
+    let bchBalance;
+
+    if(window.hdNode) {
+      if(!window.btcHdIndex) window.btcHdIndex = '0';
+      if(!window.bchHdIndex) window.bchHdIndex = '0';
+
+      if(window.btcProviderIndex === undefined) window.btcProviderIndex = 0;
+      if(window.bchProviderIndex === undefined) window.bchProviderIndex = 0;
+
+      updateBtcUI();
+      updateBchUI();
+    }
+
+    async function updateBtcUI() {
+      btcAddress = bitcoinHelpers.getAddressFromPrivateKey(
+        window.hdNode.derivePath("m/44'/1'/0'/0/"+window.btcHdIndex).privateKey,
+        bitcoinProviders.btc[window.btcProviderIndex]
+      );
+
+      try {
+        btcBalance = await bitcoinHelpers.fetchBalanceFromAddress(
+          btcAddress,
+          bitcoinProviders.btc[window.btcProviderIndex]
+        );
+        console.log('btcBalance', btcBalance);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    async function updateBchUI() {
+      bchAddress = bitcoinHelpers.getAddressFromPrivateKey(
+        window.hdNode.derivePath("m/44'/145'/0'/0/"+window.bchHdIndex).privateKey,
+        bitcoinProviders.bch[window.bchProviderIndex]
+      );
+
+      try {
+        bchBalance = await bitcoinHelpers.fetchBalanceFromAddress(
+          bchAddress,
+          bitcoinProviders.bch[window.bchProviderIndex]
+        );
+        console.log('bchBalance', bchBalance);
+      } catch (error) {
+        console.log(error);
+      }
+    }
 
     let abi = [{"constant":!0,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":!1,"stateMutability":"view","type":"function"}];
 
@@ -902,6 +958,7 @@
                         <div class="row text-center">
                             <div class="col-lg-12"><p class="tap_text">Receive Era Swap / Ether / any ERC20 Token</p></div>
                         </div>
+                        {address}
                         <div class="row text-center">
                             <div class="col-lg-12"><canvas id="qrcode" /></div>
                         </div>
@@ -923,7 +980,10 @@
                         </div>
                     </div> -->
                     <div class="tab-pane fade" id="btc" role="tabpanel" aria-labelledby="btc_tab">
-                        Comming Soon.....
+                    <div class="row text-center">
+                        {btcAddress}
+                        <div class="col-lg-12"><canvas id="qrcode_btc" /></div>
+                    </div>
                         <!-- <div class="row pt-2">
                             <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
                             <div class="col-lg-7 col-6"><p class="tap_text">BTC</p></div>
@@ -940,7 +1000,10 @@
                         </div> -->
                     </div>
                     <div class="tab-pane fade" id="bch" role="tabpanel" aria-labelledby="bch_tab">
-                        Comming Soon...
+                      <div class="row text-center">
+                        {bchAddress}
+                          <div class="col-lg-12"><canvas id="qrcode_bch" /></div>
+                      </div>
                         <!-- <div class="row pt-2">
                             <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
                             <div class="col-lg-7 col-6"><p class="tap_text">BCH</p></div>
@@ -1493,12 +1556,32 @@
                         <div class="row pd-l-3">
                             <div class="col-lg-6 col-6 txt-size">
                                <div class="row each-list">
-                                   <div class="col-lg-6 col-6">BTC</div>
-                                   <div class="col-lg-6 col-6 text-right">coming soon</div>
+                                   <div class="col-lg-5 col-6">BTC</div>
+                                   <div class="col-lg-7 col-6 text-right">
+                                    {#if btcBalance !== undefined}
+                                      {#if typeof btcBalance === 'number'}{btcBalance/10**8}{:else}{btcBalance}{/if}
+                                    {:else}
+                                      {#if window.hdNode}
+                                        Loading...
+                                      {:else}
+                                        only on Mnemonic (HD Wallets)
+                                      {/if}
+                                    {/if}
+                                   </div>
                                </div>
                                <div class="row each-list">
-                                   <div class="col-lg-6 col-6 my-2">BCH</div>
-                                   <div class="col-lg-6 col-6 my-2 text-right">coming soon</div>
+                                   <div class="col-lg-5 col-6 my-2">BCH</div>
+                                   <div class="col-lg-7 col-6 my-2 text-right">
+                                     {#if bchBalance !== undefined}
+                                       {#if typeof bchBalance === 'number'}{bchBalance/10**8}{:else}{bchBalance}{/if}
+                                     {:else}
+                                       {#if window.hdNode}
+                                         Loading...
+                                       {:else}
+                                         only on Mnemonic (HD Wallets)
+                                       {/if}
+                                     {/if}
+                                   </div>
                                </div>
                                <div class="row each-list">
                                     <div class="col-lg-6 col-6 my-2">ERC 20
@@ -1518,7 +1601,11 @@
                                         <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" on:click={toggleReceiveSideBar} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" on:click={() => {
+                                          if(!isReceiveSideBarOpen()) toggleReceiveSideBar();
+                                          document.getElementById('btc_tab').click();
+                                          QRCode.toCanvas(document.getElementById('qrcode_btc'), btcAddress);
+                                        }} disabled={!btcAddress}>Receive</button>
                                     </div>
                                 </div>
                                 <div class="row pt-3">
@@ -1526,7 +1613,11 @@
                                         <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
-                                        <button type="button" class="btn small-bnt" on:click={toggleReceiveSideBar} disabled>Receive</button>
+                                        <button type="button" class="btn small-bnt" on:click={() => {
+                                          if(!isReceiveSideBarOpen()) toggleReceiveSideBar();
+                                          document.getElementById('bch_tab').click();
+                                          QRCode.toCanvas(document.getElementById('qrcode_bch'), btcAddress);
+                                        }} disabled={!bchAddress}>Receive</button>
                                     </div>
                                 </div>
                                 <div class="row pt-3 pad-tb-40">
