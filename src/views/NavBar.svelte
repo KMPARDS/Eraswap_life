@@ -1,7 +1,8 @@
 <script>
     function logout(){
         console.log("logout")
-        wallet=undefined;
+        window.wallet = undefined;
+        window.hdNode = undefined;
         document.getElementById("home").click()
     }
 </script>
