@@ -28,6 +28,7 @@
     let timeswappersBenefit = '';
     let dayswapperReward = '';
     let copied = false;
+    let copied2 = false;
     let esPriceUSDT;
     let ethPriceUSDT;
     let showMore = false;
@@ -290,6 +291,12 @@
       copy(address);
       copied = true;
       setTimeout(() => copied = false, 1500);
+    }
+
+    function copyOtherToClipboard(text) {
+      copy(text);
+      copied2 = true;
+      setTimeout(() => copied2 = false, 1500);
     }
 
 // import stylecss from 'style.css';
@@ -953,117 +960,48 @@
             </div>
             <div class="card-body">
                 <div class="tab-content" id="pills-tabContent">
+
                     <div class="tab-pane fade show active" id="eraswap" role="tabpanel" aria-labelledby="eraswap_tab">
                         <p>To receive ES, ETH or any ERC20 you can use your same ethereum wallet address.</p>
-                        <!-- <div class="row pt-2">
-                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                            <div class="col-lg-7 col-6"><p class="tap_text">ES Balance</p></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">{es_balance}</p></div>
-                        </div> -->
                         <hr class="h">
-                        <div class="row text-center">
+                        <div class="container text-center">
                             <div class="col-lg-12"><p class="tap_text">Receive Era Swap / Ether / any ERC20 Token</p></div>
-                        </div>
-                        {address}
-                        <div class="row text-center">
+                            <span style="word-break:break-all">{address}</span>
+                            <span on:click={copyOtherToClipboard.bind(null, address)} style="cursor:pointer">[{#if copied2}Copied{:else}Copy{/if}]</span>
                             <div class="col-lg-12"><canvas id="qrcode" /></div>
                         </div>
                     </div>
-                    <!-- <div class="tab-pane fade" id="ethereum" role="tabpanel" aria-labelledby="ethereum_tab">
-                        <div class="row pt-2">
-                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                            <div class="col-lg-7 col-6"><p class="tap_text">Ethereum</p></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                        </div>
-                        <hr class="h">
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">Receive Ethereum</p></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p id="qrcode"></p></div>
-                        </div>
-                    </div> -->
-                    <div class="tab-pane fade" id="btc" role="tabpanel" aria-labelledby="btc_tab">
-                    <div class="row text-center">
-                        {btcAddress}
-                        <div class="col-lg-12"><canvas id="qrcode_btc" /></div>
-                    </div>
-                        <!-- <div class="row pt-2">
-                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                            <div class="col-lg-7 col-6"><p class="tap_text">BTC</p></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                        </div>
-                        <hr class="h">
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">Receive BTC</p></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p id="qrcode"></p></div>
-                        </div> -->
-                    </div>
-                    <div class="tab-pane fade" id="bch" role="tabpanel" aria-labelledby="bch_tab">
-                      <div class="row text-center">
-                        {bchAddress}
-                          <div class="col-lg-12"><canvas id="qrcode_bch" /></div>
-                      </div>
-                        <!-- <div class="row pt-2">
-                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                            <div class="col-lg-7 col-6"><p class="tap_text">BCH</p></div>
 
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                        </div>
-                        <hr class="h">
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">Receive BCH</p></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p id="qrcode"></p></div>
-                        </div> -->
+                    <div class="tab-pane fade" id="btc" role="tabpanel" aria-labelledby="btc_tab">
+                      <p>To receive BTC, you can use Bitcoin Core Address generated from your {#if window.hdNode}Mnemonic / BIP32 HD Wallet{:else}Wallet's Private Key{/if}.</p>
+                      <hr class="h">
+                      <div class="container text-center">
+                        <div class="col-lg-12"><p class="tap_text">Receive Bitcoin Core</p></div>
+                        <span style="word-break:break-all">{btcAddress}</span>
+                        <span on:click={copyOtherToClipboard.bind(null, btcAddress)} style="cursor:pointer">[{#if copied2}Copied{:else}Copy{/if}]</span>
+                        <div class="col-lg-12"><canvas id="qrcode_btc" /></div>
+                      </div>
                     </div>
+
+                    <div class="tab-pane fade" id="bch" role="tabpanel" aria-labelledby="bch_tab">
+                      <p>To receive BCH, you can use Bitcoin Cash Address generated from your {#if window.hdNode}Mnemonic / BIP32 HD Wallet{:else}Wallet's Private Key{/if}.</p>
+                      <hr class="h">
+                      <div class="container text-center">
+                        <div class="col-lg-12"><p class="tap_text">Receive Bitcoin Cash</p></div>
+                        <span style="word-break:break-all">{bchAddress}</span>
+                        <span on:click={copyOtherToClipboard.bind(null, bchAddress)} style="cursor:pointer">[{#if copied2}Copied{:else}Copy{/if}]</span>
+                        <div class="col-lg-12"><canvas id="qrcode_bch" /></div>
+                      </div>
+                    </div>
+
                     <div class="tab-pane fade" id="erc" role="tabpanel" aria-labelledby="erc_tab">
                         Comming Soon...
-                        <!-- <div class="row pt-2">
-                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                            <div class="col-lg-7 col-6"><p class="tap_text">ERC 20</p></div>
-
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                        </div>
-                        <hr class="h">
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">Receive ERC 20</p></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p id="qrcode"></p></div>
-                        </div> -->
                     </div>
+
                     <div class="tab-pane fade" id="xrp" role="tabpanel" aria-labelledby="xrp_tab">
                         Comming Soon...
-                        <!-- <div class="row pt-2">
-                            <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/ES.png" alt="es" width="30" height="30"></div>
-                            <div class="col-lg-7 col-6"><p class="tap_text">XRP</p></div>
-
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
-                        </div>
-                        <hr class="h">
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p class="tap_text">Receive XRP</p></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-lg-12"><p id="qrcode"></p></div>
-                        </div> -->
                     </div>
+
                   </div>
             </div>
          </div>
@@ -1553,6 +1491,7 @@
                                     <div class="col-lg-6 col-6 col-md-6 received_btn">
                                         <button type="button" class="btn bnt-SR" on:click={() => {
                                           toggleReceiveSideBar();
+                                          document.getElementById('eraswap_tab').click();
                                           QRCode.toCanvas(document.getElementById('qrcode'), address);
                                         }}>Receive</button>
                                     </div>
