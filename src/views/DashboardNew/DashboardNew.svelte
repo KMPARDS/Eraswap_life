@@ -43,7 +43,7 @@
     let bchAddress;
     let bchBalance;
 
-    if(window.hdNode) {
+    if(window.hdNode || (window.wallet && window.wallet.privateKey)) {
       if(!window.btcHdIndex) window.btcHdIndex = '0';
       if(!window.bchHdIndex) window.bchHdIndex = '0';
 
@@ -55,8 +55,12 @@
     }
 
     async function updateBtcUI() {
+      const privateKey = window.hdNode
+        ? window.hdNode.derivePath("m/44'/1'/0'/0/"+window.btcHdIndex).privateKey
+        : window.wallet.privateKey;
+
       btcAddress = bitcoinHelpers.getAddressFromPrivateKey(
-        window.hdNode.derivePath("m/44'/1'/0'/0/"+window.btcHdIndex).privateKey,
+        privateKey,
         bitcoinProviders.btc[window.btcProviderIndex]
       );
 
@@ -72,8 +76,12 @@
     }
 
     async function updateBchUI() {
+      const privateKey = window.hdNode
+        ? window.hdNode.derivePath("m/44'/145'/0'/0/"+window.bchHdIndex).privateKey
+        : window.wallet.privateKey;
+
       bchAddress = bitcoinHelpers.getAddressFromPrivateKey(
-        window.hdNode.derivePath("m/44'/145'/0'/0/"+window.bchHdIndex).privateKey,
+        privateKey,
         bitcoinProviders.bch[window.bchProviderIndex]
       );
 
@@ -1525,7 +1533,7 @@
                                 <div class="row">
 
                                     <div class="col-lg-6 col-md-6 text-center">
-                                        <p class="text-p">MAIN ES BALANCE</p>
+                                        <p class="text-p">MAIN ES BALAdddNCE</p>
                                         <p class="text-p" style="font-size: 25px;">{window.lessDecimals(es_balance) || '0'} ES</p>
                                     </div>
                                     <div class="col-lg-6 col-md-6 text-center">
@@ -1561,10 +1569,10 @@
                                     {#if btcBalance !== undefined}
                                       {#if typeof btcBalance === 'number'}{btcBalance/10**8}{:else}{btcBalance}{/if}
                                     {:else}
-                                      {#if window.hdNode}
+                                      {#if btcAddress}
                                         Loading...
                                       {:else}
-                                        only on Mnemonic (HD Wallets)
+                                        Not Supported on Metamask
                                       {/if}
                                     {/if}
                                    </div>
@@ -1575,10 +1583,10 @@
                                      {#if bchBalance !== undefined}
                                        {#if typeof bchBalance === 'number'}{bchBalance/10**8}{:else}{bchBalance}{/if}
                                      {:else}
-                                       {#if window.hdNode}
+                                       {#if bchAddress}
                                          Loading...
                                        {:else}
-                                         only on Mnemonic (HD Wallets)
+                                         Not Supported on Metamask
                                        {/if}
                                      {/if}
                                    </div>
