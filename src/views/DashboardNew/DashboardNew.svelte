@@ -1533,7 +1533,7 @@
                                 <div class="row">
 
                                     <div class="col-lg-6 col-md-6 text-center">
-                                        <p class="text-p">MAIN ES BALAdddNCE</p>
+                                        <p class="text-p">MAIN ES BALANCE</p>
                                         <p class="text-p" style="font-size: 25px;">{window.lessDecimals(es_balance) || '0'} ES</p>
                                     </div>
                                     <div class="col-lg-6 col-md-6 text-center">
@@ -1572,7 +1572,7 @@
                                       {#if btcAddress}
                                         Loading...
                                       {:else}
-                                        Not Supported on Metamask
+                                        Not Supported on your wallet type
                                       {/if}
                                     {/if}
                                    </div>
@@ -1586,7 +1586,7 @@
                                        {#if bchAddress}
                                          Loading...
                                        {:else}
-                                         Not Supported on Metamask
+                                         Not Supported on your wallet type
                                        {/if}
                                      {/if}
                                    </div>
@@ -1624,7 +1624,7 @@
                                         <button type="button" class="btn small-bnt" on:click={() => {
                                           if(!isReceiveSideBarOpen()) toggleReceiveSideBar();
                                           document.getElementById('bch_tab').click();
-                                          QRCode.toCanvas(document.getElementById('qrcode_bch'), btcAddress);
+                                          QRCode.toCanvas(document.getElementById('qrcode_bch'), bchAddress);
                                         }} disabled={!bchAddress}>Receive</button>
                                     </div>
                                 </div>
