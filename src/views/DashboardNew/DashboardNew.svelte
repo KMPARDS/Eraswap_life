@@ -238,6 +238,9 @@
       updateESPrice();
       updateEtherPrice();
       updateBuzcafeBalance();
+
+      updateBtcUI();
+      updateBchUI();
     }
 
     (async () => {

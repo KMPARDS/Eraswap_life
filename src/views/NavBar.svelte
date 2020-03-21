@@ -76,7 +76,7 @@ a:hover{
       {/if}
       {#if wallet}
       <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
-        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/dashboard">Dashboard</a>
+        <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="/dashboard" id="user-dashboard">Dashboard</a>
       </li>
       <if class="nav-item" style="margin-right: 8px; margin-bottom:10px">
         <a class="nav-link text-white tm-button tm-button-lg tm-button-white tm-button-transparent" href="#" on:click={logout}>Logout</a>
