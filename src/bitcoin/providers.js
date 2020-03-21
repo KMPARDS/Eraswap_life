@@ -2,6 +2,19 @@ const providers = {
   btc: [
     {
       name: 'blockcypher',
+      network: 'bitcoin',
+      functions: {
+        balance: {
+          getBalanceUrl: address => `https://api.blockcypher.com/v1/btc/main/addrs/${address}/balance`,
+          parseBalanceFromApiOutput: apiOutput => {
+            if(!apiOutput) return null;
+            return apiOutput.balance
+          }
+        }
+      }
+    },
+    {
+      name: 'blockcypher',
       network: 'testnet',
       functions: {
         balance: {
