@@ -216,9 +216,10 @@
         const response = await axios.get(`https://apis.buzcafe.com/api/wallet/balance?walletAddress=${address}`);
         console.log('buzcafe-balance', response.data);
         // ethPriceUSDT = +response.data[0]['price_usd'];
+        buzcafeBalance = response.data.data.balance;
       } catch (err) {
         buzcafeBalance = null;
-        console.log(err.message);
+        console.log('buzcafe',err.message);
       }
     }
 
@@ -1680,14 +1681,10 @@
                                             <img src="images/dashboardNew/icons/Buzcafe-01.png" alt="Buzcafe" class="res-img">
                                         </div>
                                     </div>
-                                   <div class="row time_track br_bt mt_bt">
-                                        <div class="col-lg-6 col-md-6"><p>Balance:</p></div>
-                                        <div class="col-lg-6 col-md-6 text-center"><p>Coming Soon</p></div>
-                                   </div>
                                    <div class="row time_track mt_bt">
-                                        <div class="col-lg-6 col-md-6"><p>Number of Business Listed:</p></div>
-                                        <div class="col-lg-6 col-md-6 text-center"><p>Coming Soon</p></div>
-                                    </div>
+                                        <div class="col-lg-6 col-md-6"><p>Balance:</p></div>
+                                        <div class="col-lg-6 col-md-6 text-center"><p>{buzcafeBalance || '0 ES'}</p></div>
+                                   </div>
                                     <div class="row time_track pt-5 pad-0">
                                         <div class="col-lg-6 col-6 text-right">
                                             <button type="button" class="btn btn-w-d" on:click={
