@@ -14,6 +14,15 @@
     window.testMetamask = true;
     window.usingMetamask = false;
 
+    // for dev purpose
+    // mnemonic = 'zero casino code';
+    // mnemonic = 'garment relax intact favorite tragic hunt chapter circle energy debate kid joy';
+    // load_wallet()
+    // wallet = ethers.Wallet.fromMnemonic('garment relax intact favorite tragic hunt chapter circle energy debate kid joy');
+    // wallet = wallet.connect(provider);
+    // wallet = new ethers.Wallet('24C4FE6063E62710EAD956611B71825B778B041B18ED53118CE5DA5F02E494BA', provider);
+    // setTimeout(() => document.getElementById('user-dashboard').click(), 100);
+
     function getSubmitOnEnterPress() {
       let enterButtonAllowed = true; // to avoid issue due to user pressing enter twice
       return (loadWalletFunction, event) => {
@@ -34,6 +43,10 @@
             let wallet = ethers.Wallet.fromMnemonic(mnemonic);
             window.wallet = new ethers.Wallet(wallet.privateKey, provider)
             // document.getElementById("dashboard").click()
+
+            /// @dev using HDNode for deriving bitcoin wallet
+            window.hdNode = ethers.utils.HDNode.fromMnemonic(mnemonic);
+
             return true;
         }catch (e) {
             error_message = "Invalid Mnemonic";
