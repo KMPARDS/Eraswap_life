@@ -57,7 +57,7 @@
 
     async function updateBtcUI() {
       const privateKey = window.hdNode
-        ? window.hdNode.derivePath("m/44'/1'/0'/0/"+window.btcHdIndex).privateKey
+        ? window.hdNode.derivePath("m/44'/0'/0'/0/"+window.btcHdIndex).privateKey
         : window.wallet.privateKey;
 
       btcAddress = bitcoinHelpers.getAddressFromPrivateKey(
