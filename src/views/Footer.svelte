@@ -47,6 +47,7 @@
 							<li><a href="https://www.instagram.com/eraswap/" target="_blank"><i class="fa fa-instagram" style="font-size:22px"></i></a></li>
 							<li><a href="https://medium.com/@eraswap" target="_blank"><i class="fa fa-medium" aria-hidden="true" style="font-size:22px"></i></a></li>
                             <li><a href="https://coinmarketcap.com/currencies/era-swap/" target="_blank"><img src="/images/cmc.png" style="height: 22px; margin-bottom: 7px;" /></a></li>
+                            <li style="margin-left:-4px"><a href="https://ethplorer.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574" target="_blank"><img src="/images/ethplorer2.png" style="height: 22px; margin-bottom: 7px;" /></a></li>
                         </ul>
                         <!-- <p>Dolor enim sit et perferendis quia in. Sed perferendis aliquid quo vel
                             necessitatibus commodi similique et. Veniam ducimus sed rerum cumque ipsum eos
