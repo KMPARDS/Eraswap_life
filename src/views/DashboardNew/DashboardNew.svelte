@@ -21,6 +21,8 @@
     let website = "";
     let first_time = "";
     let myActiveStaking = '';
+    let myTsgapDeposits = '';
+    let myPetDeposits = '';
     let unStakedTokens = '';
     let unclaimedBenefits = '';
     let powerTokenReceived = '';
@@ -154,6 +156,26 @@
       }
     }
 
+    async function updateMyTsgapDeposits() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/sip/getTotalAmountDeposited?input=${address}`);
+        console.log('sip', response);
+        myTsgapDeposits = response.data.data.totalDeposit;
+      } catch (err) {
+        myTsgapDeposits = '0.0';
+      }
+    }
+
+    async function updateMyPetDeposits() {
+      try {
+        const response = await axios.get(`https://eraswap.technology/pet/getTotalAmountDeposited?input=${address}`);
+        console.log('pet', response);
+        myPetDeposits = response.data.data.totalDeposit;
+      } catch (err) {
+        myPetDeposits = '0.0';
+      }
+    }
+
     async function updatePowerTokens() {
       try {
         const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
@@ -233,6 +255,8 @@
       updateUnclaimedBenefits();
       updateUnstakedTokens();
       updateMyActiveStakings();
+      updateMyTsgapDeposits();
+      updateMyPetDeposits();
       updatePowerTokens();
       updateTimeswappersBenefit();
       updateDayswapperReward();
@@ -1445,12 +1469,14 @@
                                 <div class="row right-sec">
                                     <div class="col-lg-12">Your total Era Swap portfolio</div>
                                     <div class="col-lg-12">
-                                        {#if es_balance && myActiveStaking && unStakedTokens && unclaimedBenefits && powerTokenReceived && esPriceUSDT}
+                                        {#if es_balance && myActiveStaking && unStakedTokens && unclaimedBenefits && powerTokenReceived && esPriceUSDT && myPetDeposits && myTsgapDeposits}
                                         <u>~{ethers.utils.commify(
                                             window.lessDecimals(
                                             String(
                                                 (+es_balance
                                                 + +myActiveStaking
+                                                + +myTsgapDeposits
+                                                + +myPetDeposits
                                                 + +unStakedTokens
                                                 + +unclaimedBenefits
                                                 + +powerTokenReceived) * esPriceUSDT
@@ -1608,18 +1634,18 @@
                                             </a>
                                         </div>
 
-                                        <div class="collapse" id="collapseExample1">
+                                        <div class="collapse" id="collapseExample1" style="width:100%">
                                             <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Stakings in TimeAlly:</div>
-                                                <div class="col-lg-6 pb-2">{window.lessDecimals(myActiveStaking) || '0'} ES</div>
+                                                <div class="col-lg-7">Stakings in TimeAlly:</div>
+                                                <div class="col-lg-5 pb-2">{window.lessDecimals(myActiveStaking) || '0'} ES</div>
                                             </div>
                                             <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Unstaked Tokens:</div>
-                                                <div class="col-lg-6 pb-2">{window.lessDecimals(unStakedTokens) || '0'} ES</div>
+                                                <div class="col-lg-7">Unstaked Tokens:</div>
+                                                <div class="col-lg-5 pb-2">{window.lessDecimals(unStakedTokens) || '0'} ES</div>
                                             </div>
                                             <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Unclaimed All TimeAlly Monthly Benefits Till Date:</div>
-                                                <div class="col-lg-6 pt-4">{window.lessDecimals(unclaimedBenefits) || '0'} ES</div>
+                                                <div class="col-lg-7">Unclaimed All TimeAlly Monthly Benefits Till Date:</div>
+                                                <div class="col-lg-5 pt-4">{window.lessDecimals(unclaimedBenefits) || '0'} ES</div>
                                             </div>
                                         </div>
 
@@ -1630,22 +1656,11 @@
                                             </a>
                                         </div>
 
-                                        <div class="collapse" id="collapseExample2">
-                                            <!-- <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Stakings in TimeAlly:</div>
-                                                <div class="col-lg-6 pb-2">0.0 ES</div>
-                                            </div>
-                                            <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Unstaked Tokens:</div>
-                                                <div class="col-lg-6 pb-2">0.0 ES</div>
-                                            </div>
-                                            <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Unclimaed All TimeAlly Monthly Benefits Till Date:</div>
-                                                <div class="col-lg-6 pt-4">0.0 ES</div>
-                                            </div> -->
-                                            <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-12">Coming Soon</div>
-                                            </div>
+                                        <div class="collapse" id="collapseExample2" style="width:100%">
+                                        <div class="row ml-1 br_bt time_track">
+                                            <div class="col-lg-7">Deposits in TSGAP:</div>
+                                            <div class="col-lg-5 pb-2">{window.lessDecimals(myTsgapDeposits) || '0'} ES</div>
+                                        </div>
                                         </div>
 
                                         <div class="col-lg-12 time_track">
@@ -1655,21 +1670,10 @@
                                             </a>
                                         </div>
 
-                                        <div class="collapse" id="collapseExample3">
-                                            <!-- <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Stakings in TimeAlly:</div>
-                                                <div class="col-lg-6 pb-2">0.0 ES</div>
-                                            </div>
+                                        <div class="collapse" id="collapseExample3" style="width:100%">
                                             <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Unstaked Tokens:</div>
-                                                <div class="col-lg-6 pb-2">0.0 ES</div>
-                                            </div>
-                                            <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-6">Unclimaed All TimeAlly Monthly Benefits Till Date:</div>
-                                                <div class="col-lg-6 pt-4">0.0 ES</div>
-                                            </div> -->
-                                            <div class="row ml-1 br_bt time_track">
-                                                <div class="col-lg-12">Coming Soon</div>
+                                                <div class="col-lg-7">Deposits in PET:</div>
+                                                <div class="col-lg-5 pb-2">{window.lessDecimals(myPetDeposits) || '0'} ES</div>
                                             </div>
                                         </div>
                                 </div>
