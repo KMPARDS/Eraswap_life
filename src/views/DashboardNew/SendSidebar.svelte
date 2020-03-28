@@ -1,5 +1,6 @@
 <script>
 import { onDestroy } from 'svelte';
+import axios from 'axios';
 
 let balance;
 let esbalance;
@@ -58,44 +59,77 @@ function hideNav() {
     document.getElementById("sendsidebar").style.width = "0";
 }
 
-// async function estimateGas() {
-//   try {
-//     receiverAddress = ethers.utils.getAddress(receiverAddress);
-//   } catch (error) {
-//     return alert('Invalid Address');
-//   }
-//   try {
-//     esAmountBN = ethers.utils.parseEther(esAmount);
-//   } catch (error) {
-//     return alert('Invalid ES Amount');
-//   }
-//
-//   if(esbalance && ethers.utils.parseEther(esbalance).lt(esAmountBN)) {
-//     return alert('Insufficient balance');
-//   }
-//
-//   try {
-//     gasEstimated = await contract.estimate.transfer(receiverAddress, esAmountBN);
-//   } catch (error) {
-//     return alert('Error while estimating:'+error.message);
-//   }
-//   estimating = false;
-// }
 
-// async function sendES(event) {
-//   event.preventDefault();
-//   signing = true;
-//   try {
-//     const tx = await contract.functions.transfer(receiverAddress, esAmountBN, {
-//       gasPrice: ethers.utils.parseUnits(userGasPrice, 'gwei')
-//     });
-//     console.log('tx', tx);
-//     txHash = tx.hash;
-//   } catch (error) {
-//     alert(error.message);
-//   }
-//   signing = false;
-// }
+
+/// bitcoin send
+let btcAddress;
+let bchAddress;
+let utxoFetching = false;
+let utxos = [];
+let selectedUtxoIds = [];
+let currentScreen = 0;
+let outputs = [];
+let address;
+let btcValue;
+let error;
+let hex;
+let feeRecommend;
+let btcHash;
+
+try {
+  (() => {
+    const privateKey = window.hdNode
+      ? window.hdNode.derivePath("m/44'/1'/0'/0/"+window.btcHdIndex).privateKey
+      : window.wallet.privateKey;
+
+    btcAddress = bitcoinHelpers.getAddressFromPrivateKey(
+      privateKey,
+      window.btcFallbackProvider
+    );
+  })();
+
+  (() => {
+    const privateKey = window.hdNode
+      ? window.hdNode.derivePath("m/44'/145'/0'/0/"+window.bchHdIndex).privateKey
+      : window.wallet.privateKey;
+
+    bchAddress = bitcoinHelpers.getAddressFromPrivateKey(
+      privateKey,
+      window.bchFallbackProvider
+    );
+  })();
+} catch {}
+
+(async() => {
+  try {
+    const response = await axios.get(`https://bitcoinfees.earn.com/api/v1/fees/recommended`);
+    // console.log('feeRecommend', response.data);
+    feeRecommend = response.data;
+    if(!feeRecommend.fastestFee) feeRecommend.fastestFee = 80;
+    if(!feeRecommend.halfHourFee) feeRecommend.halfHourFee = 60;
+    if(!feeRecommend.hourFee) feeRecommend.hourFee = 40;
+
+  } catch (err) {
+    feeRecommend = {
+      fastestFee:80,
+      halfHourFee:60,
+      hourFee:40
+    };
+  }
+})()
+
+function guessTransactionLength(options = {}) {
+  const {inputLength, outputLength} = options;
+  const extraInputs = (inputLength || selectedUtxoIds.length) - 1;
+  const extraOutputs = (outputLength || outputs.length) - 1;
+  // console.log({extraInputs, extraOutputs});
+  return 192 + 150 * extraInputs + 36 * extraOutputs;
+}
+
+function getTotalInputValue() {
+  return selectedUtxoIds.reduce((total,utxoId) => total += utxos[utxoId].value, 0);
+}
+
 </script>
 
 
@@ -650,8 +684,8 @@ function hideNav() {
 
     </style>
 
-<div id="sendsidebar" class="sidepanel">
-    <div class="card">
+<div id="sendsidebar" class="sidepanel" style="background-color:#fff">
+    <div class="card" style="border: 0">
         <div class="card-header bg-dark tab_head text-white p-0">
             <div class="row p-0">
                 <div class="col-lg-12 text-right" style="cursor:pointer"><span href="javascript:void(0)" class="closebtn" on:click={hideNav}><i class="fa fa-arrow-left p-2"></i></span></div>
@@ -829,7 +863,7 @@ function hideNav() {
                                                 const tx = await contract.functions.transfer(receiverAddress, esAmountBN, {
                                                   gasPrice: ethers.utils.parseUnits(userGasPrice, 'gwei')
                                                 });
-                                                console.log('tx', tx);
+                                                // console.log('tx', tx);
                                                 txHash = tx.hash;
                                               } catch (error) {
                                                 alert(error.message);
@@ -878,33 +912,246 @@ function hideNav() {
                     </div> -->
                 </div>
                 <div class="tab-pane fade" id="sendbtc" role="tabpanel" aria-labelledby="sendbtc_tab">
-                  Coming soon...
-                    <!-- <div class="row pt-2">
-                        <div class="col-lg-5 col-6 p-0 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
-                        <div class="col-lg-7 col-6"><p class="tap_text">BTC Balance</p></div>
 
+                  {#if currentScreen === 0}
+                    There is actually no such concept like Bitcoin balance on the Bitcoin blockchain. But to make it intuitive, balance can be said as sum of all the UTXOs for the address. These UTXOs are like Notes / Dollar bills in your physical wallet that you carry. UTXOs contain amount of Bitcoin which you can use to transfer to others just like you give notes from your wallet to others.
+                    <div class="container text-center">
+                      <button on:click={async() => {
+                        utxoFetching = true;
+                        utxos = await bitcoinHelpers.fetchUtxosFromAddress(
+                          btcAddress,
+                          window.btcFallbackProvider
+                        );
+                        currentScreen = 1;
+                        utxoFetching = false;
+                        // console.log({ utxos, btcAddress });
+                      }}>{utxoFetching ? 'Fetching...' : 'Fetch UTXOs'}</button>
                     </div>
-                    <div class="row text-center">
-                        <div class="col-lg-12"><p class="tap_text">6466.3654646496</p></div>
+                  {:else if currentScreen === 1}
+                    <style>
+                      .utxo-card {
+                        border: 1px solid #0006;
+                        border-radius: 4px;
+                        padding: .5em;
+                        cursor: pointer;
+                        margin: 10px 0;
+                      }
+
+                      .utxo-card.selected {
+                        background-color: #0004;
+                      }
+
+                      .utxo-card .utxo-entry {
+                        color: #0004;
+                        display: block;
+                      }
+
+                      .utxo-card .utxo-entry.utxo-hash {
+                        font-family: monospace;
+                      }
+
+                      .btc-amount {
+                        font-size: 2rem;
+                      }
+                    </style>
+
+                    <p>Below are the UTXOs, UTXOs are unspent transaction outputs that you can spend by sending them to other address. Click on any UTXOs that you want to include as <strong>inputs</strong> in this new transaction and after that click on <u>Proceed button below</u>.</p>
+
+                    {#each utxos as utxo, index}
+                      <div class={selectedUtxoIds.includes(index) ? 'utxo-card selected' : 'utxo-card'} on:click={() => {
+                        const i = selectedUtxoIds.indexOf(index);
+                        if(i === -1) {
+                          selectedUtxoIds.push(index);
+                        } else {
+                          selectedUtxoIds[i] = selectedUtxoIds[selectedUtxoIds.length - 1];
+                          selectedUtxoIds.pop();
+                        }
+                        selectedUtxoIds = [...selectedUtxoIds];
+                      }}>
+                        <span class="utxo-entry utxo-hash">
+                          {utxo.hash.slice(0,8)}...{utxo.hash.slice(utxo.hash.length - 4,utxo.hash.length)}
+                        </span>
+                        <span class="utxo-entry">[TX Output Index: {utxo.index}]</span>
+                        <span class="utxo-entry btc-amount">
+                          {window.bitcoinHelpers.concertToBTCDisplay(utxo.value/10**8)} BTC
+                        </span>
+                        <span class="utxo-entry">Time: {utxo.confirmed}</span>
+                      </div>
+                    {/each}
+
+                    BTC value of selected UTXOs:<br />
+                    <span class="btc-amount">{window.bitcoinHelpers.concertToBTCDisplay(
+                      selectedUtxoIds.reduce((total,utxoId) => total += utxos[utxoId].value, 0) / 10**8
+                    )} BTC</span>
+
+                    <button
+                      on:click={() => {
+                        currentScreen = 2;
+                      }}
+                      disabled={selectedUtxoIds.length === 0}
+                    >Proceed to entering outputs</button>
+                  {:else if currentScreen === 2}
+                    <style>
+                      .output-card {
+                        border: 1px solid #0006;
+                        border-radius: 4px;
+                        padding: .5em;
+                        cursor: pointer;
+                        margin: 10px 0;
+                      }
+
+                      .output-card .output-entry {
+                        color: #0004;
+                        display: block;
+                      }
+
+                      .btc-amount {
+                        font-size: 2rem;
+                      }
+
+                      .gas-recommend-box {
+                        border: 1px solid #0004;
+                        border-radius: 2px;
+                        cursor: pointer;
+                      }
+                    </style>
+
+                    <span style="cursor:pointer" on:click={() => currentScreen = 1}> {'<<'}Back to Selecting Inputs</span>
+
+                    <div class="output-card mb-0">
+                      Total Input Amount:<br />
+                      <span class="btc-amount">{window.bitcoinHelpers.concertToBTCDisplay(
+                        getTotalInputValue() / 10**8
+                      )} BTC</span>
                     </div>
-                    <hr class="h">
-                    <div class="row text-center">
-                        <div class="col-lg-12 time_track text-left">
-                            <p>Send BTC</p>
+
+                    <div class="container mb-2">
+                      <div class="row">
+                        <div class="col-4 gas-recommend-box" on:click={() => {
+                          const txSizeGuess = guessTransactionLength({outputLength: 1});
+                          const fee = feeRecommend.fastestFee * txSizeGuess;
+                          btcValue = String((getTotalInputValue() - fee)/10**8);
+                        }}>
+                          Slow
                         </div>
-                        <div class="col-lg-12">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-lg-12 form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Receiver's BTC address">
-                                    </div>
-                                    <div class="col-lg-12 form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Amount of BTC transfer">
-                                    </div>
-                                </div>
-                            </form>
+                        <div class="col-4 gas-recommend-box" on:click={() => {
+                          const txSizeGuess = guessTransactionLength({outputLength: 1});
+                          const fee = feeRecommend.halfHourFee * txSizeGuess;
+                          btcValue = String((getTotalInputValue() - fee)/10**8);
+                        }}>
+                          Medium
                         </div>
-                    </div> -->
+                        <div class="col-4 gas-recommend-box" on:click={() => {
+                          const txSizeGuess = guessTransactionLength({outputLength: 1});
+                          const fee = feeRecommend.hourFee * txSizeGuess;
+                          btcValue = String((getTotalInputValue() - fee)/10**8);
+                        }}>
+                          Fast
+                        </div>
+                      </div>
+                    </div>
+
+                    <input type="text" placeholder="Enter Address" bind:value={address} />
+                    <input type="text" placeholder="Enter BTC value" bind:value={btcValue} />
+                    <button on:click={() => {
+                      error = '';
+                      try {
+                        window.bitcoinHelpers.toOutputScript(
+                          address,
+                          window.btcFallbackProvider
+                        );
+
+                        try {
+                          const newOutputs = [...outputs];
+                          newOutputs.push({ address, value: window.bitcoinHelpers.btcToSatoshis(btcValue) });
+                          outputs = newOutputs;
+                          address = '';
+                          btcValue = '';
+                        } catch (err) {
+                          // console.log({err});
+                          error = 'Invalid Amount';
+                        }
+                      } catch (err) {
+                        // console.log({err});
+                        error = 'Invalid Address';
+                      }
+                    }}>Add Output</button>
+
+                    {#if error}
+                      <div class="alert alert-danger">
+                        {error}
+                      </div>
+                    {/if}
+
+                    {#each outputs as output, index}
+                      <div class="output-card">
+                        <span class="output-entry">Address: {output.address}</span>
+                        <span class="output-entry">Value: <br /><span class="btc-amount">{window.bitcoinHelpers.concertToBTCDisplay(output.value / 10**8)} BTC</span></span>
+                        <button on:click={() => {
+                          const newOutputs = [...outputs];
+                          newOutputs.splice(index, 1);
+                          outputs = newOutputs;
+                        }}>Remove this Output</button>
+                      </div>
+                    {/each}
+
+                    {#if outputs.length > 0}
+                      Change remaining:<br />
+                      <span class="btc-amount">{window.bitcoinHelpers.concertToBTCDisplay(
+                        ((getTotalInputValue()) - (outputs.reduce((total,output) => total += output.value, 0)))
+                        / 10**8
+                      )} BTC</span><br/>
+                      The change remaining is kept by miner as transaction fee.<br />
+
+                      <div class="output-card">
+                        Since your transaction consist of <strong>{selectedUtxoIds.length}</strong> inputs and <strong>{outputs.length}</strong> outputs, from statistics, you should leave following change:<br />
+                        10 mins: {window.bitcoinHelpers.concertToBTCDisplay(feeRecommend.fastestFee * guessTransactionLength() / 10**8)} BTC<br />
+                        30 mins: {window.bitcoinHelpers.concertToBTCDisplay(feeRecommend.halfHourFee * guessTransactionLength() / 10**8)} BTC<br />
+                        1 hour: {window.bitcoinHelpers.concertToBTCDisplay(feeRecommend.hourFee * guessTransactionLength() / 10**8)} BTC<br />
+                      </div>
+
+                      <button on:click={() => {
+                        const privateKey = window.hdNode
+                          ? window.hdNode.derivePath("m/44'/1'/0'/0/"+window.btcHdIndex).privateKey
+                          : window.wallet.privateKey;
+
+                        const tx = window.bitcoinHelpers.signTransaction(
+                          selectedUtxoIds.map(id => utxos[id]),
+                          outputs,
+                          privateKey,
+                          window.btcFallbackProvider
+                        );
+
+                        // console.log({ tx });
+
+                        hex = tx;
+                        currentScreen = 3;
+                      }}>
+                        Sign Transaction
+                      </button>
+                    {/if}
+                  {:else if currentScreen === 3}
+                    Your transaction is:
+                    <textarea value={hex} readonly />
+
+                    <div class="container text-center">
+                      <button on:click={async() => {
+                        btcHash = await window.bitcoinHelpers.broadcastTransaction(
+                          hex,
+                          window.btcFallbackProvider
+                        );
+                        console.log({btcHash});
+                      }}>Broadcast to Bitcoin Nodes</button>
+
+                      <br/>
+
+                      {#if btcHash}
+                        {#each window.btcFallbackProvider.explorers as explorer}
+                          <a href={explorer.urls.tx(btcHash)}>View on {explorer.name}</a><br />
+                        {/each}
+                      {/if}
+                    </div>
+                  {/if}
                 </div>
                 <div class="tab-pane fade" id="sendbch" role="tabpanel" aria-labelledby="sendbch_tab">
                   Coming soon...

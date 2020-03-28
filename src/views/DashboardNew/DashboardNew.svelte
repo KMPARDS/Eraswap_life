@@ -40,6 +40,8 @@
     let addressCopied = COPYSTATE.DEFAULT;
     let buzcafeBalance = '';
     let platformsExpanded = false;
+    window.sendEsToAdd = null;
+    window.sendEsDisplay = null;
 
     let btcAddress;
     let btcBalance;
@@ -50,8 +52,8 @@
       if(!window.btcHdIndex) window.btcHdIndex = '0';
       if(!window.bchHdIndex) window.bchHdIndex = '0';
 
-      if(window.btcProviderIndex === undefined) window.btcProviderIndex = 0;
-      if(window.bchProviderIndex === undefined) window.bchProviderIndex = 0;
+      if(window.btcFallbackProvider === undefined) window.btcFallbackProvider = bitcoinProviders.btc.test3;
+      if(window.bchFallbackProvider === undefined) window.bchFallbackProvider = bitcoinProviders.bch.mainnet;
 
       updateBtcUI();
       updateBchUI();
@@ -64,17 +66,17 @@
 
       btcAddress = bitcoinHelpers.getAddressFromPrivateKey(
         privateKey,
-        bitcoinProviders.btc[window.btcProviderIndex]
+        window.btcFallbackProvider
       );
 
       try {
         btcBalance = await bitcoinHelpers.fetchBalanceFromAddress(
           btcAddress,
-          bitcoinProviders.btc[window.btcProviderIndex]
+          window.btcFallbackProvider
         );
-        console.log('btcBalance', btcBalance);
+        // console.log('btcBalance', btcBalance);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
 
@@ -85,17 +87,17 @@
 
       bchAddress = bitcoinHelpers.getAddressFromPrivateKey(
         privateKey,
-        bitcoinProviders.bch[window.bchProviderIndex]
+        window.bchFallbackProvider
       );
 
       try {
         bchBalance = await bitcoinHelpers.fetchBalanceFromAddress(
           bchAddress,
-          bitcoinProviders.bch[window.bchProviderIndex]
+          window.bchFallbackProvider
         );
-        console.log('bchBalance', bchBalance);
+        // console.log('bchBalance', bchBalance);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
 
@@ -108,7 +110,7 @@
       // let contract = new ethers.Contract("0x53e750ee41c562c171d65bcb51405b16a56cf676", abi, wallet)
       window.contract = contract;
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
 
     onMount(async () => {
@@ -127,10 +129,10 @@
     async function updateUnclaimedBenefits() {
       try {
         const response = await axios.get(`https://eraswap.technology/timeally/getBenefitFromAllStakingsOfUser?input=${address}`);
-        console.log('getBenefitFromAllStakingsOfUser', response);
+        // console.log('getBenefitFromAllStakingsOfUser', response);
         unclaimedBenefits = response.data.data.totalBenefit;
       } catch (err) {
-        console.log('error from getBenefitFromAllStakingsOfUser', err.message);
+        // console.log('error from getBenefitFromAllStakingsOfUser', err.message);
         unclaimedBenefits = '0.0';
       }
     }
@@ -138,10 +140,10 @@
     async function updateUnstakedTokens() {
       try {
         const response = await axios.get(`https://eraswap.technology/timeally/getTimeAllyRewardsOfUser?input=${address}`);
-        console.log('getTimeAllyRewardsOfUser', response);
+        // console.log('getTimeAllyRewardsOfUser', response);
         unStakedTokens = response.data.data.timeAllyRewards;
       } catch (err) {
-        console.log('error from getTimeAllyRewardsOfUser', err.message);
+        // console.log('error from getTimeAllyRewardsOfUser', err.message);
         unStakedTokens = '0.0';
       }
     }
@@ -149,7 +151,7 @@
     async function updateMyActiveStakings() {
       try {
         const response = await axios.get(`https://eraswap.technology/timeally/getActiveStakingsOfUser?input=${address}`);
-        console.log('getActiveStakingsOfUser', response);
+        // console.log('getActiveStakingsOfUser', response);
         myActiveStaking = response.data.data.myActiveStakings;
       } catch (err) {
         myActiveStaking = '0.0';
@@ -159,7 +161,7 @@
     async function updateMyTsgapDeposits() {
       try {
         const response = await axios.get(`https://eraswap.technology/sip/getTotalAmountDeposited?input=${address}`);
-        console.log('sip', response);
+        // console.log('sip', response);
         myTsgapDeposits = response.data.data.totalDeposit;
       } catch (err) {
         myTsgapDeposits = '0.0';
@@ -169,7 +171,7 @@
     async function updateMyPetDeposits() {
       try {
         const response = await axios.get(`https://eraswap.technology/pet/getTotalAmountDeposited?input=${address}`);
-        console.log('pet', response);
+        // console.log('pet', response);
         myPetDeposits = response.data.data.totalDeposit;
       } catch (err) {
         myPetDeposits = '0.0';
@@ -179,7 +181,7 @@
     async function updatePowerTokens() {
       try {
         const response = await axios.get(`https://apis.timeswappers.com/api/tokensData/fetch-token-balance?walletAddress=${address}`);
-        console.log('fetch-power-token-balance', response);
+        // console.log('fetch-power-token-balance', response);
         if(response.data.status === 'error' && response.data.message === 'Power token details not found for this address.') throw new Error('Wallet doesn\'t have power tokens');
         powerTokenBalance = response.data.balance || '0.0';
         powerTokenReceived = response.data.received || '0.0';
@@ -192,56 +194,56 @@
     async function updateTimeswappersBenefit() {
       try {
         const response = await axios.get(`https://eraswap.technology/dayswappers/getTFC?input=${address}`);
-        console.log('timeswappers-getTFC', response);
+        // console.log('timeswappers-getTFC', response);
         timeswappersBenefit = response.data.data.platform.Timeswappers.tfc * 0.28;
       } catch (err) {
         timeswappersBenefit = '0.0';
-        console.log(err.message);
+        // console.log(err.message);
       }
     }
 
     async function updateDayswapperReward() {
       try {
         const response = await axios.get(`https://apis.dayswappers.com/userprofile/user_transaction?address=${address}`);
-        console.log('dayswapper-user_transaction', response);
+        // console.log('dayswapper-user_transaction', response);
         dayswapperReward = ethers.utils.formatEther(ethers.utils.parseEther(String(response.data.liquid + response.data.staked)));
       } catch (err) {
         dayswapperReward = '0.0';
-        console.log(err.message);
+        // console.log(err.message);
       }
     }
 
     async function updateESPrice() {
       try {
         const response = await axios.get(`https://eraswap.technology/probit/getESPrice`);
-        console.log('es-price-probit', response.data);
+        // console.log('es-price-probit', response.data);
         esPriceUSDT = +response.data.data.probitResponse.data[0].last;
       } catch (err) {
         esPriceUSDT = null;
-        console.log(err.message);
+        // console.log(err.message);
       }
     }
 
     async function updateEtherPrice() {
       try {
         const response = await axios.get(`https://api.coinmarketcap.com/v1/ticker/ethereum/`);
-        console.log('eth-price-cmc', response.data);
+        // console.log('eth-price-cmc', response.data);
         ethPriceUSDT = +response.data[0]['price_usd'];
       } catch (err) {
         ethPriceUSDT = null;
-        console.log(err.message);
+        // console.log(err.message);
       }
     }
 
     async function updateBuzcafeBalance() {
       try {
         const response = await axios.get(`https://apis.buzcafe.com/api/wallet/balance?walletAddress=${address}`);
-        console.log('buzcafe-balance', response.data);
+        // console.log('buzcafe-balance', response.data);
         // ethPriceUSDT = +response.data[0]['price_usd'];
         buzcafeBalance = response.data.data.balance;
       } catch (err) {
         buzcafeBalance = null;
-        console.log('buzcafe',err.message);
+        // console.log('buzcafe',err.message);
       }
     }
 
@@ -264,8 +266,10 @@
       updateEtherPrice();
       updateBuzcafeBalance();
 
-      updateBtcUI();
-      updateBchUI();
+      if(window.wallet) {
+        updateBtcUI();
+        updateBchUI();
+      }
     }
 
     (async () => {
@@ -278,7 +282,7 @@
 
             first_time = window.firstTime || await get({address: wallet.address});
             if(first_time && refer) {
-              console.log('clicked on refer model');
+              // console.log('clicked on refer model');
               document.getElementById("refer_model").click()
             }
             // if(refer)
@@ -288,7 +292,7 @@
             // }
             error_message=""
         }catch (e) {
-            console.log(e)
+            // console.log(e)
             error_message = 'Wallet not loaded. Please Load your wallet '
         }
     })();
@@ -303,14 +307,14 @@
                     website.postMessage(wallet.privateKey,"*");
                     self.close();
                 }else{
-                    console.log("Website not loaded")
+                    // console.log("Website not loaded")
                 }
             }
         }
     });
 
     async function load_website(event){
-        console.log(event);
+        // console.log(event);
         let url = event.srcElement.attributes.data.value;
     	website = await window.open(url);
     }
@@ -1035,7 +1039,7 @@
          </div>
     </div>
 
-    <SendSidebar balance={balance} esbalance={es_balance} />
+    <SendSidebar balance={balance} esbalance={es_balance} btcAddress={btcAddress} bchAddress={bchAddress} />
 
     <div id="token_slide" class="sidepanel">
         <div class="card">
@@ -1514,9 +1518,10 @@
                             <div class="col-lg-12 my-3">
                                 <div class="row">
                                     <div class="col-lg-6 col-6 col-md-6 send-btn">
-                                        <button type="button" class="btn bnt-SR" on:click={
-                                          toggleCustomSendSideBar.bind(null, null, null)
-                                        }>Send</button>
+                                        <button type="button" class="btn bnt-SR" on:click={() => {
+                                          toggleCustomSendSideBar(null, null);
+                                          document.getElementById('senderaswap_tab').click();
+                                        }}>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 col-md-6 received_btn">
                                         <button type="button" class="btn bnt-SR" on:click={() => {
@@ -1575,7 +1580,10 @@
                             <div class="col-lg-6 col-6">
                                 <div class="row">
                                     <div class="col-lg-6 col-6 text-right pad-l">
-                                        <button type="button" class="btn small-bnt" on:click={toggleSendSideBar} disabled>Send</button>
+                                        <button type="button" class="btn small-bnt" on:click={() => {
+                                          if(!isSendSideBarOpen()) toggleSendSideBar();
+                                          document.getElementById('sendbtc_tab').click();
+                                        }}>Send</button>
                                     </div>
                                     <div class="col-lg-6 col-6 pad-0">
                                         <button type="button" class="btn small-bnt" on:click={() => {
