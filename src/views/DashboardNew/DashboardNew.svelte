@@ -55,13 +55,13 @@
       if(window.btcFallbackProvider === undefined) window.btcFallbackProvider = bitcoinProviders.btc.test3;
       if(window.bchFallbackProvider === undefined) window.bchFallbackProvider = bitcoinProviders.bch.mainnet;
 
-      updateBtcUI();
-      updateBchUI();
+      // updateBtcUI();
+      // updateBchUI();
     }
 
     async function updateBtcUI() {
       const privateKey = window.hdNode
-        ? window.hdNode.derivePath("m/44'/0'/0'/0/"+window.btcHdIndex).privateKey
+        ? window.hdNode.derivePath("m/44'/1'/0'/0/"+window.btcHdIndex).privateKey
         : window.wallet.privateKey;
 
       btcAddress = bitcoinHelpers.getAddressFromPrivateKey(
@@ -278,7 +278,7 @@
           address = wallet.address.toLowerCase();
 
           updateValues();
-          setInterval(updateValues, 10000);
+          // setInterval(updateValues, 10000);
 
             first_time = window.firstTime || await get({address: wallet.address});
             if(first_time && refer) {

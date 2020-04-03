@@ -46,7 +46,9 @@ const providers = {
                   //   hex = '0x' + hex;
                   // }
                   const confirmed = tx.confirmed;
+                  console.log(tx.outputs);
                   tx.outputs.forEach((out, index) => {
+                    console.log(out.addresses.includes(address));
                     if(out.addresses.includes(address)) {
                       unspent.push({
                         value: out.value,

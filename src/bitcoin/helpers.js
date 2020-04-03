@@ -172,7 +172,7 @@ async function broadcastTransaction(hex, fallbackProvider) {
 
   for(const provider of providerArray) {
     try {
-      apiOutput = await axios.post(provider.functions.txPush.url(), provider.functions.txPush.body(hex));
+      apiOutput = (await axios.post(provider.functions.txPush.url(), provider.functions.txPush.body(hex))).data;
       return provider.functions.txPush.parse(apiOutput);
     } catch {}
   }
