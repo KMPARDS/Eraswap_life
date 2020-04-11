@@ -88,10 +88,10 @@ async function fetchUtxosFromAddress(address, fallbackProvider) {
     const url = provider.functions.utxos.url(address);
     try {
       const output = await axios.get(url);
-      const utxos = provider.functions.utxos.parse(output);
+      const utxos = await provider.functions.utxos.parse(output);
       return utxos;
     } catch (error) {
-      // console.log({error});
+      console.log(error);
     }
   }
   return null;

@@ -1,5 +1,6 @@
 const bitcoin = require('bitcoinjs-lib');
 const explorers = require('./explorers.js');
+const axios = require('axios');
 const providers = {
   btc: {
     mainnet: {
@@ -36,10 +37,10 @@ const providers = {
             },
             utxos: {
               url: address => `https://api.blockcypher.com/v1/btc/test3/addrs/${address}/full?token=c29426c605e541bea307de3a54d94fcf&unspentOnly=true&includeHex=true`,
-              parse: (apiOutput, userAddress) => {
+              parse: async(apiOutput, userAddress) => {
                 const address = apiOutput.data.address || userAddress;
                 const unspent = [];
-                apiOutput.data.txs.forEach(tx => {
+                for(const tx of apiOutput.data.txs) {
                   const hash = tx.hash;
                   let hex = tx.hex;
                   // if(hex.length > 2 && hex.slice(0,2) !== '0x') {
@@ -47,9 +48,20 @@ const providers = {
                   // }
                   const confirmed = tx.confirmed;
                   console.log(tx.outputs);
-                  tx.outputs.forEach((out, index) => {
-                    console.log(out.addresses.includes(address));
-                    if(out.addresses.includes(address)) {
+                  let outputs = tx.outputs;
+                  if(tx.next_outputs) {
+                    let longTx;
+                    let limit = 200;
+                    do {
+                      longTx = (await axios.get(`https://api.blockcypher.com/v1/btc/test3/txs/${tx.hash}?limit=${limit}`)).data;
+                      console.log({longTx});
+                      limit *= 10;
+                    } while(longTx && longTx.next_outputs)
+                    outputs = longTx.outputs;
+                  }
+                  outputs.forEach((out, index) => {
+                    // console.log(out.addresses.includes(address));
+                    if(out.addresses.includes(address) && !out.spent_by) {
                       unspent.push({
                         value: out.value,
                         hash,
@@ -59,7 +71,7 @@ const providers = {
                       })
                     }
                   });
-                });
+                };
                 return unspent;
               }
             },
