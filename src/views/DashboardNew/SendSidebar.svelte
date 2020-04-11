@@ -915,20 +915,32 @@ function getTotalInputValue() {
                     </div> -->
                 </div>
                 <div class="tab-pane fade" id="sendbtc" role="tabpanel" aria-labelledby="sendbtc_tab">
-
+                  <h2 style="margin-bottom:0">Send BTC</h2>
+                  <p>(Step {currentScreen+1} of 5)<p>
                   {#if currentScreen === 0}
-                    There is actually no such concept like Bitcoin balance on the Bitcoin blockchain. But to make it intuitive, balance can be said as sum of all the UTXOs for the address. These UTXOs are like Notes / Dollar bills in your physical wallet that you carry. UTXOs contain amount of Bitcoin which you can use to transfer to others just like you give notes from your wallet to others.
+
+                    <p>In Bitcoin, technically there is no concept of balance, that is stored explicitly on the blockchain. Instead, there are UTXOs (Unspent Transaction Outputs). Your Bitcoin balance is said as sum of all the UTXOs for your address. These UTXOs are like Notes / Dollar bills in your physical wallet that you carry. UTXOs contain amount of Bitcoin which you can use to transfer to others just like you give notes from your wallet to others.</p>
+
+                    <p>To proceed for sending Bitcoins, click below button to scan your UTXOs from the blockchain.</p>
+                    {#if !btcAddress}
+                      <div class="alert alert-danger">
+                        Your BTC wallet is not loaded, please click on Access My Wallet in the top and unlock your wallet.
+                      </div>
+                    {/if}
                     <div class="container text-center">
-                      <button on:click={async() => {
-                        utxoFetching = true;
-                        utxos = await bitcoinHelpers.fetchUtxosFromAddress(
-                          btcAddress,
-                          window.btcFallbackProvider
-                        );
-                        currentScreen = 1;
-                        utxoFetching = false;
-                        // console.log({ utxos, btcAddress });
-                      }}>{utxoFetching ? 'Fetching...' : 'Fetch UTXOs'}</button>
+                      <button
+                        disabled={!btcAddress}
+                        on:click={async() => {
+                          utxoFetching = true;
+                          utxos = await bitcoinHelpers.fetchUtxosFromAddress(
+                            btcAddress,
+                            window.btcFallbackProvider
+                          );
+                          currentScreen = 1;
+                          utxoFetching = false;
+                          // console.log({ utxos, btcAddress });
+                        }}
+                      >{utxoFetching ? 'Fetching...' : 'Fetch UTXOs'}</button>
                     </div>
                   {:else if currentScreen === 1}
                     <style>
