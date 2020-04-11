@@ -55,9 +55,6 @@ try {
   error_message = 'Wallet not loaded. Please Load your wallet '
 }
 
-function hideNav() {
-    document.getElementById("sendsidebar").style.width = "0";
-}
 
 
 
@@ -75,6 +72,12 @@ let error;
 let hex;
 let feeRecommend;
 let btcHash;
+
+function hideNav() {
+    document.getElementById("sendsidebar").style.width = "0";
+    currentScreen = 0;
+}
+
 
 try {
   (() => {
