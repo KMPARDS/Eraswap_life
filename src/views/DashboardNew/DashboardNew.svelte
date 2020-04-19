@@ -1160,7 +1160,6 @@
                     <li style="cursor:pointer;"><img src="images/dashboardNew/Computeex.jpg" alt="" data="https://computeex.net/" on:click={load_website}></li>
                     <li style="cursor:pointer;"><img src="images/dashboardNew/Curedaap-01.jpg" alt="" data="http://curedapp.com/" on:click={load_website}></li>
                     <li style="cursor:pointer;"><img src="images/dashboardNew/Rentdaap-01.jpg" alt="" data="http://rentingdapp.com/" on:click={load_website}></li>
-                    <li style="cursor:pointer;">FaithMinus<img src="images/dashboardNew/Curedaap-01.jpg" alt="" data="http://faithminus.com/" on:click={load_website}></li>
                     <li style="cursor:pointer;"><img src="images/dashboardNew/Bookingdaap-01.jpg" alt="" data="http://bookingdapp.com/" on:click={load_website}></li>
                     <li style="cursor:pointer;"><img src="images/dashboardNew/KycDaap-01.jpg" alt="" data="http://kycdapp.com/" on:click={load_website}></li>
                     <li style="cursor:pointer;"><img src="images/dashboardNew/Recyledaap-01.jpg" alt="" data="http://recyclingdapp.com/" on:click={load_website}></li>
@@ -1260,10 +1259,6 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
                         <img src="images/dashboardNew/Charitydaap-01.jpg" alt="" data="http://charitydapp.com/" on:click={load_website}>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
-                      FaithMinus
-                        <img src="images/dashboardNew/Curedaap-01.jpg" alt="" data="http://faithminus.com/" on:click={load_website}>
                     </div>
                 </div>
             </div>
