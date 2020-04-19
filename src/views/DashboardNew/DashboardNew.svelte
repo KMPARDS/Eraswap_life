@@ -1157,7 +1157,14 @@
                     <!-- <li style="cursor:pointer;"><img src="images/dashboardNew/DateSwappers.jpg" data="https://dateswappers.com/" on:click={load_website} alt=""></li> -->
                     <li style="cursor:pointer;"><img src="images/dashboardNew/Certidapp.jpg" data="https://certidapp.com/" on:click={load_website} alt=""></li>
                     <li style="cursor:pointer;"><img src="images/dashboardNew/value OF Farmers.jpg" data="https://valueoffarmers.org/" on:click={load_website} alt=""></li>
-                    <li style="cursor:pointer;"><img src="images/dashboardNew/Computeex.jpg" alt="" data="https://computeex.net/" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/Computeex.jpg" alt="" data="http://www.computeex.net/btc-to-es" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/Curedaap-01.jpg" alt="" data="http://curedapp.com/" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/Rentdaap-01.jpg" alt="" data="http://rentingdapp.com/" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/Bookingdaap-01.jpg" alt="" data="http://bookingdapp.com/" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/KycDaap-01.jpg" alt="" data="http://kycdapp.com/" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/Recyledaap-01.jpg" alt="" data="http://recyclingdapp.com/" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/Charitydaap-01.jpg" alt="" data="http://charitydapp.com/" on:click={load_website}></li>
+                    <li style="cursor:pointer;"><img src="images/dashboardNew/faithminus.jpeg" alt="" data="http://faithminus.com/" on:click={load_website}></li>
                 </ul>
             </div>
             {:else}
@@ -1234,7 +1241,28 @@
                         <img src="images/dashboardNew/value OF Farmers.jpg" data="https://valueoffarmers.org/" on:click={load_website} alt="">
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
-                        <img src="images/dashboardNew/Computeex.jpg" alt="" data="https://computeex.net/" on:click={load_website}>
+                        <img src="images/dashboardNew/Computeex.jpg" alt="" data="http://www.computeex.net/btc-to-es" on:click={load_website}>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+                        <img src="images/dashboardNew/Curedaap-01.jpg" alt="" data="http://curedapp.com/" on:click={load_website}>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+                        <img src="images/dashboardNew/Rentdaap-01.jpg" alt="" data="http://rentingdapp.com/" on:click={load_website}>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+                        <img src="images/dashboardNew/Bookingdaap-01.jpg" alt="" data="http://bookingdapp.com/" on:click={load_website}>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+                        <img src="images/dashboardNew/KycDaap-01.jpg" alt="" data="http://kycdapp.com/" on:click={load_website}>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+                        <img src="images/dashboardNew/Recyledaap-01.jpg" alt="" data="http://recyclingdapp.com/" on:click={load_website}>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+                        <img src="images/dashboardNew/Charitydaap-01.jpg" alt="" data="http://charitydapp.com/" on:click={load_website}>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+                        <img src="images/dashboardNew/faithminus.jpeg" alt="" data="http://faithminus.com/" on:click={load_website}>
                     </div>
                 </div>
             </div>
