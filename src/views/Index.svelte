@@ -1366,7 +1366,8 @@
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
                                           <p>Please watch this video to understand "Era Swap Life - One World"</p>
-                                          <!-- <iframe src="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                          <p><iframe src="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          </p>
                                           <a class="anchor-link" href="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE?rel=0&amp;" target="_blank" rel="noopenner noreferrer">Click here to open this video on Youtube in a new tab.</a>
                                         </div>
                                     </div>
@@ -1402,7 +1403,7 @@
                                     <div id="tm-accordion1-collapse1" class="collapse" aria-labelledby="tm-accordion1-heading1"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
-                                          <!-- <iframe src="https://www.youtube-nocookie.com/embed/NElgJEKOReI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                          <p> <iframe src="https://www.youtube-nocookie.com/embed/NElgJEKOReI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </p>
                                           <a class="anchor-link" href="https://www.youtube-nocookie.com/embed/NElgJEKOReI?rel=0&amp;" target="_blank" rel="noopenner noreferrer">Click here to open this video on Youtube in a new tab.</a>
                                         </div>
                                     </div>
@@ -1420,7 +1421,7 @@
                                     <div id="tm-accordion1-collapse2" class="collapse" aria-labelledby="tm-accordion1-heading2"
                                         data-parent="#tm-accordion1">
                                         <div class="card-body offset-md-1">
-                                           <!-- <iframe  src="https://www.youtube-nocookie.com/embed/Jtc3unocmEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                           <p> <iframe  src="https://www.youtube-nocookie.com/embed/Jtc3unocmEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </p>
                                            <a class="anchor-link" href="https://www.youtube-nocookie.com/embed/Jtc3unocmEA?rel=0&amp;" target="_blank" rel="noopenner noreferrer">Click here to open this video on Youtube in a new tab.</a>
 
                                         </div>
@@ -1462,8 +1463,7 @@
 
      <div id="css-only-modals">
 	<input id="modal1" class="css-only-modal-check" type="checkbox" checked/>
-	<!-- <div class="css-only-modal">
-		<label for="modal1" class="css-only-modal-close"><i class="fa fa-times fa-2x"></i></label>
+	<!-- <div class="css-only-modal">	<label for="modal1" class="css-only-modal-close"><i class="fa fa-times fa-2x"></i></label>
 		<a href="https://www.probit.com/app/exchange/ES-BTC" target="_blank"><img src="images/annoncement2.jpeg" class="img-responsive svelte-1ewjq1k" alt="" style=" width:100%">  </a>
 	</div> -->
 <div id="screen-shade"></div>

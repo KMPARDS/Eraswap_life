@@ -124,11 +124,14 @@
             </div> -->
         <div class="tm-footer-bottomarea">
             <div class="row align-items-center">
-                <div class="col-md-7">
+                <div class="col-md-9">
                     <p class="tm-footer-copyright">Copyright 2020 <a rel="noopener noreferrer">Era Swap Life</a>. </p>
                     <ul class="policy_list">
                         <li><a href="/#about_us_1">About us</a> |</li>
-                        <li><a href="sitemap.html" target="_blank">Sitemap</a></li>
+                        <li><a href="sitemap.html" target="_blank">Sitemap</a> |</li>
+                        <li><a href="/pdf/EraSwapLife_Terms&Service.pdf" target="_blank">Terms and conditions</a> |</li>
+                        <li><a href="/pdf/EraSwapLife_Privacy.pdf" target="_blank">Privacy policy</a></li>
+
                     </ul>
                 </div>
                 <!-- <div class="col-md-5">
