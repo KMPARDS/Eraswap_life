@@ -1534,7 +1534,7 @@
                                                 + +powerTokenReceived) * esPriceUSDT
                                             )
                                             ,3)
-                                        )} USDT</u> <br />(excluding TA Power since Inception)
+                                        )} USDT</u> (excluding TA Power since Inception)
                                         {:else}
                                         Calculating...
                                         {/if}
