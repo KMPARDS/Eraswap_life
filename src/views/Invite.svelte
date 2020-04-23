@@ -20,7 +20,7 @@
     refer = get_query("refer").toLowerCase();
     const platformQuery = get_query('platform');
 
-    console.log('platform', platform);
+    console.log('platformQuery', platformQuery);
 
     switch(platformQuery) {
       case 'sw':
@@ -31,6 +31,9 @@
         break;
       case 'ts':
         platform = 'TimeSwappers';
+        break;
+      case 'esl':
+        platform = 'Era Swap Life';
         break;
     }
 
