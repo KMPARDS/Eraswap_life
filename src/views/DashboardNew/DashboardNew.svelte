@@ -17,6 +17,7 @@
     let balance = "";
     let es_balance = "";
     let address = "Loading...";
+    let referUrl = "Loading Ref Url..."
     let error_message = "";
     let website = "";
     let first_time = "";
@@ -273,6 +274,7 @@
         try{
           // address = '0x52F88a1fFa3B21d0791014cBcF0d9FE3bdEb91D1'.toLowerCase()
           address = wallet.address.toLowerCase();
+          referUrl = `${(String(window.location)).split('/').slice(0,3).join('/')}/invite?platform=esl&refer=${address}`
 
           updateValues();
           setInterval(updateValues, 10000);
@@ -458,8 +460,12 @@
     padding-right:5px !important;
 }
 
+.left-content .address {
+    padding:10px !important;
+}
+
 .right-content {
-    padding: 0 15px 10px 5px !important;
+    padding: 0 15px 0px 5px !important;
 }
 
 .right-content .right-sec {
@@ -477,8 +483,8 @@
 
     .right-content {
       /* margin-right:15px !important; */
-      padding: 0px 15px 0px 15px !important;
-      margin-bottom: 10px !important;
+      padding: 10px 15px 0px 15px !important;
+      margin-bottom: 0px !important;
     }
 
     .px-5 {
@@ -1509,14 +1515,7 @@
                                     </div>
                                 </div>
 
-                                <div class="address m-0 p-2" style="text-align:center; margin: 10px 0 !important;word-break:break-all">
-                                  <p class="m-0">{`${(String(window.location)).split('/').slice(0,3).join('/')}/invite?platform=esl&refer=${address}`}</p>
-                                  <span style="cursor:pointer" on:click={() => {
-                                    copiedReferralLink = true;
-                                    copy(`${(String(window.location)).split('/').slice(0,3).join('/')}/invite?platform=esl&refer=${address}`);
-                                    setTimeout(() => copiedReferralLink = false, 2000);
-                                  }}>[{#if copiedReferralLink}Copied{:else}Copy Referral Link{/if}]</span>
-                                </div>
+
                             </div>
                             <div class="col-lg-6 px-5 right-content">
                                 <div class="row right-sec">
@@ -1535,16 +1534,35 @@
                                                 + +powerTokenReceived) * esPriceUSDT
                                             )
                                             ,3)
-                                        )} USDT</u> (excluding TA Power since Inception)
+                                        )} USDT</u> <br />(excluding TA Power since Inception)
                                         {:else}
                                         Calculating...
                                         {/if}
                                     </div>
-                                    <div class="col-lg-12">(Excluding TA Power Since Inception)</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="address m-0 p-2" style="text-align:center; margin: 10px 0 !important;word-break:break-all">
+                  <p class="m-0">{referUrl}</p>
+                  <span style="cursor:pointer" on:click={() => {
+                    copiedReferralLink = true;
+                    copy(referUrl);
+                    setTimeout(() => copiedReferralLink = false, 2000);
+                  }}>[{#if copiedReferralLink}Copied{:else}Copy Referral Link{/if}]</span>
+                  <br />
+  <a href="whatsapp://send?text={referUrl}" target="_blank"><img src="images/share/whatsapp.png" width="32"></a>
+
+  <a href="https://twitter.com/intent/tweet?text={referUrl}" target="_blank" ><img src="images/share/twitter.png"></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u={referUrl}" target="_blank" ><img src="images/share/facebook.png"></a>
+
+  <a href="https://www.linkedin.com/cws/share/?url={referUrl}" target="_blank" ><img src="images/share/linkedin.png"></a>
+
+  <a href="https://telegram.me/share/url?url={referUrl}" target="_blank"><img src="images/share/telegram.png" height="36"></a>
+
                 </div>
 
                 <div class="row balance pt-4 pb-5" style="margin: 0 !important">
