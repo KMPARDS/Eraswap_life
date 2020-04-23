@@ -30,6 +30,7 @@
     let timeswappersBenefit = '';
     let dayswapperReward = '';
     let copied = false;
+    let copiedReferralLink = false;
     let copied2 = false;
     let esPriceUSDT;
     let ethPriceUSDT;
@@ -453,11 +454,31 @@
                 cursor: default;
             }
 
+.left-content {
+    padding-right:5px !important;
+}
+
+.right-content {
+    padding: 0 15px 10px 5px !important;
+}
+
+.right-content .right-sec {
+  margin: 0 !important;
+}
+
 /* responsive start */
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
 
     .left-content{
-        margin: 10px auto !important;
+        margin: 0 auto 10px !important;
+        padding-right:15px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .right-content {
+      /* margin-right:15px !important; */
+      padding: 0px 15px 0px 15px !important;
+      margin-bottom: 10px !important;
     }
 
     .px-5 {
@@ -557,7 +578,6 @@
 
 
 @media only screen and (max-width: 1024px) {
-
     .send-btn {
         margin: 0px;
     }
@@ -683,10 +703,6 @@
     border-radius: 4px;
     /* margin: 0px 30px !important; */
     font-weight: 600;
-}
-
-.left-content {
-    margin: 50px auto;
 }
 
 .right-sec {
@@ -1479,21 +1495,30 @@
 
     <section>
         <div class="wrapper" style="border-radius:5px;">
-            <div class="container py-4">
+            <div class="container-fluid py-3">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="col-lg-6 left-content">
-                                <div class="row address m-0">
+                                <div class="row address m-0 p-2">
                                     <div class="col-lg-12">
-                                        <p>Address:</p>
+                                        <p class="m-0">Address:</p>
                                     </div>
                                     <div class="col-lg-12">
-                                        <p class="fnt-size"><span style="word-break:break-all">{address}</span> <span on:click={copyToClipboard} style="cursor:pointer">[{#if copied}Copied{:else}Copy{/if}]</span></p>
+                                        <p class="fnt-size m-0"><span style="word-break:break-all">{address}</span> <span on:click={copyToClipboard} style="cursor:pointer">[{#if copied}Copied{:else}Copy{/if}]</span></p>
                                     </div>
                                 </div>
+
+                                <div class="address m-0 p-2" style="text-align:center; margin: 10px 0 !important;word-break:break-all">
+                                  <p class="m-0">{`${(String(window.location)).split('/').slice(0,3).join('/')}/invite?platform=esl&refer=${address}`}</p>
+                                  <span style="cursor:pointer" on:click={() => {
+                                    copiedReferralLink = true;
+                                    copy(`${(String(window.location)).split('/').slice(0,3).join('/')}/invite?platform=esl&refer=${address}`);
+                                    setTimeout(() => copiedReferralLink = false, 2000);
+                                  }}>[{#if copiedReferralLink}Copied{:else}Copy Referral Link{/if}]</span>
+                                </div>
                             </div>
-                            <div class="col-lg-6 px-5">
+                            <div class="col-lg-6 px-5 right-content">
                                 <div class="row right-sec">
                                     <div class="col-lg-12">Your total Era Swap portfolio</div>
                                     <div class="col-lg-12">
@@ -1522,7 +1547,7 @@
                     </div>
                 </div>
 
-                <div class="row balance pt-4 pb-5">
+                <div class="row balance pt-4 pb-5" style="margin: 0 !important">
                     <div class="col-lg-6 my-4">
                         <div class="row border_right">
                             <div class="col-lg-12">
