@@ -1104,7 +1104,7 @@
                 <h1 class="welcome">Welcome to Era Swap Life</h1>
             </div>
             <div class="col-lg-12">
-                <img class="centerImg" src="images/dashboardNew/Center-Image-ESLife.png" alt="Center-Image-ESLife" width="50" height="50">
+                <img class="centerImg" src="images/dashboardNew/Center-Image-ESLife.png" alt="Center-Image-ESLife" style="width: 25%; height: auto; min-width: 200px;">
             </div>
             <p style="font-weight: 700; text-decoration:strong; margin: .5rem auto">Era Swap Life is a Single Sign On (SSO) to access multiple interlinked platforms of Era Swap Ecosystem.<br>You can click on the respective icon to access the platform.</p>
         </div>
