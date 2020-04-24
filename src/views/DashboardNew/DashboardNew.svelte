@@ -1553,15 +1553,15 @@
                     setTimeout(() => copiedReferralLink = false, 2000);
                   }}>[{#if copiedReferralLink}Copied{:else}Copy Referral Link{/if}]</span>
                   <br />
-  <a href="whatsapp://send?text={referUrl}" target="_blank"><img src="images/share/whatsapp.png" width="32"></a>
+  <a href="whatsapp://send?text={encodeURIComponent(referUrl)}" target="_blank"><img src="images/share/whatsapp.png" width="32"></a>
 
-  <a href="https://twitter.com/intent/tweet?text={referUrl}" target="_blank" ><img src="images/share/twitter.png"></a>
+  <a href="https://twitter.com/intent/tweet?text={encodeURIComponent(referUrl)}" target="_blank" ><img src="images/share/twitter.png"></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u={referUrl}" target="_blank" ><img src="images/share/facebook.png"></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u={encodeURIComponent(referUrl)}" target="_blank" ><img src="images/share/facebook.png"></a>
 
-  <a href="https://www.linkedin.com/cws/share/?url={referUrl}" target="_blank" ><img src="images/share/linkedin.png"></a>
+  <a href="https://www.linkedin.com/cws/share/?url={encodeURIComponent(referUrl)}" target="_blank" ><img src="images/share/linkedin.png"></a>
 
-  <a href="https://telegram.me/share/url?url={referUrl}" target="_blank"><img src="images/share/telegram.png" height="36"></a>
+  <a href="https://telegram.me/share/url?url={encodeURIComponent(referUrl)}" target="_blank"><img src="images/share/telegram.png" height="36"></a>
 
                 </div>
 
