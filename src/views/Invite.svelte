@@ -62,10 +62,10 @@
   {:else}
     <div class="row">
       <div class="col-auto">
-        <img style="border-radius:100%;height:7rem" src={imgUrl} alt="a" />
+        <img style="border-radius:100%;height:5rem" src={imgUrl || 'images/empty-avatar.png'} alt="avatar" />
       </div>
       <div class="col">
-        Hi, your friend <b>{name}</b> has invited you to join them in <b>{platform}</b> of Era Swap Ecosystem.
+        Hi, your friend <b>{name !== 'User' ? name : 'Anonymous (no name on SwappersWall)'}</b> has invited you to join them in <b>{platform}</b> of Era Swap Ecosystem.
       </div>
     </div>
 
