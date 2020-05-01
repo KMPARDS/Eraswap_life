@@ -206,7 +206,7 @@
       try {
         const response = await axios.get(`https://apis.dayswappers.com/userprofile/user_transaction?address=${address}`);
         console.log('dayswapper-user_transaction', response);
-        dayswapperReward = ethers.utils.formatEther(ethers.utils.parseEther(String(response.data.liquid + response.data.staked)));
+        dayswapperReward = ethers.utils.formatEther(ethers.utils.parseEther(String(response.data.liquid)));
       } catch (err) {
         dayswapperReward = '0.0';
         console.log(err.message);
