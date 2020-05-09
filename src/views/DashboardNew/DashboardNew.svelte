@@ -1139,11 +1139,11 @@
                     </li>
                     <li style="cursor:pointer;">
                          {#if window.usingMetamask}
-                            <a href="https://timeswappers.com/metamask-login?home=swapperswall" target="_blank">
+                            <a href="https://swapperswall.com/metamask-login?home=swapperswall" target="_blank">
                                 <img src="images/dashboardNew/SwappersWall.jpg" alt="">
                             </a>
                         {:else}
-                        <img src="images/dashboardNew/SwappersWall.jpg" alt="" data="https://timeswappers.com/wallet-login?home=swapperswall" on:click={load_website}>
+                        <img src="images/dashboardNew/SwappersWall.jpg" alt="" data="https://swapperswall.com/wallet-login?home=swapperswall" on:click={load_website}>
                         {/if}
                     </li>
                     <li style="cursor:pointer;">
@@ -1213,11 +1213,11 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
                         {#if window.usingMetamask}
-                            <a href="https://timeswappers.com/metamask-login?home=swapperswall" target="_blank">
+                            <a href="https://swapperswall.com/metamask-login?home=swapperswall" target="_blank">
                                 <img src="images/dashboardNew/SwappersWall.jpg" alt="">
                             </a>
                         {:else}
-                        <img src="images/dashboardNew/SwappersWall.jpg" alt="" data="https://timeswappers.com/wallet-login?home=swapperswall" on:click={load_website}>
+                        <img src="images/dashboardNew/SwappersWall.jpg" alt="" data="https://swapperswall.com/wallet-login?home=swapperswall" on:click={load_website}>
                         {/if}
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
