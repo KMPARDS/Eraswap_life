@@ -27,19 +27,6 @@
   <Navbar title="Send ES" />
 </div>
 <div class="container mb-4">
-  {#if error_message != ''}
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-      {error_message}
-      <a href="/access-my-wallet">Here</a>
-      <button
-        type="button"
-        class="close"
-        data-dismiss="alert"
-        aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-  {/if}
   <div class="row justify-content-center">
     <div class="col-lg-8 col-md-6 col-12 mt-30">
       <div
@@ -122,21 +109,39 @@
           <p>
             Presets:
             <span
-              style="cursor: pointer"
+              style="cursor: pointer; border: 1px solid black; padding:
+              5px;background: #ddd;"
               on:click={() => {
                 message = 'I hereby declare and authorize info@eraswapfoundation.com to upgrade all my TimeAlly staking from 1 year to 2 years to participate in Era Swap Network Proof of Stake Consensus Protocol (ESNPoSCP). I have read and understood the TimeAlly terms and conditions.\n\nFull Name: \nContact number: ';
               }}>
-              [TimeAlly Era Swap Network]
+              <b>TimeAlly Era Swap Network</b>
             </span>
           </p>
-          <p>Enter your message and then click on sign</p>
+          <p>Update your message below and then click on sign</p>
           <textarea style="width: 100%; height: 50vh" bind:value={message} />
+
+          {#if error_message != ''}
+            <div
+              class="alert alert-danger alert-dismissible fade show"
+              role="alert">
+              {error_message}
+              <a href="/access-my-wallet">Here</a>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          {/if}
 
           <button
             on:click={async () => {
               error_message = '';
               signature = '';
               try {
+                if (!window.wallet) throw new Error('Wallet not loaded. Please load your wallet.');
                 signature = await window.wallet.signMessage(message);
               } catch (error) {
                 error_message = error.message;
@@ -163,7 +168,7 @@
             <a
               class="social-link-signature"
               target="_blank"
-              href={`mailto:?body=${getUrlEncodedBody()}`}>
+              href={`mailto:info@eraswapfoundation.com?body=${getUrlEncodedBody()}`}>
               Send by Email
             </a>
             <a
