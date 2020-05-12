@@ -16,6 +16,7 @@
   let balance = "";
   let es_balance = "";
   let address = "Loading...";
+  let referUrl = "Loading Ref Url...";
   let error_message = "";
   let website = "";
   let first_time = "";
@@ -29,6 +30,7 @@
   let timeswappersBenefit = "";
   let dayswapperReward = "";
   let copied = false;
+  let copiedReferralLink = false;
   let copied2 = false;
   let esPriceUSDT;
   let ethPriceUSDT;
@@ -328,6 +330,10 @@
     try {
       // address = '0x52F88a1fFa3B21d0791014cBcF0d9FE3bdEb91D1'.toLowerCase()
       address = wallet.address.toLowerCase();
+      referUrl = `${String(window.location)
+        .split("/")
+        .slice(0, 3)
+        .join("/")}/invite?platform=esl&refer=${address}`;
 
       updateValues();
       // setInterval(updateValues, 10000);
@@ -468,7 +474,6 @@
   .tm-funfact {
     padding: 0px !important;
   }
-
   .sidepanel {
     width: 0px;
     position: fixed;
@@ -481,24 +486,19 @@
     transition: 0.5s;
     /* padding-top: 10px; */
   }
-
   .card .card-header li a {
     padding: 15px 8px 8px 8px;
   }
-
   .sidepanel .card {
     height: 100%;
   }
-
   .platforms img {
     border-radius: 5px;
     width: 180px;
   }
-
   .margin_tb_10 {
     margin: 10px auto;
   }
-
   .flexslider {
     max-width: 1055px;
     margin: 0 auto 25px;
@@ -509,160 +509,144 @@
   #carousel .slides li.flex-active-slide {
     cursor: default;
   }
-
+  .left-content {
+    padding-right: 5px !important;
+  }
+  .left-content .address {
+    padding: 10px !important;
+  }
+  .right-content {
+    padding: 0 15px 0px 5px !important;
+  }
+  .right-content .right-sec {
+    margin: 0 !important;
+  }
   /* responsive start */
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
+  @media only screen and (max-width: 991px) {
     .left-content {
-      margin: 10px auto !important;
+      margin: 0 auto 10px !important;
+      padding-right: 15px !important;
+      margin-bottom: 0 !important;
     }
-
+    .right-content {
+      /* margin-right:15px !important; */
+      padding: 10px 15px 0px 15px !important;
+      margin-bottom: 0px !important;
+    }
     .px-5 {
       padding: 0px auto !important;
     }
-
     .centerImg {
       width: 50%;
       height: 22px;
       margin: 5px auto;
     }
-
     /* .send-btn {
         margin: 0 20px !important;
     } */
-
     .received_btn {
       margin: 0 30px;
     }
-
     .pd-l-3 {
       padding: 0px;
     }
-
     .pad-l {
       padding-left: 0px;
     }
-
     .pad-0 {
       padding: 0px !important;
     }
-
     .pad-tb-40 {
       padding: 40px 0px;
     }
-
     .p-t-15 {
       padding: 20px 0px 0px 0px !important ;
     }
-
     .pr-0 {
       padding: 0px !important;
     }
-
     .resp-pad-0 {
       padding-top: 0px !important;
       text-align: center;
     }
-
     .marg-bt {
       margin-bottom: 0px;
     }
-
     .res-img {
       width: 60%;
       height: 100%;
     }
-
     .owl-nav .owl-next,
     .owl-prev {
       display: none !important;
     }
-
     .border_rt {
       border-right: none;
     }
-
     .border_right {
       border: none !important;
     }
-
     .brand_logo {
       width: 70%;
       height: 30px;
     }
-
     .fnt-size {
       font-size: 12px;
     }
-
     .wrapper {
       width: 90%;
     }
-
     .marg-tp-50 {
       margin-top: 20px;
     }
-
     .wrapper {
       width: 90% !important;
     }
-
     .wrapper .right-sec {
       margin: 0px;
     }
   }
-
   @media only screen and (max-width: 1024px) {
     .send-btn {
       margin: 0px;
     }
-
     .received_btn {
       margin: 0px;
       /* text-align: right; */
     }
-
     .pad-tb-40 {
       padding: 35px 0px;
     }
-
     .res-img {
       width: 30%;
       height: 100%;
     }
-
     .resp_imag {
       width: 60%;
       height: 100%;
     }
-
     .bet-img {
       width: 30%;
       height: 100%;
     }
-
     .marg-tp-50 {
       text-align: center;
     }
-
     .centerImg {
       width: 50%;
       height: 22px;
       margin: 5px auto;
     }
-
     .txt-cent {
       text-align: center;
     }
-
     .day_img {
       width: 30%;
       height: 100%;
     }
   }
   /*/ responsive end */
-
   /* style start */
-
   .navbar-header-fixed {
     position: fixed;
     top: 0;
@@ -670,13 +654,11 @@
     right: 0;
     z-index: 1000;
   }
-
   .navbar {
     height: 60px;
     display: flex;
     flex-wrap: wrap;
   }
-
   .navbar-header {
     align-items: stretch;
     padding: 0;
@@ -684,31 +666,26 @@
     background: linear-gradient(90deg, rgb(107, 17, 17) 0%, rgb(23, 3, 1) 100%);
     border-bottom: 1px solid rgba(72, 94, 144, 0.16);
   }
-
   .navbar-brand {
     width: 240px;
     padding: 0 0 0 20px;
     margin-top: -3px;
   }
-
   .brand_logo {
     width: 95%;
     height: 36px;
   }
-
   .welcome {
     font-size: 24px;
     font-weight: 700;
     color: #000;
     margin: 5px auto;
   }
-
   .centerImg {
     width: 20%;
     height: 28px;
     margin: 5px auto;
   }
-
   .shadow {
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.1); */
     /* -webkit-box-shadow: 0 10px 6px -6px #000;
@@ -716,7 +693,6 @@
             box-shadow: 0 10px 6px -6px #000; */
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
   }
-
   .wrapper {
     width: 75%;
     margin-top: 30px;
@@ -725,7 +701,6 @@
     margin-right: auto;
     background-color: #c9c9c9;
   }
-
   .address {
     margin: 5px;
     background-color: #232b2d;
@@ -735,11 +710,6 @@
     /* margin: 0px 30px !important; */
     font-weight: 600;
   }
-
-  .left-content {
-    margin: 50px auto;
-  }
-
   .right-sec {
     background-color: #fff;
     color: #000;
@@ -750,21 +720,17 @@
     font-weight: 600;
     color: #691111;
   }
-
   .send-btn {
     text-align: right;
   }
-
   .received_btn {
     text-align: left;
   }
-
   .balance {
     background-color: #5f0f10;
     border-radius: 5px;
     margin: 0px 5px !important;
   }
-
   .text-p {
     color: #fff;
     padding: 10px 0px 0px 0px;
@@ -772,7 +738,6 @@
     font-weight: 600;
     font-size: 16px;
   }
-
   .bnt-SR {
     border-radius: 5px;
     background-color: #fff;
@@ -781,24 +746,20 @@
     width: 80px;
     padding: 0px !important;
   }
-
   .bd-r-white {
     border-right: 2px solid #fff;
   }
   .border_right {
     border-right: 1px solid #fff;
   }
-
   .txt-size {
     color: #fff;
     font-size: 18px;
     font-weight: 600;
   }
-
   .each-list {
     border-bottom: 1px solid #fff;
   }
-
   .small-bnt {
     padding: 0px 12px;
     border-radius: 5px;
@@ -807,25 +768,20 @@
     font-size: 12px;
     padding: 0px 5px !important;
   }
-
   .shadow_box {
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2);
   }
-
   .time_track a {
     color: #5f0f10;
     text-decoration: none;
     font-weight: 600;
   }
-
   /* .time_track p {
     margin-bottom: 5px;
 } */
-
   .mt_bt {
     margin: 8px 0px;
   }
-
   .time_track {
     color: #5f0f10;
     font-weight: 600;
@@ -833,82 +789,65 @@
   .br_bt {
     border-bottom: 1px solid #ccc;
   }
-
   .time_track a:hover {
     color: #5f0f10;
     text-decoration: none;
   }
-
   .btn-w-d {
     border-radius: 2px;
     background-color: #e1e1e1;
     color: #5f0f10;
     padding: 2px 14px;
   }
-
   .btn.btn-w-d:hover {
     background-color: #5f0f10 !important;
     color: #fff !important;
   }
-
   .marg-bt {
     margin-bottom: 48px;
   }
-
   .pd-l-3 {
     padding: 10px;
   }
-
   .mrg-20 {
     margin: 20px 0px;
   }
-
   .pad-0 {
     padding: 0px;
   }
-
   /* .resp-pad-0 {
     padding-top: 50px;
 } */
-
   .res-img {
     height: 40px;
     width: 30%;
   }
-
   .mrg-bt-28 {
     margin-bottom: 5px;
   }
-
   .resp_imag {
     width: 90%;
     height: 100%;
   }
-
   .bet-img {
     width: 60%;
     height: 100%;
   }
-
   .marg-tp-50 {
     margin-top: 60px;
     margin-bottom: 2px;
   }
-
   .border_rt {
     border-right: 1px solid #5f0f10;
   }
-
   .card-header .nav-item a {
     font-size: 14px;
   }
-
   .tap_text {
     font-size: 18px;
     color: #5f0f10;
     font-weight: 600;
   }
-
   .h {
     display: block;
     margin-top: 0.5em;
@@ -919,29 +858,23 @@
     border-width: 1px;
     color: #5f0f10;
   }
-
   .marg-t-36 {
     margin-top: 36px;
   }
-
   .resp-pad-0 {
     margin-bottom: 10px;
   }
-
   .p-t-15 {
     padding-right: 0px;
   }
-
   .marg-tp-70 {
     margin-top: 48px;
   }
-
   #qrcode {
     width: 160px;
     height: 160px;
     margin-top: 15px;
   }
-
   .tab_head .nav-pills .nav-link.active,
   .nav-link:hover {
     box-shadow: inset 0 -2px 0 #f7972f;
@@ -950,7 +883,6 @@
   .tab_head .nav-pills .nav-link.active.show {
     box-shadow: inset 0 -2px 0 #f7972f !important;
   }
-
   /* .overlay {
     display: none;
     position: fixed;
@@ -959,13 +891,11 @@
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
-
 .overlay.active {
     display: block;
     opacity: 1;
 }
    */
-
   /* style css end */
 </style>
 
@@ -1230,7 +1160,7 @@
   </div>
 </div>
 
-<SendSidebar {balance} esbalance={es_balance} {btcAddress} {bchAddress} />
+<SendSidebar {balance} esbalance={es_balance} />
 
 <div id="token_slide" class="sidepanel">
   <div class="card">
@@ -1298,8 +1228,7 @@
         class="centerImg"
         src="images/dashboardNew/Center-Image-ESLife.png"
         alt="Center-Image-ESLife"
-        width="50"
-        height="50" />
+        style="width: 25%; height: auto; min-width: 200px;" />
     </div>
     <p style="font-weight: 700; text-decoration:strong; margin: .5rem auto">
       Era Swap Life is a Single Sign On (SSO) to access multiple interlinked
@@ -1354,7 +1283,7 @@
           <li style="cursor:pointer;">
             {#if window.usingMetamask}
               <a
-                href="https://timeswappers.com/metamask-login?home=swapperswall"
+                href="https://swapperswall.com/metamask-login?home=swapperswall"
                 target="_blank">
                 <img src="images/dashboardNew/SwappersWall.jpg" alt="" />
               </a>
@@ -1362,7 +1291,7 @@
               <img
                 src="images/dashboardNew/SwappersWall.jpg"
                 alt=""
-                data="https://timeswappers.com/wallet-login?home=swapperswall"
+                data="https://swapperswall.com/wallet-login?home=swapperswall"
                 on:click={load_website} />
             {/if}
           </li>
@@ -1447,7 +1376,56 @@
             <img
               src="images/dashboardNew/Computeex.jpg"
               alt=""
-              data="https://computeex.net/"
+              data="http://www.computeex.net/btc-to-es"
+              on:click={load_website} />
+          </li>
+          <li style="cursor:pointer;">
+            <img
+              src="images/dashboardNew/Curedaap-01.jpg"
+              alt=""
+              data="http://curedapp.com/"
+              on:click={load_website} />
+          </li>
+          <li style="cursor:pointer;">
+            <img
+              src="images/dashboardNew/Rentdaap-01.jpg"
+              alt=""
+              data="http://rentingdapp.com/"
+              on:click={load_website} />
+          </li>
+          <li style="cursor:pointer;">
+            <img
+              src="images/dashboardNew/Bookingdaap-01.jpg"
+              alt=""
+              data="http://bookingdapp.com/"
+              on:click={load_website} />
+          </li>
+          <li style="cursor:pointer;">
+            <img
+              src="images/dashboardNew/KycDaap-01.jpg"
+              alt=""
+              data="http://kycdapp.com/"
+              on:click={load_website} />
+          </li>
+          <li style="cursor:pointer;">
+            <img
+              src="images/dashboardNew/Recyledaap-01.jpg"
+              alt=""
+              data="http://recyclingdapp.com/"
+              on:click={load_website} />
+          </li>
+          <li style="cursor:pointer;">
+            <img
+              src="images/dashboardNew/Charitydaap-01.jpg"
+              alt=""
+              data="http://charitydapp.com/"
+              on:click={load_website} />
+          </li>
+          <li style="cursor:pointer;">
+            <img
+              src="images/dashboardNew/faithminus.jpeg"
+              alt=""
+              data="http://faithminus.com/"
               on:click={load_website} />
           </li>
         </ul>
@@ -1488,7 +1466,7 @@
           <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
             {#if window.usingMetamask}
               <a
-                href="https://timeswappers.com/metamask-login?home=swapperswall"
+                href="https://swapperswall.com/metamask-login?home=swapperswall"
                 target="_blank">
                 <img src="images/dashboardNew/SwappersWall.jpg" alt="" />
               </a>
@@ -1496,7 +1474,7 @@
               <img
                 src="images/dashboardNew/SwappersWall.jpg"
                 alt=""
-                data="https://timeswappers.com/wallet-login?home=swapperswall"
+                data="https://swapperswall.com/wallet-login?home=swapperswall"
                 on:click={load_website} />
             {/if}
           </div>
@@ -1580,7 +1558,56 @@
             <img
               src="images/dashboardNew/Computeex.jpg"
               alt=""
-              data="https://computeex.net/"
+              data="http://www.computeex.net/btc-to-es"
+              on:click={load_website} />
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+            <img
+              src="images/dashboardNew/Curedaap-01.jpg"
+              alt=""
+              data="http://curedapp.com/"
+              on:click={load_website} />
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+            <img
+              src="images/dashboardNew/Rentdaap-01.jpg"
+              alt=""
+              data="http://rentingdapp.com/"
+              on:click={load_website} />
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+            <img
+              src="images/dashboardNew/Bookingdaap-01.jpg"
+              alt=""
+              data="http://bookingdapp.com/"
+              on:click={load_website} />
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+            <img
+              src="images/dashboardNew/KycDaap-01.jpg"
+              alt=""
+              data="http://kycdapp.com/"
+              on:click={load_website} />
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+            <img
+              src="images/dashboardNew/Recyledaap-01.jpg"
+              alt=""
+              data="http://recyclingdapp.com/"
+              on:click={load_website} />
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+            <img
+              src="images/dashboardNew/Charitydaap-01.jpg"
+              alt=""
+              data="http://charitydapp.com/"
+              on:click={load_website} />
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+            <img
+              src="images/dashboardNew/faithminus.jpeg"
+              alt=""
+              data="http://faithminus.com/"
               on:click={load_website} />
           </div>
         </div>
@@ -1653,7 +1680,6 @@
 
 <!-- <div id="tm-area-about" class="tm-about-area tm-section" style="background: #eef2f4">
                 <div class="container">
-
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
                         <div class="row">
@@ -1709,9 +1735,7 @@
                                     </span>
                                 </div>
                             </div>
-
                         </div>
-
                         <br><br>
                          <div class="row">
                            <div class="col-md-3">
@@ -1777,7 +1801,6 @@
                                     </span>
                                 </div>
                             </div>
-
                             <div class="col-md-3">
                              <div class="tm-funfact text-center">
                                     <span class="tm-funfact-icon">
@@ -1794,17 +1817,17 @@
 
 <section>
   <div class="wrapper" style="border-radius:5px;">
-    <div class="container py-4">
+    <div class="container-fluid py-3">
       <div class="row">
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-6 left-content">
-              <div class="row address m-0">
+              <div class="row address m-0 p-2">
                 <div class="col-lg-12">
-                  <p>Address:</p>
+                  <p class="m-0">Address:</p>
                 </div>
                 <div class="col-lg-12">
-                  <p class="fnt-size">
+                  <p class="fnt-size m-0">
                     <span style="word-break:break-all">{address}</span>
                     <span on:click={copyToClipboard} style="cursor:pointer">
                       [
@@ -1814,8 +1837,9 @@
                   </p>
                 </div>
               </div>
+
             </div>
-            <div class="col-lg-6 px-5">
+            <div class="col-lg-6 px-5 right-content">
               <div class="row right-sec">
                 <div class="col-lg-12">Your total Era Swap portfolio</div>
                 <div class="col-lg-12">
@@ -1827,16 +1851,61 @@
                     (excluding TA Power since Inception)
                   {:else}Calculating...{/if}
                 </div>
-                <div class="col-lg-12">
-                  (Excluding TA Power Since Inception)
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row balance pt-4 pb-5">
+      <div
+        class="address m-0 p-2"
+        style="text-align:center; margin: 10px 0 !important;word-break:break-all">
+        <p class="m-0">{referUrl}</p>
+        <span
+          style="cursor:pointer"
+          on:click={() => {
+            copiedReferralLink = true;
+            copy(referUrl);
+            setTimeout(() => (copiedReferralLink = false), 2000);
+          }}>
+          [
+          {#if copiedReferralLink}Copied{:else}Copy Referral Link{/if}
+          ]
+        </span>
+        <br />
+        <a
+          href="whatsapp://send?text={encodeURIComponent(referUrl)}"
+          target="_blank">
+          <img src="images/share/whatsapp.png" width="32" />
+        </a>
+
+        <a
+          href="https://twitter.com/intent/tweet?text={encodeURIComponent(referUrl)}"
+          target="_blank">
+          <img src="images/share/twitter.png" />
+        </a>
+
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u={encodeURIComponent(referUrl)}"
+          target="_blank">
+          <img src="images/share/facebook.png" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/cws/share/?url={encodeURIComponent(referUrl)}"
+          target="_blank">
+          <img src="images/share/linkedin.png" />
+        </a>
+
+        <a
+          href="https://telegram.me/share/url?url={encodeURIComponent(referUrl)}"
+          target="_blank">
+          <img src="images/share/telegram.png" height="36" />
+        </a>
+
+      </div>
+
+      <div class="row balance pt-4 pb-5" style="margin: 0 !important">
         <div class="col-lg-6 my-4">
           <div class="row border_right">
             <div class="col-lg-12">
@@ -1863,10 +1932,7 @@
                   <button
                     type="button"
                     class="btn bnt-SR"
-                    on:click={() => {
-                      toggleCustomSendSideBar(null, null);
-                      document.getElementById('senderaswap_tab').click();
-                    }}>
+                    on:click={toggleCustomSendSideBar.bind(null, null, null)}>
                     Send
                   </button>
                 </div>
@@ -1907,7 +1973,7 @@
                   {#if bchBalance !== undefined}
                     {#if typeof bchBalance === 'number'}
                       {bchBalance / 10 ** 8}
-                    {:else}{bchBalance}{/if}
+                    {:else}{bchBalance || 0}{/if}
                   {:else if bchAddress}
                     Loading...
                   {:else}Not Supported on your wallet type{/if}
@@ -1943,7 +2009,8 @@
                     on:click={() => {
                       if (!isSendSideBarOpen()) toggleSendSideBar();
                       document.getElementById('sendbtc_tab').click();
-                    }}>
+                    }}
+                    disabled={!btcAddress}>
                     Send
                   </button>
                 </div>
