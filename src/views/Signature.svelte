@@ -119,6 +119,16 @@
             use this function to prove that you have the ownership of the
             private key.
           </p>
+          <p>
+            Presets:
+            <span
+              style="cursor: pointer"
+              on:click={() => {
+                message = 'I hereby declare and authorize info@eraswapfoundation.com to upgrade all my TimeAlly staking from 1 year to 2 years to participate in Era Swap Network Proof of Stake Consensus Protocol (ESNPoSCP) by 20th July 2020. I have read and understood the TimeAlly terms and conditions.\n\nFull Name: \nContact number: ';
+              }}>
+              [TimeAlly Era Swap Network]
+            </span>
+          </p>
           <p>Enter your message and then click on sign</p>
           <textarea style="width: 100%; height: 50vh" bind:value={message} />
 
