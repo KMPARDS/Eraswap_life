@@ -11,7 +11,7 @@
   let verifyResult = "";
   function getUrlEncodedBody() {
     return encodeURIComponent(
-      `Message:(${message})\n\nSignature:(${signature})\n\nWalletAddress:(${window.wallet.address})`
+      `Message:\n${message}\n\nDigital Signature:\n${signature}\n\nWalletAddress:\n${window.wallet.address}`
     );
   }
 </script>
