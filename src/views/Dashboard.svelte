@@ -442,7 +442,7 @@
                         <div class="col-lg-12">
                             <div class="tm-sectiontitle text-center">
                                 <!-- <h2>About Era Swap Life</h2> -->
-                                  <h2><b>Welcome to Era Swap Life</b></h2>
+                                   <h2 class="mb-20"><b>Welcome to Era Swap Life</b></h2>
                                    <span class="tm-sectiontitle-divider"><img src="/images/S_LIFE.png" alt="S_LIFE"></span>
                                    <br><br>
                                    <p style="font-weight: 700; text-decoration:strong">Era Swap Life is a Single Sign On (SSO) to access multiple interlinked platforms of Era Swap Ecosystem.<br>You can click on the respective icon to access the platform.</p>

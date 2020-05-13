@@ -3825,13 +3825,22 @@ button.tm-videobutton.tm-videobutton-lg span i {
 }
 
 .tm-feature-icon {
-  color: #a00d08;
+ /* color: #a00d08;
   font-size: 50px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 50px;
   flex: 0 0 50px;
   margin-right: 23px;
-  position: relative;
+  position: relative;*/
+  color: #a00d08;
+font-size: 27px;
+-webkit-box-flex: 0;
+-ms-flex: 0 0 50px;
+flex: 0 0 50px;
+margin-right: -7px;
+position: relative;
+font-weight: 700;
+top: -5px;
 }
 
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
@@ -6445,3 +6454,116 @@ ul.policy_list li a {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.mt-10{
+  margin-top: 10px !important;
+}
+.mt-20{
+  margin-top: 20px!important;
+}
+.mt-30{
+  margin-top: 30px!important;
+}
+.mt-40{
+  margin-top: 40px!important;
+}
+.mt-50{
+  margin-top: 50px!important;
+}
+.mt-60{
+  margin-top: 60px!important;
+}
+.mt-80{
+  margin-top: 80px!important;
+}
+.mt-100{
+  margin-top: 100px!important;
+}
+/*============*/
+.mb-10{
+  margin-bottom: 10px!important;
+}
+.mb-20{
+  margin-bottom: 20px!important;
+}
+.mb-30{
+  margin-bottom: 30px!important;
+}
+.mb-40{
+  margin-bottom: 40px!important;
+}
+.mb-50{
+  margin-bottom: 50px!important;
+}
+.mb-60{
+  margin-bottom: 60px!important;
+}
+.mt-80{
+  margin-bottom: 80px!important;
+}
+.mt-100{
+  margin-bottom: 100px!important;
+}
+
+
+.pt-10{
+  padding-top: 10px!important;
+}
+.pt-20{
+  padding-top: 20px!important;
+}
+.pt-30{
+  padding-top: 30px!important;
+}
+.pt-40{
+  padding-top: 40px!important;
+}
+.pt-50{
+  padding-top: 50px!important;
+}
+.pt-60{
+  padding-top: 60px!important;
+}
+.pt-80{
+  padding-top: 80px!important;
+}
+.pt-100{
+  padding-top: 100px!important;
+}
+
+.pb-10{
+  padding-bottom: 10px!important;
+}
+.pb-20{
+  padding-bottom: 20px!important;
+}
+.pb-30{
+  padding-bottom: 30px!important;
+}
+.pb-40{
+  padding-bottom: 40px!important;
+}
+.pb-50{
+  padding-bottom: 50px!important;
+}
+.pb-60{
+  padding-bottom: 60px!important;
+}
+.pb-80{
+  padding-bottom: 80px!important;
+}
+.pb-100{
+  padding-bottom: 100px!important;
+}
+.mtb-50{
+    margin-top: 50px!important;
+  margin-bottom: 50px!important;
+} 
+
+.tm-feature-content h5 {
+    font-weight: 600;
+}
+.tm-sectiontitle h4{
+  font-weight: 600;
+}
