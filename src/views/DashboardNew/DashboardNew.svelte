@@ -1221,16 +1221,16 @@
 <div class="container">
   <div class="row text-center" style="margin-top: 60px;">
     <div class="col-lg-12">
-      <h1 class="welcome">Welcome to Era Swap Life</h1>
+      <h1 class="welcome mb-20">Welcome to Era Swap Life</h1>
     </div>
     <div class="col-lg-12">
       <img
-        class="centerImg"
+        class="centerImg mb-20"
         src="images/dashboardNew/Center-Image-ESLife.png"
         alt="Center-Image-ESLife"
-        style="width: 25%; height: auto; min-width: 200px;" />
+        style="width: 25%; height: auto; min-width:120px;" />
     </div>
-    <p style="font-weight: 700; text-decoration:strong; margin: .5rem auto">
+    <p style=" text-decoration:strong; margin: .5rem auto">
       Era Swap Life is a Single Sign On (SSO) to access multiple interlinked
       platforms of Era Swap Ecosystem.
       <br />
@@ -1239,15 +1239,15 @@
   </div>
 
   <div class="platforms text-center">
-    <button
+    <button class="tm-button tm-button-sm mb-30 mt-20"
       on:click={() => {
         platformsExpanded = !platformsExpanded;
         if (!platformsExpanded) showSlider();
       }}>
-      {#if platformsExpanded}Collapse Platforms{:else}Expand Platforms{/if}
+      {#if platformsExpanded}<span>Collapse Platforms</span>{:else}<span>Expand Platforms</span>{/if}
     </button>
     {#if !platformsExpanded}
-      <div class="flexslider carousel">
+      <div class="flexslider carousel mt-30 mb-30">
         <ul class="slides">
 
           <li style="cursor:pointer;">
@@ -1431,7 +1431,7 @@
         </ul>
       </div>
     {:else}
-      <div class="container">
+      <div class="container mt-30 mb-30">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
             {#if window.usingMetamask}
@@ -1816,8 +1816,8 @@
   </div> -->
 
 <section>
-  <div class="wrapper" style="border-radius:5px;">
-    <div class="container-fluid py-3">
+  <div class="wrapper mt-30 mt-50" style="border-radius:5px; ">
+    <div class="container py-3">
       <div class="row">
         <div class="col-lg-12">
           <div class="row">

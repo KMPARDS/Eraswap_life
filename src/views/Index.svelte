@@ -871,14 +871,10 @@
          </div>
          <div class="row justify-content-center mt-30-reverse">
             <!-- Single Features -->
-            <div class="col-lg-4 col-md-6 col-12 mt-30">
+            <div class="col-lg-6 col-md-6 col-12 mt-30">
                <div class="tm-feature">
                   <span class="tm-feature-icon">
-                     <i class="flaticon-keyword"></i>
-                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="70px" height="72px">
-                        <path fill-rule="evenodd" d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307 " />
-                     </svg>
+                     1.
                   </span>
                   <div class="tm-feature-content">
                      <h5>Era Swap Token (ES)</h5>
@@ -888,14 +884,10 @@
             </div>
             <!--// Single Features -->
             <!-- Single Features -->
-            <div class="col-lg-4 col-md-6 col-12 mt-30">
+            <div class="col-lg-6 col-md-6 col-12 mt-30">
                <div class="tm-feature">
                   <span class="tm-feature-icon">
-                     <i class="flaticon-document"></i>
-                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="70px" height="72px">
-                        <path fill-rule="evenodd" d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307 " />
-                     </svg>
+                     2.
                   </span>
                   <div class="tm-feature-content">
                      <h5>Era Swap Ecosystem (ESE)</h5>
@@ -905,18 +897,26 @@
             </div>
             <!--// Single Features -->
             <!-- Single Features -->
-            <div class="col-lg-4 col-md-6 col-12 mt-30">
+            <div class="col-lg-6 col-md-6 col-12 mt-30">
                <div class="tm-feature">
                   <span class="tm-feature-icon">
-                     <i class="flaticon-cover"></i>
-                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="70px" height="72px">
-                        <path fill-rule="evenodd" d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307 " />
-                     </svg>
+                    3.
                   </span>
                   <div class="tm-feature-content">
                      <h5>Total Fuel Collected (TFC)</h5>
                      <p>is the total fuel collected from all the platforms of the Era Swap Ecosystem. ES rewards will be distributed to the community members in 50% liquid and 50% TA locked through TimeAlly DApp (TA).</p>
+                  </div>
+               </div>
+            </div>
+            <!--// Single Features -->
+            <div class="col-lg-6 col-md-6 col-12 mt-30">
+               <div class="tm-feature">
+                  <span class="tm-feature-icon">
+                     4.
+                  </span>
+                  <div class="tm-feature-content">
+                     <h5>Era Swap Network</h5>
+                     <p>Era Swap Network (ESN) will be building a side-blockchain on top of Ethereum blockchain using the Plasma Framework. Era Swap Network aims to achieve scalability, speed and low-cost transactions for Era Swap Ecosystem without compromising much on trustless asset security for Era Swap Community users.</p>
                   </div>
                </div>
             </div>
@@ -1034,7 +1034,7 @@
                         <span class="tm-funfact-icon">
                         <img src="/images/13.png" alt="ESN Network">
                         </span>
-                        <p style="font-size:13px">Social Community Platform</p>
+                        <p style="font-size:13px">Decentralized  Marketplace</p>
                      </div>
                      <a href="https://eraswap.network/" target="_blank">
                         <div class="flip-card-back">
