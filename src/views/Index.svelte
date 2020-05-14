@@ -915,8 +915,9 @@
                      4.
                   </span>
                   <div class="tm-feature-content">
-                     <h5>Era Swap Network</h5>
-                     <p>Era Swap Network (ESN) will be building a side-blockchain on top of Ethereum blockchain using the Plasma Framework. Era Swap Network aims to achieve scalability, speed and low-cost transactions for Era Swap Ecosystem without compromising much on trustless asset security for Era Swap Community users.</p>
+                     <h5>Era Swap Network  (ESN) </h5>
+                     <p>Era Swap Network (ESN) will be building a side-blockchain on top of Ethereum blockchain using the Plasma Framework.
+                        aims to achieve scalability, speed and low-cost transactions for Era Swap Ecosystem without compromising much on trustless asset security for Era Swap Community users.</p>
                   </div>
                </div>
             </div>
