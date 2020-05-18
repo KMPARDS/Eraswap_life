@@ -1,5 +1,3 @@
-
-
 <script>
    import Navbar from './NavBar.svelte'
    import Footer from './Footer.svelte'
@@ -730,6 +728,7 @@
    }
 </style>
 <!-- Wrapper -->
+
 <div id="wrapper" class="wrapper">
 <div class="tm-header tm-header-fixed tm-sticky-header">
    <div class="container-fluid">
@@ -915,9 +914,8 @@
                      4.
                   </span>
                   <div class="tm-feature-content">
-                     <h5>Era Swap Network  (ESN) </h5>
-                     <p>Era Swap Network (ESN) will be building a side-blockchain on top of Ethereum blockchain using the Plasma Framework.
-                        aims to achieve scalability, speed and low-cost transactions for Era Swap Ecosystem without compromising much on trustless asset security for Era Swap Community users.</p>
+                     <h5>Era Swap Network (ESN)</h5>
+                     <p>Era Swap Network (ESN) will be building a side-blockchain on top of Ethereum blockchain using the Plasma Framework. Era Swap Network aims to achieve scalability, speed and low-cost transactions for Era Swap Ecosystem without compromising much on trustless asset security for Era Swap Community users.</p>
                   </div>
                </div>
             </div>
@@ -1056,7 +1054,7 @@
                         </span>
                         <p style="font-size:13px">Social Community Platform</p>
                      </div>
-                     <a href="https://timeswappers.com/swapperswall" target="_blank">
+                     <a href="https://swapperswall.com/" target="_blank">
                         <div class="flip-card-back">
                            <div class="tm-funfact text-center">
                               <img src="images/SW_Logo_Gold_Pyramid-01.png" alt="SW_logo" height="105px">
@@ -1173,7 +1171,7 @@
                         </span>
                         <p style="font-size:13px">eLearning Platform</p>
                      </div>
-                     <a href="https://eraswap.academy/wallet-login" target="_blank">
+                     <a href="https://eraswap.academy" target="_blank">
                         <div class="flip-card-back">
                            <div class="tm-funfact text-center">
                               <img src="images/academy.png" alt="academy" height="105px">
@@ -1467,7 +1465,7 @@
                                  </span>
                                  <p style="font-size:13px">P2P Ride Sharing</p>
                               </div>
-                              <a href="Poolindapp.com" target="_blank">
+                              <a href="http://poolindapp.com/" target="_blank">
                                  <div class="flip-card-back">
                                     <div class="tm-funfact text-center">
                                        <img src="images/poolingdapp.png" alt="pooling dapp" height="105px">
@@ -1709,16 +1707,37 @@
          </div>
       </div>
       <!--// Frequently Ask Question -->
+ 
 </main>
 <!--// Page Content -->
 </div>
+ 
+
 <Footer />
 <div id="css-only-modals">
    <input id="modal1" class="css-only-modal-check" type="checkbox" checked/>
-      <div class="css-only-modal">
+   <div class="css-only-modal">
       <label for="modal1" class="css-only-modal-close"><i class="fa fa-times fa-2x"></i></label>
-      <a href="https://www.probit.com/app/exchange/ES-BTC" target="_blank"><img src="images/Announcment.jpeg" class="img-responsive svelte-1ewjq1k" alt="" style=" width:100%">  </a>
+      <a href="" target="_blank"><img src="images/Announcment.jpg" class="img-responsive svelte-1ewjq1k" alt="" style=" width:100%">  </a>
       </div> 
    <div id="screen-shade"></div>
 </div>
 
+
+<!--
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Open Modal</button>
+<div class="modal fade announcment" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content" style="border:5px solid red;">
+        <div class="modal-body">
+      
+          <a href="" target="_blank"><img src="images/Announcment.jpg" class="img-responsive svelte-1ewjq1k" alt="" style=" width:100%">  </a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary popup-close " data-dismiss="modal">X</button>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  
