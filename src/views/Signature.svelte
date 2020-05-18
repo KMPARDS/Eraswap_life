@@ -6,13 +6,13 @@
   let message = "";
   let signature = "";
   let copied = false;
+  let copied2 = false;
   let verify = false;
   let address = "";
   let verifyResult = "";
-  function getUrlEncodedBody() {
-    return encodeURIComponent(
-      `Message:\n${message}\n\nDigital Signature:\n${signature}\n\nWalletAddress:\n${window.wallet.address}`
-    );
+  function getUrlEncodedBody(shouldEncode) {
+    const body = `Message:\n${message}\n\nDigital Signature:\n${signature}\n\nWalletAddress:\n${window.wallet.address}`;
+    return shouldEncode ? encodeURIComponent(body) : body;
   }
 </script>
 
@@ -20,6 +20,7 @@
   .social-link-signature {
     padding: 10px;
     border: 1px solid black;
+    cursor: pointer;
   }
 </style>
 
@@ -168,13 +169,24 @@
             <a
               class="social-link-signature"
               target="_blank"
-              href={`mailto:info@eraswapfoundation.com?body=${getUrlEncodedBody()}`}>
-              Send by Email
+              href={`mailto:info@eraswapfoundation.com?body=${getUrlEncodedBody(true)}`}>
+              Send by Email App
             </a>
+            <span
+              class="social-link-signature"
+              on:click={() => {
+                copy(getUrlEncodedBody(false));
+                copied2 = true;
+                setTimeout(() => {
+                  copied2 = false;
+                }, 1000);
+              }}>
+              {#if !copied2}Copy Email Body{:else}Copied{/if}
+            </span>
             <a
               class="social-link-signature"
               target="_blank"
-              href={`whatsapp://send?text=${getUrlEncodedBody()}`}>
+              href={`whatsapp://send?text=${getUrlEncodedBody(true)}`}>
               Send by Whatsapp
             </a>
           {/if}
