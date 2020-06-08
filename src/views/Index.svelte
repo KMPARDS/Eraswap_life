@@ -1025,15 +1025,17 @@
    </div>
    <div class="row justify-content-center">
       <div class="col-lg-12">
+
+      <!---first row-->
          <div class="row">
             <div class="col-md-3">
                <div class="flip-card">
                   <div class="flip-card-inner">
                      <div class="flip-card-front">
                         <span class="tm-funfact-icon">
-                        <img src="/images/13.png" alt="ESN Network">
+                        <img src="/images/esn-red.png" alt="ESN Network">
                         </span>
-                        <p style="font-size:13px">Decentralized  Marketplace</p>
+                        <p style="font-size:13px">Blockchain for Community</p>
                      </div>
                      <a href="https://eraswap.network/" target="_blank">
                         <div class="flip-card-back">
@@ -1088,6 +1090,50 @@
                   <div class="flip-card-inner">
                      <div class="flip-card-front">
                         <span class="tm-funfact-icon">
+                        <img src="/images/timeallyclub-red.png" alt="5-min">
+                        </span>
+                        <p style="font-size:13px">Exclusive Club for Community</p>
+                     </div>
+                     <a href="http://timeallyclub.com/" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/timeallyclub.png" alt="timeallyclub-logo" height="105px">
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+           
+         </div>
+         <br><br>
+
+     <!---second row-->
+         <div class="row">
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
+                          <img src="/images/13.png" alt="1daap">
+                        </span>
+                        <p style="font-size:13px">Decentralized  Ecosystem for ES Platform </p>
+                     </div>
+                     <a href="https://1daap.com" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/1daap.png" alt="1daap-logo" height="105px">
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
                         <img src="/images/8-min.png" alt="8-min">
                         </span>
                         <p style="font-size:13px">Decentralized Wallet</p>
@@ -1102,9 +1148,6 @@
                   </div>
                </div>
             </div>
-         </div>
-         <br><br>
-         <div class="row">
             <div class="col-md-3">
                <div class="flip-card">
                   <div class="flip-card-inner">
@@ -1143,6 +1186,11 @@
                   </div>
                </div>
             </div>
+         </div>
+         <br><br>
+
+      <!---third row-->
+         <div class="row">
             <div class="col-md-3">
                <div class="flip-card">
                   <div class="flip-card-inner">
@@ -1181,27 +1229,23 @@
                   </div>
                </div>
             </div>
-         </div>
-         <br><br>
-         <div class="row">
             <div class="col-md-3">
                <div class="flip-card">
                   <div class="flip-card-inner">
-                     <div class="flip-card-front">
-                        <span class="tm-funfact-icon">
-                        <img src="/images/5-min.png" alt="5-min">
-                        </span>
-                        <p style="font-size:13px">Decentralized Prediction Platform</p>
-                     </div>
-                     <a href="https://www.betdeex.com/" target="_blank">
-                        <div class="flip-card-back">
-                           <div class="tm-funfact text-center">
-                              <img src="images/betdeex-logo.png" alt="betdeex-logo" height="105px">
+                        <div class="flip-card-front">
+                           <span class="tm-funfact-icon svelte-8hioxf">
+                           <img src="/images/5-min.png" alt="5-min"></span> 
+                           <p style="font-size:13px">Decentralized Prediction Platform</p>
+                        </div> 
+                        <a href="https://www.betdeex.com/" target="_blank">
+                           <div class="flip-card-back">
+                              <div class="tm-funfact text-center svelte-8hioxf">
+                               <img src="images/betdeex-logo.png" alt="betdeex-logo" height="105px">
+                              </div>
                            </div>
-                        </div>
-                     </a>
+                        </a>
+                     </div>
                   </div>
-               </div>
             </div>
             <div class="col-md-3">
                <div class="flip-card">
@@ -1222,7 +1266,15 @@
                   </div>
                </div>
             </div>
-            <div class="col-md-3">
+           
+         </div>
+         <br><br>
+
+
+      <!---fourth row-->
+         <div class="row">
+
+             <div class="col-md-3">
                <div class="flip-card">
                   <div class="flip-card-inner">
                      <div class="flip-card-front">
@@ -1236,149 +1288,157 @@
                            <div class="tm-funfact text-center">
                               <img src="images/comp.png" alt="comp" height="105px">
                            </div>
-                     </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="flip-card">
-                     <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                           <span class="tm-funfact-icon">
-                           <img src="/images/minus-red.png" alt="faith minus">
-                           </span>
-                           <p style="font-size:13px">Decentralized Dispute Management </p>
                         </div>
-                        <a href="http://faithminus.com/" target="_blank">
-                           <div class="flip-card-back">
-                              <div class="tm-funfact text-center">
-                                 <img src="images/faithminus.png" alt="faith minus" height="105px" >
-                              </div>
-                           </div>
-                        </a>
-                     </div>
+                     </a>
                   </div>
                </div>
             </div>
-            <br><br>
-            <div class="row">
-               <div class="col-md-3">
-                  <div class="flip-card">
-                     <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                           <span class="tm-funfact-icon">
-                           <img src="/images/Farmer.png" alt="Farmer">
-                           </span>
-                           <p style="font-size:13px">Farming Community</p>
-                        </div>
-                        <a href="https://valueoffarmers.org/" target="_blank">
-                           <div class="flip-card-back">
-                              <div class="tm-funfact text-center">
-                                 <img src="images/vof.png" alt="vof" height="105px">
-                              </div>
-                           </div>
-                        </a>
+          
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
+                        <img src="/images/minus-red.png" alt="faith minus">
+                        </span>
+                        <p style="font-size:13px">Decentralized Dispute Management </p>
                      </div>
+                     <a href="http://faithminus.com/" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/faithminus.png" alt="faith minus" height="105px" >
+                           </div>
+                        </div>
+                     </a>
                   </div>
                </div>
-               <div class="col-md-3">
-                  <div class="flip-card">
-                     <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                           <span class="tm-funfact-icon">
-                           <img src="/images/certidaap-red.png" alt="certidaap">
-                           </span>
-                           <p style="font-size:13px">Blockchain Authentified Certificates</p>
-                        </div>
-                        <a href="https://certidapp.com/" target="_blank">
-                           <div class="flip-card-back">
-                              <div class="tm-funfact text-center">
-                                 <img src="images/certidapp.png" alt="certidaap" height="105px">
-                              </div>
-                           </div>
-                        </a>
+            </div>
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
+                        <img src="/images/Farmer.png" alt="Farmer">
+                        </span>
+                        <p style="font-size:13px">Farming Community</p>
                      </div>
+                     <a href="https://valueoffarmers.org/" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/vof.png" alt="vof" height="105px">
+                           </div>
+                        </div>
+                     </a>
                   </div>
                </div>
-               <div class="col-md-3">
-                  <div class="flip-card">
-                     <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                           <span class="tm-funfact-icon">
-                           <img src="/images/Kyc-red.png" alt="Kyc dapp">
-                           </span>
-                           <p style="font-size:13px">Blockchain Authentified KYC</p>
-                        </div>
-                        <a href="http://kycdapp.com/" target="_blank">
-                           <div class="flip-card-back">
-                              <div class="tm-funfact text-center">
-                                 <img src="images/kycdapp.png" alt="Kyc dapp" height="105px" >
-                              </div>
-                           </div>
-                        </a>
+            </div>
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
+                        <img src="/images/certidaap-red.png" alt="certidaap">
+                        </span>
+                        <p style="font-size:13px">Blockchain Authentified Certificates</p>
                      </div>
+                     <a href="https://certidapp.com/" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/certidapp.png" alt="certidaap" height="105px">
+                           </div>
+                        </div>
+                     </a>
                   </div>
                </div>
-               <div class="col-md-3">
-                  <div class="flip-card">
-                     <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                           <span class="tm-funfact-icon">
-                           <img src="/images/booking-red.png" alt="Booking dapp">
-                           </span>
-                           <p style="font-size:13px">P2P Booking</p>
-                        </div>
-                        <a href="http://bookingdapp.com/" target="_blank">
-                           <div class="flip-card-back">
-                              <div class="tm-funfact text-center">
-                                 <img src="images/booking.png" alt="Booking dapp" height="105px">
-                              </div>
-                        </a>
-                        </div>
+            </div>
+          
+            
+         </div>
+         <br><br>
+
+      <!---fifth row-->
+         <div class="row">
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
+                        <img src="/images/Kyc-red.png" alt="Kyc dapp">
+                        </span>
+                        <p style="font-size:13px">Blockchain Authentified KYC</p>
                      </div>
+                     <a href="http://kycdapp.com/" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/kycdapp.png" alt="Kyc dapp" height="105px" >
+                           </div>
+                        </div>
+                     </a>
                   </div>
                </div>
-               <br><br>
-               <div class="row">
-                  <div class="col-md-3">
-                     <div class="flip-card">
-                        <div class="flip-card-inner">
-                           <div class="flip-card-front">
-                              <span class="tm-funfact-icon">
-                              <img src="/images/charity-red.png" alt="charity dapp">
-                              </span>
-                              <p style="font-size:13px">Decentralized Charity</p>
-                           </div>
-                           <a href="http://charitydapp.com/" target="_blank">
-                              <div class="flip-card-back">
-                                 <div class="tm-funfact text-center">
-                                    <img src="images/charitydapp.png" alt="charity dapp" height="105px">
-                                 </div>
-                              </div>
-                           </a>
-                        </div>
+            </div>
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
+                        <img src="/images/booking-red.png" alt="Booking dapp">
+                        </span>
+                        <p style="font-size:13px">P2P Booking</p>
                      </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="flip-card">
-                        <div class="flip-card-inner">
-                           <div class="flip-card-front">
-                              <span class="tm-funfact-icon">
-                              <img src="/images/rent-red.png" alt="renting dapp">
-                              </span>
-                              <p style="font-size:13px">Decentralized Renting</p>
+                     <a href="http://bookingdapp.com/" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/booking.png" alt="Booking dapp" height="105px">
                            </div>
-                           <a href="http://rentingdapp.com/" target="_blank">
-                              <div class="flip-card-back">
-                                 <div class="tm-funfact text-center">
-                                    <img src="images/rentingdapp.png" alt="renting dapp" height="105px" >
-                                 </div>
-                              </div>
-                           </a>
-                        </div>
-                     </div>
+                     </a>
                   </div>
-                  <div class="col-md-3">
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
+                        <img src="/images/charity-red.png" alt="charity dapp">
+                        </span>
+                        <p style="font-size:13px">Decentralized Charity</p>
+                     </div>
+                     <a href="http://charitydapp.com/" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/charitydapp.png" alt="charity dapp" height="105px">
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <span class="tm-funfact-icon">
+                        <img src="/images/rent-red.png" alt="renting dapp">
+                        </span>
+                        <p style="font-size:13px">Decentralized Renting</p>
+                     </div>
+                     <a href="http://rentingdapp.com/" target="_blank">
+                        <div class="flip-card-back">
+                           <div class="tm-funfact text-center">
+                              <img src="images/rentingdapp.png" alt="renting dapp" height="105px" >
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+           
+         <br><br>
+      <!---sixth row-->
+         <div class="row">
+                   <div class="col-md-3">
                      <div class="flip-card">
                         <div class="flip-card-inner">
                            <div class="flip-card-front">
@@ -1392,11 +1452,12 @@
                                  <div class="tm-funfact text-center">
                                     <img src="images/curedapp.png" alt="curedapp" height="105px">
                                  </div>
+                              </div>
                            </a>
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-3">
+                      <div class="col-md-3">
                         <div class="flip-card">
                            <div class="flip-card-inner">
                               <div class="flip-card-front">
@@ -1414,29 +1475,27 @@
                               </a>
                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <br><br>
-                  <div class="row">
+                      </div>
                      <div class="col-md-3">
-                        <div class="flip-card">
-                           <div class="flip-card-inner">
-                              <div class="flip-card-front">
-                                 <span class="tm-funfact-icon">
-                                 <img src="/images/coupondapp-red.png" alt="Coupon dapp">
-                                 </span>
-                                 <p style="font-size:13px">ES Gift Card</p>
-                              </div>
-                              <a href="http://coupondapp.com/" target="_blank">
-                                 <div class="flip-card-back">
-                                    <div class="tm-funfact text-center">
-                                       <img src="images/coupondapp.png" alt="Coupon dapp" height="105px">
-                                    </div>
+                           <div class="flip-card">
+                              <div class="flip-card-inner">
+                                 <div class="flip-card-front">
+                                    <span class="tm-funfact-icon">
+                                    <img src="/images/coupondapp-red.png" alt="Coupon dapp">
+                                    </span>
+                                    <p style="font-size:13px">ES Gift Card</p>
                                  </div>
-                              </a>
+                                 <a href="http://coupondapp.com/" target="_blank">
+                                    <div class="flip-card-back">
+                                       <div class="tm-funfact text-center">
+                                          <img src="images/coupondapp.png" alt="Coupon dapp" height="105px">
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
                            </div>
-                        </div>
                      </div>
+                    
                      <div class="col-md-3">
                         <div class="flip-card">
                            <div class="flip-card-inner">
@@ -1456,30 +1515,34 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-3">
-                        <div class="flip-card">
-                           <div class="flip-card-inner">
-                              <div class="flip-card-front">
-                                 <span class="tm-funfact-icon">
-                                 <img src="/images/pooling-red.png" alt="pooling dapp">
-                                 </span>
-                                 <p style="font-size:13px">P2P Ride Sharing</p>
-                              </div>
-                              <a href="http://poolindapp.com/" target="_blank">
-                                 <div class="flip-card-back">
-                                    <div class="tm-funfact text-center">
-                                       <img src="images/poolingdapp.png" alt="pooling dapp" height="105px">
-                                    </div>
-                                 </div>
-                              </a>
-                           </div>
+                     
+            </div>
+          <br><br>
+            <div class="row">
+              <div class="col-md-3">
+                  <div class="flip-card">
+                     <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                           <span class="tm-funfact-icon">
+                           <img src="/images/pooling-red.png" alt="pooling dapp">
+                           </span>
+                           <p style="font-size:13px">P2P Ride Sharing</p>
                         </div>
+                        <a href="http://poolindapp.com/" target="_blank">
+                           <div class="flip-card-back">
+                              <div class="tm-funfact text-center">
+                                 <img src="images/poolingdapp.png" alt="pooling dapp" height="105px">
+                              </div>
+                           </div>
+                        </a>
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
+   </div>
+   </div>
       <!--// About Us Area -->
       <!--// Global Exchange -->
       <div id="tm-area-services" class="tm-services-area tm-section tm-padding-section bg-white">
@@ -1714,14 +1777,14 @@
  
 
 <Footer />
-<div id="css-only-modals">
+<!--<div id="css-only-modals">
    <input id="modal1" class="css-only-modal-check" type="checkbox" checked/>
    <div class="css-only-modal">
       <label for="modal1" class="css-only-modal-close"><i class="fa fa-times fa-2x"></i></label>
       <a href="" target="_blank"><img src="images/Announcment.jpg" class="img-responsive svelte-1ewjq1k" alt="" style=" width:100%">  </a>
       </div> 
    <div id="screen-shade"></div>
-</div>
+</div>-->
 
 
 <!--
