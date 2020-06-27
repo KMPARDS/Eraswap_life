@@ -151,6 +151,12 @@
     <ul class="navbar-nav ml-auto navbar-right">
       {#if !wallet}
         <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
+          <a class="nav-link text-white tm-button tm-button-lg tm-button-white
+            tm-button-transparent svelte-1rnqu60" href="https://play.google.com/store/apps/details?id=com.eraswaponeapp&amp;hl=en_IN" target="_blank">
+           <i class="fa fa-mobile" aria-hidden="true" style=" position: relative; top: 3px;"></i> Get the 1DAAP
+          </a>
+        </li>
+        <li class="nav-item" style="margin-right: 8px; margin-bottom:10px">
           <a
             class="nav-link text-white tm-button tm-button-lg tm-button-white
             tm-button-transparent"
