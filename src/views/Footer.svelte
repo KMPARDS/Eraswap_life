@@ -78,10 +78,16 @@
                             <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/EraSwapLife.pdf" target="_blank">User Guide</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">Era Swap White Paper</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_lightpaper.pdf" target="_blank"> Era Swap Light Paper</a></li>
-                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswap.network/pdf/ESN_Whitepaper.pdf" target="_blank"> ESN White Paper</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="http://eraswaptoken.io/pdf/ESN_Whitepaper.pdf" target="_blank"> ESN White Paper</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="/create-new-wallet">Create Wallet</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li>
+                           
+                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap-terms-conditions.pdf" target="_blank">Era Swap Terms & Conditions</a></li>
+                            
+                             <li><i class="fa fa-angle-double-right"></i> <a href="pdf/eraswaplife-terms-condtions.pdf" target="_blank">Terms & Conditions</a></li>
+
+                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswaplife-privacy-policy.pdf" target="_blank">Privacy Policy</a></li>       
                         </ul>
                     </div>
                 </div>
