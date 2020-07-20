@@ -1261,11 +1261,11 @@ Submit
                <a
                   href="https://www.timeally.io/load-wallet/using-metamask"
                   target="_blank">
-               <img src="images/dashboardNew/TimAlly.jpg" alt="" />
+               <img src="images/dashboardNew/Timeally.jpg" alt="" />
                </a>
                {:else}
                <img
-                  src="images/dashboardNew/TimAlly.jpg"
+                  src="images/dashboardNew/Timeally.jpg"
                   alt=""
                   data="https://www.timeally.io/"
                   on:click={load_website} />
@@ -1358,7 +1358,7 @@ Submit
             </li>
             <li style="cursor:pointer;">
                <img
-                  src="images/dashboardNew/TimeAlly.jpg"
+                  src="images/dashboardNew/Timeallyclub.jpg"
                   data="https://timeallyclub.com/"
                   on:click={load_website}
                   alt="" />
@@ -1448,7 +1448,7 @@ Submit
                </a>
                {:else}
                <img
-                  src="images/dashboardNew/TimAlly.jpg"
+                  src="images/dashboardNew/Timeally.jpg"
                   alt=""
                   data="https://www.timeally.io/"
                   on:click={load_website} />
@@ -1541,7 +1541,7 @@ Submit
             </div>
             <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
                <img
-                  src="images/dashboardNew/TimeAlly Club.jpg"
+                  src="images/dashboardNew/Timeallyclub.jpg"
                   data="https://timeallyclub.com/"
                   on:click={load_website}
                   alt="" />
@@ -1624,7 +1624,7 @@ Submit
                 <img src="images/dashboardNew/TimAlly.jpg" alt="">
             </a>
          {:else}
-         <img src="images/dashboardNew/TimAlly.jpg" alt="" data="https://www.timeally.io/" on:click={load_website}>
+         <img src="images/dashboardNew/Timeally.jpg" alt="" data="https://www.timeally.io/" on:click={load_website}>
          {/if}
          </li>
          <li style="cursor:pointer;">
@@ -1674,7 +1674,7 @@ Submit
          <img src="images/dashboardNew/Betdeex.jpg" data="https://www.betdeex.com" on:click={load_website} alt="">
          {/if}
          </li>
-         <li style="cursor:pointer;"><img src="images/dashboardNew/TimeAlly Club.jpg" data="https://timeallyclub.com/" on:click={load_website} alt=""></li>
+         <li style="cursor:pointer;"><img src="images/dashboardNew/Timeallyclub.jpg" data="https://timeallyclub.com/" on:click={load_website} alt=""></li>
          <li style="cursor:pointer;"><img src="images/dashboardNew/Certidapp.jpg" data="https://certidapp.com/" on:click={load_website} alt=""></li>
          <li style="cursor:pointer;"><img src="images/dashboardNew/value OF Farmers.jpg" data="https://valueoffarmers.org/" on:click={load_website} alt=""></li>
          <li style="cursor:pointer;"><img src="images/dashboardNew/Computeex.jpg" alt="" data="https://computeex.net/" on:click={load_website}></li> -->
