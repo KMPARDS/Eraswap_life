@@ -745,7 +745,7 @@
             <div class="col-xl-8 col-lg-7 order-2 order-lg-1">
                <div class="tm-heroslider-content">
                   <h1>Era Swap Life</h1>
-                  <p>Era Swap Life is the gateway to the one world of Era Swap Ecosystem. <br>Let’s Swap to Next Era, together!!</p>
+                  <p>Era Swap Life is the gateway to the one world of Era Swap Ecosystem. <br>Let’s Swap to Next Era, together!</p>
                   <!-- <div class="tm-buttongroup">
                      <a href="/create-new-wallet"class="tm-button tm-button-lg tm-button-white tm-button-transparent" data-toggle="modal" data-target="#terms" ><span>Create New Wallet</span></a>
                      <a href="/access-my-wallet" class="tm-button tm-button-lg tm-button-white tm-button-transparent"><span>Access My Wallet</span></a>
@@ -903,7 +903,10 @@
                   </span>
                   <div class="tm-feature-content">
                      <h5>Total Fuel Collected (TFC)</h5>
-                     <p>is the total fuel collected from all the platforms of the Era Swap Ecosystem. ES rewards will be distributed to the community members in 50% liquid and 50% TA locked through TimeAlly DApp (TA).</p>
+                     <p>is the total e-handling charges by Platforms.
+The TFC collected from all the platforms is allocated back to the community
+among active Day Swappers for their contribution on multiple platforms to
+increase usage and userbase.</p>
                   </div>
                </div>
             </div>
@@ -941,8 +944,8 @@
                   <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                   <br><br>
                   <h6>Watch this exclusive teaser to see multiple platforms under Era Swap Ecosystem where Era Swap (ES) will be utilized as a decentralized utility token</h6>
-                  <a href="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE?rel=0&amp;" target="_blank" rel="noopenner noreferrer" >
-                  <img style="margin-top:20px" src="/images/es-one-world.jpg" alt="es-one-world" />
+                  <a href="https://www.youtube.com/embed/JodEk_UDw10" target="_blank" rel="noopenner noreferrer" >
+                  <img style="margin-top:20px" src="/images/decentralized-utility-app.jpg" alt="es-one-world" />
                   </a>
                </div>
             </div>
@@ -1017,9 +1020,10 @@
             <h4>Why Era Swap Life</h4>
             <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
             <br><br>
+            <p> Access Era Swap Platforms, please <a href="/create-new-wallet"><b>Create wallet</b></a> or <a href="/access-my-wallet"><b>Access Wallet </b></a></p>
             <h6>Era Swap Life offers the advantage of one access to multiple utility platforms accepting Era Swap (ES) Utility token. </h6>
             <p>The user can add his / her wallet to access these platforms which offers multiple solutions to community members like:</p>
-            <p> Access Era Swap Platforms, please <a href="/create-new-wallet"><b>Create wallet</b></a> or <a href="/access-my-wallet"><b>Access Wallet </b></a></p>
+            
          </div>
       </div>
    </div>
@@ -1548,16 +1552,24 @@
       <div id="tm-area-services" class="tm-services-area tm-section tm-padding-section bg-white">
          <div class="container">
             <div class="row justify-content-center">
-               <div class="col-lg-8">
+               <div class="col-lg-12">
                   <div class="tm-sectiontitle text-center">
                      <h4>Global Exchange</h4>
                      <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                      <br><br>
                   </div>
                </div>
-               <div class="">
-                  <img class="img-responsive custom-height" src="/images/probitexchange.png" alt="probitexchange" height="auto">
+
+               <div class="col-md-3">
+                  <img class="img-responsive custom-height" src="/images/probitexchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
                </div>
+               <div class="col-md-3">
+                  <img class="img-responsive custom-height" src="/images/uphold-exchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
+               </div>
+               <div class="col-md-3">
+                  <img class="img-responsive custom-height" src="/images/computex-exchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
+               </div>
+
             </div>
          </div>
       </div>
@@ -1692,7 +1704,7 @@
                            <div class="card-body offset-md-1">
                               <p>Please watch this video to understand "Era Swap Life - One World"</p>
                               <!-- <iframe src="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                              <a class="anchor-link" href="https://www.youtube-nocookie.com/embed/CHfxYfYnKpE?rel=0&amp;" target="_blank" rel="noopenner noreferrer">Click here to open this video on Youtube in a new tab.</a>
+                              <a class="anchor-link" href="https://www.youtube.com/embed/19jxddy4Qnc" target="_blank" rel="noopenner noreferrer">Click here to open this video on Youtube in a new tab.</a>
                            </div>
                         </div>
                      </div>

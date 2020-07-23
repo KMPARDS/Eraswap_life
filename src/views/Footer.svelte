@@ -40,14 +40,39 @@
                             <img src="/images/es_newlogo-white-min.png" width="180px" alt="">
                         </a>
                         <ul class="policy_list">
+                            <li><a href="https://twitter.com/EraSwapTech" target="_blank"><i class="fa fa-twitter" style="font-size:22px"></i></a></li>
+
                             <li><a href="https://www.facebook.com/eraswap/" target="_blank"><i class="fa fa-facebook" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://www.linkedin.com/company/eraswap/" target="_blank"><i class="fa fa-linkedin" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://www.pinterest.com/eraswapt/" target="_blank"><i class="fa fa-pinterest" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://www.youtube.com/channel/UCGCP4f5DF1W6sbCjS6y3T1g" target="_blank"><i class="fa fa-youtube" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://www.instagram.com/eraswap/" target="_blank"><i class="fa fa-instagram" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://medium.com/@eraswap" target="_blank"><i class="fa fa-medium" aria-hidden="true" style="font-size:22px"></i></a></li>
+
+                            <li><a href="https://www.reddit.com/user/EraSwap" target="_blank"><i class="fa fa-reddit" aria-hidden="true" style="font-size:22px"></i></a>
+                            </li>
+
+                            <li><a href="https://eraswap.tumblr.com/" target="_blank"><i class="fa fa-tumblr" aria-hidden="true" style="font-size:22px"></i></a>
+                            </li>
+
+                            <li> <a href="https://mix.com/eraswap" target="_blank"><i class="fa fa-stumbleupon" aria-hidden="true" style="font-size:22px"></i></a>
+                             </li>
+
                             <li><a href="https://coinmarketcap.com/currencies/era-swap/" target="_blank"><img src="/images/cmc.png" style="height: 22px; margin-bottom: 7px;" /></a></li>
+
+                            <li><a href="https://www.pinterest.com/eraswapt" target="_blank"><i class="fa fa-pinterest"aria-hidden="true" style="font-size:22px"></i></a>
+                            </li>
+
                             <li style="margin-left:-4px"><a href="https://ethplorer.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574" target="_blank"><img src="/images/ethplorer2.png" style="height: 22px; margin-bottom: 7px;" /></a></li>
+
+                            <li>  <a href="https://bitcointalk.org/index.php?topic=5025979.msg45502457" target="_blank"><i class="fa fa-btc" aria-hidden="true" style="font-size:22px"></i></a>
+                          </li>
+
                         </ul>
                         <!-- <p>Dolor enim sit et perferendis quia in. Sed perferendis aliquid quo vel
                             necessitatibus commodi similique et. Veniam ducimus sed rerum cumque ipsum eos
@@ -79,7 +104,7 @@
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">Era Swap White Paper</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_lightpaper.pdf" target="_blank"> Era Swap Light Paper</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="http://eraswaptoken.io/pdf/ESN_Whitepaper.pdf" target="_blank"> ESN White Paper</a></li>
-                            <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/era-swap-howey-test-letter-august7-2018.php">Howey Test</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="http://eraswaptoken.io/pdf/era-swap-howey-test-letter-august7-2018.pdf" target="_blank">Howey Test</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="/create-new-wallet">Create Wallet</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li>
                            
@@ -87,7 +112,7 @@
                             
                              <li><i class="fa fa-angle-double-right"></i> <a href="pdf/eraswaplife-terms-condtions.pdf" target="_blank">Terms & Conditions</a></li>
 
-                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswaplife-privacy-policy.pdf" target="_blank">Privacy Policy</a></li>       
+                             <li><i class="fa fa-angle-double-right"></i> <a href="pdf/eraswaplife-privacy-policy.pdf" target="_blank">Privacy Policy</a></li>       
                         </ul>
                     </div>
                 </div>
