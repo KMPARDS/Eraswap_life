@@ -40,14 +40,39 @@
                             <img src="/images/es_newlogo-white-min.png" width="180px" alt="">
                         </a>
                         <ul class="policy_list">
+                            <li><a href="https://twitter.com/EraSwapTech" target="_blank"><i class="fa fa-twitter" style="font-size:22px"></i></a></li>
+
                             <li><a href="https://www.facebook.com/eraswap/" target="_blank"><i class="fa fa-facebook" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://www.linkedin.com/company/eraswap/" target="_blank"><i class="fa fa-linkedin" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://www.pinterest.com/eraswapt/" target="_blank"><i class="fa fa-pinterest" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://www.youtube.com/channel/UCGCP4f5DF1W6sbCjS6y3T1g" target="_blank"><i class="fa fa-youtube" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://www.instagram.com/eraswap/" target="_blank"><i class="fa fa-instagram" style="font-size:22px"></i></a></li>
+
 							<li><a href="https://medium.com/@eraswap" target="_blank"><i class="fa fa-medium" aria-hidden="true" style="font-size:22px"></i></a></li>
+
+                            <li><a href="https://www.reddit.com/user/EraSwap" target="_blank"><i class="fa fa-reddit" aria-hidden="true" style="font-size:22px"></i></a>
+                            </li>
+
+                            <li><a href="https://eraswap.tumblr.com/" target="_blank"><i class="fa fa-tumblr" aria-hidden="true" style="font-size:22px"></i></a>
+                            </li>
+
+                            <li> <a href="https://mix.com/eraswap" target="_blank"><i class="fa fa-stumbleupon" aria-hidden="true" style="font-size:22px"></i></a>
+                             </li>
+
                             <li><a href="https://coinmarketcap.com/currencies/era-swap/" target="_blank"><img src="/images/cmc.png" style="height: 22px; margin-bottom: 7px;" /></a></li>
+
+                            <li><a href="https://www.pinterest.com/eraswapt" target="_blank"><i class="fa fa-pinterest"aria-hidden="true" style="font-size:22px"></i></a>
+                            </li>
+
                             <li style="margin-left:-4px"><a href="https://ethplorer.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574" target="_blank"><img src="/images/ethplorer2.png" style="height: 22px; margin-bottom: 7px;" /></a></li>
+
+                            <li>  <a href="https://bitcointalk.org/index.php?topic=5025979.msg45502457" target="_blank"><i class="fa fa-btc" aria-hidden="true" style="font-size:22px"></i></a>
+                          </li>
+
                         </ul>
                         <!-- <p>Dolor enim sit et perferendis quia in. Sed perferendis aliquid quo vel
                             necessitatibus commodi similique et. Veniam ducimus sed rerum cumque ipsum eos
