@@ -945,7 +945,7 @@ increase usage and userbase.</p>
                   <br><br>
                   <h6>Watch this exclusive teaser to see multiple platforms under Era Swap Ecosystem where Era Swap (ES) will be utilized as a decentralized utility token</h6>
                   <a href="https://www.youtube.com/embed/JodEk_UDw10" target="_blank" rel="noopenner noreferrer" >
-                  <img style="margin-top:20px" src="/images/decentralized-utility-app.jpg" alt="es-one-world" />
+                  <img style="margin-top:20px" src="/images/decentralized-utility-app.png" alt="es-one-world" />
                   </a>
                </div>
             </div>
