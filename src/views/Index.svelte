@@ -1561,13 +1561,13 @@ increase usage and userbase.</p>
                </div>
 
                <div class="col-md-3">
-                  <img class="img-responsive custom-height" src="/images/probitexchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
+                  <img class="img-responsive " src="/images/probitexchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
                </div>
                <div class="col-md-3">
-                  <img class="img-responsive custom-height" src="/images/uphold-exchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
+                  <img class="img-responsive " src="/images/uphold-exchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
                </div>
                <div class="col-md-3">
-                  <img class="img-responsive custom-height" src="/images/computex-exchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
+                  <img class="img-responsive " src="/images/computex-exchange.png" alt="probitexchange" height="auto" style="border: 1px solid #d0d0d0;">
                </div>
 
             </div>
