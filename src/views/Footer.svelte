@@ -100,7 +100,7 @@
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
                             <li><h4 class="text-white">Useful Links</h4></li>
-                            <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/EraSwapLife.pdf" target="_blank">User Guide</a></li>
+                            <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/how-to-create-eraswap-wallet.pdf" target="_blank">User Manual</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">Era Swap White Paper</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_lightpaper.pdf" target="_blank"> Era Swap Light Paper</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="http://eraswaptoken.io/pdf/ESN_Whitepaper.pdf" target="_blank"> ESN White Paper</a></li>
