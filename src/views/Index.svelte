@@ -1258,9 +1258,9 @@ increase usage and userbase.</p>
                         <span class="tm-funfact-icon">
                         <img src="/images/7-min.png" alt="7-min">
                         </span>
-                        <p style="font-size:13px">P2P Lend & Borrow</p>
+                        <p style="font-size:13px">Buy ES with Cards</p>
                      </div>
-                     <a href="https://computeex.net" target="_blank">
+                     <a href="https://www.computeex.net/" target="_blank">
                         <div class="flip-card-back">
                            <div class="tm-funfact text-center">
                               <img src="images/comp-lb.png" alt="comp-lb" height="105px" >
@@ -1287,7 +1287,7 @@ increase usage and userbase.</p>
                         </span>
                         <p style="font-size:13px">Multi Exchange Solution</p>
                      </div>
-                     <a href="https://computeex.net" target="_blank">
+                     <a href="https://www.computeex.net/" target="_blank">
                         <div class="flip-card-back">
                            <div class="tm-funfact text-center">
                               <img src="images/comp.png" alt="comp" height="105px">
