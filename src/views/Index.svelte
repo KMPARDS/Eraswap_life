@@ -929,7 +929,7 @@
    </div>
    <!--// Features Area -->
    <style>
-      @media(min-width: 768px){
+      @media(min-width: 768px) {
       .pcvid{
       width: 560px;
       height:315px;
