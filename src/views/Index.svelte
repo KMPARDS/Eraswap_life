@@ -876,8 +876,9 @@
                      1.
                   </span>
                   <div class="tm-feature-content">
-                     <h5>Era Swap Token (ES)</h5>
-                     <p>is a decentralized utility token currently based on Ethereum blockchain (ERC20) used on multiple platforms for exchange of services (P2P), avail discounts, rewards and more utility.</p>
+                     <h5>Era Swap DAO</h5>
+                     <p> Era Swap DAO uses the consensus mechanism to align the interests of the organization with the interests of its stakeholder. It is governed by a set of software rules in Smart Contracts on Era Swap Blockchain Network.
+</p>
                   </div>
                </div>
             </div>
@@ -889,8 +890,9 @@
                      2.
                   </span>
                   <div class="tm-feature-content">
-                     <h5>Era Swap Ecosystem (ESE)</h5>
-                     <p>includes all inter-linked platforms where ES can be utilized for multiple utilities. The ecosystem consists of platforms offering P2P services and usage to community members.</p>
+                     <h5>Era Swap Token (ES)</h5>
+                     <p>ES is a native token of Era Swap Blockchain Network proof-of-stake Consensus Protocol, designed to optimize utilization in Era Swap Ecosystem & Strengthen ESN for long-term viability. It allows P2P Exchange using Smart Contracts within Era Swap Decentralized Economy.
+</p>
                   </div>
                </div>
             </div>
@@ -902,11 +904,9 @@
                     3.
                   </span>
                   <div class="tm-feature-content">
-                     <h5>Total Fuel Collected (TFC)</h5>
-                     <p>is the total e-handling charges by Platforms.
-The TFC collected from all the platforms is allocated back to the community
-among active Day Swappers for their contribution on multiple platforms to
-increase usage and userbase.</p>
+                     <h5>Era Swap Decentralized Ecosystem</h5>
+                     <p>Era Swap Decentralized Ecosystem is based on Web 3.0. It intends to eliminate the need to involve Third-parties for cost-effective Peer-to-Peer Exchange using Era Swap Blockchain Network and offers a unique feature of Single Sign-on using a single Era Swap Wallet for accessing multiple Era Swap DApps.
+</p>
                   </div>
                </div>
             </div>
@@ -917,8 +917,9 @@ increase usage and userbase.</p>
                      4.
                   </span>
                   <div class="tm-feature-content">
-                     <h5>Era Swap Network (ESN)</h5>
-                     <p>Era Swap Network (ESN) will be building a side-blockchain on top of Ethereum blockchain using the Plasma Framework. Era Swap Network aims to achieve scalability, speed and low-cost transactions for Era Swap Ecosystem without compromising much on trustless asset security for Era Swap Community users.</p>
+                     <h5>Era Swap Blockchain Network</h5>
+                     <p>The purpose of establishing Era Swap Blockchain Network is to achieve Scalability, Speed & Low-cost Transactions for Era Swap Decentralized Ecosystem, without compromising on trustless security for users. Compared with Ethereum Blockchain, ESN will give 500 transactions in every 5 seconds at 98% lower costs.
+</p>
                   </div>
                </div>
             </div>
