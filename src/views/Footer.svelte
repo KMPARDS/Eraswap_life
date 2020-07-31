@@ -110,9 +110,9 @@
                            
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap-terms-conditions.pdf" target="_blank">Era Swap Terms & Conditions</a></li>
                             
-                             <li><i class="fa fa-angle-double-right"></i> <a href="pdf/eraswaplife-terms-condtions.pdf" target="_blank">Terms & Conditions</a></li>
+                    
 
-                             <li><i class="fa fa-angle-double-right"></i> <a href="pdf/eraswaplife-privacy-policy.pdf" target="_blank">Privacy Policy</a></li>       
+                             <li><i class="fa fa-angle-double-right"></i> <a href="pdf/eraswaplife-privacy-policy.pdf" target="_blank">Era Swap Privacy Policy</a></li>       
                         </ul>
                     </div>
                 </div>
