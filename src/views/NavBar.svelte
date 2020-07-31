@@ -208,9 +208,9 @@
         <a
           class="nav-link text-white tm-button tm-button-lg tm-button-white
           tm-button-transparent"
-          href="/ecosystem/index.html"
+          href="https://eraswap.info/"
           target="_blank">
-          ESE Dashboard
+          ES Explorer 
         </a>
       </li>
     </ul>
