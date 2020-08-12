@@ -113,9 +113,9 @@
               style="cursor: pointer; border: 1px solid black; padding:
               5px;background: #ddd;"
               on:click={() => {
-                message = 'I hereby declare and authorize info@eraswapfoundation.com to upgrade all my TimeAlly staking from 1 year to 2 years to participate in Era Swap Network Proof of Stake Consensus Protocol (ESNPoSCP). I have read and understood the TimeAlly terms and conditions.\n\nFull Name: \nContact number: ';
+                message = 'I hereby declare and authorize info@eraswapfoundation.com to upgrade my pet/TSGAP stakings for the ongoing months and to be adjusted from my Prepaid / Liquid balance. I have read and understood the TimeAlly terms and conditions.\n\nFull Name: \nContact number: ';
               }}>
-              <b>TimeAlly Era Swap Network</b>
+              <b>TimeAlly PET and TSGAP stakings</b>
             </span>
           </p>
           <p>Update your message below and then click on sign</p>
