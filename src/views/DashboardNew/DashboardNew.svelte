@@ -321,6 +321,12 @@
        updateBchUI();
      }
    }
+
+   setInterval(async() => {
+      try {
+         updateValues();
+      } catch {}
+   }, 7500);
    
    (async () => {
      try {
