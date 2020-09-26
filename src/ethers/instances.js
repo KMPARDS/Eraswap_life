@@ -30,8 +30,9 @@ window.providerESN = new CustomProvider(
   }
 );
 
-// Temporary wallet
-if (true) {
+// Temporary wallet;
+// TODO: setup env check for this
+if (false) {
   window.wallet = new ethers.Wallet(
     '0xC8C32AE192AB75269C4F1BC030C2E97CC32E63B80B0A3CA008752145CF7ACEEA',
     window.providerESN
