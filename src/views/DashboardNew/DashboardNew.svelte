@@ -19,6 +19,7 @@
    let balance = "";
    let wes_balance = "";
    let address = "Loading...";
+   let username;
    let referUrl = "Loading Ref Url...";
    let error_message = "";
    let website = "";
@@ -144,6 +145,13 @@
    //   );
    //    console.log({balance});
    // }
+   async function updateUsername() {
+      try {
+         username = await window.providerESN.resolveUsername(wallet.address);
+      } catch {
+         username = null
+      }
+   }
 
    async function updateNativeESBalance() {
       balance = String(
@@ -312,6 +320,7 @@
    
    function updateValues() {
       if (window.wallet) {
+         updateUsername();
          updateNativeESBalance();
          updatePrepaidESBalance();
          //   updateUnclaimedBenefits();
@@ -1839,7 +1848,7 @@ Submit
                         </div>
                         <div class="col-lg-12">
                            <p class="fnt-size m-0">
-                              <span style="word-break:break-all">{address}</span>
+                              <span style="word-break:break-all">{address}</span><br>
                               <span on:click={copyToClipboard} style="cursor:pointer">
                               [
                               {#if copied}Copied{:else}Copy{/if}
@@ -1851,15 +1860,17 @@ Submit
                   </div>
                   <div class="col-lg-6 px-5 right-content">
                      <div class="row right-sec">
-                        <div class="col-lg-12">Your total Era Swap portfolio</div>
+                        <div class="col-lg-12">Your username:</div>
                         <div class="col-lg-12">
-                           {#if wes_balance && myActiveStaking && unStakedTokens && unclaimedBenefits && powerTokenReceived && esPriceUSDT && myPetDeposits && myTsgapDeposits}
-                           <u>
-                           ~{ethers.utils.commify(window.lessDecimals(String((+wes_balance + +myActiveStaking + +myTsgapDeposits + +myPetDeposits + +unStakedTokens + +unclaimedBenefits + +powerTokenReceived) * esPriceUSDT), 3))}
-                           USDT
-                           </u>
-                           (excluding TA Power since Inception)
-                           {:else}Calculating...{/if}
+                           {#if username === undefined}
+                              Loading...
+                           {:else if username === null}
+                              Register on KycDapp to get username
+                           {:else}
+                              {username}
+                              <br />
+                              (You can receive funds on your username)
+                           {/if}
                         </div>
                      </div>
                   </div>
