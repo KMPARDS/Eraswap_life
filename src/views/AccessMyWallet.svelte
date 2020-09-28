@@ -2,6 +2,8 @@
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
     import Logo from './Logo.svelte'
+    import { ethers } from 'ethers'
+
     let mnemonic="";
     let error_message="";
     let keystore="";
@@ -9,7 +11,7 @@
     let load_wallet_message = "Load wallet";
     let private_key ="";
     let gotResponse = '';
-    let provider = new ethers.providers.InfuraProvider("homestead", "v3/3837e5b9f0f143f78f02be3aaf5c74e8");
+    // let provider = new ethers.providers.InfuraProvider("homestead", "v3/3837e5b9f0f143f78f02be3aaf5c74e8");
     let accessWalletButtonText = 'Unlock Wallet Now';
     window.testMetamask = true;
     window.usingMetamask = false;
@@ -40,16 +42,17 @@
       window.usingMetamask = false;
         try{
             mnemonic = mnemonic.split('\n').join('');
-            let wallet = ethers.Wallet.fromMnemonic(mnemonic);
-            window.wallet = new ethers.Wallet(wallet.privateKey, provider)
+            let wallet = window.ethersV4.Wallet.fromMnemonic(mnemonic); // accepts zero casino code
+            window.wallet = new ethers.Wallet(wallet.privateKey)
             // document.getElementById("dashboard").click()
 
             /// @dev using HDNode for deriving bitcoin wallet
-            window.hdNode = ethers.utils.HDNode.fromMnemonic(mnemonic);
+            window.hdNode = window.ethersV4.utils.HDNode.fromMnemonic(mnemonic);
 
             return true;
         }catch (e) {
             error_message = "Invalid Mnemonic";
+            console.log(e);
             return false;
         }
     }
@@ -101,7 +104,7 @@ async function load_by_keystore() {
         keystore = JSON.stringify(keystore)
     }
     window.wallet  = await ethers.Wallet.fromEncryptedJson(keystore, wallet_password)
-    window.wallet = new ethers.Wallet(wallet.privateKey, provider)
+    window.wallet = new ethers.Wallet(wallet.privateKey)
     returnValue = true;
     // document.getElementById("dashboard").click()
   } catch (e) {
@@ -116,10 +119,11 @@ async function load_by_private() {
   window.usingMetamask = false;
   try{
     window.wallet = await new ethers.Wallet(private_key);
-    window.wallet = new ethers.Wallet(wallet.privateKey, provider)
+    window.wallet = new ethers.Wallet(wallet.privateKey)
     // document.getElementById("dashboard").click()
     return true;
   } catch (e) {
+    console.log(e);
     error_message = "Invalid private key";
     return false;
   }
@@ -152,6 +156,7 @@ async function connectMetamask() {
     return true;
 
   } catch (e) {
+    console.log(e);
     const emessage = e.message.includes('window.ethereum') ? 'It seems that Metamask is not installed. If you already have it installed, please check if it is allowed for EraSwap.Life website.' : e.message;
     error_message = emessage;
     alert('Error: '+emessage);

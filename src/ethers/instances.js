@@ -30,6 +30,11 @@ window.providerESN = new CustomProvider(
   }
 );
 
+window.providerETH = new ethers.providers.InfuraProvider(
+  'homestead',
+  'v3/3837e5b9f0f143f78f02be3aaf5c74e8'
+);
+
 // Temporary wallet;
 // TODO: setup env check for this
 if (false) {

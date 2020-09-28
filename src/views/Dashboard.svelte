@@ -3,7 +3,9 @@
     import Footer from './Footer.svelte'
     import axios from 'axios';
     import copy from 'copy-to-clipboard';
-	import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
+  import { ethers } from 'ethers'
+  
     let balance = "";
     let es_balance = "";
     let address = "Loading...";

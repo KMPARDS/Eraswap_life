@@ -2,6 +2,7 @@
     import Navbar from './NavBar.svelte'
     import Footer from './Footer.svelte'
     import Logo from './Logo.svelte'
+    import { ethers } from 'ethers'
 
   import { onMount, onDestroy } from 'svelte';
   

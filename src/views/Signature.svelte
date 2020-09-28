@@ -2,6 +2,7 @@
   import Navbar from "./NavBar.svelte";
   import Footer from "./Footer.svelte";
   import copy from "copy-to-clipboard";
+  import { ethers } from 'ethers'
   let error_message = "";
   let message = "";
   let signature = "";
@@ -72,7 +73,7 @@
                 verifyResult = 'Error: please enter the signature';
               }
               try {
-                const result = await window.ethers.utils.verifyMessage(message, signature
+                const result = await ethers.utils.verifyMessage(message, signature
                     .split(' ')
                     .join(''));
                 console.log('i m dononfm', result);
