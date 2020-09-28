@@ -1,10 +1,11 @@
-import App from './App.svelte'
+import App from './App.svelte';
+import './ethers/instances';
 
 const app = new App({
-  target: document.body
-})
+  target: document.body,
+});
 
-window.app = app
+window.app = app;
 
 // one app login
 // window.onload = function(){
@@ -14,4 +15,4 @@ window.app = app
 //
 // }
 
-export default app
+export default app;

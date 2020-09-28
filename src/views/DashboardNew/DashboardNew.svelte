@@ -16,7 +16,7 @@
    window.bitcoinProviders = bitcoinProviders;
    
    let balance = "";
-   let es_balance = "";
+   let wes_balance = "";
    let address = "Loading...";
    let referUrl = "Loading Ref Url...";
    let error_message = "";
@@ -125,13 +125,7 @@
    let contract;
    
    try {
-     contract = new ethers.Contract(
-       "0xef1344bdf80bef3ff4428d8becec3eea4a2cf574",
-       abi,
-       wallet
-     );
-     // let contract = new ethers.Contract("0x53e750ee41c562c171d65bcb51405b16a56cf676", abi, wallet)
-     window.contract = contract;
+     contract = window.prepaidEsInstance;
    } catch (err) {
      // console.log(err);
    }
@@ -302,22 +296,22 @@
    }
    
    async function updateESBalance() {
-     es_balance = ethers.utils.formatEther(
-       await contract.functions.balanceOf(wallet.address)
+     wes_balance = ethers.utils.formatEther(
+       await contract.balanceOf(wallet.address)
      );
    }
    
    function updateValues() {
      updateEtherBalance();
      updateESBalance();
-     updateUnclaimedBenefits();
-     updateUnstakedTokens();
-     updateMyActiveStakings();
-     updateMyTsgapDeposits();
-     updateMyPetDeposits();
+   //   updateUnclaimedBenefits();
+   //   updateUnstakedTokens();
+   //   updateMyActiveStakings();
+   //   updateMyTsgapDeposits();
+   //   updateMyPetDeposits();
      updatePowerTokens();
      updateTimeswappersBenefit();
-     updateDayswapperReward();
+   //   updateDayswapperReward();
      updateESPrice();
      updateEtherPrice();
      updateBuzcafeBalance();
@@ -327,6 +321,12 @@
        updateBchUI();
      }
    }
+
+   setInterval(async() => {
+      try {
+         updateValues();
+      } catch {}
+   }, 7500);
    
    (async () => {
      try {
@@ -715,7 +715,7 @@
    .address {
    margin:10px;
    background-color: #fff;
-   color: #fff232b2d;
+   color: #691111;
    text-align: center;
    border-radius: 4px;
    /* margin: 0px 30px !important; */
@@ -1171,7 +1171,7 @@ Submit
       </div>
    </div>
 </div>
-<SendSidebar {balance} esbalance={es_balance} />
+<SendSidebar {balance} esbalance={wes_balance} />
 <div id="token_slide" class="sidepanel">
    <div class="card">
       <div class="card-header bg-dark text-white">
@@ -1844,9 +1844,9 @@ Submit
                      <div class="row right-sec">
                         <div class="col-lg-12">Your total Era Swap portfolio</div>
                         <div class="col-lg-12">
-                           {#if es_balance && myActiveStaking && unStakedTokens && unclaimedBenefits && powerTokenReceived && esPriceUSDT && myPetDeposits && myTsgapDeposits}
+                           {#if wes_balance && myActiveStaking && unStakedTokens && unclaimedBenefits && powerTokenReceived && esPriceUSDT && myPetDeposits && myTsgapDeposits}
                            <u>
-                           ~{ethers.utils.commify(window.lessDecimals(String((+es_balance + +myActiveStaking + +myTsgapDeposits + +myPetDeposits + +unStakedTokens + +unclaimedBenefits + +powerTokenReceived) * esPriceUSDT), 3))}
+                           ~{ethers.utils.commify(window.lessDecimals(String((+wes_balance + +myActiveStaking + +myTsgapDeposits + +myPetDeposits + +unStakedTokens + +unclaimedBenefits + +powerTokenReceived) * esPriceUSDT), 3))}
                            USDT
                            </u>
                            (excluding TA Power since Inception)
@@ -1905,15 +1905,15 @@ Submit
                   <div class="col-lg-12">
                      <div class="row">
                         <div class="col-lg-6 col-md-6 text-center">
-                           <p class="text-p">MAIN ES BALANCE</p>
+                           <p class="text-p">NATIVE ES BALANCE</p>
                            <p class="text-p" style="font-size: 25px;">
-                              {window.lessDecimals(es_balance) || '0'} ES
+                              {window.lessDecimals(balance) || '0'} ES
                            </p>
                         </div>
                         <div class="col-lg-6 col-md-6 text-center">
-                           <p class="text-p">ETHER BALANCE</p>
+                           <p class="text-p">PREPAID ES BALANCE</p>
                            <p class="text-p" style="font-size: 25px;">
-                              {window.lessDecimals(balance, 8) || '0'} ETH
+                              {window.lessDecimals(wes_balance) || '0'} WES
                            </p>
                         </div>
                      </div>
@@ -2091,9 +2091,9 @@ Submit
             <div class="col-lg-6">
                <div class="row">
                   <div class="col-lg-12 pad-0">
-                     <div class="card card-body shadow_box">
+                      <!-- <div class="card card-body shadow_box">
                         <div class="row">
-                           <div class="col-lg-12 text-center">
+                          <div class="col-lg-12 text-center">
                               <img
                                  src="images/dashboardNew/icons/TimeAlly.png"
                                  alt="Timeally"
@@ -2167,7 +2167,7 @@ Submit
                                  <p>PET:</p>
                                  <i class="fa fa-angle-down" style="font-size: 22px;" />
                               </a>
-                           </div>
+                           </div> 
                            <div
                               class="collapse"
                               id="collapseExample3"
@@ -2180,7 +2180,7 @@ Submit
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </div>-->
                      <div class="col-lg-12 px-0 mt-4">
                         <div class="card card-body shadow_box">
                            <div class="row">
@@ -2218,7 +2218,7 @@ Submit
                      </div>
                   </div>
                </div>
-            </div>
+            </div> 
             <div class="col-lg-6">
                <div class="row">
                   <div class="col-lg-12 p-t-15">

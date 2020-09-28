@@ -1,6 +1,8 @@
 <script>
   import { onDestroy } from "svelte";
   import axios from "axios";
+  import {ethers} from 'ethers';
+  import { renderEthersJsError } from '../../utils'
 
   let balance;
   let esbalance;
@@ -95,11 +97,7 @@
   let contract;
 
   try {
-    contract = new ethers.Contract(
-      "0xef1344bdf80bef3ff4428d8becec3eea4a2cf574",
-      erc20abi,
-      wallet
-    );
+    contract = window.prepaidEsInstance.connect(window.wallet.connect(window.providerESN));
     // contract = new ethers.Contract("0x53e750ee41c562c171d65bcb51405b16a56cf676", erc20abi, wallet);
   } catch (e) {
     console.log(e);
@@ -756,25 +754,25 @@
         <li class="nav-item">
           <a
             class="nav-link text-white active"
-            id="senderaswap_tab"
-            data-toggle="pill"
-            href="#senderaswap"
-            role="tab"
-            aria-controls="eraswap"
-            aria-selected="true">
-            Era Swap
-          </a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link text-white"
             id="sendethereum_tab"
             data-toggle="pill"
             href="#sendethereum"
             role="tab"
             aria-controls="ethereum"
             aria-selected="false">
-            Ethereum
+            Native ES
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-white"
+            id="senderaswap_tab"
+            data-toggle="pill"
+            href="#senderaswap"
+            role="tab"
+            aria-controls="eraswap"
+            aria-selected="false">
+            Prepaid ES
           </a>
         </li>
         <li class="nav-item">
@@ -827,10 +825,59 @@
         </li>
       </ul>
     </div>
+
+    
     <div class="card-body">
       <div class="tab-content" id="pills-tabContent">
-        <div
+      <div
           class="tab-pane fade show active"
+          id="sendethereum"
+          role="tabpanel"
+          aria-labelledby="sendethereum_tab">
+
+                  <hr class="h" />
+                    <div class="row text-center">
+                        <div class="col-lg-12 time_track text-left">
+                            <p>Send Native ES</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-12 form-group">
+                                        <input type="text" class="form-control" bind:value={receiverAddress} placeholder="Enter Address or Username">
+                                    </div>
+                                    <div class="col-lg-12 form-group">
+                                        <input type="text" class="form-control" bind:value={esAmount} placeholder="Enter Amount of Native ES">
+                                    </div>
+                                </div>
+                                <button disabled={signing} on:click={async () => {
+                                  signing = true;
+                                  const tx = await window.wallet.connect(window.providerESN).sendTransaction({
+                                    to: receiverAddress,
+                                    value: ethers.utils.parseEther(esAmount)
+                                  });
+                                  
+                                  await tx.wait();
+
+                                  txHash = tx.hash;
+                                  signing = false;
+                                }}>{#if signing}Please wait...{:else}Sign and Send Native ES{/if}</button>
+
+                                {#if txHash}
+                                <br />
+                                  <a
+                                    target="_blank"
+                                    rel="noopenner noreferrer"
+                                    href={`https://eraswap.info/txn/${txHash}`}>
+                                    View on EraSwapInfo
+                                  </a>
+                                {/if}
+                            </form>
+                        </div>
+                    </div> 
+        </div>
+        <div
+          class="tab-pane fade"
           id="senderaswap"
           role="tabpanel"
           aria-labelledby="senderaswap_tab">
@@ -846,7 +893,7 @@
           <div class="row text-center">
             <div class="col-lg-12 time_track text-left">
               <p>
-                Send Era Swap {receiverDisplay ? `to ${receiverDisplay}` : 'to Custom Address'}
+                Send Prepaid Era Swap {receiverDisplay ? `to ${receiverDisplay}` : 'to Custom Address'}
               </p>
             </div>
             <div class="col-lg-12">
@@ -889,7 +936,7 @@
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="Enter Receiver's ES address"
+                        placeholder="Enter Address or Username"
                         disabled={!receiverMutable}
                         bind:value={receiverAddress}
                         on:keyup={() => {
@@ -900,7 +947,7 @@
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="Enter Amount of ES transfer"
+                        placeholder="Enter Amount of WES transfer"
                         bind:value={esAmount}
                         on:keyup={() => {
                           gasEstimated = null;
@@ -929,24 +976,28 @@
                           estimating = true;
                           txHash = '';
                           try {
-                            receiverAddress = ethers.utils.getAddress(receiverAddress);
+                            receiverAddress = await window.providerESN.resolveAddress(receiverAddress);
                           } catch (error) {
+                            estimating = false;
                             return alert('Invalid Address');
                           }
                           try {
                             esAmountBN = ethers.utils.parseEther(esAmount);
                           } catch (error) {
+                            estimating = false;
                             return alert('Invalid ES Amount');
                           }
                           if (esbalance && ethers.utils
                               .parseEther(esbalance)
                               .lt(esAmountBN)) {
+                                estimating = false;
                             return alert('Insufficient balance');
                           }
                           try {
-                            gasEstimated = await contract.estimate.transfer(receiverAddress, esAmountBN);
+                            gasEstimated = await contract.estimateGas.transfer(receiverAddress, esAmountBN);
                           } catch (error) {
-                            return alert('Error while estimating:' + error.message);
+                            estimating = false;
+                            return alert('Error while estimating:' + renderEthersJsError(error));
                           }
                           estimating = false;
                         }}>
@@ -972,15 +1023,15 @@
                             Select gas price per unit that you are willing to
                             pay to miners
                           </option>
-                          <option value="1">Slow (1 GWEI per unit gas)</option>
+                          <option value="1">Slow (1 ESMETER per unit gas)</option>
                           <option value="5">
-                            Medium (5 GWEI per unit gas)
+                            Medium (5 ESMETER per unit gas)
                           </option>
                           <option value="10">
-                            Fast (10 GWEI per unit gas)
+                            Fast (10 ESMETER per unit gas)
                           </option>
                           <option value="20">
-                            Faster (20 GWEI per unit gas)
+                            Faster (20 ESMETER per unit gas)
                           </option>
                           <option value="custom">Custom</option>
                         </select>
@@ -990,14 +1041,13 @@
                               userGasPrice = event.target.value;
                             }}
                             placeholder="Enter custom gas price per unit gas in
-                            GWEI" />
+                            ES METER" />
                         {/if}
 
                         {#if userGasPrice !== 'custom' && gasEstimated && userGasPrice}
                           Estimated Gas Fee: {(() => {
                             try {
-                              return ethers.utils.formatEther(ethers.utils
-                                  .bigNumberify(gasEstimated)
+                              return ethers.utils.formatEther(ethers.BigNumber.from(gasEstimated)
                                   .mul(
                                     ethers.utils.parseUnits(
                                       userGasPrice,
@@ -1007,11 +1057,11 @@
                             } catch (error) {
                               alert(error.message);
                             }
-                          })()} ETH
+                          })()} ES
                           <br />
                           More you pay the gas fee, more quickly your
                           transaction will be confirmed, as it'd be preferred by
-                          miners to include in the next block they're mining.
+                          validators to include in the next block they're sealing.
                           <button
                             disabled={txHash}
                             on:click={async event => {
@@ -1040,8 +1090,8 @@
                             <a
                               target="_blank"
                               rel="noopenner noreferrer"
-                              href={`https://etherscan.io/tx/${txHash}`}>
-                              View on EtherScan
+                              href={`https://eraswap.info/txn/${txHash}`}>
+                              View on EraSwapInfo
                             </a>
                           {/if}
                         {/if}
@@ -1052,39 +1102,6 @@
               </form>
             </div>
           </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="sendethereum"
-          role="tabpanel"
-          aria-labelledby="sendethereum_tab">
-          Coming soon...
-          <!-- <div class="row pt-2">
-                        <div class="col-lg-5 col-6 pl-1 text-right"><img src="images/dashboardNew/Etherum.png" alt="es" width="30" height="30"></div>
-                        <div class="col-lg-7 col-6 p-0"><p class="tap_text">Ethereum Balance</p></div>
-
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-lg-12"><p class="tap_text">{balance || '0'} ETH</p></div>
-                    </div>
-                    <hr class="h">
-                    <div class="row text-center">
-                        <div class="col-lg-12 time_track text-left">
-                            <p>Send Ethereum</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-lg-12 form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Receiver's Ethereum address">
-                                    </div>
-                                    <div class="col-lg-12 form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Amount of Ethereum transfer">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div> -->
         </div>
         <div
           class="tab-pane fade"
