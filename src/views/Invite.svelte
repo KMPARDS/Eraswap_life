@@ -2,7 +2,8 @@
   import Navbar from './NavBar.svelte'
   import Footer from './Footer.svelte'
   import axios from 'axios'
-	import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
+  import { ethers } from 'ethers'
 
   const TIMESWAPPERS_SERVER_URL = 'https://apis.timeswappers.com';
 

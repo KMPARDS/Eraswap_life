@@ -1,7 +1,7 @@
 <script>
   import { onDestroy } from "svelte";
   import axios from "axios";
-  import {ethers} from 'ethers';
+  import { ethers } from 'ethers';
   import { renderEthersJsError } from '../../utils'
 
   let balance;

@@ -7,6 +7,7 @@
    import copy from "copy-to-clipboard";
    const QRCode = require("qrcode");
    import { onMount } from "svelte";
+   import { ethers } from 'ethers'
    
    import SendSidebar from "./SendSidebar.svelte";
    
@@ -137,10 +138,18 @@
      }
    });
    
-   async function updateEtherBalance() {
-     balance = String(
-       await ethers.utils.formatEther(String(await wallet.getBalance()))
+   // async function updateEtherBalance() {
+   //    balance = String(
+   //       await ethers.utils.formatEther(await wallet.connect(providerETH).getBalance())
+   //   );
+   //    console.log({balance});
+   // }
+
+   async function updateNativeESBalance() {
+      balance = String(
+         await ethers.utils.formatEther(await wallet.connect(providerESN).getBalance())
      );
+      console.log({balance});
    }
    
    async function updateUnclaimedBenefits() {
@@ -295,30 +304,30 @@
      }
    }
    
-   async function updateESBalance() {
+   async function updatePrepaidESBalance() {
      wes_balance = ethers.utils.formatEther(
        await contract.balanceOf(wallet.address)
      );
    }
    
    function updateValues() {
-     updateEtherBalance();
-     updateESBalance();
-   //   updateUnclaimedBenefits();
-   //   updateUnstakedTokens();
-   //   updateMyActiveStakings();
-   //   updateMyTsgapDeposits();
-   //   updateMyPetDeposits();
-     updatePowerTokens();
-     updateTimeswappersBenefit();
-   //   updateDayswapperReward();
-     updateESPrice();
-     updateEtherPrice();
-     updateBuzcafeBalance();
-   
-     if (window.wallet) {
-       updateBtcUI();
-       updateBchUI();
+      if (window.wallet) {
+         updateNativeESBalance();
+         updatePrepaidESBalance();
+         //   updateUnclaimedBenefits();
+         //   updateUnstakedTokens();
+         //   updateMyActiveStakings();
+         //   updateMyTsgapDeposits();
+         //   updateMyPetDeposits();
+         updatePowerTokens();
+         updateTimeswappersBenefit();
+         //   updateDayswapperReward();
+         updateESPrice();
+         // updateEtherPrice();
+         updateBuzcafeBalance();
+
+         updateBtcUI();
+         updateBchUI();
      }
    }
 
