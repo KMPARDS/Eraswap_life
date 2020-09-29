@@ -1433,6 +1433,20 @@ Submit
             </li>
             <li style="cursor:pointer;">
                <img
+                  src="images/dashboardNew/coupon.jpg"
+                  alt=""
+                  data="https://coupondapp.com/"
+                  on:click={load_website} />
+            </li>
+             <li style="cursor:pointer;">
+               <img
+                  src="images/dashboardNew/eraswap.jpg"
+                  alt=""
+                  data="https://eraswap.info/"
+                  on:click={load_website} />
+            </li>
+            <li style="cursor:pointer;">
+               <img
                   src="images/dashboardNew/Recyledaap-01.jpg"
                   alt=""
                   data="http://recyclingdapp.com/"
@@ -1611,6 +1625,20 @@ Submit
                   src="images/dashboardNew/KycDaap-01.jpg"
                   alt=""
                   data="http://kycdapp.com/"
+                  on:click={load_website} />
+            </div>
+             <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+               <img
+                  src="images/dashboardNew/coupon.jpg"
+                  alt=""
+                  data="https://coupondapp.com/"
+                  on:click={load_website} />
+            </div>
+             <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
+               <img
+                  src="images/dashboardNew/eraswap.jpg"
+                  alt=""
+                  data="https://eraswap.info/"
                   on:click={load_website} />
             </div>
             <div class="col-lg-3 col-md-6 col-12 text-center margin_tb_10">
@@ -1966,52 +1994,46 @@ Submit
             </div>
             <div class="col-lg-6 mt-2">
                <div class="row pd-l-3">
-                  <div class="col-lg-6 col-6 txt-size">
-                     <div class="row each-list">
-                        <div class="col-lg-5 col-6">BTC</div>
-                        <div class="col-lg-7 col-6 text-right">
+                  <div class="col-lg-8 col-8 txt-size exchnage-list">
+                    <div class="row each-list">
+                        <div class="col-lg-6 col-6 my-2">ES ERC 20</div>
+                        <div class="col-lg-6 col-6 my-2 text-right">
                            {#if btcBalance !== undefined}
                            {#if typeof btcBalance === 'number'}
                            {btcBalance / 10 ** 8}
                            {:else}{btcBalance}{/if}
                            {:else if btcAddress}
                            Loading...
-                           {:else}Not Supported on your wallet type{/if}
+                           {:else}<small>Not Supported on your wallet type</small>{/if}
                         </div>
                      </div>
                      <div class="row each-list">
-                        <div class="col-lg-5 col-6 my-2">BCH</div>
-                        <div class="col-lg-7 col-6 my-2 text-right">
+                        <div class="col-lg-6 col-6 my-2">BTC</div>
+                        <div class="col-lg-6 col-6 my-2 text-right">
+                           {#if btcBalance !== undefined}
+                           {#if typeof btcBalance === 'number'}
+                           {btcBalance / 10 ** 8}
+                           {:else}{btcBalance}{/if}
+                           {:else if btcAddress}
+                           Loading...
+                           {:else}<small>Not Supported on your wallet type</small>{/if}
+                        </div>
+                     </div>
+                     <div class="row each-list">
+                        <div class="col-lg-6 col-6 my-2">BCH</div>
+                        <div class="col-lg-6 col-6 my-2 text-right">
                            {#if bchBalance !== undefined}
                            {#if typeof bchBalance === 'number'}
                            {bchBalance / 10 ** 8}
                            {:else}{bchBalance || 0}{/if}
                            {:else if bchAddress}
                            Loading...
-                           {:else}Not Supported on your wallet type{/if}
+                           {:else}<small>Not Supported on your wallet type</small>{/if}
                         </div>
                      </div>
-                     <div class="row each-list">
-                        <div class="col-lg-6 col-6 my-2">
-                           ERC 20
-                           <span>
-                           <button
-                              type="button"
-                              class="btn small-bnt"
-                              on:click={openToken}
-                              disabled>
-                           Add Token
-                           </button>
-                           </span>
-                        </div>
-                        <div class="col-lg-6 col-6 my-2 text-right">coming soon</div>
-                     </div>
-                     <div class="row">
-                        <div class="col-lg-6 col-6 my-2">XRP</div>
-                        <div class="col-lg-6 col-6 my-2 text-right">coming soon</div>
-                     </div>
+                   
                   </div>
-                  <div class="col-lg-6 col-6">
+                  <div class="col-lg-4 col-4 exc-send-rec">
                      <div class="row">
                         <div class="col-lg-6 col-6 text-right pad-l">
                            <button
@@ -2083,26 +2105,7 @@ Submit
                            </button>
                         </div>
                      </div>
-                     <div class="row pt-4">
-                        <div class="col-lg-6 col-6 text-right pad-l">
-                           <button
-                              type="button"
-                              class="btn small-bnt"
-                              on:click={toggleSendSideBar}
-                              disabled>
-                           Send
-                           </button>
-                        </div>
-                        <div class="col-lg-6 col-6 pad-0">
-                           <button
-                              type="button"
-                              class="btn small-bnt"
-                              onclick={toggleReceiveSideBar}
-                              disabled>
-                           Receive
-                           </button>
-                        </div>
-                     </div>
+                   
                   </div>
                </div>
             </div>
@@ -2201,7 +2204,7 @@ Submit
                            </div>
                         </div>
                      </div>-->
-                     <div class="col-lg-12 px-0 mt-4">
+                     <div class="col-lg-12 px-0 ">
                         <div class="card card-body shadow_box">
                            <div class="row">
                               <div class="col-lg-12 text-center">

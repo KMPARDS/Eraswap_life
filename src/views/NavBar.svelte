@@ -59,7 +59,18 @@
           Decentralized Utility Token
         </span>
       </a>
-
+      <a class="dropdown-item" href="https://eraswap.info" target="_blank">
+        <img src="/images/13.png" alt="" height="25px" />
+        <span class="sec-menu" style="font-size:13px">
+           Era Swap Blockchain Explorer
+        </span>
+      </a> 
+        <a class="dropdown-item" href="https://merkleswap.com/" target="_blank">
+        <img src="/images/13.png" alt="" height="25px" />
+        <span class="sec-menu" style="font-size:13px">
+           Merkle Swap
+        </span>
+      </a>
       <a
         class="dropdown-item"
         href="https://timeswappers.com/swapperswall"

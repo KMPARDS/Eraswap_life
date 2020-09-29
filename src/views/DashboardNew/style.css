@@ -304,3 +304,11 @@
 }
    */
 
+   .exc-send-rec button.small-bnt{
+    height: 35px !important;
+   }
+   .exchnage-list  small{
+    display: block;
+    font-size: 11px;
+    line-height: 14px;
+  }
