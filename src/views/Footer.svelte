@@ -85,12 +85,13 @@
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
                             <li><h4 class="text-white">Smart Contracts Address</h4></li>
-                            <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0xef1344bdf80bef3ff4428d8becec3eea4a2cf574#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>Era Swap Token (ES)</span></a></li>
+
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x20ee679d73559e4c4b5e3b3042b61be723828d6c#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>Newly Released Token (NRT)</span></a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x42225682113E6Ed3616B36B4A72BbaE376041D7c#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>BetDeEx DApp</span></a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x5630ee5f247bd6b61991fbb2f117bbeb45990876#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>TimeAlly DApp</span></a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0xbad9af4db5401b7d5e8177a18c1d69c35fc03fd3#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>TSGAP DApp</span></a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x69e7960f6A1d6332a4be7e22916F627a3d95b1bc#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>PET DApp</span></a></li>
+                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/token/0x72108a8CC3254813C6BE2F1b77be53E185abFdD9" target="_blank"><i class="zmdi zmdi-apple"></i><span>Era Swap ERC 20</span></a></li>
                             <!-- <li><i class="fa fa-angle-double-right"></i> <a href="/access-my-wallet">Access my Wallet</a></li> -->
                         </ul>
                     </div>
@@ -100,6 +101,10 @@
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
                             <li><h4 class="text-white">Useful Links</h4></li>
+                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io" target="_blank"> Era Swap Token</a></li>
+                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswap.info" target="_blank"> Era Swap Blockchain Explorer</a></li>
+                             <li><i class="fa fa-angle-double-right"></i> <a href="https://merkleswap.com" target="_blank"> Merkle Swap</a></li>
+       
                             <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/how-to-create-eraswap-wallet.pdf" target="_blank">User Manual</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_whitepaper.pdf" target="_blank">Era Swap White Paper</a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io/pdf/eraswap_lightpaper.pdf" target="_blank"> Era Swap Light Paper</a></li>
