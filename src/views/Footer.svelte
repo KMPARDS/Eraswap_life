@@ -85,7 +85,6 @@
                         <!-- <h5 class="widget-title">Services</h5> -->
                         <ul>
                             <li><h4 class="text-white">Smart Contracts Address</h4></li>
-
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x20ee679d73559e4c4b5e3b3042b61be723828d6c#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>Newly Released Token (NRT)</span></a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x42225682113E6Ed3616B36B4A72BbaE376041D7c#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>BetDeEx DApp</span></a></li>
                             <li><i class="fa fa-angle-double-right"></i> <a href="https://etherscan.io/address/0x5630ee5f247bd6b61991fbb2f117bbeb45990876#code" target="_blank"><i class="zmdi zmdi-apple"></i><span>TimeAlly DApp</span></a></li>
