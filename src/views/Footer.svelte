@@ -103,6 +103,7 @@
                              <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswaptoken.io" target="_blank"> Era Swap Token</a></li>
                              <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswap.info" target="_blank"> Era Swap Blockchain Explorer</a></li>
                              <li><i class="fa fa-angle-double-right"></i> <a href="https://merkleswap.com" target="_blank"> Merkle Swap</a></li>
+                                <li><i class="fa fa-angle-double-right"></i> <a href="https://eraswap.cloud/" target="_blank">Era Swap Cloud</a></li>
        
                             <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/how-to-create-eraswap-wallet.pdf" target="_blank">User Manual</a></li>
                           <li><i class="fa fa-angle-double-right"></i> <a href="/pdf/Era_Swap_Decentralized_Autonomous_Organization.pdf" target="_blank">Era Swap DAO</a></li>
