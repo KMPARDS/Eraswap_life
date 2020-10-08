@@ -6637,3 +6637,6 @@ ul.policy_list li a {
   font-size: 11px;
   line-height: 14px;
 }
+.videos-bg a img{
+  margin: 20px 0;
+}

@@ -945,9 +945,24 @@
                   <span class=""><img src="/images/S_LIFE.png" height="30px" alt="S_LIFE"></span>
                   <br><br>
                   <h6>Watch this exclusive teaser to see multiple platforms under Era Swap Ecosystem where Era Swap (ES) will be utilized as a decentralized utility token</h6>
-                  <a href="https://www.youtube.com/embed/JodEk_UDw10" target="_blank" rel="noopenner noreferrer" >
-                  <img style="margin-top:20px" src="/images/decentralized-utility-app.png" alt="es-one-world" />
-                  </a>
+                  
+               </div>
+            </div>
+            <div class="row justify-content-center videos-bg"  style="margin:20px 0" >
+               <div class="col-sm-4">
+                     <a href="https://www.youtube.com/embed/JodEk_UDw10" target="_blank" rel="noopenner noreferrer" >
+                        <img  src="/images/decentralized-utility-app.png" alt="es-one-world" width="350px" />
+                     </a>
+               </div>
+               <div class="col-sm-4">
+                     <a href="https://www.youtube.com/embed/9_C1HPYMn9c?start=3" target="_blank" rel="noopenner noreferrer">
+                        <img src="/images/eraswap-wallet-create.png" alt="es-one-world" width="350px"/>
+                     </a>
+               </div>
+                <div class="col-sm-4">
+                     <a href="https://www.youtube.com/embed/sBCyf0hVVPs" target="_blank" rel="noopenner noreferrer">
+                        <img src="/images/dayswappers-alpha-version.png" alt="es-one-world" width="350px"/>
+                     </a>
                </div>
             </div>
          </div>

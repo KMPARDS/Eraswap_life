@@ -71,6 +71,12 @@
            Merkle Swap
         </span>
       </a>
+        <a class="dropdown-item" href="https://eraswap.cloud/" target="_blank">
+        <img src="/images/cloud.png" alt="" height="25px" />
+        <span class="sec-menu" style="font-size:13px">
+           Era Swap Cloud
+        </span>
+      </a>
       <a
         class="dropdown-item"
         href="https://timeswappers.com/swapperswall"
