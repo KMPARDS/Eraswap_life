@@ -1,38 +1,19 @@
 import { ethers } from 'ethers';
-import { CustomProvider } from './custom-provider';
 
-import { IKycDappFactory } from './typechain/IKycDappFactory';
-import { IPrepaidEsFactory } from './typechain/IPrepaidEsFactory';
+import { CustomProvider, addresses } from 'eraswap-sdk';
+import {
+  KycDappFactory,
+  PrepaidEsFactory,
+} from 'eraswap-sdk/dist/typechain/ESN';
+import { Erc20Factory } from 'eraswap-sdk/dist/typechain/ETH';
 
-const config = {
-  ESN: {
-    nrtManager: 'NRT_MANAGER',
-    timeallyManager: 'TIMEALLY_MANAGER',
-    timeallyStakingTarget: 'TIMEALLY_STAKING_TARGET',
-    validatorSet: 'VALIDATOR_SET',
-    validatorManager: 'VALIDATOR_MANAGER',
-    randomnessManager: 'RANDOMNESS_MANAGER',
-    blockRewardManager: 'BLOCK_REWARD',
-    prepaidEs: 'PREPAID_ES',
-    dayswappers: 'DAYSWAPPERS',
-    kycdapp: '0xC4336494606203e3907539d5b462A5cb7853B3C6',
-    timeallyclub: 'TIMEALLY_CLUB',
-    timeAllyPromotionalBucket: 'TIMEALLY_PROMOTIONAL_BUCKET',
-  },
-};
+const config = addresses['development'];
 
-window.providerESN = new CustomProvider(
-  'https://node0.testnet.eraswap.network',
-  {
-    name: 'EraSwapNetwork',
-    chainId: 5196,
-    ensAddress: config.ESN.kycdapp,
-  }
-);
+window.providerESN = new CustomProvider('testnet');
 
 window.providerETH = new ethers.providers.InfuraProvider(
-  'homestead',
-  'v3/3837e5b9f0f143f78f02be3aaf5c74e8'
+  'rinkeby',
+  '3837e5b9f0f143f78f02be3aaf5c74e8'
 );
 
 // Temporary wallet;
@@ -44,12 +25,17 @@ if (false) {
   );
 }
 
-window.kycDappInstance = IKycDappFactory.connect(
+window.esInstanceETH = Erc20Factory.connect(
+  config.ETH.esContract,
+  window.providerETH
+);
+
+window.kycDappInstance = KycDappFactory.connect(
   config.ESN.kycdapp,
   window.providerESN
 );
 
-window.prepaidEsInstance = IPrepaidEsFactory.connect(
+window.prepaidEsInstance = PrepaidEsFactory.connect(
   config.ESN.prepaidEs,
   window.providerESN
 );
