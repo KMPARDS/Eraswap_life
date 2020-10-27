@@ -16,6 +16,7 @@
    window.bitcoinHelpers = bitcoinHelpers;
    window.bitcoinProviders = bitcoinProviders;
    
+   let erc20_balance = "";
    let balance = "";
    let wes_balance = "";
    let address = "Loading...";
@@ -151,6 +152,16 @@
       } catch {
          username = null
       }
+   }
+
+   async function updateErc20ESBalance() {
+      try {
+         erc20_balance = ethers.utils.formatEther(await window.esInstanceETH.balanceOf(window.wallet.address));
+      } catch (err){
+         console.log('erc20', err);
+      }
+      
+      console.log({erc20_balance});
    }
 
    async function updateNativeESBalance() {
@@ -322,6 +333,7 @@
       if (window.wallet) {
          updateUsername();
          updateNativeESBalance();
+         updateErc20ESBalance();
          updatePrepaidESBalance();
          //   updateUnclaimedBenefits();
          //   updateUnstakedTokens();
@@ -1996,15 +2008,9 @@ Submit
                <div class="row pd-l-3">
                   <div class="col-lg-8 col-8 txt-size exchnage-list">
                     <div class="row each-list">
-                        <div class="col-lg-6 col-6 my-2">ES ERC 20</div>
+                        <div class="col-lg-6 col-6 my-2">ES ERC20</div>
                         <div class="col-lg-6 col-6 my-2 text-right">
-                           {#if btcBalance !== undefined}
-                           {#if typeof btcBalance === 'number'}
-                           {btcBalance / 10 ** 8}
-                           {:else}{btcBalance}{/if}
-                           {:else if btcAddress}
-                           Loading...
-                           {:else}<small>Not Supported on your wallet type</small>{/if}
+                           {window.lessDecimals(erc20_balance) || '0'} ES
                         </div>
                      </div>
                      <div class="row each-list">
@@ -2039,6 +2045,28 @@ Submit
                            <button
                               type="button"
                               class="btn small-bnt"
+                              disabled={true}
+                           >
+                           Send
+                           </button>
+                        </div>
+                        <div class="col-lg-6 col-6 pad-0">
+                           <button
+                              type="button"
+                              class="btn small-bnt"
+                              on:click={() => {
+                              if (!isReceiveSideBarOpen()) toggleReceiveSideBar();
+                              document.getElementById('eraswap_tab').click();
+                           }}>
+                           Receive
+                           </button>
+                        </div>
+                     </div>
+                     <div class="row pt-3">
+                        <div class="col-lg-6 col-6 text-right pad-l">
+                           <button
+                              type="button"
+                              class="btn small-bnt"
                               on:click={() => {
                            if (!isSendSideBarOpen()) toggleSendSideBar();
                            document.getElementById('sendbtc_tab').click();
@@ -2061,7 +2089,7 @@ Submit
                            </button>
                         </div>
                      </div>
-                     <div class="row pt-3">
+                     <div class="row pt-3 pad-tb-40">
                         <div class="col-lg-6 col-6 text-right pad-l">
                            <button
                               type="button"
@@ -2081,26 +2109,6 @@ Submit
                            QRCode.toCanvas(document.getElementById('qrcode_bch'), bchAddress);
                            }}
                            disabled={!bchAddress}>
-                           Receive
-                           </button>
-                        </div>
-                     </div>
-                     <div class="row pt-3 pad-tb-40">
-                        <div class="col-lg-6 col-6 text-right pad-l">
-                           <button
-                              type="button"
-                              class="btn small-bnt"
-                              on:click={toggleSendSideBar}
-                              disabled>
-                           Send
-                           </button>
-                        </div>
-                        <div class="col-lg-6 col-6 pad-0">
-                           <button
-                              type="button"
-                              class="btn small-bnt"
-                              on:click={toggleReceiveSideBar}
-                              disabled>
                            Receive
                            </button>
                         </div>
