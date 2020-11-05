@@ -36,7 +36,7 @@
     "bitcoinjs-lib": "^5.1.7",
     "bs58": "^4.0.1",
     "copy-to-clipboard": "3.2.0",
-    "eraswap-sdk": "^2.0.2-commit.f46752c2",
+    "eraswap-sdk": "^2.0.4-commit.db7234f1",
     "eslint-plugin-svelte3": "1.0.0",
     "ethers": "^5.0.14",
     "qrcode": "1.4.4",
