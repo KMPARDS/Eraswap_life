@@ -7,12 +7,12 @@ import {
 } from 'eraswap-sdk/dist/typechain/ESN';
 import { Erc20Factory } from 'eraswap-sdk/dist/typechain/ETH';
 
-const config = addresses['development'];
+const config = addresses['production'];
 
-window.providerESN = new CustomProvider('testnet');
+window.providerESN = new CustomProvider('mainnet');
 
 window.providerETH = new ethers.providers.InfuraProvider(
-  'rinkeby',
+  'homestead',
   '3837e5b9f0f143f78f02be3aaf5c74e8'
 );
 
