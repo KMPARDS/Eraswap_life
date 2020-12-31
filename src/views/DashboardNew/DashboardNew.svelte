@@ -1411,7 +1411,7 @@ Submit
             <li style="cursor:pointer;">
                <img
                   src="images/ESCloudLogo.png"
-                  data="https://surveysdapp.com/"
+                  data="https://eraswap.cloud/"
                   on:click={load_website}
                   alt="" />
             </li>
