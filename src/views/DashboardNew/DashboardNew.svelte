@@ -1410,6 +1410,13 @@ Submit
             </li>
             <li style="cursor:pointer;">
                <img
+                  src="images/ESCloudLogo.png"
+                  data="https://surveysdapp.com/"
+                  on:click={load_website}
+                  alt="" />
+            </li>
+            <li style="cursor:pointer;">
+               <img
                   src="images/dashboardNew/value OF Farmers.jpg"
                   data="https://valueoffarmers.org/"
                   on:click={load_website}
