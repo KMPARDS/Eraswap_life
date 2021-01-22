@@ -238,7 +238,7 @@ async function unlockWalletButton(loadWalletFunction) {
                                                             <div class="col-md-12 col-lg-10 col-sm-12 offset-xl-1 offset-lg-1">
                                                              <span class=""><img src="/images/wallet-dash.png" height="30px" alt="S_LIFE"></span><br>
                                                         <div class="tm-pricebox-price">
-                                                          <input style="height: 39px" type="file"  on:change={load_keystore}>
+                                                          <input style="height: 39px" type="file" accept=".json,application/json,application/JSON"  on:change={load_keystore}>
                                                         </div>
 
                                                         <div class="tm-pricebox-price">
